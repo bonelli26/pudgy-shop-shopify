@@ -5,7 +5,6 @@ import {getViewport, beforeScroll, afterScroll, tracking, loadGlobalScopeImages,
 import {domStorage, globalStorage} from "./storage";
 import {globalEntrance, pageEntrance} from "./anims";
 import { ScrollBasedAnims } from "../_classes/ScrollBasedAnims";
-import {NavDrawer} from "../_classes/NavDrawer";
 import { gsap } from "gsap";
 import {LazyLoadWorker} from "../_worker/LazyLoadWorker";
 import {AddToCart} from "../_extensions/Shopify/AddToCart";
@@ -56,7 +55,7 @@ const globalEvents = (namespace = null)=>{
 
 			afterScroll();
 
-			new AddToCart();
+			// new AddToCart();
 
 			pageEntrance(namespace);
 
@@ -120,7 +119,7 @@ export const onReady = ()=>{
 		$mobileMenu = new MobileMenu();
 	}
 
-	$miniCart = new MiniCart();
+	// $miniCart = new MiniCart();
 
 	if (window.location.href.indexOf("cart=true") > -1) {
 		$miniCart.open();

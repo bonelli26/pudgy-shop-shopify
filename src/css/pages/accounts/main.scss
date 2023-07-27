@@ -7,7 +7,7 @@
     }
     .xQ4 {
         div { // text
-            font-family: $neueReg;
+
             font-size: 18px;
             line-height: 1.3;
             text-align: center;
@@ -17,7 +17,7 @@
     /* Anchor Tags */
     a {
         display: block;
-        font-family: $neueReg;
+
         font-size: 18px;
         line-height: 1.3;
         text-align: center;
@@ -28,7 +28,7 @@
     h2 {
         @include get-vw(font-size, 80px, 80px);
         line-height: 0.9 !important;
-        font-family: $neueMed !important;
+
         color: #D9E6FB !important;
         text-transform: uppercase;
         @include get-vw(font-size, 30px, 24px);
@@ -56,13 +56,13 @@
         text-align: center;
         margin-bottom: 0;
         h2 {
-            font-family: $neueMed;
+            font-family: $ttBlack;
             font-size: 30px;
         }
     }
     /* Ski Pin Code */
     .zDA { // copy
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 18px;
         line-height: 1.3;
         text-align: center;
@@ -96,7 +96,7 @@
             margin-top: 30px !important;
             * {
                 color: #1B3766 !important;
-                font-family: $neueReg !important;
+                font-family: $ttBlack !important;
                 text-align: left !important;
             }
             [data-testid="chip"] * {
@@ -113,7 +113,7 @@
     /* Inputs Field */
 
     // input {
-    //     font-family: $neueMed !important;
+    //     font-family: $ttBlack !important;
     //     padding: 0 24px !important;
     //     font-size: 16px;
     //     height: 64px;
@@ -134,7 +134,7 @@
     //         color: #585689;
     //     }
     //     &::placeholder {
-    //         font-family: $neueReg;
+    //         font-family: $ttBlack;
     //         font-size: 16px;
     //         line-height: 1.3;
     //         color: #585689;
@@ -163,7 +163,7 @@
         cursor: pointer !important;
         padding: 4px 22px 0 !important;
         color: blue !important;
-        font-family: $neueMed !important;
+        font-family: $ttBlack !important;
         letter-spacing: 1px !important;
         text-transform: uppercase !important;
         align-items: center !important;
@@ -184,7 +184,7 @@
         max-width: 320px !important;
     }
     .yTZ {
-        font-family: $neueReg;
+        font-family: $ttBlack;
     }
     .fZz {
         padding: 24px;
@@ -205,7 +205,7 @@
         text-align: center;
         @include get-vw(font-size, 32px, 24px);
         line-height: 1.09;
-        font-family: $neueMed;
+        font-family: $ttBlack;
         color: #000000;
         text-transform: uppercase;
         margin-bottom: 24px;
@@ -213,7 +213,7 @@
 
     button:not(.recover):not(#hide-forgot-password) {
         order: 1;
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 14px;
         line-height: 1.21;
         text-align: center;
@@ -245,11 +245,11 @@
         text-transform: uppercase;
         color: #000000;
         order: 2;
-        font-family: $neueReg;
+        font-family: $ttBlack;
     }
 
     p {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 17px;
         line-height: 1.5;
         color: #000000;
@@ -270,7 +270,7 @@
         color: #000000;
         &::placeholder {
             color: #BDBDBD;
-            font-family: $neueReg;
+            font-family: $ttBlack;
             font-size: 14px;
             line-height: 1.21;
             text-transform: uppercase;
@@ -541,7 +541,7 @@ LOGGED IN STYLES
     height: fit-content;
 
     h1 {
-        font-family: $neueMed;
+        font-family: $ttBlack;
         @include get-vw(font-size, 80px, 65px);
         line-height: .9;
         color: #D9E6FB;
@@ -555,7 +555,7 @@ LOGGED IN STYLES
         text-decoration: underline;
         font-size: 18px;
         color: #D9E6FB;;
-        font-family: $neueReg;
+        font-family: $ttBlack;
         // width: 72px;
     }
 
@@ -610,7 +610,7 @@ LOGGED IN STYLES
     height: fit-content;
 
     a {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 16px;
         line-height: 1.5;
         color: rgba(252, 251, 244, 0.5);
@@ -641,7 +641,7 @@ LOGGED IN STYLES
     justify-content: center;
     background: #D9E6FB;
     border-radius: 10px;
-    font-family: $neueMed;
+    font-family: $ttBlack;
     font-size: 16px;
     line-height: 1;
     letter-spacing: 0.04em;
@@ -677,7 +677,7 @@ LOGGED IN STYLES
     }
 
     p, a {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 18px;
         line-height: 1.5;
         color: #D9E6FB;
@@ -705,7 +705,7 @@ LOGGED IN STYLES
         a {
             width: 50%;
             text-align: right;
-            font-family: $neueReg;
+            font-family: $ttBlack;
             font-size: 18px;
             line-height: 1.5;
             text-decoration-line: underline;
@@ -793,7 +793,7 @@ LOGGED IN STYLES
 //        text-align: left;
 //
 //        th {
-//            font-family: $neueMed;
+//            font-family: $ttBlack;
 //            @include get-vw(font-size, 15px, 14px);
 //            line-height: 1.2;
 //            text-transform: uppercase;
@@ -818,7 +818,7 @@ LOGGED IN STYLES
 //
 //        td {
 //            padding: 20px 0;
-//            font-family: $neueReg;
+//            font-family: $ttBlack;
 //            @include get-vw(font-size, 18px, 16px);
 //            line-height: 1.5;
 //            color: #D9E6FB;
@@ -890,7 +890,7 @@ LOGGED IN STYLES
     align-items: center;
 
     h1 {
-        font-family: $neueMed;
+        font-family: $ttBlack;
         font-size: 32px;
         line-height: 1.09;
         color: #000000;
@@ -899,7 +899,7 @@ LOGGED IN STYLES
         margin-bottom: 18px;
     }
     h2 {
-        font-family: $neueMed;
+        font-family: $ttBlack;
         font-size: 24px;
         line-height: 1.04;
         text-transform: uppercase;
@@ -907,7 +907,7 @@ LOGGED IN STYLES
         margin-bottom: 15px;
     }
     a {
-        font-family: $neueMed;
+        font-family: $ttBlack;
         font-size: 16px;
         line-height: 1.38;
         display: flex;
@@ -918,7 +918,7 @@ LOGGED IN STYLES
         color: #000000;
     }
     p {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 14px;
         line-height: 1.57;
         text-transform: uppercase;
@@ -973,7 +973,7 @@ LOGGED IN STYLES
             }
         }
         label {
-            font-family: $neueReg;
+            font-family: $ttBlack;
             font-size: 14px;
             line-height: 1.57;
             text-transform: uppercase;
@@ -986,7 +986,7 @@ LOGGED IN STYLES
         flex-direction: column;
         margin-bottom: 14px;
         label {
-            font-family: $neueReg;
+            font-family: $ttBlack;
             font-size: 14px;
             line-height: 1.57;
             text-transform: uppercase;
@@ -1018,7 +1018,7 @@ LOGGED IN STYLES
             color: #000000;
             &::placeholder {
                 color: #BDBDBD;
-                font-family: $neueReg;
+                font-family: $ttBlack;
                 font-size: 14px;
                 line-height: 1.21;
                 text-transform: uppercase;
@@ -1074,7 +1074,7 @@ LOGGED IN STYLES
         p {
             color: #000000;
             font-size: 14px;
-            font-family: $neueReg;
+            font-family: $ttBlack;
             line-height: 1.2 !important;
             text-transform: uppercase;
         }
@@ -1088,14 +1088,14 @@ LOGGED IN STYLES
     .bottom {
         color: #4F4F4F;
         font-size: 14px;
-        font-family: $neueReg;
+        font-family: $ttBlack;
         line-height: 1.2;
         text-transform: uppercase;
     }
     .order-right {
         color: #000000;
         font-size: 14px;
-        font-family: $neueReg;
+        font-family: $ttBlack;
         line-height: 1.2;
         text-transform: uppercase;
     }
@@ -1126,7 +1126,7 @@ LOGGED IN STYLES
 		padding: 16px;
 		margin-bottom: 8px;
 		transition: all .3s $ease-in-out-sine;
-		font-family: $neueReg;
+		font-family: $ttBlack;
 		font-size: 14px;
 		line-height: 1.21;
     }
@@ -1134,7 +1134,7 @@ LOGGED IN STYLES
     h1 {
         text-align: center;
         line-height: 1.09;
-        font-family: $neueMed;
+        font-family: $ttBlack;
         color: #000000;
         text-transform: uppercase;
         margin-bottom: 18px;
@@ -1144,7 +1144,7 @@ LOGGED IN STYLES
         width: 100%;
         text-align: center;
         line-height: 1.04;
-        font-family: $neueMed;
+        font-family: $ttBlack;
         color: #000000;
         text-transform: uppercase;
         margin-bottom: 16px;
@@ -1153,7 +1153,7 @@ LOGGED IN STYLES
     p {
         color: var(--gray-3, #828282);
         font-size: 14px;
-        font-family: $neueReg;
+        font-family: $ttBlack;
         line-height: 2;
         text-transform: uppercase;
     }
@@ -1162,7 +1162,7 @@ LOGGED IN STYLES
         align-items: center;
         gap: 8px;
         p {
-            font-family: $neueMed;
+            font-family: $ttBlack;
             font-size: 16px;
             line-height: 1.38;
             letter-spacing: -0.03em;
@@ -1192,7 +1192,7 @@ LOGGED IN STYLES
         display: none;
     }
     .form__message, .errors-list {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 12px;
         color: #000000;
     }
@@ -1203,7 +1203,7 @@ LOGGED IN STYLES
         text-transform: uppercase;
         color: #000000;
         order: 2;
-        font-family: $neueReg;
+        font-family: $ttBlack;
     }
     @include bp-767 {
         padding: 94px 16px 80px;
@@ -1233,7 +1233,7 @@ LOGGED IN STYLES
         p {
             color: var(--gray-3, #828282);
             font-size: 14px;
-            font-family: $neueReg;
+            font-family: $ttBlack;
             line-height: 2;
             text-transform: uppercase;
         }
@@ -1269,7 +1269,7 @@ LOGGED IN STYLES
     }
 }
 .product-title {
-    font-family: $neueReg;
+    font-family: $ttBlack;
     font-size: 14px;
     line-height: 1.21;
     text-transform: uppercase;
@@ -1281,7 +1281,7 @@ LOGGED IN STYLES
     flex-direction: column;
 }
 .product-price {
-    font-family: $neueReg;
+    font-family: $ttBlack;
     font-size: 14px;
     line-height: 1.21;
     text-transform: uppercase;
@@ -1290,7 +1290,7 @@ LOGGED IN STYLES
 }
 .properties {
     span {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 14px;
         line-height: 1.21;
         text-transform: uppercase;
@@ -1319,7 +1319,7 @@ LOGGED IN STYLES
         transition: .2s all $ease-in-out-sine;
     }
     p {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 14px;
         line-height: 1.21;
         text-transform: uppercase;
@@ -1350,7 +1350,7 @@ LOGGED IN STYLES
     height: 90px;
 }
 .order-none {
-    font-family: $neueReg;
+    font-family: $ttBlack;
     font-size: 14px;
     line-height: 1.21;
     text-transform: uppercase;
@@ -1374,7 +1374,7 @@ LOGGED IN STYLES
     }
     .right {
         p {
-            font-family: $neueReg;
+            font-family: $ttBlack;
             font-size: 14px;
             line-height: 1.57;
             text-transform: uppercase;
@@ -1383,7 +1383,7 @@ LOGGED IN STYLES
     }
     .account-addresses {
         margin-top: 8px;
-        font-family: $neueReg;
+        font-family: $ttBlack;
         font-size: 14px;
         line-height: 1.38;
         letter-spacing: -0.03em;
@@ -1417,14 +1417,14 @@ LOGGED IN STYLES
         display: none;
     }
     h1 {
-        font-family: $neueMed;
+        font-family: $ttBlack;
         @include get-vw(font-size, 80px, 65px);
         line-height: .9;
         color: #D9E6FB;
     }
 
     h2 {
-        font-family: $neueMed;
+        font-family: $ttBlack;
         font-size: 40px;
         line-height: .9;
         color: #D9E6FB;
@@ -1447,7 +1447,7 @@ LOGGED IN STYLES
 }
 
  .error-message, .form__message, .errors {
-    font-family: $neueReg !important;
+    font-family: $ttBlack !important;
     font-size: 14px !important;
     line-height: 1.25 !important;
     color: #EB5757 !important;
@@ -1455,7 +1455,7 @@ LOGGED IN STYLES
      justify-content: center;
     * {
 
-        font-family: $neueReg !important;
+        font-family: $ttBlack !important;
         font-size: 14px !important;
         line-height: 1.25 !important;
         color: #EB5757 !important;
@@ -1483,7 +1483,7 @@ LOGGED IN STYLES
     }
 
     li {
-        font-family: $neueReg;
+        font-family: $ttBlack;
         @include get-vw(font-size, 22px, 20px);
         line-height: 1.2;
         color: #D9E6FB;

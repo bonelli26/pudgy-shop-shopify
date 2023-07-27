@@ -42,60 +42,10 @@
       "settings": {
         "heading": "you may also like"
       }
-    },
-    "double-marquee": {
-      "type": "double-marquee",
-      "blocks": {
-        "547381e9-6b37-4589-bda4-10728606ae5a": {
-          "type": "marquee_right",
-          "settings": {
-            "marquee_text": "@igloo"
-          }
-        },
-        "043ac29e-7b17-4147-a441-cace7b0bf205": {
-          "type": "marquee_left",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/igloo-shoot.png"
-          }
-        },
-        "9b1b1146-b460-4c9a-be63-6883059fa54b": {
-          "type": "marquee_left",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/336323478_768477154466941_2346580804777076853_n.jpg"
-          }
-        },
-        "cfb5a1da-2463-4629-a0f0-8edb666cc4fb": {
-          "type": "marquee_left",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/342868521_835801164766121_3518724675550916593_n.jpg"
-          }
-        },
-        "b62359b8-36d6-48bd-ac14-e07a47524985": {
-          "type": "marquee_left",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/345892337_628009422509604_3262896961825045631_n_09400340-9331-473c-9711-fbb2580cfda1.jpg"
-          }
-        }
-      },
-      "block_order": [
-        "547381e9-6b37-4589-bda4-10728606ae5a",
-        "043ac29e-7b17-4147-a441-cace7b0bf205",
-        "9b1b1146-b460-4c9a-be63-6883059fa54b",
-        "cfb5a1da-2463-4629-a0f0-8edb666cc4fb",
-        "b62359b8-36d6-48bd-ac14-e07a47524985"
-      ],
-      "settings": {
-        "right_marquee_duration": "25",
-        "right_marquee_duration_mob": "15",
-        "left_marquee_duration": "25",
-        "left_marquee_duration_mob": "15",
-        "marquee_url": "https:\/\/www.instagram.com\/igloo\/?hl=en"
-      }
     }
   },
   "order": [
     "pdp-hero",
-    "pdp-recirc",
-    "double-marquee"
+    "pdp-recirc"
   ]
 }
