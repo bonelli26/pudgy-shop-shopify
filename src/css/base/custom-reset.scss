@@ -1,0 +1,113 @@
+/*
+	CUSTOM RESET
+
+	- Global reset styles
+-------------------------------------------------- */
+a {
+	text-decoration: none;
+	color: inherit;
+
+	&:focus,
+	&:active {
+		outline: 0 none;
+	}
+}
+
+button {
+	-webkit-appearance: none;
+    border: none;
+	color: inherit;
+    background: none;
+	cursor: pointer;
+	padding: 0;
+}
+
+p {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	font-weight: normal;
+	margin: 0;
+	padding: 0;
+}
+
+input,
+select {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+	border-radius: 0;
+	box-shadow: none;
+}
+
+img {
+	object-fit: cover;
+}
+
+/* Customized Selections - Change color to match design */
+::-moz-selection {
+	background: $black;
+	text-shadow: none;
+	color: $white;
+}
+
+::selection {
+	background: $black;
+	text-shadow: none;
+	color: $white;
+}
+
+::selection a {
+	color: $white;
+}
+
+::-moz-selection a {
+	color: $white;
+}
+
+/* Customized Placeholders - Change color to match design */
+::-webkit-input-placeholder {
+	// color: $black;
+	opacity: 1;
+}
+
+::-moz-placeholder {
+	color: $black;
+	opacity: 1;
+}
+
+:-moz-placeholder {
+	color: $black;
+	opacity: 1;
+}
+
+:-ms-input-placeholder {
+	// color: $black;
+	opacity: 1;
+}
+
+.flex {
+	display: flex;
+}
+
+/* Hide from both screenreaders and browsers: h5bp.com/u */
+.hidden {
+	display: none !important;
+	visibility: hidden;
+}
+
+/* Skip to content */
+#skip-to-content {
+	position: fixed;
+	top: 127px;
+	left: 0;
+	transform: translateX(-100%);
+}

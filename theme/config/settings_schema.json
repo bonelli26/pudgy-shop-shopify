@@ -1,0 +1,396 @@
+[
+  {
+    "name": "theme_info",
+    "theme_name": "Igloo custom theme",
+    "theme_version": "1.0",
+    "theme_author": "Josh Kirk",
+    "theme_documentation_url": "https:\/\/shopify.dev\/themes\/tools\/cli",
+    "theme_support_url": "https:\/\/support.shopify.com\/"
+  },
+  {
+    "name": "t:settings_schema.favicon.name",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "favicon",
+        "label": "t:settings_schema.favicon.settings.favicon.label",
+        "info": "t:settings_schema.favicon.settings.favicon.info"
+      }
+    ]
+  },
+  {
+    "name": "Social share image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Social share image"
+      }
+    ]
+  },
+  {
+    "name": "Nav Image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "nav_image",
+        "label": "Nav Image"
+      }
+    ]
+  },
+  {
+    "name": "PDP Icon Text",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "small_image_1",
+        "label": "Small Icon 1"
+      },
+      {
+        "type": "text",
+        "id": "text_1",
+        "label": "Text 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "small_image_2",
+        "label": "Small Icon 2"
+      },
+      {
+        "type": "text",
+        "id": "text_2",
+        "label": "Text 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "small_image_3",
+        "label": "Small Icon 3"
+      },
+      {
+        "type": "text",
+        "id": "text_3",
+        "label": "Text 3"
+      }
+    ]
+  },
+  {
+    "name": "Social Media Links",
+    "settings": [
+      {
+        "type": "text",
+        "id": "instagram_url",
+        "label": "Instagram"
+      },
+      {
+        "type": "text",
+        "id": "twitter_url",
+        "label": "Twitter"
+      },
+      {
+        "type": "text",
+        "id": "youtube_url",
+        "label": "Youtube"
+      },
+      {
+        "type": "text",
+        "id": "tiktok_url",
+        "label": "Tik Tok"
+      }
+    ]
+  },
+  {
+    "name": "Pencil Bar",
+    "settings": [
+      {
+        "type": "text",
+        "id": "pencil_bar_link",
+        "label": "Pencil Bar Link"
+      },
+      {
+        "type": "text",
+        "id": "pencil_bar_message",
+        "label": "Pencil Bar Message"
+      }
+    ]
+  },
+  {
+    "name": "Navigation Drawer Tile 1",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product_1_link",
+        "label": "Product"
+      },
+      {
+        "type": "image_picker",
+        "id": "drawer_image_1",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "drawer_image_1_hover",
+        "label": "Secondary Image (on hover)"
+      },
+      {
+        "type": "richtext",
+        "id": "drawer_title_1",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "drawer_subtitle_1",
+        "label": "Subtitle"
+      }
+    ]
+  },
+  {
+    "name": "Navigation Drawer Tile 2",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product_2_link",
+        "label": "Product"
+      },
+      {
+        "type": "image_picker",
+        "id": "drawer_image_2",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "drawer_image_2_hover",
+        "label": "Secondary Image (on hover)"
+      },
+      {
+        "type": "richtext",
+        "id": "drawer_title_2",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "drawer_subtitle_2",
+        "label": "Subtitle"
+      }
+    ]
+  },
+  {
+    "name": "Navigation Drawer Tile 3",
+    "settings": [
+      {
+        "type": "product",
+        "id": "product_3_link",
+        "label": "Product"
+      },
+      {
+        "type": "image_picker",
+        "id": "drawer_image_3",
+        "label": "Image"
+      },
+      {
+        "type": "image_picker",
+        "id": "drawer_image_3_hover",
+        "label": "Secondary Image (on hover)"
+      },
+      {
+        "type": "richtext",
+        "id": "drawer_title_3",
+        "label": "Title"
+      },
+      {
+        "type": "text",
+        "id": "drawer_subtitle_3",
+        "label": "Subtitle"
+      }
+    ]
+  },
+  {
+    "name": "Instagram",
+    "settings": [
+      {
+        "id": "instagram_header",
+        "type": "richtext",
+        "label": "Header"
+      },
+      {
+        "id": "instagram_button_text",
+        "type": "text",
+        "label": "Button text"
+      },
+      {
+        "id": "instagram_button_link",
+        "type": "text",
+        "label": "Button Link"
+      },
+      {
+        "id": "instagram_image_one",
+        "type": "image_picker",
+        "label": "Image 1"
+      },
+      {
+        "id": "instagram_image_two",
+        "type": "image_picker",
+        "label": "Image 2"
+      },
+      {
+        "id": "instagram_image_three",
+        "type": "image_picker",
+        "label": "Image 3"
+      },
+      {
+        "id": "instagram_image_four",
+        "type": "image_picker",
+        "label": "Image 4"
+      },
+      {
+        "id": "instagram_image_five",
+        "type": "image_picker",
+        "label": "Image 5"
+      }
+    ]
+  },
+  {
+    "name": "Footer Content",
+    "settings": [
+      {
+        "id": "box_image_1",
+        "type": "image_picker",
+        "label": "Box Image 1"
+      },
+      {
+        "id": "box_text_1",
+        "type": "text",
+        "label": "Box Text 1"
+      },
+      {
+        "id": "box_image_2",
+        "type": "image_picker",
+        "label": "Box Image 2"
+      },
+      {
+        "id": "box_text_2",
+        "type": "text",
+        "label": "Box Text 2"
+      },
+      {
+        "id": "box_image_3",
+        "type": "image_picker",
+        "label": "Box Image 3"
+      },
+      {
+        "id": "box_text_3",
+        "type": "text",
+        "label": "Box Text 3"
+      },
+      {
+        "id": "box_image_4",
+        "type": "image_picker",
+        "label": "Box Image 4"
+      },
+      {
+        "id": "box_text_4",
+        "type": "text",
+        "label": "Box Text 4"
+      },
+      {
+        "type": "text",
+        "id": "disclaimer",
+        "label": "Disclaimer"
+      },
+      {
+        "type": "text",
+        "id": "copyright",
+        "label": "Copyright"
+      },
+      {
+        "type": "text",
+        "id": "credits",
+        "label": "Credits Link"
+      }
+    ]
+  },
+  {
+    "name": "Email CTA (Footer)",
+    "settings": [
+      {
+        "type": "text",
+        "id": "email_cta_header",
+        "label": "Email CTA Header"
+      },
+      {
+        "type": "text",
+        "id": "email_cta_copy",
+        "label": "Email CTA Copy"
+      },
+      {
+        "type": "text",
+        "id": "email_cta_button_text",
+        "label": "Email CTA Button Text"
+      },
+      {
+        "type": "text",
+        "id": "email_cta_button_link",
+        "label": "Email CTA Button Link"
+      }
+    ]
+  },
+  {
+    "name": "Klaviyo modal",
+    "settings": [
+      {
+        "id": "modal_header",
+        "type": "text",
+        "label": "Header"
+      },
+      {
+        "id": "modal_copy",
+        "type": "text",
+        "label": "copy"
+      },
+      {
+        "id": "modal_success_message",
+        "type": "text",
+        "label": "Success message"
+      },
+      {
+        "id": "list_id",
+        "type": "text",
+        "label": "Klaviyo list ID"
+      },
+      {
+        "id": "modal_image",
+        "type": "image_picker",
+        "label": "Modal image"
+      }
+    ]
+  },
+  {
+    "name": "Mini Cart Subscription",
+    "settings": [
+      {
+        "type": "text",
+        "id": "subscription_header",
+        "label": "Subscription Header"
+      },
+      {
+        "type": "text",
+        "id": "copy_1",
+        "label": "Copy 1"
+      },
+      {
+        "type": "text",
+        "id": "copy_2",
+        "label": "Copy 2"
+      },
+      {
+        "type": "text",
+        "id": "copy_3",
+        "label": "Copy 3"
+      },
+      {
+        "type": "text",
+        "id": "subscription_button",
+        "label": "Button"
+      }
+    ]
+  }
+]

@@ -1,0 +1,52 @@
+
+    <h1 class="form-content form-fade-el">{{ section.settings.header }}</h1>
+    <p class="form-content form-fade-el">{{ section.settings.copy }}</p>
+    <div class="bottom">
+        <p class="success-message">{{ settings.contact_form_success }}</p>
+        <form>
+            <div class="form-content form-fade-el">
+                <input required type="text" id="name" name="name" placeholder="Name">
+                <input required type="email" name="email" placeholder="Email" id="email">
+                <input required type="text" name="subject" placeholder="Subject" id="subject">
+                <textarea required name="message" id="message" placeholder="Message"></textarea>
+                <button class="btn black" type="submit" value="Submit">Submit</button>
+            </div>
+            <div class="success-content">
+                <p>{{ section.settings.success_header }}</p>
+                <p>{{ section.settings.success_copy }}</p>
+                <a href="/" class="btn black">Back to Home</a>
+            </div>
+        </form>
+    </div>
+
+
+
+{% schema %}
+{
+    "name": "Contact",
+    "tag": "section",
+    "class": "contact c-24",
+    "settings": [
+        {
+        "type": "text",
+        "id": "header",
+        "label": "Header"
+        },
+        {
+        "type": "text",
+        "id": "copy",
+        "label": "Copy"
+        },
+        {
+        "type": "text",
+        "id": "success_header",
+        "label": "Success header"
+        },
+        {
+        "type": "text",
+        "id": "success_copy",
+        "label": "Success copy"
+        }
+    ]
+}
+{% endschema %}

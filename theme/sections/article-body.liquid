@@ -1,0 +1,32 @@
+<div class="top c-230">
+    <div class="img-wrapper article-featured-image">
+        {% assign splitExcerpt = article.excerpt | split: " /// " %}
+        {% assign actualExcerpt = splitExcerpt[0] %}
+        {% assign heroBase64 = splitExcerpt[1] %}
+        <img class="preload-critical"{% if article.image.alt %} alt="{{ blog.image.alt }}"{% endif %}
+        src="{{ heroBase64 }}"
+        data-preload-desktop="https:{{ article.image | image_url }}"
+        data-preload-mobile="https:{{ article.image | image_url }}">
+    </div>
+</div>
+<div class="c-536 inner">
+    <div class="blog-title pill">{{ article.tags }}</div>
+    <h1 class="article-header">{{ article.title }}</h1>
+    <div class="article-content">
+        {{ article.content }}
+    </div>
+    <div class="article-info">
+        <img class="preload" src="https://cdn.shopify.com/s/files/1/0377/9883/8316/files/Ellipse_2.png?v=1681238456">
+        <div class="right">
+            <div class="article-author">Sleep Doctor</div>
+            <div class="article-date">{{ article.updated_at |  date: '%B %d, %Y' }}</div>
+        </div>
+    </div>
+</div>
+{% schema %}
+{
+"name": "Article Body",
+"tag": "section",
+"class": "article-body"
+}
+{% endschema %}

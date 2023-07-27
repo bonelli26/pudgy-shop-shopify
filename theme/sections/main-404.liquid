@@ -1,0 +1,40 @@
+<div class="template-404">
+  <p>{{ section.settings.eyebrow }}</p>
+  <h1>{{ section.settings.header }}</h1>
+  <span>{{ section.settings.text }}</span>
+  <a href="{{ section.settings.button_url }}" class="">{{ section.settings.button_text }}</a>
+</div>
+
+{% schema %}
+  {
+    "name": "Main 404",
+    "tag": "section",
+    "settings": [
+          {
+            "id": "eyebrow",
+            "type": "text",
+            "label": "Eyebrow"
+          },
+          {
+            "id": "header",
+            "type": "text",
+            "label": "Header"
+          },
+          {
+            "id": "text",
+            "type": "text",
+            "label": "Text"
+          },
+          {
+            "id": "button_url",
+            "type": "text",
+            "label": "Button URL"
+          },
+          {
+            "id": "button_text",
+            "type": "text",
+            "label": "Button text"
+          }
+      ]
+  }
+{% endschema %}

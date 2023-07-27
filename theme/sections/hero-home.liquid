@@ -1,0 +1,48 @@
+<div class="bg">
+    {% if section.settings.video_url  %}
+        <video preload muted loop playsinline class="preload-critical bg auto" data-preload-desktop="{{ section.settings.video_url }}" data-preload-mobile="{{ section.settings.video_url_mobile }}"></video>
+    {% else %}
+        <img class="preload-critical bg"{% if section.settings.hero_image.alt %} alt="{{ section.settings.hero_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_image | image_url }}" data-preload-mobile="https:{{ section.settings.hero_image_mobile | image_url }}">
+    {% endif %}
+</div>
+{% if section.settings.hero_copyy %}
+    <div class="c-24">
+        <div class="text-wrapper">{{ section.settings.hero_copyy }}</div>
+    </div>
+{% endif %}
+
+
+{% schema %}
+    {
+        "name": "Hero Section",
+        "tag": "section",
+        "class": "hero-section mw",
+        "settings": [
+            {
+              "id": "hero_image",
+              "type": "image_picker",
+              "label": "Hero Image"
+            },
+            {
+              "id": "hero_image_mobile",
+             "type": "image_picker",
+             "label": "Hero Image Mobile"
+             },
+             {
+             "type": "url",
+             "id": "video_url",
+             "label": "Video URL"
+             },
+             {
+             "type": "url",
+             "id": "video_url_mobile",
+             "label": "Video URL Mobile"
+             },
+          {
+            "type": "richtext",
+            "id": "hero_copyy",
+            "label": "Hero Copy"
+          }
+        ]
+    }
+{% endschema %}

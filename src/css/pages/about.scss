@@ -1,0 +1,143 @@
+.about-main {
+	@include get-vw(padding-top, 93px, 86px);
+	@include get-vw(padding-bottom, 24px, 24px);
+	display: flex;
+	flex-direction: column;
+	gap: 8px;
+	.top, .bottom {
+		align-items: stretch;
+		gap: 8px;
+		max-width: unset;
+	}
+	.top-left {
+		//@include get-vw(min-width, 751px, 343px);
+		width: 55vw;
+		display: flex;
+		position: relative;
+		justify-content: center;
+		align-items: center;
+	}
+	.logo {
+		position: absolute;
+		@include get-vw(width, 518px, 264px);
+		display: flex;
+		@include get-vw(height, 155px, 78px);
+	}
+	.img-wrapper {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		width: 100%;
+		height: 100%;
+		row-gap: 8px;
+		overflow: hidden;
+		img {
+			width: calc(33.33% - 4px);
+			aspect-ratio: 1/1;
+			display: flex;
+			//@include get-vw(height, 245px, 109px);
+			min-height: 14.12vw;
+
+		}
+	}
+	.top-right {
+		//@include get-vw(width, 633px, 343px);
+		width: 43vw;
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		justify-content: center;
+		align-items: flex-start;
+		background: #F2F2F2;
+		@include get-vw(padding-left, 48px, 16px);
+		@include get-vw(padding-right, 70px, 16px);
+	}
+	h1, h2 {
+		font-family: $neueMed;
+		@include get-vw(font-size, 48px, 24px);
+		line-height: 1;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		color: #000000;
+		@include get-vw(margin-bottom, 32px, 24px);
+		width: 60%;
+	}
+	p {
+		font-family: $neueMed;
+		@include get-vw(font-size, 16px, 14px);
+		line-height: 1;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		color: #000000;
+	}
+
+	.bottom-left {
+		width: 25vw;
+		min-width: 25vw;
+		min-height: 100%;
+		display: flex;
+		flex-direction: column;
+		position: relative;
+		justify-content: center;
+		align-items: flex-start;
+		background: #F2F2F2;
+		@include get-vw(padding-left, 48px, 16px);
+		@include get-vw(padding-right, 48px, 16px);
+	}
+	.bottom-right {
+		display: flex;
+		width: 100%;
+		//@include get-vw(min-width, 952px, 343px);
+		min-width: 55vw;
+		min-height: 180px;
+		img {
+			display: flex;
+			width: 100%;
+			min-height: 100%;
+			aspect-ratio: 2/1;
+
+		}
+	}
+
+	@include bp-959 {
+		.bottom-right {
+			min-width: unset;
+		}
+		.bottom-left {
+			padding: 24px 16px;
+		}
+		p {
+			font-family: $neueReg;
+			line-height: 1.21;
+		}
+	}
+
+	@include bp-767 {
+		gap: 14px;
+		.top, .bottom {
+			gap: 14px;
+		}
+		h1, h2 {
+			width: 100%;
+		}
+		.top {
+			flex-direction: column;
+		}
+		.bottom {
+			flex-direction: column-reverse;
+		}
+		.bottom-right {
+			img {
+				min-height: 48vw;
+			}
+		}
+		.top-left, .top-right, .bottom-left, .bottom-right {
+			min-width: 100%;
+			width: 100%;
+		}
+		.top-right {
+			padding: 24px 16px;
+		}
+	}
+}

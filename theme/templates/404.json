@@ -1,0 +1,17 @@
+{
+  "sections": {
+    "main": {
+      "type": "main-404",
+      "settings": {
+        "eyebrow": "error 404",
+        "header": "oh no! you may have gotten lost.",
+        "text": "this page does not exist.",
+        "button_url": "\/",
+        "button_text": "back to safety"
+      }
+    }
+  },
+  "order": [
+    "main"
+  ]
+}

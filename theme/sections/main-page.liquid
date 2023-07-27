@@ -1,0 +1,17 @@
+<section class="c-24 utility-page">
+  <h1 class="header">
+    {{ page.title | escape }}
+  </h1>
+  <div class="body">
+    {{ page.content }}
+  </div>
+</section>
+
+
+{% schema %}
+{
+  "name": "t:sections.main-page.name",
+  "tag": "section",
+  "class": "spaced-section"
+}
+{% endschema %}

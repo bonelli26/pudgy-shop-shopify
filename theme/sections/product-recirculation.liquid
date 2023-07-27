@@ -1,0 +1,53 @@
+ <h2>{{ section.settings.heading }}</h2>
+    <div class="inner">
+        {% for block in section.blocks %}
+            {% case block.type %}
+                {% when 'product-card' %}
+                    {% assign thisProduct = block.settings.product %}
+                    <a href="/products/{{ thisProduct.handle }}" class="product-tile ">
+                        <div class="img-wrapper">
+                            <img class="preload bg"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
+                            <img class="preload bg"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}">
+                        </div>
+                        <p class="item-name">{{ thisProduct.title }}</p>
+                        <span class="item-price">
+                            {{ thisProduct.price | money }}
+                            <p class="compare-at-price{% if thisProduct.compare_at_price %} visible{% endif %}">{% if thisProduct.compare_at_price %}{{ thisProduct.compare_at_price | money }}{% endif %}</p>
+                        </span>
+                    </a>
+            {% endcase %}
+        {% endfor %}
+    </div>
+
+
+
+
+
+{% schema %}
+    {
+        "name": "Product Recirculation",
+        "tag": "section",
+        "class": "product-recirculation c-24 mw",
+        "settings": [
+            {
+                "id": "heading",
+                "type": "text",
+                "label": "Heading"
+            }
+        ],
+        "blocks": [
+          {
+            "name": "Products Card",
+            "type": "product-card",
+            "limit": 4,
+            "settings": [
+              {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+              }
+            ]
+          }
+        ]
+    }
+{% endschema %}

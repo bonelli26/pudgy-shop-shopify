@@ -1,0 +1,133 @@
+@use "sass:math";
+/* ------------------------------------------------------------------ */
+/*      MIXINS
+
+        - Global mixins used across the site
+/* ------------------------------------------------------------------ */
+/* ----- MEDIA QUERIES ----- */
+@mixin bp-320 {
+	@media screen and (max-width: 320px) {
+		@content;
+	}
+}
+@mixin bp-370 {
+	@media screen and (max-width: 370px) {
+		@content;
+	}
+}
+@mixin bp-767 {
+	@media screen and (max-width: 767px) {
+		@content;
+	}
+}
+@mixin bp-959 {
+	@media screen and (max-width: 959px) {
+		@content;
+	}
+}
+@mixin bp-1024 {
+	@media screen and (max-width: 1024px) {
+		@content;
+	}
+}
+@mixin bp-1100 {
+	@media screen and (max-width: 1100px) {
+		@content;
+	}
+}
+@mixin bp-1140 {
+	@media screen and (max-width: 1140px) {
+		@content;
+	}
+}
+@mixin bp-1200 {
+	@media screen and (max-width: 1200px) {
+		@content;
+	}
+}
+@mixin bp-1300 {
+	@media screen and (max-width: 1300px) {
+		@content;
+	}
+}
+@mixin bp-1440 {
+	@media screen and (max-width: 1440px) {
+		@content;
+	}
+}
+@mixin bp-1680 {
+	@media screen and (max-width: 1680px) {
+		@content;
+	}
+}
+@mixin bp-1920 {
+	@media screen and (max-width: 1920px) {
+		@content;
+	}
+}
+
+@mixin bp-min-1440 {
+	@media screen and (min-width: 1441px) {
+		@content;
+	}
+}
+
+@mixin bp-min-1920 {
+	@media screen and (min-width: 1921px) {
+		@content;
+	}
+}
+@function get-vw($target) {
+	$vw-context: (1440 * 0.01) * 1px;
+	@return ($target / $vw-context) * 1vw;
+}
+
+/* ----- SIZE and auto Generate breakpoint for mobile size ----- */
+@mixin get-vw($property, $desktop-size, $mobile-size: false) {
+	// Viewport width of design
+	$reference-width: 1728;
+
+	//Desktop size
+	$vw-context: $reference-width * 0.01 * 1px;
+	#{$property}: math.div($desktop-size, $vw-context) * 1vw;
+
+	$minBp: ($reference-width * 1.1px);
+	@media screen and (min-width: $minBp) {
+		#{$property}: (strip-unit($desktop-size) * 1.1px);
+	}
+
+	// Mobile size
+	@if $mobile-size {
+		$bp: math.div($reference-width * strip-unit($mobile-size), strip-unit($desktop-size)) * 1px;
+
+		@media screen and (max-width: $bp) {
+			#{$property}: $mobile-size;
+		}
+	}
+}
+
+@function strip-unit($number) {
+	@if type-of($number) == "number" and not unitless($number) {
+		@return math.div($number, $number * 0 + 1);
+	}
+
+	@return $number;
+}
+
+@mixin get-vw-no-max($property, $desktop-size, $mobile-size: false) {
+	// Viewport width of design
+	$reference-width: 1438;
+
+	//Desktop size
+	$vw-context: $reference-width * 0.01 * 1px;
+	#{$property}: math.div($desktop-size, $vw-context) * 1vw;
+
+	// Mobile size
+	@if $mobile-size {
+		$bp: math.div($reference-width * strip-unit($mobile-size), strip-unit($desktop-size)) * 1px;
+
+		@media screen and (max-width: $bp) {
+			#{$property}: $mobile-size;
+		}
+	}
+}

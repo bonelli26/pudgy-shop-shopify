@@ -1,0 +1,114 @@
+{
+  "sections": {
+    "about-main": {
+      "type": "about-main",
+      "blocks": {
+        "e5b22af8-f122-4f0a-b9d2-642dbe27422b": {
+          "type": "top_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/327818679_244303421470895_7358423465812952045_n_fd50f7a0-78b7-4794-addc-2b6214a68366.jpg"
+          }
+        },
+        "8fecbb19-47af-4666-a664-5fb46abee7cf": {
+          "type": "top_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/342868521_835801164766121_3518724675550916593_n_d7da8f90-9892-4326-b55d-eb0b0d2b5d44.jpg"
+          }
+        },
+        "a6214b36-5c89-42d5-a5d6-e0aea5ea11a1": {
+          "type": "top_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IGLOO-4_b3be4f76-248c-4815-9af2-4dc4536b93c8.png"
+          }
+        },
+        "1e929cc7-56bb-4982-909e-09c954744fb4": {
+          "type": "top_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/IGLOO-3_13f7976e-80c5-4cdf-a3eb-7897636ec921.png"
+          }
+        },
+        "ffe69054-4d32-48ed-abdb-7a4f51e325b8": {
+          "type": "top_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/352141665_1419606112194542_619424486982771097_n.jpg"
+          }
+        },
+        "37f8e94a-467b-4123-9e89-045e9b2e6dcc": {
+          "type": "top_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/327040026_919436175684191_3529527116751965075_n.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e5b22af8-f122-4f0a-b9d2-642dbe27422b",
+        "8fecbb19-47af-4666-a664-5fb46abee7cf",
+        "a6214b36-5c89-42d5-a5d6-e0aea5ea11a1",
+        "1e929cc7-56bb-4982-909e-09c954744fb4",
+        "ffe69054-4d32-48ed-abdb-7a4f51e325b8",
+        "37f8e94a-467b-4123-9e89-045e9b2e6dcc"
+      ],
+      "settings": {
+        "top_header": "iglooed  together",
+        "top_copy": "We’re excited to have you join our community, the Igloo. Igloo is designed in Miami and developed in Los Angeles. We produce comfortable, fashion-forward pieces perfect for everyday wear. Igloo is designed with the intent to promote vibrant and genuine connections with others.",
+        "logo": "shopify:\/\/shop_images\/IGLOO_METAL_v2_1.png",
+        "bottom_header": "nice as a way of life",
+        "bottom_copy": "We want to encourage individuals to approach life with an open heart, embracing empathy, compassion, and respect for one another. Igloo's designs act as a visual representation of this mindset, serving as a reminder to spread warmth and joy wherever we go.",
+        "bottom_image": "shopify:\/\/shop_images\/Rectangle_43.jpg"
+      }
+    },
+    "double-marquee": {
+      "type": "double-marquee",
+      "blocks": {
+        "e7e8793a-2e16-45ae-9139-a1b324fe046d": {
+          "type": "marquee_right",
+          "settings": {
+            "marquee_text": "@igloo"
+          }
+        },
+        "da2ddc0c-7fd4-4f85-9beb-ade2145af0b0": {
+          "type": "marquee_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/igloo-shoot.png"
+          }
+        },
+        "444844f6-885d-4f3c-99f4-a2ccef6de9c3": {
+          "type": "marquee_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/336323478_768477154466941_2346580804777076853_n.jpg"
+          }
+        },
+        "bc9696b1-142b-4748-a935-e9f6ed0800fc": {
+          "type": "marquee_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/342868521_835801164766121_3518724675550916593_n.jpg"
+          }
+        },
+        "5753e6aa-1a7a-4ac0-a40f-db6c67c76102": {
+          "type": "marquee_left",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/345892337_628009422509604_3262896961825045631_n_09400340-9331-473c-9711-fbb2580cfda1.jpg"
+          }
+        }
+      },
+      "block_order": [
+        "e7e8793a-2e16-45ae-9139-a1b324fe046d",
+        "da2ddc0c-7fd4-4f85-9beb-ade2145af0b0",
+        "444844f6-885d-4f3c-99f4-a2ccef6de9c3",
+        "bc9696b1-142b-4748-a935-e9f6ed0800fc",
+        "5753e6aa-1a7a-4ac0-a40f-db6c67c76102"
+      ],
+      "settings": {
+        "right_marquee_duration": "20",
+        "right_marquee_duration_mob": "10",
+        "left_marquee_duration": "20",
+        "left_marquee_duration_mob": "10",
+        "marquee_url": ""
+      }
+    }
+  },
+  "order": [
+    "about-main",
+    "double-marquee"
+  ]
+}

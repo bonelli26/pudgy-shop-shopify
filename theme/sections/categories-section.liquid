@@ -1,0 +1,106 @@
+    <div class="inner">
+        <a class="left" href="{{ section.settings.left_button_link }}">
+            <img class="preload-critical bg"{% if section.settings.left_image.alt %} alt="{{ section.settings.left_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.left_image | img_url: '1200x', format: 'jpg' }}" data-preload-mobile="https:{{ section.settings.left_image | img_url: '550x', format: 'jpg' }}">
+            <div class="content">
+                <p>{{ section.settings.left_title }}</p>
+                <div class="btn white" >
+                    {{ section.settings.left_button_text }}
+                </div>
+            </div>
+        </a>
+        <a class="right" href="{{ section.settings.right_button_link }}">
+            <img class="preload-critical bg"{% if section.settings.right_image.alt %} alt="{{ section.settings.right_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.right_image | img_url: '1200x', format: 'jpg' }}" data-preload-mobile="https:{{ section.settings.right_image | img_url: '550x', format: 'jpg' }}">
+            <div class="content">
+                <p>{{ section.settings.right_title }}</p>
+                <div class="btn white">
+                    {{ section.settings.right_button_text }}
+                </div>
+            </div>
+        </a>
+        <a class="full-bleed" href="{{ section.settings.full_bleed_button_link }}">
+            <img class="preload-critical bg"{% if section.settings.full_bleed_image.alt %} alt="{{ section.settings.full_bleed_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.full_bleed_image | img_url: '2000x', format: 'jpg' }}" data-preload-mobile="https:{{ section.settings.full_bleed_image_mobile | img_url: '550x', format: 'jpg'}}">
+            <div class="content">
+                <p>{{ section.settings.full_bleed_title }}</p>
+                <div class="btn white">
+                    {{ section.settings.full_bleed_button_text }}
+                </div>
+            </div>
+        </a>
+    </div>
+
+
+
+{% schema %}
+{
+"name": "Categories Section",
+"tag": "section",
+"class": "categories-section mw",
+"settings": [
+    {
+    "id": "left_image",
+    "type": "image_picker",
+    "label": "Left Image"
+    },
+    {
+    "id": "left_title",
+    "type": "text",
+    "label": "Left Title"
+    },
+    {
+    "id": "left_button_text",
+    "type": "text",
+    "label": "Left Button Text"
+    },
+    {
+    "id": "left_button_link",
+    "type": "text",
+    "label": "Left Button Link"
+    },
+    {
+    "id": "right_image",
+    "type": "image_picker",
+    "label": "Right Image"
+    },
+    {
+    "id": "right_title",
+    "type": "text",
+    "label": "Right Title"
+    },
+    {
+    "id": "right_button_text",
+    "type": "text",
+    "label": "Right Button Text"
+    },
+    {
+    "id": "right_button_link",
+    "type": "text",
+    "label": "Right Button Link"
+    },
+    {
+    "id": "full_bleed_image",
+    "type": "image_picker",
+    "label": "Full Bleed Image"
+    },
+    {
+    "id": "full_bleed_image_mobile",
+    "type": "image_picker",
+    "label": "Full Bleed Image Mobile"
+    },
+    {
+    "id": "full_bleed_title",
+    "type": "text",
+    "label": "Full Bleed Title"
+    },
+    {
+    "id": "full_bleed_button_text",
+    "type": "text",
+    "label": "Full Bleed Button Text"
+    },
+    {
+    "id": "full_bleed_button_link",
+    "type": "text",
+    "label": "Full Bleed Button Link"
+    }
+]
+}
+{% endschema %}

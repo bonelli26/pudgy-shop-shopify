@@ -1,0 +1,198 @@
+
+<h1>{{ section.settings.page_header }}</h1>
+<div class="faq-body tab-set" data-triggers="faq-trigger" data-tabs="faq-tab">
+    <div class="trigger-wrapper">
+        <button class="trigger blue-selected active" data-trigger="faq-trigger"><span>{{ section.settings.trigger_1 }}</span></button>
+        <button class="trigger blue-selected" data-trigger="faq-trigger"><span>{{ section.settings.trigger_2 }}</span></button>
+        {% if section.settings.trigger_3 != blank %}<button class="trigger blue-selected" data-trigger="faq-trigger"><span>{{ section.settings.trigger_3 }}</span></button>{% endif %}
+        {% if section.settings.trigger_4 != blank %}<button class="trigger blue-selected" data-trigger="faq-trigger"><span>{{ section.settings.trigger_4 }}</span></button>{% endif %}
+        <a href="{{ section.settings.button_url }}" class="btn white secondary">{{ section.settings.button_text }}</a>
+    </div>
+    <div class="tab-wrapper">
+        <div class="tab tab-set is-selected" data-tab="faq-tab">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'faq_tab_1' %}
+                        <div class="drawer">
+                            <div class="label">
+                                <p>{{ block.settings.question }}</p>
+                                <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 1V5.5H1V6.5H5.5V11H6.5V6.5H11V5.5H6.5V1H5.5Z" fill="black"/></svg></span>
+                            </div>
+                            <div class="drawer-items">
+                                <div class="content">
+                                    {{ block.settings.answer }}
+                                </div>
+                            </div>
+                        </div>
+                {% endcase %}
+            {% endfor %}
+        </div>
+        <div class="tab tab-set " data-tab="faq-tab">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'faq_tab_2' %}
+                        <div class="drawer">
+                            <div class="label">
+                                <p>{{ block.settings.question }}</p>
+                                <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 1V5.5H1V6.5H5.5V11H6.5V6.5H11V5.5H6.5V1H5.5Z" fill="black"/></svg></span>
+                            </div>
+                            <div class="drawer-items">
+                                <div class="content">
+                                    {{ block.settings.answer }}
+                                </div>
+                            </div>
+                        </div>
+                {% endcase %}
+            {% endfor %}
+        </div>
+        <div class="tab tab-set " data-tab="faq-tab">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'faq_tab_3' %}
+                        <div class="drawer">
+                            <div class="label">
+                                <p>{{ block.settings.question }}</p>
+                                <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 1V5.5H1V6.5H5.5V11H6.5V6.5H11V5.5H6.5V1H5.5Z" fill="black"/></svg></span>
+                            </div>
+                            <div class="drawer-items">
+                                <div class="content">
+                                    {{ block.settings.answer }}
+                                </div>
+                            </div>
+                        </div>
+                {% endcase %}
+            {% endfor %}
+        </div>
+        <div class="tab tab-set " data-tab="faq-tab">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'faq_tab_4' %}
+                        <div class="drawer">
+                            <div class="label">
+                                <p>{{ block.settings.question }}</p>
+                                <span><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 1V5.5H1V6.5H5.5V11H6.5V6.5H11V5.5H6.5V1H5.5Z" fill="black"/></svg></span>
+                            </div>
+                            <div class="drawer-items">
+                                <div class="content">
+                                    {{ block.settings.answer }}
+                                </div>
+                            </div>
+                        </div>
+                {% endcase %}
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+  "name": "FAQ Main",
+  "tag": "section",
+  "class": "faqs-main c-24",
+  "settings": [
+    {
+      "id": "page_header",
+      "type": "text",
+      "label": "Page Header"
+    },
+    {
+      "id": "trigger_1",
+      "type": "text",
+      "label": "Trigger 1"
+    },
+    {
+      "id": "trigger_2",
+      "type": "text",
+      "label": "Trigger 2"
+    },
+    {
+      "id": "trigger_3",
+      "type": "text",
+      "label": "Trigger 3"
+    },
+    {
+      "id": "trigger_4",
+      "type": "text",
+      "label": "Trigger 4"
+    },
+    {
+      "id": "button_text",
+      "type": "text",
+      "label": "Button Text"
+    },
+    {
+      "id": "button_url",
+      "type": "text",
+      "label": "Button URL"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Faqs Tab 1",
+      "type": "faq_tab_1",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "name": "Faqs Tab 2",
+      "type": "faq_tab_2",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "name": "Faqs Tab 3",
+      "type": "faq_tab_3",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    },
+    {
+      "name": "Faqs Tab 4",
+      "type": "faq_tab_4",
+      "settings": [
+        {
+          "type": "text",
+          "id": "question",
+          "label": "Question"
+        },
+        {
+          "type": "richtext",
+          "id": "answer",
+          "label": "Answer"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

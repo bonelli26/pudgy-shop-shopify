@@ -1,0 +1,56 @@
+{% assign tags = collection.all_tags %}
+
+<div class="collection-filters">
+    <p class="filter-desktop">Filter</p>
+    <div class="collection-filters-buttons">
+        <button class="blue-selected is-selected" data-trigger="all">All</button>
+        {% for tag in tags %}
+            <button class="blue-selected" data-trigger="{{ tag | handle }}">{{ tag }}</button>
+        {% endfor %}
+    </div>
+    <div class="collection-filters-buttons-mobile">
+        <div class="drawer replace-label">  
+            <div class="mobile-bg"></div>          
+            <button class="label">
+                <p>Filter
+                    <span>
+                        <svg width="10" height="10" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M4.5 0V4.5H0V5.5H4.5V10H5.5V5.5H10V4.5H5.5V0H4.5Z" fill="black"/></svg>
+                    </span>
+                </p>
+                <span class="current-label">Shop All</span>
+            </button>
+            <div class="drawer-items">
+                <button class="blue-selected" data-trigger="all">Shop All</button>
+                {% for tag in tags %}
+                    <button class="blue-selected" data-trigger="{{ tag | handle }}">{{ tag }}</button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="collection-inner mw">
+    {% for thisProduct in collection.products %}
+        <a href="{{ thisProduct.url }}" class="product-tile{% for tag in thisProduct.tags %} {{ tag | handle }}{% endfor %}">
+            <div class="img-wrapper">
+                <img class="preload-critical bg"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
+                <img class="preload-critical bg"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[1] | img_url: '550x', format: 'jpg' }}">
+            </div>
+            <p class="item-name">{{ thisProduct.title }}</p>
+            <span class="item-price">
+                {{ thisProduct.price | money }}
+                <p class="compare-at-price{% if thisProduct.compare_at_price %} visible{% endif %}">{% if thisProduct.compare_at_price %}{{ thisProduct.compare_at_price | money }}{% endif %}</p>
+            </span>
+        </a>
+    {% endfor %}
+    <div class="product-tile dummy"></div>
+    <div class="product-tile dummy"></div>
+</div>
+
+{% schema %}
+{
+  "name": "Collection Categories",
+  "tag": "section",
+  "class": "collection-wrapper mw tabs-inside c-24"
+}
+{% endschema %}

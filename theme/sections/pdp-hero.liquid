@@ -1,0 +1,110 @@
+<div class="left slider no-drag-free mw" data-align="start" data-at="767">
+    {% assign imageSize = product.images | size %}
+    <div class="slides">
+        <div class="inner">
+            {% for image in product.images limit: 4 %}
+                <div class="slide">
+                    <img class="preload-critical" {% if image.alt %}alt="{{ image.alt }}"{% endif %}data-preload-desktop="https:{{ image | img_url: '1000x', format: 'jpg' }}" data-preload-mobile="https:{{ image | img_url: '550x', format: 'jpg' }}">
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+<div class="right">
+    <h1 class="header">{{ product.title }}</h1>
+    <div class="price-wrapper">
+        <div class="top-price">
+            <div class="price">{{ product.price | money }}</div>
+            <div class="compare-at-price">{% if product.compare_at_price %}{{ product.first_available_variant.compare_at_price | money }}{% endif %}</div>
+            <p class="discount">{% if product.compare_at_price %}sale {{ product.compare_at_price | minus:product.price | times:100 | divided_by:product.compare_at_price | round: 0 }}% off{% endif %}</p>
+        </div>
+        {% if product.selling_plan != empty %}
+            <p class="plan">or 4-interest free payments of <strong>$23.99</strong></p>
+        {% endif %}
+    </div>
+
+    <div class="option-drawer">
+        {% if product.has_only_default_variant == false %}
+            {% for option in product.options_with_values %}
+                <div class="options-wrapper">
+                    <p class="option-title">{{ option.name }}</p>
+                    <div class="options">
+                        {% for value in option.values %}
+                            <button class="btn white option{% if forloop.first %} active{% endif %}" data-value="{{ value }}">{{ value }}</button>
+                        {%- endfor %}
+                    </div>
+                </div>
+            {% endfor %}
+        {% endif %}
+    </div>
+
+    <form class="atc-form">
+        <button class="btn black add-to-cart{% unless product.available %} disabled{% endunless %}" data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
+            <span class="in-stock">add to cart</span>
+            <span class="out-of-stock">Sold out</span>
+        </button>
+    </form>
+    <div class="icon-text-wrapper mw">
+        <div class="icon-text">
+            <img class="preload-critical" data-preload-desktop="https:{{ settings.small_image_1 | image_url }}" data-preload-mobile="https:{{ settings.small_image_1 | image_url }}">
+            <p>{{ settings.text_1 }}</p>
+        </div>
+        <div class="icon-text">
+            <img class="preload-critical" data-preload-desktop="https:{{ settings.small_image_2 | image_url }}" data-preload-mobile="https:{{ settings.small_image_2 | image_url }}">
+            <p>{{ settings.text_2 }}</p>
+        </div>
+        <div class="icon-text">
+            <img class="preload-critical" data-preload-desktop="https:{{ settings.small_image_3 | image_url }}" data-preload-mobile="https:{{ settings.small_image_3 | image_url }}">
+            <p>{{ settings.text_3 }}</p>
+        </div>
+
+    </div>
+    {% if product.metafields.accentuate.tab_headers %}
+        <div class="new-tabs mw" data-triggers="pdp-trigger" data-tabs="pdp-tab">
+            <div class="trigger-wrapper">
+                {% for header in product.metafields.accentuate.tab_headers %}
+                    <button class="trigger blue-selected {% if forloop.first %} is-selected{% endif %}" data-trigger="pdp-trigger">{{ header }}</button>
+                {% endfor %}
+            </div>
+            <div class="tab-wrapper">
+                {% for copy in product.metafields.accentuate.tab_texts %}
+                    <div class="tab tab-set{% if forloop.first %} is-selected{% endif %}" data-tab="pdp-tab">
+                        <p>{{ copy }}</p>
+                    </div>
+                {% endfor %}
+
+                <div class="tab tab-set mw img-tab" data-tab="pdp-tab">
+                    <div class="img-wrapper">
+                        {% for image in product.metafields.accentuate.chart_size_image %}
+                            <img class="preload{% if forloop.first %} active{% endif %}" data-preload-desktop="{{ image[0].src }}" data-preload-mobile="{{ image[0].src }}">
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    {% endif %}
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "PDP Hero",
+  "tag": "section",
+  "class": "pdp-hero mw",
+  "blocks": [
+    {
+      "name": "Tab Trigger",
+      "type": "tab_trigger",
+      "settings": [
+        {
+          "type": "text",
+          "id": "trigger",
+          "label": "Trigger"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

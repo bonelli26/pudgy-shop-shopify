@@ -1,0 +1,79 @@
+<div class="top c-24">
+    <div class="top-left">
+        <img class="preload-critical logo" {% if section.settings.logo.alt %} alt="{{ section.settings.logo.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.logo | img_url: '900x' }}" data-preload-mobile="https:{{ section.settings.logo | img_url: '500x' }}">
+        <div class="img-wrapper">
+            {% for block in section.blocks %}
+                <img class="preload-critical" {% if block.settings.image.alt %} alt="{{ block.settings.image.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.image | img_url: '500x', format: 'jpg' }}" data-preload-mobile="https:{{ block.settings.image | img_url: '300x', format: 'jpg' }}">
+            {% endfor %}
+        </div>
+    </div>
+    <div class="top-right">
+        <h1 class="pdp-header">{{ section.settings.top_header }}</h1>
+        <p class="pdp-text">{{ section.settings.top_copy }}</p>
+    </div>
+</div>
+<div class="bottom c-24">
+    <div class="bottom-left">
+        <h1 class="pdp-header">{{ section.settings.bottom_header }}</h1>
+        <p class="pdp-text">{{ section.settings.bottom_copy }}</p>
+    </div>
+    <div class="bottom-right">
+        <img class="preload-critical" {% if section.settings.bottonm_image.alt %} alt="{{ section.settings.bottom_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.bottom_image | img_url: '1400x', format: 'jpg' }}" data-preload-mobile="https:{{ section.settings.bottom_image | img_url: '550x', format: 'jpg' }}">
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "About Main",
+  "tag": "section",
+  "class": "about-main mw",
+  "settings": [
+    {
+      "id": "top_header",
+      "type": "text",
+      "label": "Top Header"
+    },
+    {
+      "id": "top_copy",
+      "type": "text",
+      "label": "Top Copy"
+    },
+    {
+      "id": "logo",
+      "type": "image_picker",
+      "label": "Logo"
+    },
+    {
+      "id": "bottom_header",
+      "type": "text",
+      "label": "Bottom Header"
+    },
+    {
+      "id": "bottom_copy",
+      "type": "text",
+      "label": "Bottom Copy"
+    },
+    {
+      "id": "bottom_image",
+      "type": "image_picker",
+      "label": "Bottom Image"
+    }
+
+  ],
+  "blocks": [
+    {
+      "name": "Top left",
+      "type": "top_left",
+      "limit": 6,
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

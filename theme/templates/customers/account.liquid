@@ -1,0 +1,102 @@
+{{ 'customer.css' | asset_url | stylesheet_tag }}
+
+<div class="customer account">
+  <div>
+    <h1>{{ 'customer.account.title' | t }}</h1>
+    <a class="logout-btn" href="{{ routes.account_logout_url }}">
+      <svg width="16" height="20" viewBox="0 0 16 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M7.99935 0.833313C5.47619 0.833313 3.41602 2.89349 3.41602 5.41665C3.41602 7.93981 5.47619 9.99998 7.99935 9.99998C10.5225 9.99998 12.5827 7.93981 12.5827 5.41665C12.5827 2.89349 10.5225 0.833313 7.99935 0.833313ZM7.99935 2.20831C9.77941 2.20831 11.2077 3.63659 11.2077 5.41665C11.2077 7.1967 9.77941 8.62498 7.99935 8.62498C6.21929 8.62498 4.79102 7.1967 4.79102 5.41665C4.79102 3.63659 6.21929 2.20831 7.99935 2.20831ZM2.72852 11.8333C1.59758 11.8333 0.666016 12.7649 0.666016 13.8958V14.4455C0.666016 15.7934 1.52068 17.0024 2.8243 17.8337C4.12792 18.6651 5.91157 19.1666 7.99935 19.1666C10.0871 19.1666 11.8708 18.6651 13.1744 17.8337C14.478 17.0024 15.3327 15.7934 15.3327 14.4455V13.8958C15.3327 12.7649 14.4011 11.8333 13.2702 11.8333H2.72852ZM2.72852 13.2083H13.2702C13.6582 13.2083 13.9577 13.5078 13.9577 13.8958V14.4455C13.9577 15.2086 13.4661 16.0169 12.435 16.6745C11.4039 17.332 9.86423 17.7916 7.99935 17.7916C6.13446 17.7916 4.59485 17.332 3.56372 16.6745C2.5326 16.0169 2.04102 15.2086 2.04102 14.4455V13.8958C2.04102 13.5078 2.34054 13.2083 2.72852 13.2083Z" fill="black"/>
+      </svg>
+      <p>{{ 'customer.log_out' | t }}</p>
+    </a>
+  </div>
+
+  <div class="account-inner">
+    <div>
+      <h2>{{ 'customer.orders.title' | t }}</h2>
+
+        {% paginate customer.orders by 20 %}
+        {%- if customer.orders.size > 0 -%}
+          <div class="order-grid">
+            {%- for order in customer.orders -%}
+              <div class="order-item">
+                <div class="img-wrapper">
+                    {%- for line_item in order.line_items -%}
+                        <img src="{{ line_item.image | img_url }}">
+                    {%- endfor -%}
+                </div>
+                <div class="order-left">
+                    <div class="product-title">
+                        {%- for line_item in order.line_items -%}
+                            <p>{{ line_item.title | link_to: line_item.product.url }}</p>
+                        {%- endfor -%}
+                    </div>
+                  <div class="bottom">
+                    {{ order.created_at | date: '%d/%m/%y' }} | {{ order.fulfillment_status_label }}
+                  </div>
+                </div>
+              <div class="order-right">
+                {{ order.total_price |  money_without_trailing_zeros }}
+              </div>
+              </div>
+            {%- endfor -%}
+          </div>
+        {%- else -%}
+          <p>{{ 'customer.orders.none' | t }}</p>
+        {%- endif -%}
+
+
+
+        {%- if paginate.pages > 1 -%}
+          {%- if paginate.parts.size > 0 -%}
+              <nav class="pagination" role="navigation" aria-label="{{ 'general.pagination.label' | t }}">
+                <ul role="list">
+                {%- if paginate.previous -%}
+                  <li>
+                    <a href="{{ paginate.previous.url }}" aria-label="{{ 'general.pagination.previous' | t }}">
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+
+                {%- for part in paginate.parts -%}
+                  <li>
+                    {%- if part.is_link -%}
+                      <a href="{{ part.url }}" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</a>
+                    {%- else -%}
+                      {%- if part.title == paginate.current_page -%}
+                        <span aria-current="page" aria-label="{{ 'general.pagination.page' | t: number: part.title }}">{{ part.title }}</span>
+                      {%- else -%}
+                        <span>{{ part.title }}</span>
+                      {%- endif -%}
+                    {%- endif -%}
+                  </li>
+                {%- endfor -%}
+
+                {%- if paginate.next -%}
+                  <li>
+                    <a href="{{ paginate.next.url }}" aria-label="{{ 'general.pagination.next' | t }}" >
+                      <svg aria-hidden="true" focusable="false" viewBox="0 0 10 6">
+                        <path fill-rule="evenodd" clip-rule="evenodd" d="M9.354.646a.5.5 0 00-.708 0L5 4.293 1.354.646a.5.5 0 00-.708.708l4 4a.5.5 0 00.708 0l4-4a.5.5 0 000-.708z" fill="currentColor">
+                      </svg>
+                    </a>
+                  </li>
+                {%- endif -%}
+                </ul>
+              </nav>
+          {%- endif -%}
+        {%- endif -%}
+      {% endpaginate %}
+    </div>
+
+    <div>
+      <h2>{{ 'customer.account.details' | t }}</h2>
+
+      {{ customer.default_address | format_address }}
+
+    </div>
+
+  </div>
+</div>

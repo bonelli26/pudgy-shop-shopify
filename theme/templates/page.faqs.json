@@ -1,0 +1,127 @@
+{
+  "sections": {
+    "faq-main": {
+      "type": "faq-main",
+      "blocks": {
+        "59c5f6c8-2180-4138-9eda-3fafb19b8d24": {
+          "type": "faq_tab_1",
+          "settings": {
+            "question": "How do your pieces fit and size?",
+            "answer": "<p>For detailed size information, please refer to the product page of the specific item you are interested in.<\/p><p>Our core items come with a size and fit guide that provides both measurements and guidance on how the garment typically fits. Additionally, you can find the model sizes specified in the \"size and fit\" description available for each <a href=\"\/collections\/tops\" title=\"Tops\">product<\/a>.<\/p>"
+          }
+        },
+        "8a9ee685-ab50-4940-8466-7aeea863eec3": {
+          "type": "faq_tab_1",
+          "settings": {
+            "question": "Where is Igloo made?",
+            "answer": "<p>Designed in Miami, manufactured in Los Angeles.<\/p>"
+          }
+        },
+        "b72afe1b-0d75-4e4a-8cd1-e08cbcfd8ade": {
+          "type": "faq_tab_1",
+          "settings": {
+            "question": "How can I get in contact?",
+            "answer": "<p>Please email help@igloo.shop for order and or general related inquiries.<\/p>"
+          }
+        },
+        "cdc9b87f-b377-43ad-bb94-eed62472e966": {
+          "type": "faq_tab_1",
+          "settings": {
+            "question": "How should I care for my product?",
+            "answer": "<p>Each item should be handled with care. You can view specific care instruction on the care tag located on your product or on the product page in the description.<\/p>"
+          }
+        },
+        "9c857e0e-be55-425e-8a79-75c8b6582694": {
+          "type": "faq_tab_2",
+          "settings": {
+            "question": "Do you accept returns?",
+            "answer": "<p>Yes, up to 30 days from your original purchase date. Product must be unworn, unused, and in it's original packaging. All returns are subject to review before issue of refund.<\/p>"
+          }
+        },
+        "c6906407-1b6b-4c83-98e9-b64e71847ee7": {
+          "type": "faq_tab_2",
+          "settings": {
+            "question": "Can I exchange my product?",
+            "answer": "<p>Yes! If you'd like to exchange your item, please email help@igloo.shop with your exchange process.<\/p>"
+          }
+        },
+        "e2482877-ce75-4465-a577-5e408e3573ec": {
+          "type": "faq_tab_2",
+          "settings": {
+            "question": "How do I return or exchange my order?",
+            "answer": "<p>We want you to be as delighted with our products as we are! In the event that you are not completely satisfied with your purchase, you are welcome to return or exchange it within 30 days of purchase for a full refund or store credit. <\/p><p>Online returns are accepted, and to initiate an online return or exchange, simply send an email to help@igloo.shop. Please note that items marked as \"final sale\" on our product page are not eligible for return or exchange. <\/p><p>For domestic returns requesting a refund, a return shipping fee of $8 will be applicable, which will be deducted from your refund. However, this return shipping fee is waived for returns requesting store credit or exchanges. <\/p><p>If the item was received as a gift, the recipient can proceed with the return by providing either the order number (beginning with an IGLOO), the shipping zip code, the email address of the purchaser, or the phone number associated with the order. <\/p><p>Our gift returns portal can be accessed here to facilitate the return process.<\/p>"
+          }
+        },
+        "84bb419f-7ce0-4b46-8683-f97aa002e8d9": {
+          "type": "faq_tab_3",
+          "settings": {
+            "question": "Shipping Policy",
+            "answer": "<p>We anticipate that your items will be processed and shipped within a span of 3-7 business days. Any items with future ship dates are indicated with an estimated ship date in the product details. <\/p><p>For international orders, please allow 5-9 business days for delivery after the processing period. If you have any additional inquiries, feel free to reach out to us at help@igloo.shop. <\/p><p>Free standard shipping is offered for all domestic orders exceeding $200. Orders ranging from $150 to $200 incur a $8 shipping fee, while orders between $100 and $150 are subject to an $11 shipping charge. <\/p><p>For orders below $100, a shipping fee of $12 will be applied. Regarding international orders, our standard shipping is free for all orders surpassing $250. <\/p><p>To ensure accessibility to as many countries as possible, we collaborate with an international partner and employ a flat rate based on the total value of the cart. <\/p><p>Orders ranging from $100 to $250 will incur a shipping fee of $20, while orders under $100 will have a shipping fee of $25.<\/p>"
+          }
+        },
+        "6eb91655-1755-472b-9ce2-dbcb882bb9ab": {
+          "type": "faq_tab_3",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Yes, we ship all over the world.<\/p>"
+          }
+        },
+        "7b82948c-406c-4659-a028-2140eb9220fb": {
+          "type": "faq_tab_3",
+          "settings": {
+            "question": "Do you offer expedited shipping?",
+            "answer": "<p>At this time, we do not offer expedited shipping.<\/p>"
+          }
+        },
+        "1cac07e0-aed0-45fd-b2a2-49d994374a0d": {
+          "type": "faq_tab_3",
+          "settings": {
+            "question": "How much is shipping?",
+            "answer": "<p>Free standard shipping is offered for all domestic orders exceeding $200. Orders ranging from $150 to $200 incur a $8 shipping fee, while orders between $100 and $150 are subject to an $11 shipping charge. For orders below $100, a shipping fee of $12 will be applied.<\/p>"
+          }
+        },
+        "4d491152-dcea-424d-8af9-82301d95d17f": {
+          "type": "faq_tab_4",
+          "settings": {
+            "question": "returns & exchanges",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+          }
+        },
+        "3499617f-cd23-4a14-989e-4405a29c7bc8": {
+          "type": "faq_tab_4",
+          "settings": {
+            "question": "returns & exchanges",
+            "answer": "<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "59c5f6c8-2180-4138-9eda-3fafb19b8d24",
+        "8a9ee685-ab50-4940-8466-7aeea863eec3",
+        "b72afe1b-0d75-4e4a-8cd1-e08cbcfd8ade",
+        "cdc9b87f-b377-43ad-bb94-eed62472e966",
+        "9c857e0e-be55-425e-8a79-75c8b6582694",
+        "c6906407-1b6b-4c83-98e9-b64e71847ee7",
+        "e2482877-ce75-4465-a577-5e408e3573ec",
+        "84bb419f-7ce0-4b46-8683-f97aa002e8d9",
+        "6eb91655-1755-472b-9ce2-dbcb882bb9ab",
+        "7b82948c-406c-4659-a028-2140eb9220fb",
+        "1cac07e0-aed0-45fd-b2a2-49d994374a0d",
+        "4d491152-dcea-424d-8af9-82301d95d17f",
+        "3499617f-cd23-4a14-989e-4405a29c7bc8"
+      ],
+      "settings": {
+        "page_header": "frequently asked questions",
+        "trigger_1": "general",
+        "trigger_2": "returns & exchanges",
+        "trigger_3": "Shipping & delivery",
+        "trigger_4": "",
+        "button_text": "contact us",
+        "button_url": "\/pages\/contact"
+      }
+    }
+  },
+  "order": [
+    "faq-main"
+  ]
+}
