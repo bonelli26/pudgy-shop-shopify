@@ -204,74 +204,278 @@
 
 <footer>
   <div class="top mw">
-    <div class="tag"><?php echo $globalModules->footer_tag[0]->text ?></div>
-    <p class="footer-header"><?php echo $globalModules->footer_header[0]->text ?></p>
+    <div class="tag">{{ settings.footer_tag }}</div>
+    <p class="footer-header">{{ settings.footer_header }}</p>
   </div>
   <div class="marquee hover footer-marquee mw">
-    <div class="inner" data-dur="<?php echo $globalModules->footer_marquee_duration[0]->text; ?>">
+    <div class="inner" data-dur="10">
       <div class="group">
-        <?php foreach ($globalModules->social_block as $block) { ?>
         <div class="block-wrapper">
           <div class="block">
-            <img class="preload-critical" data-preload-desktop="<?php echo $block->top_image->url ?>" data-preload-mobile="<?php echo $block->top_image->url ?>">
+            <img class="preload-critical" src="{{ settings.image_1 | img_url }}">
             <div class="top-block">
               <div class="img-wrapper">
-                <img class="preload-critical" data-preload-desktop="<?php echo $block->profile_image->url ?>" data-preload-mobile="<?php echo $block->profile_image->url ?>">
+                <img class="preload-critical" src="{{ settings.profile_image_1 | img_url }}">
               </div>
-              <div class="text-wrapper">
-                <p><?php echo $block->block_header[0]->text ?></p>
-                <p><?php echo $block->subheader_block[0]->text ?></p>
-              </div>
+              <div class="text-wrapper">{{ settings.profile_name_1 }}</div>
             </div>
-            <p class="copy"><?php echo $block->copy[0]->text ?></p>
+            <p class="copy">{{ settings.profile_copy_1 }}</p>
           </div>
           <div class="block">
-            <img class="preload-critical" data-preload-desktop="<?php echo $block->top_image->url ?>" data-preload-mobile="<?php echo $block->top_image->url ?>">
+            <img class="preload-critical" src="{{ settings.image_1 | img_url }}">
             <div class="top-block">
               <div class="img-wrapper">
-                <img class="preload-critical" data-preload-desktop="<?php echo $block->profile_image->url ?>" data-preload-mobile="<?php echo $block->profile_image->url ?>">
+                <img class="preload-critical" src="{{ settings.profile_image_1 | img_url }}">
               </div>
-              <div class="text-wrapper">
-                <p><?php echo $block->block_header[0]->text ?></p>
-                <p><?php echo $block->subheader_block[0]->text ?></p>
-              </div>
+              <div class="text-wrapper">{{ settings.profile_name_1 }}</div>
             </div>
-            <p class="copy"><?php echo $block->copy[0]->text ?></p>
+            <p class="copy">{{ settings.profile_copy_1 }}</p>
           </div>
         </div>
-        <?php } ?>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_2 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_2 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_2 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_2 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_2 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_2 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_2 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_2 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_4 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_4 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_4 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_4 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_4 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_4 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_4 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_4 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_5 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_5 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_5 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_5 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_5 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_5 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_5 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_5 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+        </div>
       </div>
       <div class="group" aria-hidden="true">
-        <?php foreach ($globalModules->social_block as $block) { ?>
         <div class="block-wrapper">
           <div class="block">
-            <img class="preload-critical" data-preload-desktop="<?php echo $block->top_image->url ?>" data-preload-mobile="<?php echo $block->top_image->url ?>">
+            <img class="preload-critical" src="{{ settings.image_1  | img_url}}">
             <div class="top-block">
               <div class="img-wrapper">
-                <img class="preload-critical" data-preload-desktop="<?php echo $block->profile_image->url ?>" data-preload-mobile="<?php echo $block->profile_image->url ?>">
+                <img class="preload-critical" src="{{ settings.profile_image_1  | img_url}}">
               </div>
-              <div class="text-wrapper">
-                <p><?php echo $block->block_header[0]->text ?></p>
-                <p><?php echo $block->subheader_block[0]->text ?></p>
-              </div>
+              <div class="text-wrapper">{{ settings.profile_name_1 }}</div>
             </div>
-            <p class="copy"><?php echo $block->copy[0]->text ?></p>
+            <p class="copy">{{ settings.profile_copy_1 }}</p>
           </div>
           <div class="block">
-            <img class="preload-critical" data-preload-desktop="<?php echo $block->top_image->url ?>" data-preload-mobile="<?php echo $block->top_image->url ?>">
+            <img class="preload-critical" src="{{ settings.image_1  | img_url}}">
             <div class="top-block">
               <div class="img-wrapper">
-                <img class="preload-critical" data-preload-desktop="<?php echo $block->profile_image->url ?>" data-preload-mobile="<?php echo $block->profile_image->url ?>">
+                <img class="preload-critical" src="{{ settings.profile_image_1  | img_url}}">
               </div>
-              <div class="text-wrapper">
-                <p><?php echo $block->block_header[0]->text ?></p>
-                <p><?php echo $block->subheader_block[0]->text ?></p>
-              </div>
+              <div class="text-wrapper">{{ settings.profile_name_1 }}</div>
             </div>
-            <p class="copy"><?php echo $block->copy[0]->text ?></p>
+            <p class="copy">{{ settings.profile_copy_1 }}</p>
           </div>
         </div>
-        <?php } ?>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_2 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_2 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_2 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_2 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_2 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_2 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_2 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_2 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_4 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_4 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_4 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_4 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_4 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_4 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_4 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_4 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_5 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_5 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_5 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_5 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_5 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_5 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_5 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_5 }}</p>
+          </div>
+        </div>
+        <div class="block-wrapper">
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+          <div class="block">
+            <img class="preload-critical" src="{{ settings.image_3 | img_url }}">
+            <div class="top-block">
+              <div class="img-wrapper">
+                <img class="preload-critical" src="{{ settings.profile_image_3 | img_url }}">
+              </div>
+              <div class="text-wrapper">{{ settings.profile_name_3 }}</div>
+            </div>
+            <p class="copy">{{ settings.profile_copy_3 }}</p>
+          </div>
+        </div>
       </div>
     </div>
   </div>
@@ -282,36 +486,47 @@
     <svg class="svg-right" xmlns="http://www.w3.org/2000/svg" width="67" height="49" viewBox="0 0 67 49" fill="none">
       <path d="M21.1155 1.81937C21.235 1.78886 21.3584 1.77665 21.4815 1.78317L43.7092 2.95928C44.3562 2.99352 44.8633 3.52816 44.8633 4.17612V6.0786L55.3693 3.00656C55.6403 2.9273 55.9305 2.94465 56.1901 3.05562L64.4462 6.58397C64.9531 6.80062 65.2514 7.33065 65.1736 7.87643L59.7755 45.7474C59.6988 46.2851 59.2756 46.7071 58.7378 46.7823C58.1999 46.8575 57.6773 46.5676 57.4561 46.0716L46.7574 22.0692L40.1265 23.7066C39.9207 23.7574 39.7052 23.7536 39.5013 23.6957L16.321 17.1094C16.217 17.0799 16.1174 17.0366 16.0248 16.9808L2.37064 8.748C1.94996 8.49434 1.72272 8.01289 1.79431 7.5269C1.8659 7.0409 2.22231 6.64542 2.69826 6.52385L21.1155 1.81937Z" fill="white" stroke="#00142D" stroke-width="2.43707" stroke-linejoin="round"/>
     </svg>
-    <img class="preload-critical pengu-logo" data-preload-desktop="<?php echo $globalModules->footer_bottom_image->url ?>" data-preload-mobile="<?php echo $globalModules->footer_bottom_image->url ?>">
+    <img class="preload-critical pengu-logo" src="{{ settings.top_image | img_url }}">
     <div class="images">
-      <?php foreach ($globalModules->footer_images as $link) { ?>
-      <img class="preload-critical" data-preload-desktop="<?php echo $link->image->url ?>" data-preload-mobile="<?php echo $link->image->url ?>">
-      <?php } ?>
+      <img class="preload-critical" src="{{ settings.footer_image_1 | img_url }}">
+      <img class="preload-critical" src="{{ settings.footer_image_3 | img_url }}">
+      <img class="preload-critical" src="{{ settings.footer_image_2 | img_url }}">
+      <img class="preload-critical" src="{{ settings.footer_image_4 | img_url }}">
     </div>
     <div class="links">
-      <?php foreach ($globalModules->bottom_links as $link) { ?>
-      <a href="<?php echo $link->url[0]->text ?>"><?php echo $link->text[0]->text ?></a>
-      <?php } ?>
+      {% for link in linklists.pudgy_shop_footer.links %}
+        <a class="link"href="{{ link.url }}"  class="blue-hover">{{ link.title }}</a>
+      {% endfor %}
     </div>
     <div class="socials">
-      <?php foreach ($globalModules->socials as $link) { ?>
-      <a href="<?php echo $link->url[0]->text ?>">
-        <img class="preload-critical" data-preload-desktop="<?php echo $link->image->url ?>" data-preload-mobile="<?php echo $link->image->url ?>">
-        <img class="preload-critical" data-preload-desktop="<?php echo $link->hover_image->url ?>" data-preload-mobile="<?php echo $link->hover_image->url ?>">
-        <div class="text-wrapper">
-          <p><?php echo $link->text_1[0]->text ?></p>
-          <p><?php echo $link->text_2[0]->text ?></p>
-        </div>
-
+      <a href="{{ settings.url_1 }}" target="_blank">
+        <img class="preload-critical" src="{{ settings.social_image_1 | img_url }}">
+        <img class="preload-critical" src="{{ settings.hover_image_1 | img_url }}">
+        <div class="text-wrapper">{{ settings.social_copy_1 }}</div>
       </a>
-      <?php } ?>
+      <a href="{{ settings.url_2 }}" target="_blank">
+        <img class="preload-critical" src="{{ settings.social_image_2 | img_url }}">
+        <img class="preload-critical" src="{{ settings.hover_image_2 | img_url }}">
+        <div class="text-wrapper">{{ settings.social_copy_2 }}</div>
+      </a>
+      <a href="{{ settings.url_3 }}" target="_blank">
+        <img class="preload-critical" src="{{ settings.social_image_3 | img_url }}">
+        <img class="preload-critical" src="{{ settings.hover_image_3 | img_url }}">
+        <div class="text-wrapper">{{ settings.social_copy_3 }}</div>
+      </a>
+      <a href="{{ settings.url_4 }}" target="_blank">
+        <img class="preload-critical" src="{{ settings.social_image_4 | img_url }}">
+        <img class="preload-critical" src="{{ settings.hover_image_4 | img_url }}">
+        <div class="text-wrapper">{{ settings.social_copy_4 }}</div>
+      </a>
+
     </div>
   </div>
   <div class="utility-links">
-    <p><?php echo $globalModules->copyright[0]->text ?></p>
-    <?php foreach ($globalModules->utility_links as $link) { ?>
-    <a href="<?php echo $link->url[0]->text ?>"><?php echo $link->text[0]->text ?></a>
-    <?php } ?>
+    <p>{{ settings.copyright }}</p>
+    <a href="{{ settings.terms_url }}">{{ settings.terms }}</a>
+    <a href="{{ settings.privacy_url }}">{{ settings.privacy }}</a>
+    <a href="{{ settings.site_credits_url }}">{{ settings.site_credits }}</a>
   </div>
 </footer>
 {{ '_main.css' | asset_url | stylesheet_tag }}

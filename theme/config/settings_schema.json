@@ -18,16 +18,7 @@
       }
     ]
   },
-  {
-    "name": "Social share image",
-    "settings": [
-      {
-        "type": "image_picker",
-        "id": "share_image",
-        "label": "Social share image"
-      }
-    ]
-  },
+
   {
     "name": "Nav Image",
     "settings": [
@@ -78,23 +69,83 @@
     "settings": [
       {
         "type": "text",
-        "id": "instagram_url",
-        "label": "Instagram"
+        "id": "url_1",
+        "label": "URL 1"
+      },
+      {
+        "type": "richtext",
+        "id": "social_copy_1",
+        "label": "Social Copy 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image_1",
+        "label": "Social Image 1"
+      },
+      {
+        "type": "image_picker",
+        "id": "hover_image_1",
+        "label": "Hover Image 1"
       },
       {
         "type": "text",
-        "id": "twitter_url",
-        "label": "Twitter"
+        "id": "url_2",
+        "label": "URL 2"
+      },
+      {
+        "type": "richtext",
+        "id": "social_copy_2",
+        "label": "Social Copy 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image_2",
+        "label": "Social Image 2"
+      },
+      {
+        "type": "image_picker",
+        "id": "hover_image_2",
+        "label": "Hover Image 2"
       },
       {
         "type": "text",
-        "id": "youtube_url",
-        "label": "Youtube"
+        "id": "url_3",
+        "label": "URL 3"
+      },
+      {
+        "type": "richtext",
+        "id": "social_copy_3",
+        "label": "Social Copy 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image_3",
+        "label": "Social Image 3"
+      },
+      {
+        "type": "image_picker",
+        "id": "hover_image_3",
+        "label": "Hover Image 3"
       },
       {
         "type": "text",
-        "id": "tiktok_url",
-        "label": "Tik Tok"
+        "id": "url_4",
+        "label": "URL 4"
+      },
+      {
+        "type": "richtext",
+        "id": "social_copy_4",
+        "label": "Social Copy 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "social_image_4",
+        "label": "Social Image 4"
+      },
+      {
+        "type": "image_picker",
+        "id": "hover_image_4",
+        "label": "Hover Image 4"
       }
     ]
   },
@@ -114,222 +165,188 @@
     ]
   },
   {
-    "name": "Navigation Drawer Tile 1",
+    "name": "Footer Content",
     "settings": [
       {
-        "type": "product",
-        "id": "product_1_link",
-        "label": "Product"
-      },
-      {
+        "id": "top_image",
         "type": "image_picker",
-        "id": "drawer_image_1",
-        "label": "Image"
+        "label": "Top Image"
       },
       {
-        "type": "image_picker",
-        "id": "drawer_image_1_hover",
-        "label": "Secondary Image (on hover)"
-      },
-      {
-        "type": "richtext",
-        "id": "drawer_title_1",
-        "label": "Title"
-      },
-      {
+        "id": "footer_tag",
         "type": "text",
-        "id": "drawer_subtitle_1",
-        "label": "Subtitle"
+        "label": "Footer Tag"
+      },
+      {
+        "id": "footer_header",
+        "type": "text",
+        "label": "Footer Header"
+      },
+      {
+        "id": "footer_image_1",
+        "type": "image_picker",
+        "label": "Footer Image 1"
+      },
+      {
+        "id": "footer_image_2",
+        "type": "image_picker",
+        "label": "Footer Image 2"
+      },
+      {
+        "id": "footer_image_3",
+        "type": "image_picker",
+        "label": "Footer Image 3"
+      },
+      {
+        "id": "footer_image_4",
+        "type": "image_picker",
+        "label": "Footer Image 4"
+      }
+
+    ]
+  },
+  {
+    "name": "Utility Links",
+    "settings": [
+      {
+        "id": "copyright",
+        "type": "text",
+        "label": "Copyright"
+      },
+      {
+        "id": "terms",
+        "type": "text",
+        "label": "Terms"
+      },
+      {
+        "id": "terms_url",
+        "type": "text",
+        "label": "Terms URL"
+      },
+      {
+        "id": "privacy",
+        "type": "text",
+        "label": "Privacy"
+      },
+      {
+        "id": "privacy_url",
+        "type": "text",
+        "label": "Privacy URL"
+      },
+      {
+        "id": "site_credits",
+        "type": "text",
+        "label": "Site Credits"
+      },
+      {
+        "id": "site_credits_url",
+        "type": "text",
+        "label": "Site Credits URL"
       }
     ]
   },
   {
-    "name": "Navigation Drawer Tile 2",
+    "name": "Social Marquee",
     "settings": [
       {
-        "type": "product",
-        "id": "product_2_link",
-        "label": "Product"
-      },
-      {
-        "type": "image_picker",
-        "id": "drawer_image_2",
-        "label": "Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "drawer_image_2_hover",
-        "label": "Secondary Image (on hover)"
-      },
-      {
-        "type": "richtext",
-        "id": "drawer_title_2",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "drawer_subtitle_2",
-        "label": "Subtitle"
-      }
-    ]
-  },
-  {
-    "name": "Navigation Drawer Tile 3",
-    "settings": [
-      {
-        "type": "product",
-        "id": "product_3_link",
-        "label": "Product"
-      },
-      {
-        "type": "image_picker",
-        "id": "drawer_image_3",
-        "label": "Image"
-      },
-      {
-        "type": "image_picker",
-        "id": "drawer_image_3_hover",
-        "label": "Secondary Image (on hover)"
-      },
-      {
-        "type": "richtext",
-        "id": "drawer_title_3",
-        "label": "Title"
-      },
-      {
-        "type": "text",
-        "id": "drawer_subtitle_3",
-        "label": "Subtitle"
-      }
-    ]
-  },
-  {
-    "name": "Instagram",
-    "settings": [
-      {
-        "id": "instagram_header",
-        "type": "richtext",
-        "label": "Header"
-      },
-      {
-        "id": "instagram_button_text",
-        "type": "text",
-        "label": "Button text"
-      },
-      {
-        "id": "instagram_button_link",
-        "type": "text",
-        "label": "Button Link"
-      },
-      {
-        "id": "instagram_image_one",
+        "id": "image_1",
         "type": "image_picker",
         "label": "Image 1"
       },
       {
-        "id": "instagram_image_two",
+        "id": "profile_image_1",
+        "type": "image_picker",
+        "label": "Profile Image 1"
+      },
+      {
+        "id": "profile_name_1",
+        "type": "richtext",
+        "label": "Profile Name 1"
+      },
+      {
+        "id": "profile_copy_1",
+        "type": "text",
+        "label": "Copy 1"
+      },
+      {
+        "id": "image_2",
         "type": "image_picker",
         "label": "Image 2"
       },
       {
-        "id": "instagram_image_three",
+        "id": "profile_image_2",
+        "type": "image_picker",
+        "label": "Profile Image 2"
+      },
+      {
+        "id": "profile_name_2",
+        "type": "richtext",
+        "label": "Profile Name 2"
+      },
+      {
+        "id": "profile_copy_2",
+        "type": "text",
+        "label": "Copy 2"
+      },
+      {
+        "id": "image_3",
         "type": "image_picker",
         "label": "Image 3"
       },
       {
-        "id": "instagram_image_four",
+        "id": "profile_image_3",
+        "type": "image_picker",
+        "label": "Profile Image 3"
+      },
+      {
+        "id": "profile_name_3",
+        "type": "richtext",
+        "label": "Profile Name 3"
+      },
+      {
+        "id": "profile_copy_3",
+        "type": "text",
+        "label": "Copy 3"
+      },
+      {
+        "id": "image_4",
         "type": "image_picker",
         "label": "Image 4"
       },
       {
-        "id": "instagram_image_five",
+        "id": "profile_image_4",
+        "type": "image_picker",
+        "label": "Profile Image 4"
+      },
+      {
+        "id": "profile_name_4",
+        "type": "richtext",
+        "label": "Profile Name 4"
+      },
+      {
+        "id": "profile_copy_4",
+        "type": "text",
+        "label": "Copy 4"
+      },
+      {
+        "id": "image_5",
         "type": "image_picker",
         "label": "Image 5"
-      }
-    ]
-  },
-  {
-    "name": "Footer Content",
-    "settings": [
+      },
       {
-        "id": "box_image_1",
+        "id": "profile_image_5",
         "type": "image_picker",
-        "label": "Box Image 1"
+        "label": "Profile Image 5"
       },
       {
-        "id": "box_text_1",
+        "id": "profile_name_5",
+        "type": "richtext",
+        "label": "Profile Name 5"
+      },
+      {
+        "id": "profile_copy_5",
         "type": "text",
-        "label": "Box Text 1"
-      },
-      {
-        "id": "box_image_2",
-        "type": "image_picker",
-        "label": "Box Image 2"
-      },
-      {
-        "id": "box_text_2",
-        "type": "text",
-        "label": "Box Text 2"
-      },
-      {
-        "id": "box_image_3",
-        "type": "image_picker",
-        "label": "Box Image 3"
-      },
-      {
-        "id": "box_text_3",
-        "type": "text",
-        "label": "Box Text 3"
-      },
-      {
-        "id": "box_image_4",
-        "type": "image_picker",
-        "label": "Box Image 4"
-      },
-      {
-        "id": "box_text_4",
-        "type": "text",
-        "label": "Box Text 4"
-      },
-      {
-        "type": "text",
-        "id": "disclaimer",
-        "label": "Disclaimer"
-      },
-      {
-        "type": "text",
-        "id": "copyright",
-        "label": "Copyright"
-      },
-      {
-        "type": "text",
-        "id": "credits",
-        "label": "Credits Link"
-      }
-    ]
-  },
-  {
-    "name": "Email CTA (Footer)",
-    "settings": [
-      {
-        "type": "text",
-        "id": "email_cta_header",
-        "label": "Email CTA Header"
-      },
-      {
-        "type": "text",
-        "id": "email_cta_copy",
-        "label": "Email CTA Copy"
-      },
-      {
-        "type": "text",
-        "id": "email_cta_button_text",
-        "label": "Email CTA Button Text"
-      },
-      {
-        "type": "text",
-        "id": "email_cta_button_link",
-        "label": "Email CTA Button Link"
+        "label": "Copy 5"
       }
     ]
   },
