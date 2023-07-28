@@ -2,49 +2,53 @@
   "sections": {
     "pdp-hero": {
       "type": "pdp-hero",
-      "blocks": {
-        "52d2921d-70af-4e93-951b-89f863684e7f": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "details"
-          }
-        },
-        "aa4e880f-781f-40b0-a7b8-6c42666c3a78": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "fabric"
-          }
-        },
-        "b9ceb964-c435-46c6-b788-8b54fca90271": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "care guide"
-          }
-        },
-        "fb04344b-2f04-400a-852a-327328ef8523": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "chart size"
-          }
-        }
-      },
-      "block_order": [
-        "52d2921d-70af-4e93-951b-89f863684e7f",
-        "aa4e880f-781f-40b0-a7b8-6c42666c3a78",
-        "b9ceb964-c435-46c6-b788-8b54fca90271",
-        "fb04344b-2f04-400a-852a-327328ef8523"
-      ],
       "settings": {
+        "ribbon_image": "shopify:\/\/shop_images\/top_Summer_1.png",
+        "variant_ice_block": "shopify:\/\/shop_images\/pdp-ice-block-1.png"
       }
     },
     "about-section": {
       "type": "about-section",
       "settings": {
+        "igloo_icon": "shopify:\/\/shop_images\/about-img.png",
+        "block_1_title": "ABOUT bowl cut figure",
+        "block_1_copy": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus.",
+        "block_2_title": "who is pudgy Penguins?",
+        "block_2_copy": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui."
       }
     },
     "faq-section": {
       "type": "faq-section",
+      "blocks": {
+        "6e34ebcf-921c-44ab-a430-d733f75c3213": {
+          "type": "faq-block",
+          "settings": {
+            "question": "Do you ship worldwide?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "8f6c4641-607f-46a6-9ea4-5da24095eb0d": {
+          "type": "faq-block",
+          "settings": {
+            "question": "What happens when a collectible is sold out?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "9b2100a5-3768-4d5d-b5ee-c0b10223d4ad": {
+          "type": "faq-block",
+          "settings": {
+            "question": "What happens when a collectible is sold out?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "6e34ebcf-921c-44ab-a430-d733f75c3213",
+        "8f6c4641-607f-46a6-9ea4-5da24095eb0d",
+        "9b2100a5-3768-4d5d-b5ee-c0b10223d4ad"
+      ],
       "settings": {
+        "header": "FAQ’S"
       }
     }
   },

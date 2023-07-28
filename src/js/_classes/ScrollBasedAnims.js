@@ -17,7 +17,14 @@ export class ScrollBasedAnims {
 		this.transitioning = false;
 		this.headerScrolled = false;
 		this.adjustHeaderDist = 1;
-
+		this.stickyAtc = false;
+		this.stickyAtcShowing = false;
+		if (globalStorage.namespace === "product" && globalStorage.windowWidth < 768) {
+			this.stickyAtc = document.getElementById('atc-wrapper');
+			this.stickyAtcShow = document.querySelector(".pdp-hero").getBoundingClientRect();
+			this.stickyAtcStop = document.querySelector(".best-sellers").getBoundingClientRect();
+			gsap.set(this.stickyAtc, { yPercent: 100, force3d: true });
+		}
 		const {
 			dataFromElems = this.currentView.querySelectorAll('[data-from]'),
 			dataHeroFromElems = this.currentView.querySelectorAll('[data-h-from]'),
@@ -183,43 +190,41 @@ export class ScrollBasedAnims {
 
 
 	hideShowHeader() {
+		this.dist = this.adjustHeaderDist / 2;
 		if (this.direction === "untouched") {
-			gsap.set(domStorage.header, { autoAlpha: 1, y: 0 });
+			return;
 		}
-		// } else if (this.direction === "untouched") {
-		// 	gsap.set(domStorage.header, { autoAlpha: 1 });
-	
-		// 	return;
-		// }
 
-		// if (globalStorage.namespace !== "home") {
-		// 	if (this.direction === "down" && !this.headerScrolled) {
-		// 		this.headerScrolled = true;
-		// 		gsap.to(domStorage.header, { y: -66, duration: 0.3, force3D: true, ease: "sine.out" });
-		// 	} else if (this.direction === "up" && this.headerScrolled) {
-		// 		this.headerScrolled = false;
-		// 		gsap.to(domStorage.header, { y: 0, duration: 0.3, force3D: true, ease: "sine.out" });
-		// 	}
-		// } else {
-			if (this.direction === "down" && !this.headerScrolled && this.data.scrollY > this.adjustHeaderDist) {
-				this.headerScrolled = true;
-				if (globalStorage.windowWidth < 768) {
-					gsap.to(domStorage.header, { yPercent: -100, duration: 0.3, force3D: true, ease: "sine.inOut" });
-					gsap.to(domStorage.nav, { autoAlpha: 0, duration: 0.3, force3D: true, ease: "sine.inOut" });
-				} else  {
-					gsap.to(domStorage.header, { yPercent: -100, duration: 0.3, force3D: true, ease: "sine.inOut" });
-				}
-			} else if (this.direction === "up" && this.headerScrolled) {
-				this.headerScrolled = false;
-				if (globalStorage.windowWidth < 768) {
-					gsap.to(domStorage.header, { yPercent: 0, duration: 0.3, force3D: true, ease: "sine.inOut" });
-					gsap.to(domStorage.nav, { autoAlpha: 1, duration: 0.3, force3D: true, ease: "sine.inOut" });
-				} else  {
-					gsap.to(domStorage.header, { yPercent: 0, duration: 0.3, force3D: true, ease: "sine.inOut" });
-				}
-
-			// }
+		if (this.direction === "down" && !this.headerScrolled && this.data.scrollY >= this.dist) {
+			console.log(this.dist);
+			this.headerScrolled = true;
+			gsap.to(domStorage.header, { y: -40, duration: 0.3, force3D: true, ease: "sine.inOut", delay: 0.2 });
+		} else if (this.direction === "up" && this.headerScrolled && this.data.scrollY <= this.adjustHeaderDist) {
+			this.headerScrolled = false;
+			gsap.to(domStorage.header, { y: 0, duration: 0.3, force3D: true, ease: "sine.inOut" });
 		}
+
+		if (this.stickyAtc) {
+			if (this.direction === "down") {
+				if (!this.stickyAtcShowing && (this.data.scrollY > this.stickyAtcShow.top / 2 && (this.data.scrollY + this.data.height) < this.stickyAtcStop.bottom)) {
+					this.stickyAtcShowing = true;
+					gsap.to(this.stickyAtc, { yPercent: 0, ease: "sine.inOut", duration: 0.3 });
+				} else if (this.stickyAtcShowing && (this.data.scrollY + this.data.height) > this.stickyAtcStop.bottom) {
+					this.stickyAtcShowing = false;
+					gsap.to(this.stickyAtc, { yPercent: 100, ease: "sine.inOut", duration: 0.3 });
+				}
+			} else if (this.direction === "up") {
+				if (!this.stickyAtcShowing && (this.data.scrollY + this.data.height) < this.stickyAtcStop.bottom && this.data.scrollY > this.stickyAtcShow.top) {
+					this.stickyAtcShowing = true;
+					gsap.to(this.stickyAtc, {yPercent: 0, ease: "sine.inOut", duration: 0.3});
+				}
+				else if (this.stickyAtcShowing && this.data.scrollY < this.stickyAtcShow.bottom) {
+					this.stickyAtcShowing = false;
+					gsap.to(this.stickyAtc, { yPercent: 100, ease: "sine.inOut", duration: 0.3 });
+				}
+			}
+		}
+
 	}
 
 	getMarqueeData() {
