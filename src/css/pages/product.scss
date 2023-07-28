@@ -105,6 +105,7 @@
       text-transform: uppercase;
       text-align: center;
       margin-bottom: 8px;
+      text-align: start;
       @include get-vw(font-size, 104px, 64px);
     }
     .price-wrapper {

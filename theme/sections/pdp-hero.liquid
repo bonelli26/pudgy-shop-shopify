@@ -1,24 +1,111 @@
-<h1>Hello</h1>
+
+<div class="max-width pdp-hero-inner">
+    <div class="left">
+        {% assign imageSize = product.images | size %}
+        <div class="slider no-drag-free">
+            <div class="frame">
+                {% if section.settings.ribbon_image != blank %}
+                    <img class="preload-critical ribbon" {% if section.settings.hero_ribbon.alt %} alt="{{ section.settings.hero_ribbon.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.ribbon_image | image_url }}" data-preload-mobile="https:{{ section.settings.ribbon_image | image_url }}">
+                {% endif %}
+                <div class="slides">
+                    <div class="inner">
+                        {% for image in product.images limit: 4 %}
+                            <div class="slide">
+                                <img class="preload-critical"{% if image.alt %} alt="{{ image.alt }}"{% endif %} data-preload-desktop="https:{{ image | image_url }}" data-preload-mobile="https:{{ image | image_url }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% if imageSize == 1 %}
+                <div class="thumbnails dots">
+                    {% for image in product.images limit: 4 %}
+                        <div class="thumbnail dot{% if forloop.first %} active{% endif %}">
+                            <img class="preload-critical bg"{% if image.alt %} alt="{{ image.alt }}"{% endif %} data-preload-desktop="https:{{ image | image_url }}" data-preload-mobile="https:{{ image | image_url }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="right">
+        <p class="eyebrow">{{ product.type }}</p>
+        <h1>{{ product.title }}</h1>
+        <div class="price-wrapper">
+            <p class="price">{{ product.price | money }}</p>
+            <p class="old-price">{{ product.price | money }}
+                <span><svg width="58" height="28" viewBox="0 0 58 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+					<line x1="1.38793" y1="26.7724" x2="55.7664" y2="1.41531" stroke="#EF928E" stroke-width="2"/>
+					<line x1="2.23317" y1="1.41498" x2="56.6116" y2="26.7721" stroke="#EF928E" stroke-width="2"/>
+					</svg></span>
+            </p>
+        </div>
+        <div class="after-pay desktop-only">
+            <p>Or 4-interest free payments of <strong>$6.99 </strong>with</p><img class="preload" src="https://images.prismic.io/pudgypenguinsshop/acd79ef5-7945-4a3a-93cd-36a1aefd54a5_afterpay.png?auto=compress,format">
+        </div>
+        <div class="after-pay mobile-only">
+            <p>Or 4-interest free payments with</p><img class="preload" src="https://images.prismic.io/pudgypenguinsshop/acd79ef5-7945-4a3a-93cd-36a1aefd54a5_afterpay.png?auto=compress,format">
+        </div>
+        <div class="copy">{{ product.description }}</div>
+        <div class="variant-wrapper mw">
+            <img class="preload-critical bg" {% if section.settings.variant_ice_block.alt %} alt="{{ section.settings.variant_ice_block.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.variant_ice_block | image_url }}" data-preload-mobile="https:{{ section.settings.variant_ice_block | image_url }}">
+            <div class="left-variant variant">
+                <p>{{ section.settings.variant_1_title }}</p>
+                <p>{{ section.settings.variant_1_value }}</p>
+            </div>
+            <div class="right-variant variant">
+                <p>{{ section.settings.variant_2_title }}</p>
+                <p>{{ section.settings.variant_2_value }}</p>
+            </div>
+        </div>
+        <div class="atc-wrapper" id="atc-wrapper">
+            <button class="icon-link">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" fill="none"><g filter="url(#a)"><path fill="#fff" d="M18.1 2c-1.704 0-3.34 1.187-4.6 3.317C12.24 3.187 10.604 2 8.9 2A6.908 6.908 0 0 0 2 8.9c0 7.048 10.69 12.708 11.145 12.946a.76.76 0 0 0 .71 0C14.31 21.608 25 15.95 25 8.9 25 5.095 21.904 2 18.1 2Z"/><path stroke="#00142D" stroke-width="2" d="M18.1 1c-1.771 0-3.349.985-4.6 2.553C12.249 1.985 10.67 1 8.9 1 4.543 1 1 4.543 1 8.9c0 4.003 2.998 7.44 5.753 9.788 2.81 2.394 5.669 3.908 5.929 4.044a1.76 1.76 0 0 0 1.635 0c.255-.132 3.117-1.647 5.93-4.044C23.002 16.34 26 12.903 26 8.9 26 4.543 22.457 1 18.1 1Z"/></g><defs><filter id="a" width="29.471" height="26.404" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dx="2.471" dy="2.471"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_2_23"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_2_23" result="shape"/></filter></defs></svg>
+            </button>
+            <div class="quantity increment-wrapper">
+                <button class="decrease">-</button>
+                <span class="count">1</span>
+                <button class="increase">+</button>
+            </div>
+            <button class="add-to-cart">Add To Cart<span><svg width="23" height="27" viewBox="0 0 23 27" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<g filter="url(#filter0_d_1130_7264)">
+							<path fill-rule="evenodd" clip-rule="evenodd" d="M4.38927 8.61189H6.74035V7.21661C6.74035 4.04146 9.17416 1.45947 12.1331 1.45947C15.092 1.45947 17.4982 4.04169 17.4982 7.21661V8.61189H20.3189C21.0381 8.61189 21.6191 9.2354 21.6191 10.0072V18.4946C21.6191 21.7595 19.13 24.4595 16.0605 24.4595H8.31668C5.1912 24.4595 2.61914 21.6995 2.61914 18.3456V10.5104C2.61914 9.47182 3.42124 8.61111 4.3891 8.61111L4.38927 8.61189ZM9.20181 8.61189H15.0376V7.21661C15.0376 5.52485 13.7097 4.1008 12.134 4.1008C10.5298 4.1008 9.20266 5.52572 9.20266 7.21661V8.61189H9.20181Z" fill="#F5FDFF"/>
+							<path d="M20.3189 8.11189H17.9982V7.21661C17.9982 3.79936 15.4008 0.959473 12.1331 0.959473C8.86861 0.959473 6.24035 3.79567 6.24035 7.21661V8.11189H4.79148L4.79131 8.11111H4.3891C3.11247 8.11111 2.11914 9.22947 2.11914 10.5104V18.3456C2.11914 21.9418 4.88243 24.9595 8.31668 24.9595H16.0605C19.4403 24.9595 22.1191 22.0002 22.1191 18.4946V10.0072C22.1191 8.99305 21.3469 8.11189 20.3189 8.11189ZM14.5376 8.11189H9.70266V7.21661C9.70266 5.77114 10.8357 4.6008 12.134 4.6008C13.401 4.6008 14.5376 5.76728 14.5376 7.21661V8.11189Z" stroke="#00142D"/>
+							</g>
+							<defs>
+							<filter id="filter0_d_1130_7264" x="0.619141" y="0.459473" width="22" height="26" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+							<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+							<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+							<feOffset dx="-1" dy="1"/>
+							<feComposite in2="hardAlpha" operator="out"/>
+							<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+							<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1130_7264"/>
+							<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1130_7264" result="shape"/>
+							</filter>
+							</defs>
+							</svg></span></button>
+        </div>
+    </div>
+</div>
 
 
 
 {% schema %}
 {
-  "name": "PDP Hero",
-  "tag": "section",
-  "class": "pdp-hero mw",
-  "blocks": [
-    {
-      "name": "Tab Trigger",
-      "type": "tab_trigger",
-      "settings": [
-        {
-          "type": "text",
-          "id": "trigger",
-          "label": "Trigger"
-        }
-      ]
-    }
-  ]
+"name": "PDP Hero",
+"tag": "section",
+"class": "pdp-hero mw",
+"settings": [
+{
+"id": "ribbon_image",
+"type": "image_picker",
+"label": "Ribbon"
+},
+{
+"id": "variant_ice_block",
+"type": "image_picker",
+"label": "Variant Ice Block"
+}
+]
 }
 {% endschema %}

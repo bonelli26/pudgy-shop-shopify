@@ -3,36 +3,8 @@
     "pdp-hero": {
       "type": "pdp-hero",
       "blocks": {
-        "52d2921d-70af-4e93-951b-89f863684e7f": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "details"
-          }
-        },
-        "aa4e880f-781f-40b0-a7b8-6c42666c3a78": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "fabric"
-          }
-        },
-        "b9ceb964-c435-46c6-b788-8b54fca90271": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "care guide"
-          }
-        },
-        "fb04344b-2f04-400a-852a-327328ef8523": {
-          "type": "tab_trigger",
-          "settings": {
-            "trigger": "chart size"
-          }
-        }
       },
       "block_order": [
-        "52d2921d-70af-4e93-951b-89f863684e7f",
-        "aa4e880f-781f-40b0-a7b8-6c42666c3a78",
-        "b9ceb964-c435-46c6-b788-8b54fca90271",
-        "fb04344b-2f04-400a-852a-327328ef8523"
       ],
       "settings": {
       }
