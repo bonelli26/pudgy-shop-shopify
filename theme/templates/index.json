@@ -3,11 +3,6 @@
     "hero-home": {
       "type": "hero-home",
       "settings": {
-        "hero_image": "shopify:\/\/shop_images\/PP-Igloo-Lookbook332-Edit_1_1.jpg",
-        "hero_image_mobile": "shopify:\/\/shop_images\/Rectangle_18.jpg",
-        "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/94b7b181674946eeb253c48015783fd8.mp4",
-        "video_url_mobile": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4",
-        "hero_copyy": "<p>debut delivery<\/p><p><strong>spring\/summer ‘23<\/strong><\/p>"
       }
     }
   },

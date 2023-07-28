@@ -1,2 +1,501 @@
+.view-product {
+  .pdp-hero {
+    background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
+    border-bottom: 2px solid rgba(0, 20, 45, 1);
+    .pdp-hero-inner {
+      display: flex;
+      align-items: flex-start;
+      justify-content: space-between;
+      @include get-vw(padding-top, 190px);
+      @include get-vw(padding-bottom, 67px);
+      @include get-vw(padding-left, 211px);
+      @include get-vw(padding-right, 206px);
+      @include get-vw(gap, 82px, 16px);
+    }
+    .ribbon {
+      position: absolute;
+      display: flex;
+      z-index: 4;
+      top: 0;
+      right: 0;
+      transition: all .4s cubic-bezier(.47,1.64,.41,.8);
+      transform: rotate(5.049deg);
+      @include get-vw(height, 192px, 142px);
+      @include get-vw(width, 192px, 142px);
+    }
+    .left {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      width: 32vw;
+    }
+    .right {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+    }
+    .frame {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      border: 8px solid #FFF;
+      border-radius: 24px;
+      box-shadow: 2px 4px 0 4px rgba(0, 0, 0, 0.15), 0 0 0 2px #00142D;
+      @include get-vw(margin-bottom, 19px, 19px);
+      @include get-vw(height, 603px, 340px);
+    }
+    .slider {
+      overflow: unset;
+    }
+    .slide {
+      display: flex;
+      overflow: hidden;
+      height: 100%;
+      width: 32vw;
+      position: relative;
+      min-width: 32vw;
+    }
+    .thumbnails {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      width: 100%;
+      gap: 1vw;
+      @include get-vw(height, 121px);
+    }
+    .thumbnail {
+      position: relative;
+      height: 100%;
+      width: 25%;
+      border-radius: 24px;
+      border: 1.5px solid #000;
+      overflow: hidden;
+      transition: .3s all $ease-in-out-sine;
+      box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
+      &.active {
+        transform: rotate(-5deg);
+        box-shadow: unset;
+        border: 2px solid rgba(255, 163, 255, 1);
+      }
+      html:not(.touch) & {
+        &:hover {
+          transform: rotate(-5deg);
+        }
+      }
+    }
+    .eyebrow {
+      color: #00142D;
+      font-family: $mencoBlack;
+      line-height: 1.45;
+      text-transform: uppercase;
+      margin-bottom: 8px;
+      @include get-vw(font-size, 18px, 16px);
+    }
+    h1 {
+      color: #FFF;
+      text-shadow: -3px 3px #00142D;
+      -webkit-text-stroke: 1px #00142d;
+      text-strke: 1px #00142d;
+      font-family: $ttBlack;
+      line-height: .91;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      text-align: center;
+      margin-bottom: 8px;
+      @include get-vw(font-size, 104px, 64px);
+    }
+    .price-wrapper {
+      display: flex;
+      align-items: center;
+      margin-bottom: 8px;
+    }
+    .price {
+      color: #FFA3FF;
+      -webkit-text-stroke: 1px #00142d;
+      text-strke: 1px #00142d;
+      text-shadow: -1px 1px #00142D;
+      font-family: $ttBlack;
+      line-height: .91;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      margin-right: 8px;
+      @include get-vw(font-size, 46px, 46px);
+    }
+    .old-price {
+      color: #FFF;
+      -webkit-text-stroke: 1px #00142d;
+      text-strke: 1px #00142d;
+      text-shadow: -1px 1px #00142D;
+      font-family: $ttBlack;
+      line-height: .88;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      position: relative;
+      @include get-vw(font-size, 32px, 32px);
+      span {
+        top: 0;
+        left: 0;
+        position: absolute;
+        width: 100%;
+        height: 100%;
+      }
+    }
+    .after-pay {
+      align-items: center;
+      color: #000;
+      text-align: center;
+      font-family: $mencoBold;
+      font-size: 14px;
+      line-height: 1.45;
+      text-transform: uppercase;
+      @include get-vw(margin-bottom, 24px, 24px);
+      strong {
+        font-family: $mencoBlack;
+      }
+      img {
+        margin-left: 8px;
+        width: 67px;
+        height: 23px;
+      }
+    }
+    .copy {
+      color: #00142D;
+      font-family: $mencoBlack;
+      line-height: 1.45;
+      text-transform: uppercase;
+      @include get-vw(margin-bottom, 26px, 24px);
+      @include get-vw(font-size, 18px, 16px);
+    }
+    .variant-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      position: relative;
+      @include get-vw(height, 53px, 53px);
+      @include get-vw(margin-bottom, 26px, 26px);
+      img {
+        object-fit: contain;
+      }
+    }
+    .variant {
+      position: relative;
+      padding: 0 24px;
+      z-index: 2;
+      width: 50%;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      color: #000;
+      text-align: center;
+      font-family: $mencoBold;
+      font-size: 14px;
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
+    .atc-wrapper {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 8px;
+      @include get-vw(height, 58px, 58px);
+      .quantity, .icon-link {
+        height: 100%;
+        flex: 1;
+        border-radius: 29px;
+        border: 1px solid #00142D;
+        background: #FFF;
+        box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
+      }
+    }
+    .quantity {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 24px;
+      button, span {
+        color: #00142D;
+        font-family: $mencoBlack;
+        font-size: 18px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+    }
+    .icon-link {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+
+      svg {
+        width: 31px;
+        height: 26px;
+      }
+    }
+    .add-to-cart {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      border-radius: 100px;
+      border: 1px solid #000;
+      background: #FFA3FF;
+      box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
+      height: 100%;
+      color: #F5FDFF;
+      text-align: center;
+      font-family: $ttBlack;
+      font-size: 29px;
+      line-height: .80;
+      letter-spacing: -0.01em;
+      text-transform: uppercase;
+      -webkit-text-stroke: 1px #00142d;
+      text-strke: 1px #00142d;
+      text-shadow: -1px 1px #00142D;
+      white-space: nowrap;
+      @include get-vw(width, 275px, 181px);
+      span {
+        margin-left: 8px;
+      }
+    }
+    @include bp-767 {
+      .pdp-hero-inner {
+        flex-direction: column;
+        padding: 128px 17px 42px;
+        gap: 16px;
+      }
+      .left {
+        width: 100%;
+      }
+      .slider {
+        display: flex;
+        gap: 12px;
+      }
+      .slide {
+        width: 100%;
+        min-width: 100%;
+      }
+      .frame {
+        margin-bottom: 0;
+        width: 68vw;
+        border-radius: 22px;
+        box-shadow: 0 1.1258188486099243px 1.6887284517288208px 0 rgba(0, 0, 0, 0.32);
+      }
+      .thumbnails {
+        height: 100%;
+        flex: 1;
+        flex-direction: column;
+        gap: 10px;
+        border: none;
+      }
+      .thumbnail {
+        width: 100%;
+        height: 20vw;
+        border: unset;
+        border-radius: 16.5px;
+        &.active {
+          border: 2.067px solid #00142D;
+          transform: rotate(-5deg);
+        }
+      }
+      .ribbon {
+        top: unset;
+        bottom: -65px;
+        right: -40px;
+        transform: rotate(-4deg);
+        width: 142px;
+        height: 142px;
+      }
+      .price-wrapper {
+        margin-bottom: 15px;
+      }
+      .after-pay {
+        font-family: $mencoBlack;
+      }
+      .variant-wrapper {
+        margin-bottom: 0;
+      }
+      .atc-wrapper {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 14px 14px 16px;
+        border-radius: 40px 40px 0 0;
+        background: #FFFFFF;
+        height: 23.4vw;
+        z-index: 100;
+      }
+    }
+  }
+  .about-section {
+    position: relative;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    @include get-vw(padding-top, 68px, 43px);
+    @include get-vw(padding-left, 212px, 130px);
+    @include get-vw(padding-right, 205px, 130px);
+    @include get-vw(padding-bottom, 43px, 22px);
+    @include get-vw(gap, 24px, 15px);
+    .icon {
+      position: absolute;
+      @include get-vw(top, -30px, -29px);
+      @include get-vw(right, 44px, 7px);
+      @include get-vw(width, 118px, 89px);
+      @include get-vw(height, 118px, 89px);
+    }
+    .text-block {
+      position: relative;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: stretch;
+      width: 100%;
+      z-index: 2;
+      height: auto;
+      @include get-vw(padding-top, 50px, 27px);
+      @include get-vw(padding-right, 60px, 23px);
+      @include get-vw(padding-left, 52px, 23px);
+      @include get-vw(padding-bottom, 47px, 47px);
+      h2, p {
+        z-index: 1;
+      }
+    }
+    .ice-block {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    h2 {
+      color: #FFF;
+      text-shadow: -3px 3px #00142D;
+      -webkit-text-stroke: 1px #00142d;
+      text-strke: 1px #00142d;
+      font-family: $ttBlack;
+      line-height: .91;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      text-align: center;
+      @include get-vw(margin-bottom, 20px, 20px);
+      @include get-vw(font-size, 72px, 32px);
+    }
+    .copy {
+      color: #00142D;
+      font-family: $mencoMedium;
+      line-height: 1.45;
+      @include get-vw(font-size, 21px, 16px);
+    }
+    @include bp-767 {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+  .faq-section {
+    @include get-vw(padding-top, 43px, 22px);
+    @include get-vw(padding-bottom, 64px, 33px);
+    @include get-vw(padding-left, 212px, 130px);
+    @include get-vw(padding-right, 205px, 130px);
+    .ice-block {
+      position: absolute;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+    }
+    h3 {
+      color: #FFF;
+      text-shadow: -3px 3px #00142D;
+      -webkit-text-stroke: 1px #00142d;
+      text-strke: 1px #00142d;
+      font-family: $ttBlack;
+      line-height: .91;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      text-align: center;
+      @include get-vw(font-size, 104px, 56px);
+      @include get-vw(margin-bottom, 35px, 28px);
+    }
+    .inner {
+      width: 100%;
+      gap: 5px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+    .drawer {
+      position: relative;
+      width: 100%;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      z-index: 2;
+      height: auto;
+      @include get-vw(padding-left, 58px, 25px);
+      @include get-vw(padding-top, 15px, 15px);
+      @include get-vw(padding-bottom, 18px, 18px);
+      @include get-vw(padding-right, 52px, 25px);
+      &.open {
+        span {
+          transform: rotate(45deg);
+        }
+      }
+      > img {
+        object-fit: contain;
+        transform-origin: 0 center;
+      }
+      .label, .drawer-items {
+        z-index: 1;
+      }
+      .drawer-items {
+        overflow: hidden;
+        transform-origin: 0 center;
+        p {
+          @include get-vw(padding-top, 34px, 24px);
+          @include get-vw(margin-bottom, 88px, 34px);
+        }
+      }
+    }
+    .label {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      color: #FFF;
+      text-shadow: -3px 3px #00142D;
+      -webkit-text-stroke: 1px #00142d;
+      text-strke: 1px #00142d;
+      font-family: $ttBlack;
+      line-height: .91;
+      letter-spacing: -0.02em;
+      text-transform: uppercase;
+      @include get-vw(font-size, 46px, 32px);
+      span {
+        transition: all .25s $ease-in-out-sine;
+        @include get-vw(font-size, 104px, 56px);
+      }
+    }
+    .drawer-items {
+      p {
+        color: #00142D;
+        font-family: $mencoMedium;
+        line-height: 1.45;
+        @include get-vw(font-size, 21px, 16px);
+      }
+    }
+    @include bp-767 {
+      padding-left: 18px;
+      padding-right: 18px;
+    }
+  }
+  .best-sellers {
+    .top {
+      @include get-vw(max-width, 600px, 427px);
+    }
+  }
+}
 
 

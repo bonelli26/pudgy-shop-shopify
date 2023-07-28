@@ -37,15 +37,20 @@
       "settings": {
       }
     },
-    "pdp-recirc": {
-      "type": "pdp-recirc",
+    "about-section": {
+      "type": "about-section",
       "settings": {
-        "heading": "you may also like"
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "settings": {
       }
     }
   },
   "order": [
     "pdp-hero",
-    "pdp-recirc"
+    "about-section",
+    "faq-section"
   ]
 }
