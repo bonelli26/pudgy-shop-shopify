@@ -196,6 +196,15 @@ export class Marquees {
 			inner.appendChild(elementCopy);
 		}
 
+		if(marquee.classList.contains('hover')) {
+			inner.addEventListener("mouseenter", () => {
+				tween.timeScale(0);
+			});
+			inner.addEventListener("mouseleave", () => {
+				tween.timeScale(1);
+			});
+		}
+
 		this.duplicates = inner.querySelectorAll(".duplicate");
 
 		let mobDist =  inner.dataset.right ? marquee.querySelector(".inner > *:first-child").getBoundingClientRect().right : marquee.querySelector(".inner > *:nth-child("+resetElCount+")").offsetLeft ;

@@ -1,7 +1,6 @@
 {
   "current": {
     "favicon": "shopify:\/\/shop_images\/igloo-fav.png",
-    "share_image": "shopify:\/\/shop_images\/IGLOO_BRAND.png",
     "nav_image": "shopify:\/\/shop_images\/PudgyP_Wordmark_Final.png",
     "small_image_1": "shopify:\/\/shop_images\/Exchange.png",
     "text_1": "EASY EXCHANGES",
@@ -52,6 +51,7 @@
     "checkout_sidebar_background_color": "#e9f7fb",
     "checkout_accent_color": "#80abff",
     "checkout_button_color": "#000000",
+    "share_image": "shopify:\/\/shop_images\/IGLOO_BRAND.png",
     "instagram_url": "https:\/\/www.instagram.com\/mysweetdreams\/?hl=en",
     "product_1_link": "dream-gummies",
     "drawer_image_1": "shopify:\/\/shop_images\/SD_LIGHT_LEAK_V1-03_fd366430-57b7-4791-8f5e-572f749fc778.png",

@@ -1,25 +1,43 @@
- <h2>{{ section.settings.heading }}</h2>
-    <div class="inner">
-        {% for block in section.blocks %}
-            {% case block.type %}
-                {% when 'product-card' %}
+<div class="top">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.copy }}</p>
+</div>
+<div class="best-sellers-wrapper slider no-drag-free no-loop no-loop-mobile" data-at="767" data-align="center">
+    <div class="slides">
+        <div class="inner">
+            {% for block in section.blocks %}
+                {% case block.type %}
+                    {% when 'product-card' %}
                     {% assign thisProduct = block.settings.product %}
-                    <a href="/products/{{ thisProduct.handle }}" class="product-tile ">
-                        <div class="img-wrapper">
-                            <img class="preload bg"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
-                            <img class="preload bg"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}">
-                        </div>
-                        <p class="item-name">{{ thisProduct.title }}</p>
-                        <span class="item-price">
-                            {{ thisProduct.price | money }}
-                            <p class="compare-at-price{% if thisProduct.compare_at_price %} visible{% endif %}">{% if thisProduct.compare_at_price %}{{ thisProduct.compare_at_price | money }}{% endif %}</p>
+                    <a href="/products/{{ thisProduct.handle }}" class="slide card-wrapper">
+                        <span>
+                            <div class="tag" >{{ thisProduct.tags }}</div>
+                            <div class="block">
+                                <div class="img-wrapper">
+                                    <img class="preload bg"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
+                                    <img class="preload bg"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}">
+                                </div>
+                                <div class="block-inner">
+                                    <p class="type">{{ thisProduct.type }}</p>
+                                    <p class="name">{{ thisProduct.title }}</p>
+                                    <div class="price">
+                                        <p>
+                                            {{ thisProduct.price | money }}
+                                            <strong>
+                                                {% if thisProduct.compare_at_price %}{{ thisProduct.compare_at_price | money }}{% endif %}
+                                            </strong>
+                                        </p>
+                                    </div>
+                                    <button class="pink-btn">Shop Now</button>
+                                </div>
+                            </div>
                         </span>
                     </a>
-            {% endcase %}
-        {% endfor %}
+                {% endcase %}
+            {% endfor %}
+        </div>
     </div>
-
-
+</div>
 
 
 
@@ -27,19 +45,24 @@
     {
         "name": "Product Recirculation",
         "tag": "section",
-        "class": "product-recirculation c-24 mw",
+        "class": "best-sellers mw max-width",
         "settings": [
             {
                 "id": "heading",
                 "type": "text",
                 "label": "Heading"
+            },
+            {
+                "id": "copy",
+                "type": "text",
+                "label": "Copy"
             }
         ],
         "blocks": [
           {
             "name": "Products Card",
             "type": "product-card",
-            "limit": 4,
+            "limit": 3,
             "settings": [
               {
                 "type": "product",

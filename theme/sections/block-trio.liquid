@@ -1,0 +1,47 @@
+{% for block in section.blocks %}
+    <div class="block">
+        <img class="preload-critical" src="{{ block.settings.image | img_url }}" data-preload-mobile="{{ block.settings.image_mobile | img_url }}">
+        <div class="inner">
+            <p>{{ block.settings.eyebrow }}</p>
+            <p>{{ block.settings.copy }}</p>
+        </div>
+    </div>
+{% endfor %}
+
+
+{% schema %}
+{
+  "name": "Block Trio",
+  "tag": "section",
+  "class": "block-trio mw max-width",
+  "blocks": [
+    {
+      "name": "Ice Block",
+      "type": "ice_block",
+      "limit": 3,
+      "settings": [
+        {
+          "type": "image_picker",
+          "id": "image",
+          "label": "Image"
+        },
+        {
+          "type": "image_picker",
+          "id": "image_mobile",
+          "label": "Image Mobile"
+        },
+        {
+          "type": "text",
+          "id": "eyebrow",
+          "label": "Eyebrow"
+        },
+        {
+          "type": "text",
+          "id": "copy",
+          "label": "Copy"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}
