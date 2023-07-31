@@ -1,10 +1,11 @@
 import { gsap } from "gsap";
+import {globalStorage} from "../_global/storage";
 
 export class MiniCart {
     constructor() {
         this.backdrop = document.getElementById("mini-cart-backdrop");
-        this.trigger = document.getElementById("mini-cart-trigger");
-        this.homeTrigger = document.getElementById("mini-cart-trigger-home");
+        this.trigger = globalStorage.windowWidth > 767 ? document.getElementById("mini-cart-trigger") : document.getElementById("mini-cart-trigger-mobile") ;
+        // this.homeTrigger = document.getElementById("mini-cart-trigger-home");
         this.miniCart = document.getElementById("mini-cart");
         this.fadeEls = document.querySelector(".mini-cart .inner");
         // this.yDist = this.fadeEls.getBoundingClientRect().height;
@@ -13,8 +14,8 @@ export class MiniCart {
         this.isOpen = false;
         this.timeline = new gsap.timeline();
         this.bindListeners();
-        gsap.set(this.miniCart, { xPercent: 100, autoAlpha: 1 });
-        // gsap.set(this.fadeEls, { y: this.yDist });
+        gsap.set(this.miniCart, { xPercent: 100, autoAlpha: 0 });
+        gsap.set(this.backdrop, { xPercent: 100, opacity: 0 });
 
 
     }
@@ -23,9 +24,7 @@ export class MiniCart {
         this.trigger.addEventListener("click", () => {
             this.open();
         });
-        this.homeTrigger.addEventListener("click", () => {
-            this.open();
-        });
+
         this.closeCart.addEventListener("click", () => {
             this.close();
         });
@@ -46,8 +45,8 @@ export class MiniCart {
         this.isOpen = true;
         this.timeline.clear();
         this.timeline
-            .to(this.backdrop, { duration: 0.25, autoAlpha: 1, force3D: true, ease: "sine.inOut" })
-            .to(this.miniCart, { duration: 0.8, xPercent: 0, force3D: true, ease: "expo.out" }, 0.05)
+            .to(this.backdrop, { duration: 0.25, opacity: 0.5, xPercent: 0, force3D: true, ease: "sine.inOut" })
+            .to(this.miniCart, { duration: 0.8, autoAlpha: 1, xPercent: 0, force3D: true, ease: "expo.out" }, 0.05)
             .fromTo(this.shippingBar, { scaleX: 0.3 }, { scaleX: 1, ease: "expo.out", duration: 0.95 }, 0.1);
     }
 
@@ -56,15 +55,15 @@ export class MiniCart {
         this.isOpen = false;
         this.timeline.clear();
         this.timeline
-            .to(this.miniCart, { duration: 0.6, xPercent: 100, force3D: true, ease: "expo.out" })
-            .to(this.backdrop, { duration: 0.25, autoAlpha: 0, force3D: true, ease: "sine.inOut" }, 0.1);
+            .to(this.miniCart, { duration: 0.6, autoAlpha: 0, xPercent: 100, force3D: true, ease: "expo.out" })
+            .to(this.backdrop, { duration: 0.25, opacity: 0, xPercent: 100, force3D: true, ease: "sine.inOut" }, 0.1);
 
     }
 
     resize() {
-        // this.yDist = this.fadeEls.getBoundingClientRect().height;
-        // if (!this.isOpen) {
-        //     gsap.set(this.fadeEls, { y: this.yDist });
-        // }
+        this.yDist = this.fadeEls.getBoundingClientRect().height;
+        if (!this.isOpen) {
+            gsap.set(this.fadeEls, { y: this.yDist });
+        }
     }
 }

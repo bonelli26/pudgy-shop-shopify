@@ -26,7 +26,7 @@ export class AddToCart {
 				this.addToCart(form);
 			});
 
-			/* --- Bind form incrementer (change product count to be added) ---
+			/* --- Bind form incrementer (change product count to be added) --- */
 			let productIncrements = form.querySelector(".atc-form .increment-wrapper");
 			if (productIncrements) {
 				let el = productIncrements,
@@ -44,12 +44,12 @@ export class AddToCart {
 					count = count + 1;
 					countEl.textContent = count;
 				});
-			} */
+			}
 		}
 
 	}
 
-	bindOptions(form) {
+	/* bindOptions(form) {
 
 		// break apart and store variants
 		let addToCartBtn = form.querySelector(".add-to-cart") || form.querySelector(".newsletter");
@@ -161,7 +161,7 @@ export class AddToCart {
 				}
 			}
 		}
-	}
+	} */
 
 	/*
 	 * addToCart
@@ -200,8 +200,8 @@ export class AddToCart {
 			.then(data => {
 				this.cartItems = data.items;
 				if (data.item_count > 0) {
-					domStorage.cartCountEl.textContent = data.item_count;
-					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
+					// domStorage.cartCountEl.textContent = data.item_count;
+					// domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
 					this.buildMiniCart(data.items);
 					this.toggleEmptyCart(false);
 					if (!firstBuild) {
@@ -209,7 +209,7 @@ export class AddToCart {
 					}
 				} else {
 					this.toggleEmptyCart(true, true);
-					domStorage.cartCountEl.textContent = "0";
+					// domStorage.cartCountEl.textContent = "0";
 				}
 			});
 
@@ -254,10 +254,10 @@ export class AddToCart {
 		}).then(response => {
 			fetch(window.Shopify.routes.root + 'cart.js')
 				.then(response => response.json())
-				.then(data => {
-					domStorage.cartCountEl.textContent = data.item_count;
-					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
-				});
+				// .then(data => {
+				// 	domStorage.cartCountEl.textContent = data.item_count;
+				// 	domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
+				// });
 		}).catch((error) => {
 			console.error('Error:', error);
 		});
@@ -331,31 +331,31 @@ export class AddToCart {
 		for (let i = 0; i < miniCartIncrements.length; i++) {
 			let el = miniCartIncrements[i],
 				countEl = el.querySelector(".count"),
-				decrease = el.querySelector(".decrease"),
-				increase = el.querySelector(".increase"),
+				// decrease = el.querySelector(".decrease"),
+				// increase = el.querySelector(".increase"),
 				parentLineItem = el.parentElement.parentElement.parentElement,
 				priceEl = parentLineItem.querySelector(".line-item-price"),
-				price = parseFloat(priceEl.dataset.origPrice),
-				count = parseInt(countEl.textContent);
+				price = parseFloat(priceEl.dataset.origPrice);
+				// count = parseInt(countEl.textContent);
 
-			decrease.addEventListener("click", () => {
-				if (count === 1) {
-					this.removeProduct(parentLineItem.dataset.key, parentLineItem);
-					return;
-				}
-				count = count - 1;
-				countEl.textContent = count;
-				parentLineItem.dataset.quantity = count;
-				priceEl.textContent = "$"+(count * price).toFixed(2);
-				this.modifyLineItem(parentLineItem.dataset.key, count);
-			});
-			increase.addEventListener("click", () => {
-				count = count + 1;
-				countEl.textContent = count;
-				parentLineItem.dataset.quantity = count;
-				priceEl.textContent = "$"+(count * price).toFixed(2);
-				this.modifyLineItem(parentLineItem.dataset.key, count);
-			});
+			// decrease.addEventListener("click", () => {
+			// 	if (count === 1) {
+			// 		this.removeProduct(parentLineItem.dataset.key, parentLineItem);
+			// 		return;
+			// 	}
+			// 	count = count - 1;
+			// 	countEl.textContent = count;
+			// 	parentLineItem.dataset.quantity = count;
+			// 	priceEl.textContent = "$"+(count * price).toFixed(2);
+			// 	this.modifyLineItem(parentLineItem.dataset.key, count);
+			// });
+			// increase.addEventListener("click", () => {
+			// 	count = count + 1;
+			// 	countEl.textContent = count;
+			// 	parentLineItem.dataset.quantity = count;
+			// 	priceEl.textContent = "$"+(count * price).toFixed(2);
+			// 	this.modifyLineItem(parentLineItem.dataset.key, count);
+			// });
 		}
 	}
 }

@@ -9,20 +9,19 @@
   opacity: 0.5;
   background: #00142D;
   cursor: pointer;
-  opacity: 0;
-  visibility: hidden;
+  //opacity: 0;
+  //visibility: hidden;
 }
 
 #mini-cart {
-  opacity: 0;
-  visibility: hidden;
+  //opacity: 0;
+  //visibility: hidden;
   position: fixed;
   display: flex;
   flex-direction: column;
   height: calc(100% - 40px);
   top: 20px;
   right: 20px;
-  background: #FFFFFF;
   z-index: 110;
   @include get-vw(width, 338px, 338px);
   border-radius: 13px;
@@ -51,10 +50,10 @@
   }
   .nav-close {
     position: absolute;
-    left: -8px;
+    left: 0px;
     svg {
-      width: 45px;
-      height: 43px;
+      width: 30px;
+      height: 30px;
       flex-shrink: 0;
     }
   }

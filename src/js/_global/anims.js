@@ -544,46 +544,46 @@ export const newTabs = () => {
 }
 
 export const filterTabs = () => {
-	if(globalStorage.namespace !== "collection") { return; }
-	let tabParent = document.querySelector(".collection-wrapper");
-	const triggers = globalStorage.windowWidth > 768 ? tabParent.querySelectorAll('.collection-filters-buttons .blue-selected') : tabParent.querySelectorAll('.collection-filters-buttons-mobile .blue-selected');	
-	const tabsWrapper = tabParent.querySelector('.collection-inner');
-	const	tiles = tabsWrapper.querySelectorAll('.product-tile:not(.dummy)');
-	
+	if(globalStorage.namespace !== "collections") { return; }
+	let tabParent = document.querySelector(".collection-grid");
+	const triggers = globalStorage.windowWidth > 768 ? tabParent.querySelectorAll('.filters .pink-btn') : tabParent.querySelectorAll('.collection-filters-buttons-mobile .blue-selected');
+	const tabsWrapper = tabParent.querySelector('.grid');
+	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
+
 	for (let i = 0; i < triggers.length; i++) {
 		let trigger = triggers[i],
 			triggerData = trigger.dataset.trigger,
 			animating = false;
 
 		trigger.addEventListener("click", () => {
-			if (animating || trigger.classList.contains("is-selected")) { return; }			
+			if (animating || trigger.classList.contains("active")) { return; }
 
 			animating = true;
 
 			gsap.delayedCall(.19, () => { animating = false; });
 
-			document.querySelector(".blue-selected.is-selected").classList.remove("is-selected");
+			document.querySelector(".pink-btn.active").classList.remove("active");
 
-			trigger.classList.add("is-selected");
+			trigger.classList.add("active");
 
 			gsap.to(tabsWrapper, { autoAlpha: 0, ease: "sine.inOut", force3D: true, duration: .18, onComplete: () => {
-				for (let j = 0; j < tiles.length; j++) {
-					const tile = tiles[j];
-	
-					if (triggerData === 'all') {		
-						gsap.set(tile, { display: "flex" });
-					} else if (tile.classList.contains(triggerData)) {					
-						gsap.set(tile, { display: "flex" });
-					} else {					
-						gsap.set(tile, { display: "none" });
-					}	
-				}
+					for (let j = 0; j < tiles.length; j++) {
+						const tile = tiles[j];
 
-				gsap.to(tabsWrapper, { autoAlpha: 1, ease: "sine.inOut", duration: 0.3, force3D: true });
-			} })
+						if (triggerData === 'all') {
+							gsap.set(tile, { display: "flex" });
+						} else if (tile.classList.contains(triggerData)) {
+							gsap.set(tile, { display: "flex" });
+						} else {
+							gsap.set(tile, { display: "none" });
+						}
+					}
+
+					gsap.to(tabsWrapper, { autoAlpha: 1, ease: "sine.inOut", duration: 0.3, force3D: true });
+				} })
 
 		});
 
 	}
-	
+
 }
