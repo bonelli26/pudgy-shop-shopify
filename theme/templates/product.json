@@ -11,8 +11,8 @@
       "type": "about-section",
       "settings": {
         "igloo_icon": "shopify:\/\/shop_images\/about-img.png",
-        "block_1_title": "ABOUT bowl cut figure",
-        "block_1_copy": "Cras justo odio, dapibus ac facilisis in, egestas eget quam. Etiam porta sem malesuada magna mollis euismod. Sed posuere consectetur est at lobortis. Aenean lacinia bibendum nulla sed consectetur. Sed posuere consectetur est at lobortis.Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Maecenas sed diam eget risus varius blandit sit amet non magna. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Nullam id dolor id nibh ultricies vehicula ut id elit. Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus. Donec id elit non mi porta gravida at eget metus.",
+        "block_1_title": "",
+        "block_1_copy": "",
         "block_2_title": "who is pudgy Penguins?",
         "block_2_copy": "Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui."
       }
@@ -53,7 +53,34 @@
     },
     "product-recirculation": {
       "type": "product-recirculation",
+      "blocks": {
+        "2776a604-de33-45ed-81a9-920dac347668": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-toys"
+          }
+        },
+        "e52c17df-6f6d-4e27-a1a1-f8d65e89033b": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins-huggable-plush"
+          }
+        },
+        "d14b927f-5c04-4590-8a99-5b5fabc79cb9": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins-plush-buddies"
+          }
+        }
+      },
+      "block_order": [
+        "2776a604-de33-45ed-81a9-920dac347668",
+        "e52c17df-6f6d-4e27-a1a1-f8d65e89033b",
+        "d14b927f-5c04-4590-8a99-5b5fabc79cb9"
+      ],
       "settings": {
+        "heading": "Complete the Collection",
+        "copy": ""
       }
     }
   },

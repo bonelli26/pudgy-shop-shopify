@@ -179,13 +179,15 @@
       display: flex;
       align-items: center;
       position: relative;
+      padding-bottom: 3px;
       @include get-vw(height, 53px, 53px);
       @include get-vw(margin-bottom, 26px, 26px);
-      img {
-        object-fit: contain;
-      }
+    }
+    .left-variant {
+      border-right: 1px solid #00142D;
     }
     .variant {
+      height: calc(100% - 3px);
       position: relative;
       padding: 0 24px;
       z-index: 2;
@@ -365,7 +367,7 @@
       @include get-vw(padding-right, 60px, 23px);
       @include get-vw(padding-left, 52px, 23px);
       @include get-vw(padding-bottom, 47px, 47px);
-      h2, p {
+      h2, .copy {
         z-index: 1;
       }
     }
