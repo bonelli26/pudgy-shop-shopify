@@ -37,15 +37,6 @@
             <p class="old-price">{{ product.first_available_variant.compare_at_price | money }}<span><svg width="58" height="28" viewBox="0 0 58 28" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.38793" y1="26.7724" x2="55.7664" y2="1.41531" stroke="#EF928E" stroke-width="2"/><line x1="2.23317" y1="1.41498" x2="56.6116" y2="26.7721" stroke="#EF928E" stroke-width="2"/></svg></span></p>
             {% endif %}
         </div>
-
-        <div class="price-wrapper">
-            <p class="compare-at-price{% if thisProduct.compare_at_price %} visible{% endif %}">
-                {% if thisProduct.compare_at_price %}
-                    {{ thisProduct.compare_at_price | money }}{% endif %}
-            </p>
-            {{ thisProduct.price | money }}
-        </div>
-
         <div class="after-pay desktop-only">
             <p>Or 4-interest free payments of <strong>$6.99 </strong>with</p><img class="preload" src="https://images.prismic.io/pudgypenguinsshop/acd79ef5-7945-4a3a-93cd-36a1aefd54a5_afterpay.png?auto=compress,format">
         </div>
