@@ -50,11 +50,17 @@
       "settings": {
         "header": "FAQ’S"
       }
+    },
+    "product-recirculation": {
+      "type": "product-recirculation",
+      "settings": {
+      }
     }
   },
   "order": [
     "pdp-hero",
     "about-section",
-    "faq-section"
+    "faq-section",
+    "product-recirculation"
   ]
 }
