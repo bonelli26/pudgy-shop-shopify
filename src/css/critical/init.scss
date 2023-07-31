@@ -606,6 +606,7 @@ body {
 			@include get-vw(height, 430px, 305px);
 			display: flex;
 			transition: all .3s $ease-in-out;
+			width: 100%;
 			&:last-of-type {
 				position: absolute;
 				top: 0;
@@ -666,6 +667,7 @@ body {
 		z-index: 4;
 
 	}
+
 }
 
 .hero {
@@ -743,6 +745,7 @@ body {
 		width: auto;
 		@include get-vw(height, 700px, 350px);
 	}
+
 
 	@include bp-767 {
 		.hero-wrapper {
@@ -1337,8 +1340,8 @@ footer {
 		box-shadow: 2px 4px 0px 4px rgba(0, 0, 0, 0.15), 0px 0px 0px 2px #00142D;
 		@include get-vw(padding-top, 124px, 100px);
 		@include get-vw(padding-bottom, 57px, 30px);
-		@include get-vw(padding-left, 50px, 30px);
-		@include get-vw(padding-right, 50px, 30px);
+		@include get-vw(padding-left, 50px, 20px);
+		@include get-vw(padding-right, 50px, 20px);
 		@include get-vw(margin-bottom, 35px, 20px);
 	}
 	.pengu-logo {
@@ -1550,8 +1553,8 @@ footer {
 	z-index: 2;
 	border-top: 3px solid #00142D;
 	background: linear-gradient(0deg, rgba(255,255,255,0) 60%, rgba(194,236,255,1) 100%);
-	@include get-vw(padding-left, 240px, 100px);
-	@include get-vw(padding-right, 240px, 100px);
+	@include get-vw(padding-left, 240px, 150px);
+	@include get-vw(padding-right, 240px, 150px);
 	@include get-vw(padding-top, 40px, 17px);
 	@include get-vw(padding-bottom, 40px, 17px);
 	.filters {

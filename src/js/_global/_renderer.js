@@ -55,7 +55,7 @@ const globalEvents = (namespace = null)=>{
 
 			afterScroll();
 
-			// new AddToCart();
+			new AddToCart();
 
 			pageEntrance(namespace);
 
@@ -65,8 +65,8 @@ const globalEvents = (namespace = null)=>{
 };
 
 /* --- DOMContentLoaded Function --- */
-export let $mobileMenu = false;
-export let $miniCart = false;
+export let $mobileMenu = true;
+export let $miniCart = true;
 let idleCallback
 export const onReady = ()=>{
 	let namespace = document.querySelector("[data-router-view]").dataset.routerView;
@@ -119,7 +119,7 @@ export const onReady = ()=>{
 		$mobileMenu = new MobileMenu();
 	}
 
-	// $miniCart = new MiniCart();
+	$miniCart = new MiniCart();
 
 	if (window.location.href.indexOf("cart=true") > -1) {
 		$miniCart.open();
@@ -153,7 +153,7 @@ export const onResize = ()=>{
 		}
 	}
 
-	$miniCart.resize();
+	// $miniCart.resize();
 };
 
 /*

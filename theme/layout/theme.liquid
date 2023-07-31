@@ -97,9 +97,9 @@
     </div>
   </div>
   <nav id="nav">
-    <div class="logo mw">
+    <a class="logo mw" href="/">
       <img class="preload-critical" src="{{ settings.nav_image | img_url }}" data-preload-mobile="{{ settings.nav_image | img_url }}">
-    </div>
+    </a>
     <div class="nav-mask"></div>
     <div class="nav-bar mw" id="nav-bar">
       <div class="left">
@@ -108,14 +108,14 @@
         {% endfor %}
       </div>
       <div class="right">
-        <a class="icon-link" href="<?php echo $globalModules->fav_url[0]->text ?>">
+        <a class="icon-link" href="/">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
                 <path d="M9.57028 17.9599L9.50257 18L9.46207 17.975C-3.41332 10.3098 1.00526 2.9114 5.78429 3.0008C5.93697 3.0008 6.09165 3.01593 6.24499 3.03434C8.16809 3.26519 9.07424 4.32208 9.5025 5.2317C9.92935 4.32279 10.8368 3.26518 12.7607 3.04293C17.6871 2.44181 22.818 10.0519 9.57028 17.9599Z" fill="#33336C"/>
             </svg>
           </span>
         </a>
-        <button class="icon-link cart">
+        <button class="icon-link cart" id="mini-cart-trigger">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
                 <g clip-path="url(#clip0_901_144)">
@@ -155,7 +155,7 @@
         <path d="M13 27H32" stroke="#33336C" stroke-width="3" stroke-linecap="round"/>
       </svg>
     </button>
-    <button class="icon-link cart mobile">
+    <button class="icon-link cart mobile" id="mini-cart-trigger-mobile">
       <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
         <g clip-path="url(#clip0_901_144)">
           <path fill-rule="evenodd" clip-rule="evenodd" d="M2.64735 5.90851H4.73146V4.75589C4.73146 2.13294 6.88891 0 9.51186 0C12.1348 0 14.2678 2.13313 14.2678 4.75589V5.90851H16.7682C17.4057 5.90851 17.9208 6.42358 17.9208 7.06112V14.0725C17.9208 16.7696 15.7143 19 12.9933 19H6.1288C3.35822 19 1.07822 16.72 1.07822 13.9494V7.47684C1.07822 6.61888 1.78923 5.90786 2.6472 5.90786L2.64735 5.90851ZM6.91342 5.90851H12.0866V4.75589C12.0866 3.35835 10.9094 2.18196 9.51262 2.18196C8.09059 2.18196 6.91418 3.35907 6.91418 4.75589V5.90851H6.91342Z" fill="#33336C"/>
