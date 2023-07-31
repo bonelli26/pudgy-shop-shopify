@@ -15,52 +15,13 @@
         </div>
         <div class="track"><span id="shipping-meter-bar" class="shipping-meter-bar"></span></div>
     </div>
-    <div class="inner c-24 products-wrapper">
-        <div class="product-tile line-item one-time" data-id="40901003706412" data-key="40901003706412:e63d5040a948b5a76b39455def94d0da" data-quantity="1">
-            <div class="product-image">
-                <img src="https://images.prismic.io/pudgypenguinsshop/30151d95-506d-4f94-a917-f058befbf4ea_summer-pengu.jpg?auto=compress,format">
-            </div>
-            <div class="product-info">
-                <div class="left">
-                    <p class="line-item-title type">Figurine</p>
-                    <p class="name">Bowl Cut</p>
-                    <div class="increment-wrapper quantity">
-                        <button name="decrease item quantity" aria-label="decrease item quantity" type="button" class="increment decrease" data-type="minus">-</button>
-                        <span class="count">1</span>
-                        <button name="increase item quantity" aria-label="increase item quantity" type="button" class="increment increase" data-type="plus">+</button>
-                    </div>
-                </div>
-                <div class="right">
-                    <button class="remove-btn remove">
-                        <svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
-                            <g filter="url(#filter0_d_1221_10272)">
-                                <path d="M3.94888 16.601L9.09662 11.4533L4.14687 6.50352L8.50265 2.14774L13.4524 7.09749L18.6001 1.94975L22.9559 6.30553L17.8082 11.4533L22.7579 16.403L18.4021 20.7588L13.4524 15.809L8.30466 20.9568L3.94888 16.601Z" fill="#FF8B8B"/>
-                                <path d="M3.59533 16.2474L3.24178 16.601L3.59533 16.9546L7.95111 21.3103L8.30466 21.6639L8.65822 21.3103L13.4524 16.5161L18.0486 21.1123L18.4021 21.4659L18.7557 21.1123L23.1115 16.7566L23.465 16.403L23.1115 16.0495L18.5153 11.4533L23.3095 6.65908L23.663 6.30553L23.3095 5.95197L18.9537 1.5962L18.6001 1.24264L18.2466 1.5962L13.4524 6.39038L8.85621 1.79419L8.50265 1.44063L8.1491 1.79419L3.79332 6.14996L3.43977 6.50352L3.79332 6.85707L8.38952 11.4533L3.59533 16.2474Z" stroke="#00142D"/>
-                            </g>
-                            <defs>
-                                <filter id="filter0_d_1221_10272" x="0.535156" y="0.535645" width="23.835" height="23.8354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                                    <feOffset dx="-2" dy="2"/>
-                                    <feComposite in2="hardAlpha" operator="out"/>
-                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
-                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1221_10272"/>
-                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1221_10272" result="shape"/>
-                                </filter>
-                            </defs>
-                        </svg>
-                    </button>
-                    <div class="price-wrapper">
-                        <p class="line-item-price" data-orig-price="2999">$29.99</p>
-                    </div>
-                </div>
-            </div>
-        </div>
+    <div class="inner c-24 products-wrapper" id="products-wrapper">
+
     </div>
     <div class="bottom c-24">
         <div class="subtotal bottom-line">
             <p>Subtotal</p>
-            <p id="cart-subtotal">$29.99</p>
+            <p id="mini-cart-total">$29.99</p>
         </div>
         <form action="/cart" method="post">
             <button class="pink-btn checkout-btn" id="checkout-btn" name="checkout">
@@ -71,8 +32,8 @@
             <p>Or 4-interest free payments of <strong>$6.99</strong> with</p>
         </div>
     </div>
-    <div class="empty-wrapper">
-        <p>Your cart is <strong>empty</strong></p>
-        <a class="btn black" href="/">Start Shopping</a>
+    <div class="empty-wrapper" id="empty-wrapper">
+        <p>Your cart is empty</p>
+        <a class="pink-btn" href="/collections/all">Start Shopping</a>
     </div>
 </div>

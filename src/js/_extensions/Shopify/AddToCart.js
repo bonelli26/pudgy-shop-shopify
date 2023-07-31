@@ -49,7 +49,7 @@ export class AddToCart {
 
 	}
 
-	/* bindOptions(form) {
+	bindOptions(form) {
 
 		// break apart and store variants
 		let addToCartBtn = form.querySelector(".add-to-cart") || form.querySelector(".newsletter");
@@ -161,7 +161,7 @@ export class AddToCart {
 				}
 			}
 		}
-	} */
+	}
 
 	/*
 	 * addToCart
@@ -200,8 +200,7 @@ export class AddToCart {
 			.then(data => {
 				this.cartItems = data.items;
 				if (data.item_count > 0) {
-					// domStorage.cartCountEl.textContent = data.item_count;
-					// domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
+					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
 					this.buildMiniCart(data.items);
 					this.toggleEmptyCart(false);
 					if (!firstBuild) {
@@ -254,10 +253,9 @@ export class AddToCart {
 		}).then(response => {
 			fetch(window.Shopify.routes.root + 'cart.js')
 				.then(response => response.json())
-				// .then(data => {
-				// 	domStorage.cartCountEl.textContent = data.item_count;
-				// 	domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
-				// });
+				.then(data => {
+					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
+				});
 		}).catch((error) => {
 			console.error('Error:', error);
 		});
@@ -280,30 +278,47 @@ export class AddToCart {
 			console.log(item)
 			/* --- Product --- */
 			html += `
-				<article class="line-item product" data-id="${item.variant_id}" data-key="${item.key}" data-quantity="${item.quantity}">
-					<div class="left">
-						<div class="img-wrapper">
-							<img src="${item.image}" alt="${item.product_title} - ${item.variant_title}" />
-						</div>
-						
-						<div class="inner">
-							<div class="text-wrapper">
-								<h1 class="product-name">${item.product_title}</h1>`;
-			if (item.variant_title) {
-				html += `<h2 class="line-item-subtitle">${item.variant_title}</h2>`
-			}
-			html += `</div>
-							<div class="increment-wrapper">
-								<button name="decrease item quantity" aria-label="decrease item quantity" type="button" class="increment decrease" data-type="minus"><svg width="10" height="2" viewBox="0 0 10 2" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M10 1.5H0V0.5H10V1.5Z" fill="black"/></svg></button>
-								<span class="count">${item.quantity}</span>
-								<button name="increase item quantity" aria-label="increase item quantity" type="button" class="increment increase" data-type="plus"><svg width="12" height="12" viewBox="0 0 12 12" fill="none" xmlns="http://www.w3.org/2000/svg"><path fill-rule="evenodd" clip-rule="evenodd" d="M5.5 1V5.5H1V6.5H5.5V11H6.5V6.5H11V5.5H6.5V1H5.5Z" fill="black"/></svg></button>
+				<article class="line-item product-tile" data-id="${item.variant_id}" data-key="${item.key}" data-quantity="${item.quantity}">
+					<div class="product-image">
+						<img src="${item.image}" alt="${item.product_title} - ${item.variant_title}" />
+					</div>					
+					<div class="product-info">
+						<div class="left">
+								<h1 class="name">${item.product_title}</h1>`;
+							if (item.variant_title) {
+								html += `<h2 class="line-item-subtitle type">${item.variant_title}</h2>`;
+							}
+						html += `<div class="increment-wrapper quantity">
+									<button name="decrease item quantity" aria-label="decrease item quantity" type="button" class="increment decrease" data-type="minus">-</button>
+										<span class="count">${item.quantity}</span>
+									<button name="increase item quantity" aria-label="increase item quantity" type="button" class="increment increase" data-type="plus">+</button>
+								</div>
+							</div>
+							<div class="right">
+								<button class="remove-btn remove" name="remove item" aria-label="remove item" type="button">
+									<svg xmlns="http://www.w3.org/2000/svg" width="25" height="25" viewBox="0 0 25 25" fill="none">
+									<g filter="url(#filter0_d_1221_10272)">
+									<path d="M3.94888 16.601L9.09662 11.4533L4.14687 6.50352L8.50265 2.14774L13.4524 7.09749L18.6001 1.94975L22.9559 6.30553L17.8082 11.4533L22.7579 16.403L18.4021 20.7588L13.4524 15.809L8.30466 20.9568L3.94888 16.601Z" fill="#FF8B8B"/>
+									<path d="M3.59533 16.2474L3.24178 16.601L3.59533 16.9546L7.95111 21.3103L8.30466 21.6639L8.65822 21.3103L13.4524 16.5161L18.0486 21.1123L18.4021 21.4659L18.7557 21.1123L23.1115 16.7566L23.465 16.403L23.1115 16.0495L18.5153 11.4533L23.3095 6.65908L23.663 6.30553L23.3095 5.95197L18.9537 1.5962L18.6001 1.24264L18.2466 1.5962L13.4524 6.39038L8.85621 1.79419L8.50265 1.44063L8.1491 1.79419L3.79332 6.14996L3.43977 6.50352L3.79332 6.85707L8.38952 11.4533L3.59533 16.2474Z" stroke="#00142D"/>
+									</g>
+									<defs>
+									<filter id="filter0_d_1221_10272" x="0.535156" y="0.535645" width="23.835" height="23.8354" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+									<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+									<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+									<feOffset dx="-2" dy="2"/>
+									<feComposite in2="hardAlpha" operator="out"/>
+									<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+									<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1221_10272"/>
+									<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1221_10272" result="shape"/>
+									</filter>
+									</defs>
+								</svg>
+								</button>
+								<div class="price-wrapper">
+									<p class="line-item-price" data-orig-price="${item.price.toString().slice(0, -2)}">${parseFloat((item.price * item.quantity).toString().slice(0, -2)).toLocaleString('en-US', {style: 'currency', currency: 'USD'})}</p>
+								</div>
 							</div>
 						</div>						
-					</div>
-					<div class="right">
-						<p class="price line-item-price" data-orig-price="${item.price.toString().slice(0, -2)}">${parseFloat((item.price * item.quantity).toString().slice(0, -2)).toLocaleString('en-US', { style: 'currency', currency: 'USD' })}</p>
-						
-						<button name="remove item" aria-label="remove item" type="button" class="remove">Remove</button>
 					</div>
 				</article>
 			`;
@@ -331,31 +346,31 @@ export class AddToCart {
 		for (let i = 0; i < miniCartIncrements.length; i++) {
 			let el = miniCartIncrements[i],
 				countEl = el.querySelector(".count"),
-				// decrease = el.querySelector(".decrease"),
-				// increase = el.querySelector(".increase"),
+				decrease = el.querySelector(".decrease"),
+				increase = el.querySelector(".increase"),
 				parentLineItem = el.parentElement.parentElement.parentElement,
 				priceEl = parentLineItem.querySelector(".line-item-price"),
-				price = parseFloat(priceEl.dataset.origPrice);
-				// count = parseInt(countEl.textContent);
+				price = parseFloat(priceEl.dataset.origPrice),
+				count = parseInt(countEl.textContent);
 
-			// decrease.addEventListener("click", () => {
-			// 	if (count === 1) {
-			// 		this.removeProduct(parentLineItem.dataset.key, parentLineItem);
-			// 		return;
-			// 	}
-			// 	count = count - 1;
-			// 	countEl.textContent = count;
-			// 	parentLineItem.dataset.quantity = count;
-			// 	priceEl.textContent = "$"+(count * price).toFixed(2);
-			// 	this.modifyLineItem(parentLineItem.dataset.key, count);
-			// });
-			// increase.addEventListener("click", () => {
-			// 	count = count + 1;
-			// 	countEl.textContent = count;
-			// 	parentLineItem.dataset.quantity = count;
-			// 	priceEl.textContent = "$"+(count * price).toFixed(2);
-			// 	this.modifyLineItem(parentLineItem.dataset.key, count);
-			// });
+			decrease.addEventListener("click", () => {
+				if (count === 1) {
+					this.removeProduct(parentLineItem.dataset.key, parentLineItem);
+					return;
+				}
+				count = count - 1;
+				countEl.textContent = count;
+				parentLineItem.dataset.quantity = count;
+				priceEl.textContent = "$"+(count * price).toFixed(2);
+				this.modifyLineItem(parentLineItem.dataset.key, count);
+			});
+			increase.addEventListener("click", () => {
+				count = count + 1;
+				countEl.textContent = count;
+				parentLineItem.dataset.quantity = count;
+				priceEl.textContent = "$"+(count * price).toFixed(2);
+				this.modifyLineItem(parentLineItem.dataset.key, count);
+			});
 		}
 	}
 }

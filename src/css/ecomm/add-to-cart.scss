@@ -12,7 +12,7 @@
 
 .increment-wrapper {
 	display: flex;
-
+	min-width: 112px;
 	.increment {
 		background: none;
 		border: 1px solid $black;
