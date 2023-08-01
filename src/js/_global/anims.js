@@ -546,7 +546,7 @@ export const newTabs = () => {
 export const filterTabs = () => {
 	if(globalStorage.namespace !== "collections") { return; }
 	let tabParent = document.querySelector(".collection-grid");
-	const triggers = globalStorage.windowWidth > 768 ? tabParent.querySelectorAll('.filters .pink-btn') : tabParent.querySelectorAll('.collection-filters-buttons-mobile .blue-selected');
+	const triggers = tabParent.querySelectorAll('.filters .pink-btn');
 	const tabsWrapper = tabParent.querySelector('.grid');
 	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
 

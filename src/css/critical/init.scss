@@ -490,9 +490,9 @@ body {
 	flex-direction: column;
 	align-items: center;
 	width: calc(33.33% - 12px);
-	@include get-vw(min-width, 284px ,173px);
-	@include get-vw(max-width, 284px ,173px);
-	@include get-vw(height, 430px, 305px);
+	@include get-vw(min-width, 284px, 284px);
+	@include get-vw(max-width, 284px, 284px);
+	@include get-vw(height, 430px, 430px);
 	&.dummy {
 		height: 0;
 	}
@@ -603,7 +603,7 @@ body {
 		img {
 			position: relative;
 			z-index: 2;
-			@include get-vw(height, 430px, 305px);
+			@include get-vw(height, 430px, 430px);
 			display: flex;
 			transition: all .3s $ease-in-out;
 			width: 100%;
@@ -668,6 +668,12 @@ body {
 
 	}
 
+	@include bp-959 {
+		height: 288px;
+		max-width: 184px;
+		min-width: 184px	;
+	}
+
 }
 
 .hero {
@@ -727,6 +733,7 @@ body {
 		line-height: .91;
 		letter-spacing: -1.4px;
 		text-transform: uppercase;
+		max-width: 280px;
 	}
 	.right {
 		position: relative;
@@ -844,11 +851,11 @@ body {
 	.top {
 		display: flex;
 		flex-direction: column;
-		max-width: 440px;
+		max-width: 320px;
 		justify-content: center;
 		margin: 0 auto;
 		gap: 8px;
-		@include get-vw(padding-bottom, 25px, 25px);
+		@include get-vw(padding-bottom, 20px, 20px);
 		p {
 			color: #00142D;
 			text-align: center;
@@ -927,9 +934,10 @@ body {
 	}
 	.blocks {
 		display: flex;
-		justify-content: space-between;
+		justify-content: center;
 		flex-wrap: wrap;
 		@include get-vw(row-gap, 30px, 17px);
+		@include get-vw(column-gap, 25px, 0px);
 		max-width: 1000px;
 		margin: 0 auto;
 	}
@@ -943,16 +951,16 @@ body {
 
 .fifty-fifty-tiles {
 	display: flex;
-	justify-content: space-between;
+	justify-content: center;
 	flex-direction: column;
+	align-items: center;
 	@include get-vw(padding-top, 20px, 20px);
 	@include get-vw(padding-bottom, 30px, 30px);
-	//@include get-vw(padding-left, 260px, 130px);
-	//@include get-vw(padding-right, 260px, 130px);
 	.tile-wrapper {
 		display: flex;
 		justify-content: center;
 		@include get-vw(gap, 28px, 18px);
+		@include get-vw(margin-bottom, 40px, 30px);
 	}
 	.tile {
 		//width: calc(50% - 14px);
@@ -1573,8 +1581,10 @@ footer {
 	.grid {
 		display: flex;
 		flex-wrap: wrap;
-		justify-content: space-between;
+		justify-content: center;
 		row-gap: 35px;
+		@include get-vw(row-gap, 35px, 15px);
+		@include get-vw(column-gap, 20px, 0px);
 	}
 
 	@include bp-767 {
