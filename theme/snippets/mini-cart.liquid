@@ -1,14 +1,12 @@
 <div class="mini-cart-backdrop" id="mini-cart-backdrop"></div>
 <div class="mini-cart" id="mini-cart">
-    <div class="top">
-        <button id="nav-close" class="nav-close">
-            <svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M11.9453 11.7129L32.2593 32.0268" stroke="#33336C" stroke-width="3" stroke-linecap="round"/>
-                <path d="M12.6875 31.3198L33.0014 11.0059" stroke="#33336C" stroke-width="3" stroke-linecap="round"/>
-            </svg>
-        </button>
-        <p>Cart</p>
-    </div>
+    <button id="nav-close" class="nav-close">
+        <svg width="45" height="43" viewBox="0 0 45 43" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M11.9453 11.7129L32.2593 32.0268" stroke="#33336C" stroke-width="3" stroke-linecap="round"/>
+            <path d="M12.6875 31.3198L33.0014 11.0059" stroke="#33336C" stroke-width="3" stroke-linecap="round"/>
+        </svg>
+    </button>
+    <div class="top"><p>Cart</p></div>
     <div class="shipping-bar" id="shipping-bar">
         <div class="shipping-messages">
             <p>Spend $25 to get FREE SHIPPING</p>
@@ -17,6 +15,52 @@
     </div>
     <div class="inner c-24 products-wrapper" id="products-wrapper">
 
+    </div>
+    <div class="mini-cart-recirc mw">
+        <p>Frequently purchased Together</p>
+        {% assign thisCollection = collections.all %}
+        {% assign placed = 0 %}
+        {% for thisProduct in thisCollection.products limit: 2 %}
+            {% assign thisType = thisProduct.type %}
+            {% assign thisTitle = thisProduct.title %}
+            {% if thisType == product.type and thisTitle != product.title %}
+                <button class="" data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
+                    <div class="img-wrapper">
+                        <img class="preload"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} src="https:{{ thisProduct.images[0] | image_url }}" data-preload-mobile="https:{{ thisProduct.images[0] | image_url }}">
+                    </div>
+                    <div class="text-wrapper">
+                        <p>{{ thisProduct.title }}</p>
+                        <span>{{ thisProduct.price | money }}</span>
+                    </div>
+                    <div class="pink-btn">Add</div>
+                </button>
+                {% assign placed = placed | plus: 1 %}
+            {% endif %}
+        {% endfor %}
+
+        {% if placed < 2 %}
+            {% assign missingAmount = 2 | minus: placed %}
+            {% for thisProduct in thisCollection.products %}
+                {% assign thisTitle = thisProduct.title %}
+                {% assign thisType = thisProduct.type %}
+                {% unless thisTitle == product.title or thisType == product.type %}
+                    <button class="" data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
+                        <div class="img-wrapper">
+                            <img class="preload"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} src="https:{{ thisProduct.images[0] | image_url }}" data-preload-mobile="https:{{ thisProduct.images[0] | image_url }}">
+                        </div>
+                        <div class="text-wrapper">
+                            <p>{{ thisProduct.title }}</p>
+                            <span>{{ thisProduct.price | money }}</span>
+                        </div>
+                        <div class="pink-btn">Add</div>
+                    </button>
+                    {% assign missingAmount = missingAmount | minus: 1 %}
+                    {% if missingAmount == 0 %}
+                        {% break %}
+                    {% endif %}
+                {% endunless %}
+            {% endfor %}
+        {% endif %}
     </div>
     <div class="bottom c-24">
         <div class="subtotal bottom-line">

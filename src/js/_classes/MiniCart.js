@@ -15,9 +15,7 @@ export class MiniCart {
         this.timeline = new gsap.timeline();
         this.bindListeners();
         gsap.set(this.miniCart, { xPercent: 100, autoAlpha: 0 });
-        gsap.set(this.backdrop, { xPercent: 100, opacity: 0 });
-
-
+        gsap.set(this.backdrop, { opacity: 0, pointerEvents: "none" });
     }
 
     bindListeners() {
@@ -45,7 +43,7 @@ export class MiniCart {
         this.isOpen = true;
         this.timeline.clear();
         this.timeline
-            .to(this.backdrop, { duration: 0.25, opacity: 0.5, xPercent: 0, force3D: true, ease: "sine.inOut" })
+            .to(this.backdrop, { duration: 0.25, opacity: 0.5, force3D: true, ease: "sine.inOut", pointerEvents: "all" })
             .to(this.miniCart, { duration: 0.8, autoAlpha: 1, xPercent: 0, force3D: true, ease: "expo.out" }, 0.05)
             .fromTo(this.shippingBar, { scaleX: 0.3 }, { scaleX: 1, ease: "expo.out", duration: 0.95 }, 0.1);
     }
@@ -56,7 +54,7 @@ export class MiniCart {
         this.timeline.clear();
         this.timeline
             .to(this.miniCart, { duration: 0.6, autoAlpha: 0, xPercent: 100, force3D: true, ease: "expo.out" })
-            .to(this.backdrop, { duration: 0.25, opacity: 0, xPercent: 100, force3D: true, ease: "sine.inOut" }, 0.1);
+            .to(this.backdrop, { duration: 0.25, opacity: 0, force3D: true, ease: "sine.inOut", pointerEvents: "none" }, 0.1);
 
     }
 

@@ -1,7 +1,7 @@
-<div class="c-205 c-col" id="videowise-section" data-at="767" data-align="center">
+<div class="slider no-drag-free no-loop no-loop-mobile" id="videowise-section" data-at="767" data-align="center">
   <div class="tag">{{ section.settings.copy }}</div>
   <h4>{{ section.settings.header }}</h4>
-    <div class="slides">
+  <div class="slides">
       <div class="inner">
         {%- for block in section.blocks -%}
           {% case block.type %}
@@ -45,15 +45,14 @@
           {% endcase %}
         {% endfor %}
       </div>
-    </div>
-  </div>
+</div>
 </div>
 
 {% schema %}
   {
     "name": "Video Trio",
     "tag": "section",
-    "class": "video-trio mw slider no-drag-free no-loop no-loop-mobile max-width",
+    "class": "video-trio mw max-width",
     "settings": [
       {
         "id": "header",
