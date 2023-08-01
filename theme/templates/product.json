@@ -78,12 +78,46 @@
         "heading": "Complete the Collection",
         "copy": ""
       }
+    },
+    "bottom-marquee": {
+      "type": "bottom-marquee",
+      "blocks": {
+        "4513afea-0e4b-48fc-90ef-b9b089937a66": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ny-times.png"
+          }
+        },
+        "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/end.png"
+          }
+        },
+        "d7507adf-d969-4e27-873d-335e99f37fdf": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tech.png"
+          }
+        }
+      },
+      "block_order": [
+        "4513afea-0e4b-48fc-90ef-b9b089937a66",
+        "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5",
+        "d7507adf-d969-4e27-873d-335e99f37fdf"
+      ],
+      "settings": {
+        "marquee_duration": "10",
+        "marquee_duration_mobile": "5",
+        "header": "As seen on"
+      }
     }
   },
   "order": [
     "pdp-hero",
     "about-section",
     "faq-section",
-    "product-recirculation"
+    "product-recirculation",
+    "bottom-marquee"
   ]
 }
