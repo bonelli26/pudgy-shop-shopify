@@ -157,16 +157,20 @@
           "type": "tile",
           "settings": {
             "header": "Action Figures Colection",
-            "copy": "",
-            "tag": ""
+            "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
+            "tag": "Limited Edition",
+            "frame": "shopify:\/\/shop_images\/ice-frame.png",
+            "top_image": "shopify:\/\/shop_images\/Untitled_2000x2000px_1.svg"
           }
         },
         "df5835a2-bee7-4d7f-9768-1d894fb1e9e0": {
           "type": "tile",
           "settings": {
             "header": "Action Figures Colection",
-            "copy": "",
-            "tag": ""
+            "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
+            "tag": "Limited Edition",
+            "frame": "shopify:\/\/shop_images\/ice-frame.png",
+            "top_image": "shopify:\/\/shop_images\/5.Lifestyle_d73516e1-06c1-447b-90e7-7fe8fcb82344.jpg"
           }
         }
       },
