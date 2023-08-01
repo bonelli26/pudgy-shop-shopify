@@ -44,6 +44,7 @@
             <p>Or 4-interest free payments with</p><img class="preload" src="https://images.prismic.io/pudgypenguinsshop/acd79ef5-7945-4a3a-93cd-36a1aefd54a5_afterpay.png?auto=compress,format">
         </div>
         <div class="copy">{{ product.description }}</div>
+        {% if product.metafields.accentuate.attribute %}
         <div class="variant-wrapper mw">
             <svg class="bg" width="485" height="55" preserveAspectRatio="none" viewBox="0 0 485 55" fill="none" xmlns="http://www.w3.org/2000/svg">
                 <g filter="url(#filter0_d_1130_7248)">
@@ -86,6 +87,7 @@
                 {% endfor %}
             </div>
         </div>
+        {% endif %}
         <div class="atc-wrapper" id="atc-wrapper">
             <button class="icon-link">
                 <svg xmlns="http://www.w3.org/2000/svg" width="30" height="27" fill="none"><g filter="url(#a)"><path fill="#fff" d="M18.1 2c-1.704 0-3.34 1.187-4.6 3.317C12.24 3.187 10.604 2 8.9 2A6.908 6.908 0 0 0 2 8.9c0 7.048 10.69 12.708 11.145 12.946a.76.76 0 0 0 .71 0C14.31 21.608 25 15.95 25 8.9 25 5.095 21.904 2 18.1 2Z"/><path stroke="#00142D" stroke-width="2" d="M18.1 1c-1.771 0-3.349.985-4.6 2.553C12.249 1.985 10.67 1 8.9 1 4.543 1 1 4.543 1 8.9c0 4.003 2.998 7.44 5.753 9.788 2.81 2.394 5.669 3.908 5.929 4.044a1.76 1.76 0 0 0 1.635 0c.255-.132 3.117-1.647 5.93-4.044C23.002 16.34 26 12.903 26 8.9 26 4.543 22.457 1 18.1 1Z"/></g><defs><filter id="a" width="29.471" height="26.404" x="0" y="0" color-interpolation-filters="sRGB" filterUnits="userSpaceOnUse"><feFlood flood-opacity="0" result="BackgroundImageFix"/><feColorMatrix in="SourceAlpha" result="hardAlpha" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0"/><feOffset dx="2.471" dy="2.471"/><feComposite in2="hardAlpha" operator="out"/><feColorMatrix values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/><feBlend in2="BackgroundImageFix" result="effect1_dropShadow_2_23"/><feBlend in="SourceGraphic" in2="effect1_dropShadow_2_23" result="shape"/></filter></defs></svg>
