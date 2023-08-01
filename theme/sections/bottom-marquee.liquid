@@ -1,0 +1,54 @@
+<h4>{{ section.settings.header }}</h4>
+<div class="marquee mw">
+    <div class="inner" data-dur="{{ section.settings.marquee_duration }}" data-mobile-dur="{{ section.settings.marquee_duration_mobile }}">
+        <div class="group">
+            {% for block in section.blocks %}
+                <img class="preload-critical" {% if block.settings.image.alt %} alt="{{ block.settings.image.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.image | image_url }}" data-preload-mobile="https:{{ block.settings.image | image_url }}">
+            {% endfor %}
+        </div>
+        <div class="group" aria-hidden="true">
+            {% for block in section.blocks %}
+                <img class="preload-critical" {% if block.settings.image.alt %} alt="{{ block.settings.image.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.image | image_url }}" data-preload-mobile="https:{{ block.settings.image | image_url }}">
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+{% schema %}
+{
+  "name": "Bottom Marquee",
+  "tag": "section",
+  "class": "bottom-marquee max-width",
+  "settings": [
+    {
+      "id": "marquee_duration",
+      "type": "text",
+      "label": "Marquee Duration"
+    },
+    {
+      "id": "marquee_duration_mobile",
+      "type": "text",
+      "label": "Marquee Duration Mobile"
+    },
+    {
+      "id": "header",
+      "type": "text",
+      "label": "Header"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Marquee",
+      "type": "marquee",
+      "settings": [
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Marquee Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

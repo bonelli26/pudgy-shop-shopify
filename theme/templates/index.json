@@ -82,11 +82,149 @@
         "heading": "best sellers",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
       }
+    },
+    "home-product-grid": {
+      "type": "home-product-grid",
+      "blocks": {
+        "8eea2e1a-2b28-45f8-9416-76678ecd3674": {
+          "type": "product-card",
+          "settings": {
+            "product": "canvas-print"
+          }
+        },
+        "654aa941-26d3-4193-ac2c-09910ad695ce": {
+          "type": "product-card",
+          "settings": {
+            "product": "clout-goggles"
+          }
+        },
+        "80c0b751-de3f-4177-a4b7-0570408f3c0e": {
+          "type": "product-card",
+          "settings": {
+            "product": "custom-box-sweatshirt"
+          }
+        },
+        "206df600-35ce-4e6a-a245-cb3c1b283650": {
+          "type": "product-card",
+          "settings": {
+            "product": "custom-mug"
+          }
+        },
+        "6b4e7d03-aff8-416d-92f0-f20d2d558be0": {
+          "type": "product-card",
+          "settings": {
+            "product": "custom-pudgy-penguins-tee-1"
+          }
+        },
+        "9e32027b-5088-43a3-9508-b2a15cb044db": {
+          "type": "product-card",
+          "settings": {
+            "product": "custom-pudgy-pillow"
+          }
+        },
+        "522067bd-426f-40f5-924e-2f1292fdd509": {
+          "type": "product-card",
+          "settings": {
+            "product": "custom-pudgy-penguins-tee-2"
+          }
+        },
+        "642ee847-06da-46bc-84c1-f31a35c720af": {
+          "type": "product-card",
+          "settings": {
+            "product": "hd-metal-print"
+          }
+        }
+      },
+      "block_order": [
+        "8eea2e1a-2b28-45f8-9416-76678ecd3674",
+        "654aa941-26d3-4193-ac2c-09910ad695ce",
+        "80c0b751-de3f-4177-a4b7-0570408f3c0e",
+        "206df600-35ce-4e6a-a245-cb3c1b283650",
+        "6b4e7d03-aff8-416d-92f0-f20d2d558be0",
+        "9e32027b-5088-43a3-9508-b2a15cb044db",
+        "522067bd-426f-40f5-924e-2f1292fdd509",
+        "642ee847-06da-46bc-84c1-f31a35c720af"
+      ],
+      "settings": {
+        "heading": "Live Now",
+        "copy": "Pudgy Sale"
+      }
+    },
+    "fifty-fifty-tiles": {
+      "type": "fifty-fifty-tiles",
+      "blocks": {
+        "98b623e8-50a8-4c87-b092-e0f6800a0fda": {
+          "type": "tile",
+          "settings": {
+            "header": "Action Figures Colection",
+            "copy": "",
+            "tag": ""
+          }
+        },
+        "df5835a2-bee7-4d7f-9768-1d894fb1e9e0": {
+          "type": "tile",
+          "settings": {
+            "header": "Action Figures Colection",
+            "copy": "",
+            "tag": ""
+          }
+        }
+      },
+      "block_order": [
+        "98b623e8-50a8-4c87-b092-e0f6800a0fda",
+        "df5835a2-bee7-4d7f-9768-1d894fb1e9e0"
+      ],
+      "settings": {
+      }
+    },
+    "video-trio": {
+      "type": "video-trio",
+      "settings": {
+        "header": "",
+        "copy": ""
+      }
+    },
+    "bottom-marquee": {
+      "type": "bottom-marquee",
+      "blocks": {
+        "4513afea-0e4b-48fc-90ef-b9b089937a66": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ny-times.png"
+          }
+        },
+        "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/end.png"
+          }
+        },
+        "d7507adf-d969-4e27-873d-335e99f37fdf": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tech.png"
+          }
+        }
+      },
+      "block_order": [
+        "4513afea-0e4b-48fc-90ef-b9b089937a66",
+        "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5",
+        "d7507adf-d969-4e27-873d-335e99f37fdf"
+      ],
+      "settings": {
+        "marquee_duration": "10",
+        "marquee_duration_mobile": "5",
+        "header": "As seen on"
+      }
     }
   },
   "order": [
     "hero-home",
     "block-trio",
-    "product-recirculation"
+    "product-recirculation",
+    "home-product-grid",
+    "fifty-fifty-tiles",
+    "video-trio",
+    "bottom-marquee"
   ]
 }

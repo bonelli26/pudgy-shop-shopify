@@ -1,0 +1,60 @@
+<div class="tile-wrapper">
+    {% for block in section.blocks %}
+        <a class="tile" href="">
+            <img class="preload frame" {% if block.settings.frame.alt %} alt="{{ block.settings.frame.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.frame | image_url }}" data-preload-mobile="https:{{ block.settings.frame | image_url }}">
+            <div class="tile-inner">
+                <div class="top">
+                    <img class="preload" {% if block.settings.top_image.alt %} alt="{{ block.settings.top_image.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.top_image | image_url }}" data-preload-mobile="https:{{ block.settings.top_image | image_url }}">
+                    <div class="tag">{{ block.settings.tag }}</div>
+                </div>
+                <div class="bottom">
+                    <p class="title">{{ block.settings.header }}</p>
+                    <p class="copy">{{ block.settings.copy }}</p>
+                    <button class="pink-btn">Shop Now</button>
+                </div>
+            </div>
+        </a>
+    {% endfor %}
+</div>
+
+
+{% schema %}
+{
+  "name": "Fifty Fifty Tiles",
+  "tag": "section",
+  "class": "fifty-fifty-tiles mw max-width",
+  "blocks": [
+    {
+      "name": "Tile",
+      "type": "tile",
+      "settings": [
+        {
+          "id": "header",
+          "type": "text",
+          "label": "Header"
+        },
+        {
+          "id": "copy",
+          "type": "text",
+          "label": "Copy"
+        },
+        {
+          "id": "tag",
+          "type": "text",
+          "label": "Tag"
+        },
+        {
+          "id": "frame",
+          "type": "image_picker",
+          "label": "Frame"
+        },
+        {
+          "id": "top_image",
+          "type": "image_picker",
+          "label": "Top Image"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

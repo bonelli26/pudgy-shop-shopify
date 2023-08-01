@@ -1,0 +1,68 @@
+<div class="top">
+    <div class="eyebrow">{{ section.settings.copy }}</div>
+    <h3>{{ section.settings.heading }}</h3>
+</div>
+<div class="blocks">
+    {% for block in section.blocks %}
+        {% assign thisProduct = block.settings.product %}
+        <a href="/products/{{ thisProduct.handle }}" class="slide card-wrapper">
+            <span>
+                <div class="tag" >{{ thisProduct.tags }}</div>
+                <div class="block">
+                    <div class="img-wrapper">
+                        <img class="preload bg"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
+                        <img class="preload bg"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}">
+                    </div>
+                    <div class="block-inner">
+                        <p class="type">{{ thisProduct.type }}</p>
+                        <p class="name">{{ thisProduct.title }}</p>
+                        <div class="price">
+                            <p>
+                                {{ thisProduct.price | money }}
+                                <strong>
+                                    {% if thisProduct.compare_at_price %}{{ thisProduct.compare_at_price | money }}{% endif %}
+                                </strong>
+                            </p>
+                        </div>
+                        <button class="pink-btn">Shop Now</button>
+                    </div>
+                </div>
+            </span>
+        </a>
+    {% endfor %}
+</div>
+
+
+
+{% schema %}
+    {
+        "name": "Product Grid",
+        "tag": "section",
+        "class": "pudgy-sale mw max-width",
+        "settings": [
+            {
+                "id": "heading",
+                "type": "text",
+                "label": "Heading"
+            },
+            {
+                "id": "copy",
+                "type": "text",
+                "label": "Copy"
+            }
+        ],
+        "blocks": [
+          {
+            "name": "Products Card",
+            "type": "product-card",
+            "settings": [
+              {
+                "type": "product",
+                "id": "product",
+                "label": "Product"
+              }
+            ]
+          }
+        ]
+    }
+{% endschema %}
