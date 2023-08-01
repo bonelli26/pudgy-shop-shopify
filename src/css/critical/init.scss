@@ -782,19 +782,19 @@ body {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		@include get-vw(height, 164px, 97px);
+		@include get-vw(height, 164px, 164px);
 		width: calc(33.33% - 10px);
 		&:nth-of-type(2) {
-			@include get-vw(height, 150px, 90px);
+			@include get-vw(height, 150px, 150px);
 			img {
-				@include get-vw(height, 150px, 90px);
+				@include get-vw(height, 150px, 150px);
 			}
 		}
 	}
 	img {
 		position: absolute;
 		top: 0;
-		@include get-vw(height, 164px, 97px);
+		@include get-vw(height, 164px, 164px);
 		width: auto;
 		display: flex;
 	}
@@ -827,7 +827,13 @@ body {
 			width: 29%;
 			&:nth-of-type(2) {
 				width: 36%;
+				img {
+					height: 90px;
+				}
 			}
+		}
+		img {
+			height: 90px;
 		}
 	}
 }
@@ -979,6 +985,7 @@ body {
 		@include get-vw(height,  294px, 229px);
 		img {
 			@include get-vw(height,  294px, 229px);
+			width: 100%;
 			display: flex;
 		}
 	}
