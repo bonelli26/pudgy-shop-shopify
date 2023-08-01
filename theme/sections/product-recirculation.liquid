@@ -11,7 +11,7 @@
                     {% assign thisProduct = block.settings.product %}
                     <a href="/products/{{ thisProduct.handle }}" class="slide card-wrapper">
                         <span>
-                            <div class="tag" >{{ thisProduct.tags }}</div>
+                            {% if thisProduct.tags[0] %}<div class="tag">{{ thisProduct.tags[0] }}</div>{% endif %}
                             <div class="block">
                                 <div class="img-wrapper">
                                     <img class="preload bg"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">

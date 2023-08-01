@@ -185,14 +185,6 @@ module.exports = {
 		}),
 		new CopyWebpackPlugin([
 			{
-				from: path.join(__dirname, "src/images"),
-				to: path.join(__dirname, "theme/assets"),
-				force: true,
-				ignore: [
-					".gitkeep"
-				]
-			},
-			{
 				from: path.join(__dirname, "src/fonts"),
 				to: path.join(__dirname, "theme/assets"),
 				force: true,
