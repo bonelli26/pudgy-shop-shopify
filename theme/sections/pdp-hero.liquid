@@ -4,8 +4,10 @@
         {% assign imageSize = product.images | size %}
         <div class="slider no-drag-free">
             <div class="frame">
-                {% if section.settings.ribbon_image != blank %}
-                    <img class="preload-critical ribbon" {% if section.settings.hero_ribbon.alt %} alt="{{ section.settings.hero_ribbon.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.ribbon_image | image_url }}" data-preload-mobile="https:{{ section.settings.ribbon_image | image_url }}">
+                {% if product.metafields.accentuate.ribbon %}
+                    {% for ribbon in product.metafields.accentuate.ribbon %}
+                        <img class="preload-critical ribbon" data-preload-desktop="{{ ribbon.src }}" data-preload-mobile="{{ ribbon.src }}">
+                    {% endfor %}
                 {% endif %}
                 <div class="slides">
                     <div class="inner">
@@ -133,11 +135,6 @@
 "tag": "section",
 "class": "pdp-hero mw",
 "settings": [
-{
-"id": "ribbon_image",
-"type": "image_picker",
-"label": "Ribbon"
-},
 {
 "id": "variant_ice_block",
 "type": "image_picker",
