@@ -673,6 +673,11 @@ body {
 		height: 288px;
 		max-width: 184px;
 		@include get-vw(min-width, 184px, 170px);
+		.img-wrapper {
+			img {
+				height: 288px;
+			}
+		}
 	}
 
 }
@@ -735,7 +740,7 @@ body {
 		line-height: .91;
 		letter-spacing: -1.4px;
 		text-transform: uppercase;
-		@include get-vw(max-width, 280px, 280px);
+		max-width: 320px;
 	}
 	.right {
 		position: relative;
@@ -755,9 +760,10 @@ body {
 		@include get-vw(height, 700px, 350px);
 	}
 
-	@include bp-959 {
+	@include bp-1200 {
 		h1 {
-			font-size: 64px;
+			@include get-vw(font-size, 104px, 64px);
+			@include get-vw(max-width, 280px, 280px);
 		}
 	}
 
@@ -1128,6 +1134,7 @@ body {
 		@include get-vw(height, 550px, 528px);
 		min-width: 297px;
 		max-width: 297px;
+		overflow: hidden;
 		&:after {
 			position: absolute;
 			content: '';
@@ -1160,6 +1167,7 @@ body {
 		background: linear-gradient(154deg, rgba(194, 236, 255, 0.50) 0%, rgba(71, 125, 253, 0.50) 100%);
 		border-radius: 22px;
 		transition: all .2s $ease-in-out;
+		z-index: 2;
 		svg {
 			display: flex;
 			width: auto;
@@ -1170,6 +1178,9 @@ body {
 	video {
 		border-radius: 22px;
 		@include get-vw(height, 550px, 528px);
+		width: auto;
+		left: 50%;
+		transform: translateX(-50%);
 	}
 
 	@include bp-767 {
@@ -1187,12 +1198,12 @@ body {
 	@include get-vw(padding-top, 28px, 28px);
 	@include get-vw(padding-bottom, 90px, 90px);
 	position: relative;
-
+	overflow: hidden;
 	&:after, &:before {
 		content: '';
 		position: absolute;
 		z-index: 3;
-		background: linear-gradient(180deg, #D29AF2 4.17%, #AA88E7 100%);
+		background: linear-gradient(0deg, #D29AF2 4.17%, #AA88E7 100%);
 		filter: blur(50px);
 		height: 100%;
 		width: 400px;
@@ -1286,9 +1297,6 @@ footer {
 	}
 	.inner {
 		align-items: flex-start !important;
-	}
-	.group {
-
 	}
 	.block-wrapper {
 		display: flex;
@@ -1434,7 +1442,7 @@ footer {
 			-webkit-text-stroke: 1px #00142d;
 			text-stroke: 1px #00142d;
 			font-family: $ttBlack;
-			@include get-vw(font-size, 48px, 40px);
+			@include get-vw(font-size, 48px, 34px);
 			line-height: .91;
 			letter-spacing: -0.96px;
 			text-transform: uppercase;
@@ -1542,7 +1550,7 @@ footer {
 			a {
 				width: calc(50% - 5px);
 				&:nth-of-type(even) {
-					padding-left: 40px;
+					padding-left: 20px;
 				}
 			}
 		}

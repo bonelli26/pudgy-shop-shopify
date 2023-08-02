@@ -25,31 +25,6 @@
     },
     "product-recirculation": {
       "type": "product-recirculation",
-      "blocks": {
-        "f8bb63c2-8142-4e2f-a93d-e41d3a54f803": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-positive-penguins"
-          }
-        },
-        "167bbab9-e9c1-49e0-b525-4c9373385378": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-plush-buddies"
-          }
-        },
-        "07c68f58-e068-445e-ab8a-98da1382d058": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-huggable-plush"
-          }
-        }
-      },
-      "block_order": [
-        "f8bb63c2-8142-4e2f-a93d-e41d3a54f803",
-        "167bbab9-e9c1-49e0-b525-4c9373385378",
-        "07c68f58-e068-445e-ab8a-98da1382d058"
-      ],
       "settings": {
         "heading": "best sellers",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
@@ -61,7 +36,7 @@
         "8eea2e1a-2b28-45f8-9416-76678ecd3674": {
           "type": "product-card",
           "settings": {
-            "product": "canvas-print"
+            "product": "pudgy-penguins-action-figures"
           }
         },
         "654aa941-26d3-4193-ac2c-09910ad695ce": {
@@ -128,6 +103,7 @@
         "98b623e8-50a8-4c87-b092-e0f6800a0fda": {
           "type": "tile",
           "settings": {
+            "url": "\/collections\/all",
             "header": "Action Figures Colection",
             "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
             "tag": "Limited Edition",
@@ -138,6 +114,7 @@
         "df5835a2-bee7-4d7f-9768-1d894fb1e9e0": {
           "type": "tile",
           "settings": {
+            "url": "\/collections\/all",
             "header": "Action Figures Colection",
             "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
             "tag": "Limited Edition",
@@ -155,6 +132,31 @@
     },
     "video-trio": {
       "type": "video-trio",
+      "blocks": {
+        "caee1b52-d16d-4cab-b918-01dfda9bb08f": {
+          "type": "tile",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
+          }
+        },
+        "6a11ed60-0ce9-467a-b573-b52db82bfeb2": {
+          "type": "tile",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
+          }
+        },
+        "21c25fe4-138b-4194-9cf9-73ef655e7a5f": {
+          "type": "tile",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "caee1b52-d16d-4cab-b918-01dfda9bb08f",
+        "6a11ed60-0ce9-467a-b573-b52db82bfeb2",
+        "21c25fe4-138b-4194-9cf9-73ef655e7a5f"
+      ],
       "settings": {
         "header": "instagram",
         "copy": "our content"

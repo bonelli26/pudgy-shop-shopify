@@ -550,8 +550,6 @@ export const filterTabs = () => {
 	const tabsWrapper = tabParent.querySelector('.grid');
 	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
 
-	console.log(tabParent)
-
 	for (let i = 0; i < triggers.length; i++) {
 		let trigger = triggers[i],
 			triggerData = trigger.dataset.trigger,
@@ -586,6 +584,24 @@ export const filterTabs = () => {
 
 		});
 
+	}
+}
+
+export const prepVideos = () => {
+	const videoWrapper = document.querySelectorAll(".video-wrapper")
+	if(videoWrapper !== true) { return; }
+	console.log(videoWrapper)
+	for (let i = 0; i < videoWrapper.length; i++) {
+		const video = videoWrapper[i]
+		const cover = video.querySelector(".video-wrapper:after")
+		const button = video.querySelector("button")
+
+		console.log(video)
+
+		video.addEventListener('click', () => {
+			gsap.to(cover, { autoAlpha: 0, ease: "sine.inOut", force3D: true, duration: 0.01 })
+			gsap.to(button, { autoAlpha: 0, ease: "sine.inOut", force3D: true, duration: 0.35 })
+		})
 	}
 
 }

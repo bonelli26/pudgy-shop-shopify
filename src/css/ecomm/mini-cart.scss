@@ -328,7 +328,7 @@
     text-transform: uppercase;
     text-align: center;
   }
-  button {
+  a {
     display: flex;
     align-items: flex-start;
     align-self: stretch;
@@ -359,6 +359,13 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 12px;
+    span {
+      color: #000;
+      font-family: $mencoMedium;
+      font-size: 14px;
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
   }
   .pink-btn {
     width: 75px;
