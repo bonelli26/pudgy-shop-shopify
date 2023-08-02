@@ -1,6 +1,6 @@
 <div class="tile-wrapper">
     {% for block in section.blocks %}
-        <a class="tile" href="">
+        <a class="tile" href="{{ block.settings.url }}">
             <img class="preload frame" {% if block.settings.frame.alt %} alt="{{ block.settings.frame.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.frame | image_url }}" data-preload-mobile="https:{{ block.settings.frame | image_url }}">
             <div class="tile-inner">
                 <div class="top">
@@ -29,6 +29,11 @@
       "name": "Tile",
       "type": "tile",
       "settings": [
+        {
+          "id": "url",
+          "type": "text",
+          "label": "URL"
+        },
         {
           "id": "header",
           "type": "text",

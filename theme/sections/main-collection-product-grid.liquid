@@ -7,7 +7,7 @@
 </div>
 <div class="collection-grid mw">
     <div class="filters">
-        <button class="pink-btn blue active" data-trigger="all">all toys</button>
+        <button class="pink-btn active blue" data-trigger="all">all toys</button>
         {% for tag in tags %}
             <button class="pink-btn blue"  data-trigger="{{ tag | handle }}">{{ tag }}</button>
         {% endfor %}
@@ -26,22 +26,22 @@
                     {% if thisProduct.tags[0] %}<div class="tag">{{ thisProduct.tags[0] }}</div>{% endif %}
                     <div class="block">
                          <div class="img-wrapper">
-                    <img class="preload-critical"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
-                    <img class="preload-critical"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[1] | img_url: '550x', format: 'jpg' }}">
-                </div>
-                <div class="block-inner">
-                    <p class="type">{{ thisProduct.type }}</p>
-                    <p class="name">{{ thisProduct.title }}</p>
-                    <div class="price">
-                        <p>
-                            {{ thisProduct.price | money }}
-                            <strong>
-                                {% if thisProduct.compare_at_price %}{{ thisProduct.compare_at_price | money }}{% endif %}
-                            </strong>
-                        </p>
-                    </div>
-                    <button class="pink-btn">Shop Now</button>
-                </div>
+                            <img class="preload-critical"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
+                            <img class="preload-critical"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[1] | img_url: '550x', format: 'jpg' }}">
+                        </div>
+                        <div class="block-inner">
+                            <p class="type">{{ thisProduct.type }}</p>
+                            <p class="name">{{ thisProduct.title }}</p>
+                            <div class="price">
+                                <p>
+                                    {{ thisProduct.price | money }}
+                                    <strong>
+                                        {% if thisProduct.compare_at_price %}{{ thisProduct.compare_at_price | money }}{% endif %}
+                                    </strong>
+                                </p>
+                            </div>
+                            <button class="pink-btn">Shop Now</button>
+                        </div>
                     </div>
                 </span>
             </a>

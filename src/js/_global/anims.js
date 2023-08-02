@@ -544,11 +544,13 @@ export const newTabs = () => {
 }
 
 export const filterTabs = () => {
-	if(globalStorage.namespace !== "collections") { return; }
+	if(globalStorage.namespace !== "collection") { return; }
 	let tabParent = document.querySelector(".collection-grid");
 	const triggers = tabParent.querySelectorAll('.filters .pink-btn');
 	const tabsWrapper = tabParent.querySelector('.grid');
 	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
+
+	console.log(tabParent)
 
 	for (let i = 0; i < triggers.length; i++) {
 		let trigger = triggers[i],

@@ -1,7 +1,11 @@
 {
   "sections": {
     "product-grid": {
-      "type": "main-collection-product-grid"
+      "type": "main-collection-product-grid",
+      "settings": {
+        "collections_header": "SHOP ALL",
+        "collections_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
+      }
     }
   },
   "order": [

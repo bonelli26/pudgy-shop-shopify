@@ -595,6 +595,7 @@ body {
 		@include get-vw(padding-right, 18px, 10px);
 		transform-origin: left;
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
+		background: #FFE092;
 	}
 	.img-wrapper {
 		position: absolute;
@@ -768,11 +769,12 @@ body {
 		-webkit-text-stroke: 1px #00142d;
 		text-stroke: 1px #00142d;
 		font-family: $ttBlack;
-		@include get-vw(font-size, 104px, 64px);
+		//@include get-vw(font-size, 104px, 64px);
+		font-size: 104px;
 		line-height: .91;
 		letter-spacing: -1.4px;
 		text-transform: uppercase;
-		max-width: 280px;
+		@include get-vw(max-width, 280px, 280px);
 	}
 	.right {
 		position: relative;
@@ -792,6 +794,11 @@ body {
 		@include get-vw(height, 700px, 350px);
 	}
 
+	@include bp-959 {
+		h1 {
+			font-size: 64px;
+		}
+	}
 
 	@include bp-767 {
 		.hero-wrapper {
@@ -836,12 +843,13 @@ body {
 				@include get-vw(height, 150px, 150px);
 			}
 		}
+		svg:last-of-type {
+			display: none;
+		}
 	}
-	img {
+	svg {
 		position: absolute;
-		top: 0;
 		@include get-vw(height, 164px, 164px);
-		width: auto;
 		display: flex;
 	}
 	.inner {
@@ -868,6 +876,20 @@ body {
 		}
 	}
 
+	@include bp-959 {
+		padding: 0 10px;
+		.block {
+			svg {
+				&:first-of-type {
+					display: none;
+				}
+				&:last-of-type {
+					display: flex;
+				}
+			}
+		}
+	}
+
 	@include bp-767 {
 		.block {
 			width: 29%;
@@ -877,6 +899,7 @@ body {
 					height: 90px;
 				}
 			}
+
 		}
 		img {
 			height: 90px;
@@ -1002,11 +1025,13 @@ body {
 	.tile-wrapper {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
+		padding: 0 150px;
 		@include get-vw(gap, 28px, 18px);
 		@include get-vw(margin-bottom, 40px, 30px);
 	}
 	.tile {
-		//width: calc(50% - 14px);
+		max-width: calc(50% - 14px);
 		@include get-vw(width, 452px, 353px);
 		position: relative;
 		overflow: visible;
@@ -1082,14 +1107,18 @@ body {
 		margin-bottom: 15px;
 	}
 	@include bp-767 {
+		padding: 0;
 		.tile-wrapper {
 			flex-direction: column;
+			padding: 0;
 		}
 		.tile {
 			width: 100%;
+			max-width: 100%;
 		}
 		.tile-inner {
-			max-width: 350px;
+			max-width: 370px;
+			width: 100%;
 		}
 	}
 }
@@ -1433,7 +1462,8 @@ footer {
 		display: flex;
 		@include get-vw(gap, 9px, 5px);
 		@include get-vw(margin-bottom, 40px, 35px);
-		img {
+		svg {
+			display: flex;
 			@include get-vw(width, 140px, 78px);
 			@include get-vw(height, 144px, 81px);
 		}
@@ -1610,18 +1640,21 @@ footer {
 	}
 }
 .collection-grid {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
 	position: relative;
 	z-index: 2;
 	border-top: 3px solid #00142D;
 	background: linear-gradient(0deg, rgba(255,255,255,0) 60%, rgba(194,236,255,1) 100%);
-	@include get-vw(padding-left, 240px, 150px);
-	@include get-vw(padding-right, 240px, 150px);
+	@include get-vw(padding-left, 240px, 100px);
+	@include get-vw(padding-right, 240px, 100px);
 	@include get-vw(padding-top, 40px, 17px);
 	@include get-vw(padding-bottom, 40px, 17px);
 	.filters {
 		display: flex;
 		justify-content: center;
-		@include get-vw(margin-bottom, 48px, 24px);
+		@include get-vw(padding-bottom, 48px, 24px);
 		@include get-vw(gap, 11px, 11px);
 	}
 	.grid {
@@ -1631,15 +1664,30 @@ footer {
 		row-gap: 35px;
 		@include get-vw(row-gap, 35px, 15px);
 		@include get-vw(column-gap, 20px, 0px);
+		max-width: 1200px;
+		width: 100%;
+	}
+
+	@include bp-1200 {
+		padding-right: 10px;
+		padding-left: 10px;
 	}
 
 	@include bp-767 {
-		padding-right: 10px;
-		padding-left: 10px;
+		overflow: scroll;
+		align-items: flex-start;
 		.filters {
 			overflow: scroll;
 			justify-content: flex-start;
 			margin: 0 10px ;
+		}
+		.grid {
+			position: sticky;
+			left: 0;
+			justify-content: space-between;
+		}
+		.card-wrapper {
+			min-width: calc(50% - 5px);
 		}
 	}
 }
