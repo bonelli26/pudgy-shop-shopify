@@ -117,11 +117,12 @@
       -webkit-text-stroke: 1px #00142d;
       text-strke: 1px #00142d;
       font-family: $ttBlack;
+      line-height: .91;
       letter-spacing: -0.02em;
       text-transform: uppercase;
       text-align: start;
-      margin-bottom: 18px;
       @include get-vw(font-size, 104px, 64px);
+      @include get-vw(margin-bottom, 18px, 8px);
     }
     .price-wrapper {
       display: flex;
@@ -170,8 +171,8 @@
       line-height: 1.45;
       text-transform: uppercase;
       white-space: nowrap;
+      font-size: 14px;
       @include get-vw(margin-bottom, 24px, 24px);
-      @include get-vw(font-size, 14px, 12px);
       strong {
         font-family: $mencoBlack;
       }
@@ -186,7 +187,6 @@
       font-family: $mencoBlack;
       line-height: 1.45;
       text-transform: uppercase;
-      @include get-vw(margin-bottom, 26px, 24px);
       @include get-vw(font-size, 18px, 16px);
     }
     .variant-wrapper {
@@ -196,6 +196,7 @@
       position: relative;
       padding-bottom: 3px;
       @include get-vw(height, 53px, 53px);
+      @include get-vw(margin-top, 26px, 24px);
       @include get-vw(margin-bottom, 26px, 26px);
     }
     .left-variant {
@@ -293,7 +294,7 @@
     @include bp-767 {
       .pdp-hero-inner {
         flex-direction: column;
-        padding: 128px 17px 42px;
+        padding: 135px 17px 42px;
         gap: 16px;
       }
       .left {
@@ -325,12 +326,13 @@
         height: 100%;
         flex: 1;
         flex-direction: column;
-        gap: 1vw;
+        justify-content: flex-start;
+        gap: 10px;
         border: none;
       }
       .thumbnail {
         width: 70px;
-        height: 75px;
+        height: 25%;
         border: unset;
         border-radius: 16.5px;
         &.active {
@@ -345,9 +347,6 @@
         transform: rotate(-4deg);
         width: 142px;
         height: 142px;
-      }
-      .price-wrapper {
-        margin-bottom: 15px;
       }
       .after-pay {
         font-family: $mencoBlack;
@@ -370,14 +369,17 @@
   }
   .about-section {
     position: relative;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    @include get-vw(padding-top, 68px, 43px);
-    @include get-vw(padding-left, 212px, 130px);
-    @include get-vw(padding-right, 205px, 130px);
-    @include get-vw(padding-bottom, 43px, 22px);
-    @include get-vw(gap, 24px, 15px);
+    > .inner {
+      position: relative;
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      @include get-vw(padding-top, 68px, 43px);
+      @include get-vw(padding-left, 212px, 130px);
+      @include get-vw(padding-right, 205px, 130px);
+      @include get-vw(padding-bottom, 43px, 22px);
+      @include get-vw(gap, 24px, 15px);
+    }
     .icon {
       position: absolute;
       @include get-vw(top, -30px, -29px);
@@ -430,7 +432,15 @@
     @include bp-767 {
       padding-left: 18px;
       padding-right: 18px;
+      > .inner {
+        padding-left: 0;
+        padding-right: 0;
+      }
+      .icon {
+        right: -7px;
+      }
       h2 {
+        max-width: 85%;
         text-shadow: -1px 1px #00142D;
       }
     }
@@ -545,7 +555,6 @@
     .top {
       @include get-vw(max-width, 600px, 427px);
     }
-
     h2 {
       color: #FBF7EB;
       text-shadow: -3px 3px #00142d;
@@ -557,6 +566,11 @@
       letter-spacing: -0.02em;
       text-transform: uppercase;
       text-align: center;
+    }
+    @include bp-767 {
+      .top {
+        max-width: 100%;
+      }
     }
   }
 }
