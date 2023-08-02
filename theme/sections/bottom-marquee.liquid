@@ -1,5 +1,5 @@
 <h4>{{ section.settings.header }}</h4>
-<div class="marquee mw">
+<div class="marquee">
     <div class="inner" data-dur="{{ section.settings.marquee_duration }}" data-mobile-dur="{{ section.settings.marquee_duration_mobile }}">
         <div class="group">
             {% for block in section.blocks %}
@@ -19,7 +19,7 @@
 {
   "name": "Bottom Marquee",
   "tag": "section",
-  "class": "bottom-marquee max-width",
+  "class": "bottom-marquee",
   "settings": [
     {
       "id": "marquee_duration",

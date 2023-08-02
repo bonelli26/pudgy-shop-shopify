@@ -275,7 +275,7 @@ nav {
 		html:not(.touch) & {
 			&:hover {
 				transform: rotate(-3deg) translate3d(-2px, 1px, 0px);
-				text-shadow: -1px 1px #00142d;
+				text-shadow: -3px 3px #00142d;
 			}
 		}
 	}
@@ -466,7 +466,7 @@ body {
 		&.active {
 			background: #477DFD;
 			box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
-			text-shadow: -1px 1px #00142d;
+			text-shadow: -3px 3px #00142d;
 			transform: translate3d(1px, 1px, 0px);
 		}
 		html:not(.touch) & {
@@ -478,7 +478,7 @@ body {
 	html:not(.touch) & {
 		&:hover {
 			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
-			text-shadow: -1px 1px #00142d;
+			text-shadow: -3px 3px #00142d;
 			transform: translate3d(1px, 1px, 0px);
 		}
 	}
@@ -1326,6 +1326,7 @@ footer {
 		}
 		img:first-of-type {
 			@include get-vw(height, 170px, 170px);
+			max-height: 170px;
 			display: flex;
 			position: absolute;
 			width: 100%;
@@ -1336,7 +1337,7 @@ footer {
 	.top-block {
 		display: flex;
 		align-items: center;
-		osition: relative;
+		position: relative;
 		z-index: 2;
 		.img-wrapper {
 			position: relative;
@@ -1353,7 +1354,6 @@ footer {
 		.text-wrapper {
 			display: flex;
 			flex-direction: column;
-			@include get-vw(margin-bottom, 4px, 4px);
 			p:first-of-type {
 				color: #000;
 				font-family: $ttBlack;

@@ -43,25 +43,23 @@ const globalEvents = (namespace = null)=>{
 
 	ImageLoad.break = false;
 	ImageLoad.loadImages(criticalMedia, "nodeList", (returned)=>{
+		let transitionFinished = setInterval(()=>{
+			if(globalStorage.transitionFinished){
+				clearInterval(transitionFinished);
+				beforeScroll();
 
+				$scroll = new ScrollBasedAnims({});
+
+				afterScroll();
+
+				new AddToCart();
+
+				pageEntrance(namespace);
+
+				globalStorage.imagesLoaded = false;
+			}
+		}, 20);
 	});
-
-	let transitionFinished = setInterval(()=>{
-		if(globalStorage.transitionFinished){
-			clearInterval(transitionFinished);
-			beforeScroll();
-
-			$scroll = new ScrollBasedAnims({});
-
-			afterScroll();
-
-			new AddToCart();
-
-			pageEntrance(namespace);
-
-			globalStorage.imagesLoaded = false;
-		}
-	}, 20);
 };
 
 /* --- DOMContentLoaded Function --- */
