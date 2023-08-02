@@ -589,14 +589,12 @@ export const filterTabs = () => {
 
 export const prepVideos = () => {
 	const videoWrapper = document.querySelectorAll(".video-wrapper")
-	if(videoWrapper !== true) { return; }
-	console.log(videoWrapper)
+	if(!videoWrapper) { return; }
+	
 	for (let i = 0; i < videoWrapper.length; i++) {
 		const video = videoWrapper[i]
 		const cover = video.querySelector(".video-wrapper:after")
 		const button = video.querySelector("button")
-
-		console.log(video)
 
 		video.addEventListener('click', () => {
 			gsap.to(cover, { autoAlpha: 0, ease: "sine.inOut", force3D: true, duration: 0.01 })
