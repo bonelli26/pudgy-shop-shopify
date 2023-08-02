@@ -1,4 +1,6 @@
 {% if product.metafields.accentuate.copy_block_header[0] %}
+<div class="inner">
+{% if product.metafields.accentuate.copy_block_header[0] %}
 <div class="text-block">
     <svg class="ice-block" width="1028" height="401" preserveAspectRatio="none" viewBox="0 0 1028 401" fill="none" xmlns="http://www.w3.org/2000/svg">
         <g filter="url(#filter0_d_1130_7266)">
@@ -51,6 +53,8 @@
     {% for copy_block_content in product.metafields.accentuate.copy_block_content[1] %}
         <div class="copy">{{ copy_block_content }}</div>
     {% endfor %}
+</div>
+{% endif %}
 </div>
 {% endif %}
 

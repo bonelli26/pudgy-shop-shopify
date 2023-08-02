@@ -565,7 +565,7 @@ body {
 		width: auto;
 		display: flex;
 		z-index: 4;
-		@include get-vw(width, 60px, 25px);
+		@include get-vw(width, 60px, 38px);
 		height: auto;
 		top: 10px;
 	}
@@ -576,6 +576,7 @@ body {
 		left: 0px;
 	}
 	.tag {
+		height: auto;
 		position: absolute;
 		z-index: 4;
 		border-radius: 31px;
@@ -625,9 +626,9 @@ body {
 		z-index: 3;
 		justify-content: flex-end;
 		align-items: center;
-		padding-bottom: 20px;
 		text-align: center;
 		text-transform: uppercase;
+		@include get-vw(padding-bottom, 20px, 14px);
 	}
 	.type {
 		font-family: $mencoBlack;
@@ -671,7 +672,38 @@ body {
 	@include bp-959 {
 		height: 288px;
 		max-width: 184px;
-		min-width: 184px	;
+		min-width: 184px;
+		.img-wrapper {
+			img {
+				height: 100%;
+			}
+		}
+	}
+	@include bp-767 {
+		height: 77vw;
+		min-height: 292px;
+		max-width: 173px;
+		min-width: 173px;
+		.pink-btn {
+			transform: unset;
+			height: 40px;
+			position: relative;
+			max-width: 89%;
+			font-size: 16px;
+			margin-top: 3px;
+			text-shadow: -0.5px 0.5px #00142D;
+		}
+		.name {
+			font-size: 24px;
+		}
+		.svg-left {
+			top: 8px;
+			left: 8px;
+		}
+		.svg-right {
+			top: 8px;
+			right: 8px;
+		}
 	}
 
 }
@@ -716,12 +748,12 @@ body {
 		background:  #A9FF99;
 		color: #00142D;
 		font-family: $mencoBlack;
-		@include get-vw(font-size, 16px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
 		padding: 0 22px;
 		width: auto;
 		@include get-vw(height, 35px, 35px);
+		@include get-vw(font-size, 16px, 16px);
 	}
 	h1 {
 		color: #FFF;
@@ -891,11 +923,15 @@ body {
 
 	@include bp-767 {
 		padding: 0 24px 24px;
+		.top {
+			max-width: 100%;
+		}
 		.best-sellers-wrapper {
-			padding: 0 0px;
+			padding: 0 0;
 		}
 		.inner {
 			justify-content: normal;
+			gap: 18px;
 		}
 	}
 }
@@ -1198,6 +1234,9 @@ body {
 	@include bp-767 {
 		&:after, &:before {
 			display: none;
+		}
+		h4 {
+			margin-bottom: 32px;
 		}
 	}
 }
