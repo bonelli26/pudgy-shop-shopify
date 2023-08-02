@@ -801,6 +801,11 @@ body {
 	}
 
 	@include bp-767 {
+		h1 {
+			max-width: 100%;
+			margin-top: 24px;
+			margin-bottom: 8px;
+		}
 		.hero-wrapper {
 			flex-direction: column;
 			padding-right: 16px;
@@ -808,12 +813,16 @@ body {
 		}
 		.left {
 			max-width: 100%;
+			gap: 0;
 		}
 		.toy {
 			width: 286px;
 			height: 286px;
 			left: unset;
 			right: -50%;
+		}
+		.pink-btn {
+			margin-top: 24px;
 		}
 	}
 }
