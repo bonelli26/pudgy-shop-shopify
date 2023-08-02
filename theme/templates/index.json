@@ -23,8 +23,8 @@
         "copy_3": "10m"
       }
     },
-    "product-recirculation": {
-      "type": "product-recirculation",
+    "best-sellers": {
+      "type": "best-sellers",
       "settings": {
         "heading": "best sellers",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
@@ -100,32 +100,26 @@
     "fifty-fifty-tiles": {
       "type": "fifty-fifty-tiles",
       "blocks": {
-        "98b623e8-50a8-4c87-b092-e0f6800a0fda": {
+        "70c8636f-2624-4572-95e9-3ef43e8dfbad": {
           "type": "tile",
           "settings": {
-            "url": "\/collections\/all",
-            "header": "Action Figures Colection",
-            "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
-            "tag": "Limited Edition",
+            "tag": "Limited edition",
             "frame": "shopify:\/\/shop_images\/ice-frame.png",
-            "top_image": "shopify:\/\/shop_images\/Untitled_2000x2000px_1.svg"
+            "collection": "affirmation"
           }
         },
-        "df5835a2-bee7-4d7f-9768-1d894fb1e9e0": {
+        "fac1099a-9dd7-4a6d-ae2b-c5b881e47dcd": {
           "type": "tile",
           "settings": {
-            "url": "\/collections\/all",
-            "header": "Action Figures Colection",
-            "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
-            "tag": "Limited Edition",
+            "tag": "Limited edition",
             "frame": "shopify:\/\/shop_images\/ice-frame.png",
-            "top_image": "shopify:\/\/shop_images\/5.Lifestyle_d73516e1-06c1-447b-90e7-7fe8fcb82344.jpg"
+            "collection": "best-sellers"
           }
         }
       },
       "block_order": [
-        "98b623e8-50a8-4c87-b092-e0f6800a0fda",
-        "df5835a2-bee7-4d7f-9768-1d894fb1e9e0"
+        "70c8636f-2624-4572-95e9-3ef43e8dfbad",
+        "fac1099a-9dd7-4a6d-ae2b-c5b881e47dcd"
       ],
       "settings": {
       }
@@ -168,19 +162,19 @@
         "4513afea-0e4b-48fc-90ef-b9b089937a66": {
           "type": "marquee",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ny-times.png"
+            "image": "shopify:\/\/shop_images\/ny-times_4b98a263-7318-468f-9b44-1b03b6a2882c.png"
           }
         },
         "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5": {
           "type": "marquee",
           "settings": {
-            "image": "shopify:\/\/shop_images\/end.png"
+            "image": "shopify:\/\/shop_images\/end_68621987-f5e5-42a0-a656-808100404d16.png"
           }
         },
         "d7507adf-d969-4e27-873d-335e99f37fdf": {
           "type": "marquee",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tech.png"
+            "image": "shopify:\/\/shop_images\/tech_3c63c082-e7b8-4da9-8883-0cc20b7707ac.png"
           }
         }
       },
@@ -199,7 +193,7 @@
   "order": [
     "hero-home",
     "block-trio",
-    "product-recirculation",
+    "best-sellers",
     "home-product-grid",
     "fifty-fifty-tiles",
     "video-trio",

@@ -3,7 +3,6 @@
     "pdp-hero": {
       "type": "pdp-hero",
       "settings": {
-        "ribbon_image": "shopify:\/\/shop_images\/top_Summer_1.png",
         "variant_ice_block": "shopify:\/\/shop_images\/pdp-ice-block-1.png"
       }
     },
@@ -47,36 +46,9 @@
         "header": "FAQ’S"
       }
     },
-    "product-recirculation": {
-      "type": "product-recirculation",
-      "blocks": {
-        "2776a604-de33-45ed-81a9-920dac347668": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-toys"
-          }
-        },
-        "e52c17df-6f6d-4e27-a1a1-f8d65e89033b": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-huggable-plush"
-          }
-        },
-        "d14b927f-5c04-4590-8a99-5b5fabc79cb9": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-plush-buddies"
-          }
-        }
-      },
-      "block_order": [
-        "2776a604-de33-45ed-81a9-920dac347668",
-        "e52c17df-6f6d-4e27-a1a1-f8d65e89033b",
-        "d14b927f-5c04-4590-8a99-5b5fabc79cb9"
-      ],
+    "pdp-recirc": {
+      "type": "pdp-recirc",
       "settings": {
-        "heading": "Complete the Collection",
-        "copy": ""
       }
     },
     "bottom-marquee": {
@@ -117,7 +89,7 @@
     "pdp-hero",
     "about-section",
     "faq-section",
-    "product-recirculation",
+    "pdp-recirc",
     "bottom-marquee"
   ]
 }

@@ -61,7 +61,7 @@ body {
 	width: 100%;
 	height: 100%;
 	z-index: 120;
-	display: none;
+	background: linear-gradient(90deg, #9F8FFF 0%, #FFA3FF 25.33%, #FF8B8B 50.33%, #FFE092 74.81%, #A9FF99 100%);
 }
 .preload {
 	//opacity: 0;
@@ -275,7 +275,7 @@ nav {
 		html:not(.touch) & {
 			&:hover {
 				transform: rotate(-3deg) translate3d(-2px, 1px, 0px);
-				text-shadow: -3px 3px #00142d;
+				text-shadow: -1px 1px #00142d;
 			}
 		}
 	}
@@ -438,6 +438,20 @@ body {
 	background: linear-gradient(180deg, #C2ECFF 4.69%, #3E83FE 20.31%, #97BDFF 30.73%, #6EBACA 51.13%, #5964D0 61.09%, #F1A7FA 76.46%, #074FCF 100%), #F5FDFF;
 }
 
+.view-product, .view-home, .view-collection {
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' class='svg-grid' viewBox='0 0 1439 3712'%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23a)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 3.5h1380M30 47.5h1380M30 91.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380M59.5 620V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23b)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 619.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23c)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 1239.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23d)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 1859.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23e)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 2479.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23f)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 3095.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 0h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='b'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 616h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='c'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 1236h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='d'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 1856h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='e'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 2476h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='f'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 3092h1439v620H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+		background-repeat: repeat;
+		opacity: 0.4;
+	}
+
+}
+
 .pink-btn {
 	display: flex;
 	justify-content: center;
@@ -466,7 +480,7 @@ body {
 		&.active {
 			background: #477DFD;
 			box-shadow: 0px 0px 0px 0px rgba(0, 0, 0, 0.25);
-			text-shadow: -3px 3px #00142d;
+			text-shadow: -1px 1px #00142d;
 			transform: translate3d(1px, 1px, 0px);
 		}
 		html:not(.touch) & {
@@ -478,7 +492,7 @@ body {
 	html:not(.touch) & {
 		&:hover {
 			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
-			text-shadow: -3px 3px #00142d;
+			text-shadow: -1px 1px #00142d;
 			transform: translate3d(1px, 1px, 0px);
 		}
 	}
@@ -1021,9 +1035,9 @@ body {
 	}
 	.top {
 		display: flex;
-		@include get-vw(height,  294px, 229px);
+		@include get-vw(height, 220px, 220px);
 		img {
-			@include get-vw(height,  294px, 229px);
+			@include get-vw(height, 220px, 220px);
 			width: 100%;
 			display: flex;
 		}
@@ -1233,6 +1247,9 @@ body {
 	}
 	.marquee {
 		overflow: hidden;
+	}
+	.group {
+		align-items: center;
 	}
 
 	@include bp-767 {
@@ -1575,6 +1592,16 @@ footer {
 	@include get-vw(padding-bottom, 50px, 50px);
 	@include get-vw(gap, 17px, 10px);
 	background: linear-gradient(162deg, #477DFD 0%, #94DBFF 100%);
+	&:after {
+		position: absolute;
+		top: 0;
+		left: 0;
+		width: 100%;
+		height: 100%;
+		content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' class='svg-grid' viewBox='0 0 1439 3712'%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23a)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 3.5h1380M30 47.5h1380M30 91.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380M59.5 620V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23b)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 619.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23c)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 1239.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23d)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 1859.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23e)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 2479.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23f)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 3095.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 0h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='b'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 616h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='c'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 1236h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='d'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 1856h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='e'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 2476h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='f'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 3092h1439v620H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
+		background-repeat: repeat;
+		opacity: 0.6;
+	}
 	h1 {
 		color: #FFF;
 		text-shadow: -2px 2px #00142d;
