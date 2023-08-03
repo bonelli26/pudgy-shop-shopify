@@ -6,7 +6,7 @@
         "hero_tag": "NEW DROP",
         "hero_header": "Pudgy  bowl cut",
         "hero_intro": "Send a Pudgy Penguin and spread the love! It's the perfect gift for your significant other, family, friends, or even yourself.",
-        "hero_button_url": "\/",
+        "hero_button_url": "\/collections\/all-toys",
         "toy_image": "shopify:\/\/shop_images\/box-toy.png",
         "hand_image": "shopify:\/\/shop_images\/PUP_Action_Figures_LF_SR1_1_1.png",
         "hero_bg": "shopify:\/\/shop_images\/sky-hero.jpg"
@@ -33,64 +33,36 @@
     "home-product-grid": {
       "type": "home-product-grid",
       "blocks": {
-        "8eea2e1a-2b28-45f8-9416-76678ecd3674": {
+        "9110167c-e0ed-4035-88e1-a08bafa83ca2": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-action-figures"
+            "product": "pudgy-penguins-army-hat-figurine"
           }
         },
-        "654aa941-26d3-4193-ac2c-09910ad695ce": {
+        "aa2c735d-077c-42fe-847d-e9d88e12084f": {
           "type": "product-card",
           "settings": {
-            "product": "clout-goggles"
+            "product": "pudgy-penguins-cowboy-figurine"
           }
         },
-        "80c0b751-de3f-4177-a4b7-0570408f3c0e": {
+        "090542dc-b5cc-4b21-8d20-1824095d9616": {
           "type": "product-card",
           "settings": {
-            "product": "custom-box-sweatshirt"
+            "product": "pudgy-penguins-fish-head-figurine"
           }
         },
-        "206df600-35ce-4e6a-a245-cb3c1b283650": {
+        "0f7f91a3-38f1-4621-82a6-8973523b70f7": {
           "type": "product-card",
           "settings": {
-            "product": "custom-mug"
-          }
-        },
-        "6b4e7d03-aff8-416d-92f0-f20d2d558be0": {
-          "type": "product-card",
-          "settings": {
-            "product": "custom-pudgy-penguins-tee-1"
-          }
-        },
-        "9e32027b-5088-43a3-9508-b2a15cb044db": {
-          "type": "product-card",
-          "settings": {
-            "product": "custom-pudgy-pillow"
-          }
-        },
-        "522067bd-426f-40f5-924e-2f1292fdd509": {
-          "type": "product-card",
-          "settings": {
-            "product": "custom-pudgy-penguins-tee-2"
-          }
-        },
-        "642ee847-06da-46bc-84c1-f31a35c720af": {
-          "type": "product-card",
-          "settings": {
-            "product": "hd-metal-print"
+            "product": "pudgy-penguins-samurai-figurine"
           }
         }
       },
       "block_order": [
-        "8eea2e1a-2b28-45f8-9416-76678ecd3674",
-        "654aa941-26d3-4193-ac2c-09910ad695ce",
-        "80c0b751-de3f-4177-a4b7-0570408f3c0e",
-        "206df600-35ce-4e6a-a245-cb3c1b283650",
-        "6b4e7d03-aff8-416d-92f0-f20d2d558be0",
-        "9e32027b-5088-43a3-9508-b2a15cb044db",
-        "522067bd-426f-40f5-924e-2f1292fdd509",
-        "642ee847-06da-46bc-84c1-f31a35c720af"
+        "9110167c-e0ed-4035-88e1-a08bafa83ca2",
+        "aa2c735d-077c-42fe-847d-e9d88e12084f",
+        "090542dc-b5cc-4b21-8d20-1824095d9616",
+        "0f7f91a3-38f1-4621-82a6-8973523b70f7"
       ],
       "settings": {
         "heading": "Live Now",
@@ -103,17 +75,17 @@
         "70c8636f-2624-4572-95e9-3ef43e8dfbad": {
           "type": "tile",
           "settings": {
-            "tag": "Limited edition",
+            "tag": "New releases",
             "frame": "shopify:\/\/shop_images\/ice-frame.png",
-            "collection": "affirmation"
+            "collection": "figurines"
           }
         },
         "fac1099a-9dd7-4a6d-ae2b-c5b881e47dcd": {
           "type": "tile",
           "settings": {
-            "tag": "Limited edition",
+            "tag": "New releases",
             "frame": "shopify:\/\/shop_images\/ice-frame.png",
-            "collection": "best-sellers"
+            "collection": "plushies"
           }
         }
       },

@@ -49,6 +49,7 @@
     "pdp-recirc": {
       "type": "pdp-recirc",
       "settings": {
+        "heading": "You might also like"
       }
     },
     "bottom-marquee": {
