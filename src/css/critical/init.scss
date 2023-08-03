@@ -465,7 +465,87 @@ body {
 	}
 
 }
-
+.pink-btn {
+	--color: #fff;
+	--color-hover: #EFF0FF;
+	--hover-back: #FFA3FF;
+	--hover-front: #00142D;
+	-webkit-tap-highlight-color: transparent;
+	position: relative;
+	color: var(--c, var(--color));
+	transition: color .3s 0s $ease-in-out-sine;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	@include get-vw(width, 275px, 230px);
+	@include get-vw(height, 58px, 58px);
+	max-width: 100%;
+	white-space: nowrap;
+	overflow: hidden;
+	text-shadow: -1px 1px #00142d;
+	-webkit-text-stroke: 1px #00142d;
+	text-stroke: 1px #00142d;
+	font-family: $ttBlack;
+	@include get-vw(font-size, 29px, 29px);
+	line-height: .8;
+	letter-spacing: .29px;
+	text-transform: uppercase;
+	background: #FFA3FF;
+	border: 1px solid #000000;
+	border-radius: 100px;
+	box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+	span:not(.tag) {
+		z-index: 3;
+		position: relative;
+		transform: scale(1) translateZ(0);
+		transition: transform .3s $ease-out-sine;
+	}
+	&:before,
+	&:after {
+		content: '';
+		position: absolute;
+		background: var(--pb, var(--hover-back));
+		top: 0;
+		left: 0;
+		right: 0;
+		height: 200%;
+		border-radius: var(--br, 40%);
+		transform: translateY(var(--y, 50%));
+		transition: transform var(--d, .35s) $ease-in-out-sine var(--d-d, 0s), border-radius .45s $ease-in-out-sine var(--br-d, .08s);
+	}
+	&:after {
+		--pb: var(--hover-front);
+		--d: .39s;
+	}
+	&:before {
+		--d-d: .06s;
+	}
+	html:not(.touch) & {
+		&:hover {
+			transform: translate3d(1px, 1px, 0px);
+			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
+			transition: color .3s .1s $ease-in-out-sine;
+			color: #C5FCFF;
+			--name: move;
+			--c: var(--color-hover);
+			span:not(.tag) {
+				transform: scale(0.975) translateZ(0);
+			}
+			&:before,
+			&:after {
+				--y: 0;
+				--br: 0;
+			}
+			&:before {
+				--d-d: 0s;
+			}
+			&:after {
+				--br: 0;
+				--d-d: .02s;
+			}
+		}
+	}
+}
 .pink-btn {
 	display: flex;
 	justify-content: center;
