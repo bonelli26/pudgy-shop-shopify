@@ -3,7 +3,7 @@
         <div class="tag">{{ section.settings.hero_tag }}</div>
         <h1>{{ section.settings.hero_header }}</h1>
         <p>{{ section.settings.hero_intro }}</p>
-        <a class="pink-btn" href="{{ section.settings.hero_button_url }}">Shop Now</a>
+        <a class="pink-btn" href="{{ section.settings.hero_button_url }}"><span>Shop Now</span></a>
     </div>
     <div class="right">
         <img class="preload-critical bg toy"{% if section.settings.toy_image.alt %} alt="{{ section.settings.toy_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.toy_image | image_url }}" data-preload-mobile="https:{{ section.settings.toy_image | image_url }}">

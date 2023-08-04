@@ -1,6 +1,16 @@
 import {globalStorage} from "./storage";
 import {$scroll} from "./_renderer";
-import {Marquees, prepSliders, prepDrawers, prepModals, prepTabs, newTabs, filterTabs} from "./anims";
+import {
+	Marquees,
+	prepSliders,
+	prepDrawers,
+	prepModals,
+	prepTabs,
+	newTabs,
+	filterTabs,
+	prepVideos,
+	seeMore
+} from "./anims";
 import {gsap} from "gsap";
 import * as serialize from "form-serialize";
 import {GlobalLazyLoadWorker} from "../_worker/GlobalLazyLoadWorker";
@@ -245,6 +255,8 @@ export const beforeScroll = () => {
 	filterTabs();
 	prepTabs();
 	prepDrawers();
+	prepVideos();
+	seeMore();
 	prepModals(document.querySelectorAll(".modal-trigger"));
 	globalStorage.windowWidth = getViewport().width;
 };

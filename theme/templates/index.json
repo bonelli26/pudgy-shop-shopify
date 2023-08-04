@@ -6,7 +6,7 @@
         "hero_tag": "NEW DROP",
         "hero_header": "Pudgy  bowl cut",
         "hero_intro": "Send a Pudgy Penguin and spread the love! It's the perfect gift for your significant other, family, friends, or even yourself.",
-        "hero_button_url": "\/",
+        "hero_button_url": "\/collections\/all-toys",
         "toy_image": "shopify:\/\/shop_images\/box-toy.png",
         "hand_image": "shopify:\/\/shop_images\/PUP_Action_Figures_LF_SR1_1_1.png",
         "hero_bg": "shopify:\/\/shop_images\/sky-hero.jpg"
@@ -14,70 +14,17 @@
     },
     "block-trio": {
       "type": "block-trio",
-      "blocks": {
-        "62a13a5a-9bed-4d55-bd16-7623e2878d49": {
-          "type": "ice_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ice-block-1.png",
-            "image_mobile": "shopify:\/\/shop_images\/ice-mobli-1.png",
-            "eyebrow": "Traits minted",
-            "copy": "5000"
-          }
-        },
-        "bd271637-a53c-482e-a691-233a4197e6f1": {
-          "type": "ice_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ico-block-2.png",
-            "image_mobile": "shopify:\/\/shop_images\/ice-mobile-2.png",
-            "eyebrow": "Toys Sold",
-            "copy": "10,000+"
-          }
-        },
-        "65be1b6f-7210-4b90-99ee-a9d6c559c253": {
-          "type": "ice_block",
-          "settings": {
-            "image": "shopify:\/\/shop_images\/ice-block-3.png",
-            "image_mobile": "shopify:\/\/shop_images\/ice-mobile.3.png",
-            "eyebrow": "Market Value",
-            "copy": "10m"
-          }
-        }
-      },
-      "block_order": [
-        "62a13a5a-9bed-4d55-bd16-7623e2878d49",
-        "bd271637-a53c-482e-a691-233a4197e6f1",
-        "65be1b6f-7210-4b90-99ee-a9d6c559c253"
-      ],
       "settings": {
+        "eyebrow_1": "Traits minted",
+        "copy_1": "5000",
+        "eyebrow_2": "Toys Sold",
+        "copy_2": "10,000+",
+        "eyebrow_3": "Market Value",
+        "copy_3": "10m"
       }
     },
-    "product-recirculation": {
-      "type": "product-recirculation",
-      "blocks": {
-        "f8bb63c2-8142-4e2f-a93d-e41d3a54f803": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-positive-penguins"
-          }
-        },
-        "167bbab9-e9c1-49e0-b525-4c9373385378": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-plush-buddies"
-          }
-        },
-        "07c68f58-e068-445e-ab8a-98da1382d058": {
-          "type": "product-card",
-          "settings": {
-            "product": "pudgy-penguins-huggable-plush"
-          }
-        }
-      },
-      "block_order": [
-        "f8bb63c2-8142-4e2f-a93d-e41d3a54f803",
-        "167bbab9-e9c1-49e0-b525-4c9373385378",
-        "07c68f58-e068-445e-ab8a-98da1382d058"
-      ],
+    "best-sellers": {
+      "type": "best-sellers",
       "settings": {
         "heading": "best sellers",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
@@ -86,64 +33,36 @@
     "home-product-grid": {
       "type": "home-product-grid",
       "blocks": {
-        "8eea2e1a-2b28-45f8-9416-76678ecd3674": {
+        "9110167c-e0ed-4035-88e1-a08bafa83ca2": {
           "type": "product-card",
           "settings": {
-            "product": "canvas-print"
+            "product": "pudgy-penguins-army-hat-figurine"
           }
         },
-        "654aa941-26d3-4193-ac2c-09910ad695ce": {
+        "aa2c735d-077c-42fe-847d-e9d88e12084f": {
           "type": "product-card",
           "settings": {
-            "product": "clout-goggles"
+            "product": "pudgy-penguins-cowboy-figurine"
           }
         },
-        "80c0b751-de3f-4177-a4b7-0570408f3c0e": {
+        "090542dc-b5cc-4b21-8d20-1824095d9616": {
           "type": "product-card",
           "settings": {
-            "product": "custom-box-sweatshirt"
+            "product": "pudgy-penguins-fish-head-figurine"
           }
         },
-        "206df600-35ce-4e6a-a245-cb3c1b283650": {
+        "0f7f91a3-38f1-4621-82a6-8973523b70f7": {
           "type": "product-card",
           "settings": {
-            "product": "custom-mug"
-          }
-        },
-        "6b4e7d03-aff8-416d-92f0-f20d2d558be0": {
-          "type": "product-card",
-          "settings": {
-            "product": "custom-pudgy-penguins-tee-1"
-          }
-        },
-        "9e32027b-5088-43a3-9508-b2a15cb044db": {
-          "type": "product-card",
-          "settings": {
-            "product": "custom-pudgy-pillow"
-          }
-        },
-        "522067bd-426f-40f5-924e-2f1292fdd509": {
-          "type": "product-card",
-          "settings": {
-            "product": "custom-pudgy-penguins-tee-2"
-          }
-        },
-        "642ee847-06da-46bc-84c1-f31a35c720af": {
-          "type": "product-card",
-          "settings": {
-            "product": "hd-metal-print"
+            "product": "pudgy-penguins-samurai-figurine"
           }
         }
       },
       "block_order": [
-        "8eea2e1a-2b28-45f8-9416-76678ecd3674",
-        "654aa941-26d3-4193-ac2c-09910ad695ce",
-        "80c0b751-de3f-4177-a4b7-0570408f3c0e",
-        "206df600-35ce-4e6a-a245-cb3c1b283650",
-        "6b4e7d03-aff8-416d-92f0-f20d2d558be0",
-        "9e32027b-5088-43a3-9508-b2a15cb044db",
-        "522067bd-426f-40f5-924e-2f1292fdd509",
-        "642ee847-06da-46bc-84c1-f31a35c720af"
+        "9110167c-e0ed-4035-88e1-a08bafa83ca2",
+        "aa2c735d-077c-42fe-847d-e9d88e12084f",
+        "090542dc-b5cc-4b21-8d20-1824095d9616",
+        "0f7f91a3-38f1-4621-82a6-8973523b70f7"
       ],
       "settings": {
         "heading": "Live Now",
@@ -153,36 +72,57 @@
     "fifty-fifty-tiles": {
       "type": "fifty-fifty-tiles",
       "blocks": {
-        "98b623e8-50a8-4c87-b092-e0f6800a0fda": {
+        "70c8636f-2624-4572-95e9-3ef43e8dfbad": {
           "type": "tile",
           "settings": {
-            "header": "Action Figures Colection",
-            "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
-            "tag": "Limited Edition",
+            "tag": "New releases",
             "frame": "shopify:\/\/shop_images\/ice-frame.png",
-            "top_image": "shopify:\/\/shop_images\/Untitled_2000x2000px_1.svg"
+            "collection": "figurines"
           }
         },
-        "df5835a2-bee7-4d7f-9768-1d894fb1e9e0": {
+        "fac1099a-9dd7-4a6d-ae2b-c5b881e47dcd": {
           "type": "tile",
           "settings": {
-            "header": "Action Figures Colection",
-            "copy": "Nullam id dolor id nibh ultricies vehicula ut id elit. Sed posuere consectetur est at lobortis.",
-            "tag": "Limited Edition",
+            "tag": "New releases",
             "frame": "shopify:\/\/shop_images\/ice-frame.png",
-            "top_image": "shopify:\/\/shop_images\/5.Lifestyle_d73516e1-06c1-447b-90e7-7fe8fcb82344.jpg"
+            "collection": "plushies"
           }
         }
       },
       "block_order": [
-        "98b623e8-50a8-4c87-b092-e0f6800a0fda",
-        "df5835a2-bee7-4d7f-9768-1d894fb1e9e0"
+        "70c8636f-2624-4572-95e9-3ef43e8dfbad",
+        "fac1099a-9dd7-4a6d-ae2b-c5b881e47dcd"
       ],
       "settings": {
       }
     },
     "video-trio": {
       "type": "video-trio",
+      "blocks": {
+        "caee1b52-d16d-4cab-b918-01dfda9bb08f": {
+          "type": "tile",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
+          }
+        },
+        "6a11ed60-0ce9-467a-b573-b52db82bfeb2": {
+          "type": "tile",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
+          }
+        },
+        "21c25fe4-138b-4194-9cf9-73ef655e7a5f": {
+          "type": "tile",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "caee1b52-d16d-4cab-b918-01dfda9bb08f",
+        "6a11ed60-0ce9-467a-b573-b52db82bfeb2",
+        "21c25fe4-138b-4194-9cf9-73ef655e7a5f"
+      ],
       "settings": {
         "header": "",
         "copy": ""
@@ -194,19 +134,19 @@
         "4513afea-0e4b-48fc-90ef-b9b089937a66": {
           "type": "marquee",
           "settings": {
-            "image": "shopify:\/\/shop_images\/ny-times.png"
+            "image": "shopify:\/\/shop_images\/ny-times_4b98a263-7318-468f-9b44-1b03b6a2882c.png"
           }
         },
         "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5": {
           "type": "marquee",
           "settings": {
-            "image": "shopify:\/\/shop_images\/end.png"
+            "image": "shopify:\/\/shop_images\/end_68621987-f5e5-42a0-a656-808100404d16.png"
           }
         },
         "d7507adf-d969-4e27-873d-335e99f37fdf": {
           "type": "marquee",
           "settings": {
-            "image": "shopify:\/\/shop_images\/tech.png"
+            "image": "shopify:\/\/shop_images\/tech_3c63c082-e7b8-4da9-8883-0cc20b7707ac.png"
           }
         }
       },
@@ -225,7 +165,7 @@
   "order": [
     "hero-home",
     "block-trio",
-    "product-recirculation",
+    "best-sellers",
     "home-product-grid",
     "fifty-fifty-tiles",
     "video-trio",

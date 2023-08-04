@@ -284,11 +284,9 @@ export class AddToCart {
 					</div>					
 					<div class="product-info">
 						<div class="left">
-								<h1 class="name">${item.product_title}</h1>`;
-							if (item.variant_title) {
-								html += `<h2 class="line-item-subtitle type">${item.variant_title}</h2>`;
-							}
-						html += `<div class="increment-wrapper quantity">
+							<div class="line-item-subtitle type">${item.product_type}</div>
+							<h1 class="name">${item.product_title}</h1>
+							<div class="increment-wrapper quantity">
 									<button name="decrease item quantity" aria-label="decrease item quantity" type="button" class="increment decrease" data-type="minus">-</button>
 										<span class="count">${item.quantity}</span>
 									<button name="increase item quantity" aria-label="increase item quantity" type="button" class="increment increase" data-type="plus">+</button>

@@ -1,23 +1,23 @@
 <div class="tile-wrapper">
     {% for block in section.blocks %}
-        <a class="tile" href="{{ block.settings.url }}">
+    {% assign thisCollection = block.settings.collection %}
+        <a class="tile" href="{{ thisCollection.url }}">
             <img class="preload frame" {% if block.settings.frame.alt %} alt="{{ block.settings.frame.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.frame | image_url }}" data-preload-mobile="https:{{ block.settings.frame | image_url }}">
             <div class="tile-inner">
                 <div class="top">
-                    <img class="preload" {% if block.settings.top_image.alt %} alt="{{ block.settings.top_image.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.top_image | image_url }}" data-preload-mobile="https:{{ block.settings.top_image | image_url }}">
+                    <img class="preload" {% if thisCollection.image.alt %} alt="{{ thisCollection.image.alt }}"{% endif %} data-preload-desktop="https:{{ thisCollection.image | image_url }}" data-preload-mobile="https:{{ thisCollection.image | image_url }}">
                     <div class="tag">{{ block.settings.tag }}</div>
                 </div>
                 <div class="bottom">
-                    <p class="title">{{ block.settings.header }}</p>
-                    <p class="copy">{{ block.settings.copy }}</p>
-                    <button class="pink-btn">Shop Now</button>
+                    <p class="title">{{ thisCollection.handle }}</p>
+                    <p class="copy">{{ thisCollection.description }}</p>
+                    <button class="pink-btn"><span>Shop Now</span></button>
                 </div>
             </div>
         </a>
     {% endfor %}
 </div>
-<button class="pink-btn">SEE MORE</button>
-
+<button class="pink-btn see-more"><span>SEE MORE</span></button>
 
 {% schema %}
 {
@@ -30,21 +30,6 @@
       "type": "tile",
       "settings": [
         {
-          "id": "url",
-          "type": "text",
-          "label": "URL"
-        },
-        {
-          "id": "header",
-          "type": "text",
-          "label": "Header"
-        },
-        {
-          "id": "copy",
-          "type": "text",
-          "label": "Copy"
-        },
-        {
           "id": "tag",
           "type": "text",
           "label": "Tag"
@@ -55,9 +40,9 @@
           "label": "Frame"
         },
         {
-          "id": "top_image",
-          "type": "image_picker",
-          "label": "Top Image"
+          "type": "collection",
+          "id": "collection",
+          "label": "Collection"
         }
       ]
     }

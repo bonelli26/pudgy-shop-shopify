@@ -550,8 +550,6 @@ export const filterTabs = () => {
 	const tabsWrapper = tabParent.querySelector('.grid');
 	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
 
-	console.log(tabParent)
-
 	for (let i = 0; i < triggers.length; i++) {
 		let trigger = triggers[i],
 			triggerData = trigger.dataset.trigger,
@@ -587,5 +585,36 @@ export const filterTabs = () => {
 		});
 
 	}
+}
+
+export const prepVideos = () => {
+	const videoWrapper = document.querySelectorAll(".video-wrapper")
+	if(!videoWrapper) { return; }
+
+	for (let i = 0; i < videoWrapper.length; i++) {
+		const video = videoWrapper[i]
+		const cover = video.querySelector(".video-wrapper:after")
+		const button = video.querySelector("button")
+
+		video.addEventListener('click', () => {
+			gsap.to(cover, { autoAlpha: 0, ease: "sine.inOut", force3D: true, duration: 0.01 })
+			gsap.to(button, { autoAlpha: 0, ease: "sine.inOut", force3D: true, duration: 0.35 })
+		})
+	}
+
+}
+
+export const seeMore = () => {
+	const seeMoreSection = document.querySelector(".fifty-fifty-tiles")
+	if(!seeMoreSection) { return; }
+	const tiles = seeMoreSection.querySelectorAll(".tile:nth-child(n+3)")
+	const trigger = seeMoreSection.querySelector(".see-more")
+
+	gsap.set(tiles, { display: "none", autoAlpha: 0 })
+	console.log(trigger)
+	trigger.addEventListener('click', () => {
+		gsap.to(trigger, { display: "none" })
+		gsap.to(tiles, { display: "flex", autoAlpha: 1, ease: "sine.inOut", force3D: true, duration: 0.2 })
+	})
 
 }
