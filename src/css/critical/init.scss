@@ -876,10 +876,14 @@ body {
 	}
 
 	@include bp-767 {
+		height: 100vh;
 		.hero-wrapper {
 			flex-direction: column;
 			padding-right: 16px;
 			padding-left: 16px;
+		}
+		h1 {
+			white-space: nowrap;
 		}
 		.left {
 			max-width: 100%;
@@ -1696,19 +1700,31 @@ footer {
 		.block {
 			width: 220px;
 			height: 230px;
-			padding: 130px 20px 16px;
+			padding: 125px 20px 16px;
 			img:first-of-type {
 				height: 130px;
 			}
 		}
 		.top-block {
 			.img-wrapper {
-				width: 30px;
-				height: 30px;
+				width: 40px;
+				height: 40px;
 				img {
-					height: 30px;
+					height: 40px;
 				}
 			}
+			.text-wrapper {
+				p:first-of-type {
+					font-size: 14px;
+				}
+				p:last-of-type {
+					font-size: 8px;
+				}
+			}
+		}
+		.copy {
+			font-size: 12px;
+			line-height: 1;
 		}
 		.bottom {
 			max-width: 99%;
