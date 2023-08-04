@@ -80,7 +80,7 @@
         "d7507adf-d969-4e27-873d-335e99f37fdf"
       ],
       "settings": {
-        "marquee_duration": "10",
+        "marquee_duration": "20",
         "marquee_duration_mobile": "5",
         "header": "As seen on"
       }

@@ -33,14 +33,14 @@
       flex-direction: column;
       //@include get-vw(min-width, 484px, 142px);
       @include get-vw(padding-left, 20px, 0px);
-      width: calc(50% - 20px);
+      width: calc(40% - 40px);
     }
     .right {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
       //min-width: 33.611vw;
-      width: calc(50% - 20px);
+      width: calc(60% - 40px);
       @include get-vw(padding-right, 20px, 0px);
     }
     .frame {
@@ -73,22 +73,21 @@
     }
     .thumbnails {
       display: flex;
-      align-items: center;
+      align-items: stretch;
       justify-content: space-between;
       width: 100%;
-      gap: 15px;
-      //@include get-vw-no-max(height, 121px, 83px);
     }
     .thumbnail {
       position: relative;
       height: 100%;
+      width: calc(25% - 0.5vw);
       border-radius: 24px;
       border: 1.5px solid #000;
       overflow: hidden;
       transition: .3s all $ease-in-out-sine;
       box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
-      aspect-ratio: 0.84 / 1;
-      @include get-vw(width, 121px, 70px);
+      aspect-ratio: 0.85 / 1;
+      max-height: 7vw;
       &.active {
         transform: rotate(-5deg);
         box-shadow: unset;
@@ -332,6 +331,7 @@
         height: 25%;
         border: unset;
         border-radius: 16.5px;
+        max-height: unset;
         &.active {
           border: 2.067px solid #00142D;
           transform: rotate(-5deg);
@@ -361,6 +361,9 @@
         background: #FFFFFF;
         height: 23.4vw;
         z-index: 100;
+      }
+      .atc-form {
+        width: 100%;
       }
     }
   }
