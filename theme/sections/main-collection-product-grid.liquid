@@ -7,9 +7,9 @@
 </div>
 <div class="collection-grid mw">
     <div class="filters">
-        <button class="pink-btn active blue" data-trigger="all">all toys</button>
+        <button class="pink-btn blue active" data-trigger="all"><span>all toys</span></button>
         {% for tag in tags %}
-            <button class="pink-btn blue"  data-trigger="{{ tag | handle }}">{{ tag }}</button>
+            <button class="pink-btn blue"  data-trigger="{{ tag | handle }}"><span><{{ tag }}/span></button>
         {% endfor %}
     </div>
 
@@ -44,7 +44,7 @@
                                     </strong>
                                 </p>
                             </div>
-                            <button class="pink-btn">Shop Now</button>
+                            <button class="pink-btn"><span>Shop Now</span></button>
                         </div>
                     </div>
                 </span>

@@ -79,7 +79,7 @@
 
 <header id="header">
   <div class="pencil-bar marquee gradiant-marquee">
-    <div class="inner" data-dur="25">
+    <div class="inner" data-dur="25" data-mobile-dur="5">
       <div class="group">
         {% if settings.pencil_bar_url == blank and settings.pencil_bar_message != blank %}
           <p>{{ settings.pencil_bar_message }}</p>
@@ -96,7 +96,7 @@
       </div>
     </div>
   </div>
-  <nav id="nav">
+  <nav id="nav" class="max-width">
     <a class="logo mw" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="149" height="83" viewBox="0 0 149 83" fill="none">
         <g clip-path="url(#clip0_1321_882)">

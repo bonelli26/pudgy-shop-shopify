@@ -101,7 +101,8 @@
                     <button class="increase">+</button>
                 </div>
                 <button class="add-to-cart pink-btn{% unless product.available %} disabled{% endunless %}" data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
-                    Add To Cart
+                    <span>
+                        Add To Cart
                     <span>
                         <svg width="23" height="27" viewBox="0 0 23 27" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <g filter="url(#filter0_d_1130_7264)">
@@ -120,6 +121,7 @@
                             </filter>
                             </defs>
                         </svg>
+                    </span>
                     </span>
                 </button>
             </form>
