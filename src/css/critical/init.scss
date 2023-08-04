@@ -261,8 +261,8 @@ nav {
 		justify-content: space-between;
 		align-items: center;
 		@include get-vw(padding-left, 40px, 27px);
-		@include get-vw(padding-right, 20px, 9px);
-		@include get-vw(width, 722px, 722px);
+		@include get-vw(padding-right, 10px, 10px);
+		//@include get-vw(width, 722px, 722px);
 		height: 62px;
 		z-index: 3;
 	}
@@ -270,6 +270,7 @@ nav {
 		display: flex;
 		@include get-vw(gap, 45px, 20px);
 		align-items: center;
+		@include get-vw(margin-right, 60px, 10px);
 	}
 	.link {
 		color: #fff;
@@ -1664,7 +1665,6 @@ footer {
 			}
 		}
 	}
-
 	.footer-address {
 		color: #E9F7FB;
 		text-align: center;
@@ -1685,6 +1685,23 @@ footer {
 	@include bp-767 {
 		padding-left: 5px;
 		padding-right: 5px;
+		.block {
+			width: 220px;
+			height: 230px;
+			padding: 130px 20px 16px;
+			img:first-of-type {
+				height: 130px;
+			}
+		}
+		.top-block {
+			.img-wrapper {
+				width: 30px;
+				height: 30px;
+				img {
+					height: 30px;
+				}
+			}
+		}
 		.bottom {
 			max-width: 99%;
 		}
