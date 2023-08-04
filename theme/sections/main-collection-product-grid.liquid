@@ -6,15 +6,15 @@
     <p>{{ section.settings.collections_copy }}</p>
 </div>
 <div class="collection-grid mw">
-    <div class="filters" style="display: none">
+    <div class="filters">
         <button class="pink-btn blue active" data-trigger="all"><span>all toys</span></button>
         {% for tag in tags %}
             <button class="pink-btn blue"  data-trigger="{{ tag | handle }}"><span>{{ tag }}</span></button>
         {% endfor %}
     </div>
-    <div class="filters-mobile drawer" data-at="767">
+    <div class="filters-mobile drawer replace-label" data-at="767">
         <div class="label">
-            <p>Filter By</p>
+            <p class="current-label">Filter By</p>
             <span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
 <g filter="url(#filter0_d_1470_11015)">
 <path fill-rule="evenodd" clip-rule="evenodd" d="M3.26256 1.40026C3.94598 0.716841 5.05402 0.716841 5.73744 1.40026L10.5 6.16282L15.2626 1.40026C15.946 0.716841 17.054 0.716841 17.7374 1.40026C18.4209 2.08368 18.4209 3.19171 17.7374 3.87513L10.5 11.1126L3.26256 3.87513C2.57915 3.19171 2.57915 2.08368 3.26256 1.40026Z" fill="#F5FDFF"/>

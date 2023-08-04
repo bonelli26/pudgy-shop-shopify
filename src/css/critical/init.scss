@@ -1823,6 +1823,25 @@ footer {
 		max-width: 1200px;
 		width: 100%;
 	}
+	.filters-mobile {
+		display: none;
+		align-items: center;
+		flex-direction: column;
+		border: 1px solid #00142D;
+		border-radius: 53px;
+		.label {
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			width: 100%;
+		}
+		.drawer-items {
+			display: flex;
+			flex-direction: column;
+			align-items: center;
+			gap: 24px;
+		}
+	}
 
 	@include bp-1200 {
 		padding-right: 10px;
@@ -1833,9 +1852,13 @@ footer {
 		//overflow: scroll;
 		align-items: flex-start;
 		.filters {
+			display: none;
 			//overflow: scroll;
-			justify-content: flex-start;
-			margin: 0 10px ;
+			//justify-content: flex-start;
+			//margin: 0 10px ;
+		}
+		.filters-mobile {
+			display: flex;
 		}
 		.grid {
 			position: sticky;

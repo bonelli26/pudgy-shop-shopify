@@ -12,7 +12,7 @@ export const pageEntrance = (namespace = null)=> {
 
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
-	
+
 	gsap.to(domStorage.header, { duration: 0.3, autoAlpha: 1, force3D: true, ease: "sine.inOut" });
 
 	if (globalStorage.firstLoad) {
@@ -41,7 +41,7 @@ export const pageEntrance = (namespace = null)=> {
 
 
 	if (globalStorage.firstLoad) {
-		timeline.add(() => {			
+		timeline.add(() => {
 		});
 	}
 
@@ -82,9 +82,9 @@ export const prepDrawers = () => {
 			continue;
 		}
 		thisDrawer.classList.add("bound")
-		const childrenWrapper = thisDrawer.querySelector(".drawer-items")
-		const childrenWrapperItems = childrenWrapper.querySelectorAll("*")
-		const childrenWrapperHeight = childrenWrapper.offsetHeight
+		const childrenWrapper = thisDrawer.querySelector(".drawer-items");
+		const childrenWrapperItems = childrenWrapper.querySelectorAll("*");
+		const childrenWrapperHeight = childrenWrapper.offsetHeight;
 		const childrenItems = thisDrawer.querySelectorAll(".drawer-items > *");
 
 		if (thisDrawer.classList.contains("replace-label")) {
@@ -497,8 +497,8 @@ export const newTabs = () => {
 			let trigger = triggers[j],
 				tab = tabs[j],
 				splitEl = tab.querySelectorAll("p:not(.img-wrapper)"),
-				img = tab.querySelector(".img-wrapper"),				
-				splitLines = false;	
+				img = tab.querySelector(".img-wrapper"),
+				splitLines = false;
 
 				console.log(splitEl);
 
@@ -510,7 +510,7 @@ export const newTabs = () => {
 			}
 
 			if (j !== 0) {
-				gsap.set(img, { autoAlpha: 0 });				
+				gsap.set(img, { autoAlpha: 0 });
 			}
 
 			trigger.addEventListener("click", () => {
@@ -519,7 +519,7 @@ export const newTabs = () => {
 				gsap.delayedCall(.3, () => { animating = false; });
 				let currentTab = tabs[activeIdx];
 				let currentLines = currentTab.querySelectorAll("* > div");
-				let currentImg = currentTab.querySelector(".img-wrapper");									
+				let currentImg = currentTab.querySelector(".img-wrapper");
 
 				el.querySelector(".trigger.is-selected").classList.remove("is-selected");
 				trigger.classList.add("is-selected");
@@ -527,13 +527,13 @@ export const newTabs = () => {
 				activeIdx = j;
 
 				if (currentImg) {
-					gsap.fromTo(currentImg, { autoAlpha: 1, y: 0 } ,{ y: 20, autoAlpha: 0, ease: "sine.inOut", duration: 0.2, force3D: true });		
+					gsap.fromTo(currentImg, { autoAlpha: 1, y: 0 } ,{ y: 20, autoAlpha: 0, ease: "sine.inOut", duration: 0.2, force3D: true });
 				} else {
 					gsap.fromTo(currentLines, { autoAlpha: 1 } ,{ autoAlpha: 0, stagger: 0.06, ease: "sine.out", duration: 0.35, force3D: true  });
 				}
 
-				if (img) {					
-					gsap.fromTo(img, { autoAlpha: 0, y: 20 } ,{ autoAlpha: 1, y: 0, ease: "sine.inOut", duration: 0.5, force3D: true });					
+				if (img) {
+					gsap.fromTo(img, { autoAlpha: 0, y: 20 } ,{ autoAlpha: 1, y: 0, ease: "sine.inOut", duration: 0.5, force3D: true });
 				} else {
 					gsap.fromTo(splitLines, { autoAlpha: 0 } ,{ autoAlpha: 1, stagger: 0.06, ease: "sine.out", duration: 0.35, force3D: true, delay: .25  });
 				}
