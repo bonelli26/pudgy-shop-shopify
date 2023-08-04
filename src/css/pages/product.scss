@@ -76,7 +76,7 @@
       align-items: center;
       width: 100%;
       gap: 1vw;
-      @include get-vw-no-max(height, 121px);
+      //@include get-vw-no-max(height, 121px, 83px);
     }
     .thumbnail {
       position: relative;
