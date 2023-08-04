@@ -744,6 +744,9 @@ body {
 		line-height: .91;
 		letter-spacing: -0.92px;
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
+		text-shadow: -1px 1px #00142d;
+		-webkit-text-stroke: 1px #00142d;
+		text-strke: 1px #00142d;
 	}
 	.price {
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
@@ -780,6 +783,7 @@ body {
 
 	@include bp-767 {
 		.pink-btn {
+			position: relative;
 			transform: scale(1);
 			font-size: 16px;
 			max-width: 90%;
