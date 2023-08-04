@@ -218,10 +218,7 @@ export class ScrollBasedAnims {
 					this.stickyAtcShowing = true;
 					gsap.to(this.stickyAtc, {yPercent: 0, ease: "sine.inOut", duration: 0.3});
 				}
-				else if (this.stickyAtcShowing && this.data.scrollY < this.stickyAtcShow.bottom) {
-					this.stickyAtcShowing = false;
-					gsap.to(this.stickyAtc, { yPercent: 100, ease: "sine.inOut", duration: 0.3 });
-				}
+
 			}
 		}
 

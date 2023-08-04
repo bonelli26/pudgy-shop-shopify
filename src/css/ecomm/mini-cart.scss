@@ -125,7 +125,6 @@
   .inner {
     z-index: 1;
     flex-direction: column;
-    min-height: 100%;
     padding: 0 2px;
     gap: 5px;
     display: flex;
@@ -247,7 +246,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
     flex-direction: column;
-
+    margin-top: auto;
     form {
       width: 100%;
       margin-bottom: 24px;
@@ -283,6 +282,9 @@
   }
   .inner-wrapper {
     overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
   }
   .empty-wrapper {
     opacity: 0;

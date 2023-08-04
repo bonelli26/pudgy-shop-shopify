@@ -38,7 +38,7 @@ export class MobileMenu {
 			.to(this.bar1, { rotate: 45, duration: 1, force3D: true, ease: "expo.out", transformOrigin: "top left" })
 			.to(this.bar3, { rotate: -45, duration: 1, force3D: true, ease: "expo.out", transformOrigin: "bottom left" }, "<")
 			.to(this.bar2, { rotate: 45, autoAlpha: 0, duration: 0.8, force3D: true, ease: "expo.out" }, "<")
-			.to(this.navDrawer, { scale: 1, duration: 1.3, force3D: true, ease: "bounce.out", transformOrigin: "top left"}, "<");
+			.to(this.navDrawer, { scale: 1, duration: 0.4, force3D: true, ease: "elastic.out", transformOrigin: "top left"}, "<");
 
 		this.trigger.classList.add('open');
 	}
@@ -49,10 +49,10 @@ export class MobileMenu {
 		this.timeline.progress(0);
 		this.timeline
 			.set(this.navDrawer, {pointerEvents: "none"})
-			.to(this.bar1, { rotate: 0, duration: 0.5, force3D: true, ease: "expo.out", transformOrigin: "top left" })
-			.to(this.bar3, { rotate: 0, duration: 0.5, force3D: true, ease: "expo.out", transformOrigin: "bottom left" }, "<")
-			.to(this.bar2, { autoAlpha: 1, rotate: 0, duration: 0.4, force3D: true, ease: "expo.out" }, "<")
-			.to(this.navDrawer, { scale: 0, duration: 0.8, force3D: true, ease: "expo.in", transformOrigin: "top left" }, "<");
+			.to(this.bar1, { rotate: 0, duration: 0.18, force3D: true, ease: "expo.out", transformOrigin: "top left" })
+			.to(this.bar3, { rotate: 0, duration: 0.18, force3D: true, ease: "expo.out", transformOrigin: "bottom left" }, "<")
+			.to(this.bar2, { autoAlpha: 1, rotate: 0, duration: 0.18, force3D: true, ease: "expo.out" }, "<")
+			.to(this.navDrawer, { scale: 0, duration: 0.2, force3D: true, ease: "expo.in", transformOrigin: "top left" }, "<");
 
 		this.trigger.classList.remove('open');
 	}
