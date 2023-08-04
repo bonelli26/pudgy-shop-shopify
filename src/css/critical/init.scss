@@ -1084,6 +1084,11 @@ body {
 		padding-right: 10px;
 		.blocks {
 			padding: 0;
+			justify-content: space-between;
+		}
+		.card-wrapper {
+			min-width: 0;
+			width: calc(50% - 5px);
 		}
 	}
 
@@ -1205,7 +1210,6 @@ body {
 	@include get-vw(padding-top, 30px, 30px);
 	@include get-vw(padding-bottom, 30px, 30px);
 	overflow: hidden;
-
 	.tag {
 		color: #00142D;
 		text-align: center;
@@ -1304,6 +1308,10 @@ body {
 		padding-right: 30px;
 		.inner {
 			justify-content: normal;
+		}
+		.video-wrapper {
+			min-width: 75vw;
+			max-width: 80vw;
 		}
 	}
 }
@@ -1806,10 +1814,10 @@ footer {
 	}
 
 	@include bp-767 {
-		overflow: scroll;
+		//overflow: scroll;
 		align-items: flex-start;
 		.filters {
-			overflow: scroll;
+			//overflow: scroll;
 			justify-content: flex-start;
 			margin: 0 10px ;
 		}
