@@ -49,6 +49,7 @@
     "pdp-recirc": {
       "type": "pdp-recirc",
       "settings": {
+        "heading": "You might also like"
       }
     },
     "bottom-marquee": {
@@ -79,8 +80,8 @@
         "d7507adf-d969-4e27-873d-335e99f37fdf"
       ],
       "settings": {
-        "marquee_duration": "10",
-        "marquee_duration_mobile": "5",
+        "marquee_duration": "15",
+        "marquee_duration_mobile": "10",
         "header": "As seen on"
       }
     }

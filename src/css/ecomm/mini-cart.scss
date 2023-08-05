@@ -124,9 +124,7 @@
   }
   .inner {
     z-index: 1;
-    overflow-y: auto;
     flex-direction: column;
-    height: 100%;
     padding: 0 2px;
     gap: 5px;
     display: flex;
@@ -167,7 +165,7 @@
     }
     .right {
       flex-direction: column;
-      height: calc(100% - 10px);
+      height: 100%;
       display: flex;
       align-items: flex-end;
       justify-content: space-between;
@@ -177,7 +175,7 @@
     color: #00142D;
     font-family: $mencoBold;
     font-size: 16px;
-    line-height: 1.45;
+    line-height: 1;
     text-transform: uppercase;
     margin-bottom: 4px;
   }
@@ -207,7 +205,6 @@
   .line-through-price {
     margin-left: 4px;
     text-decoration-line: line-through;
-
     line-height: 1.21;
     text-transform: uppercase;
     color: #828282;
@@ -249,7 +246,7 @@
     padding-top: 16px;
     padding-bottom: 16px;
     flex-direction: column;
-
+    margin-top: auto;
     form {
       width: 100%;
       margin-bottom: 24px;
@@ -271,6 +268,7 @@
     }
   }
   .bottom-benefits {
+    text-align: center;
     p {
       color: #000;
       font-family: $mencoBold;
@@ -282,7 +280,12 @@
       font-family: $mencoBold;
     }
   }
-
+  .inner-wrapper {
+    overflow-y: auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+  }
   .empty-wrapper {
     opacity: 0;
     position: absolute;
@@ -317,16 +320,17 @@
   display: flex;
   flex-direction: column;
   gap: 5px;
+  padding-top: 10px;
   > p {
     margin-bottom: 10px;
+    text-align: center;
   }
   p {
     color: #00142D;
     font-family: $mencoBlack;
     font-size: 16px;
-    line-height: 1.45;
+    line-height: 1;
     text-transform: uppercase;
-    text-align: center;
   }
   a {
     display: flex;
@@ -342,7 +346,7 @@
     border-radius: 11px;
     border: 1px solid #00142D;
     display: flex;
-    width: 40px;
+    min-width: 40px;
     height: 40px;
     justify-content: center;
     align-items: center;
@@ -350,8 +354,8 @@
     overflow: hidden;
     img {
       position: relative;
-      width: 100%;
-      height: 100%;
+      width: 40px;
+      height: 40px;
     }
   }
   .text-wrapper {
@@ -359,17 +363,19 @@
     flex-direction: column;
     align-items: flex-start;
     margin-left: 12px;
+    gap: 3px;
     span {
       color: #000;
       font-family: $mencoMedium;
       font-size: 14px;
-      line-height: 1.45;
+      line-height: 1;
       text-transform: uppercase;
     }
   }
   .pink-btn {
     width: 75px;
-    height: 100%;
+    min-width: 75px;
+    height: 40px;
     font-size: 16px;
     margin-left: auto;
   }

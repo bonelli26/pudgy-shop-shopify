@@ -79,7 +79,7 @@
 
 <header id="header">
   <div class="pencil-bar marquee gradiant-marquee">
-    <div class="inner" data-dur="25">
+    <div class="inner" data-dur="25" data-mobile-dur="5">
       <div class="group">
         {% if settings.pencil_bar_url == blank and settings.pencil_bar_message != blank %}
           <p>{{ settings.pencil_bar_message }}</p>
@@ -96,7 +96,7 @@
       </div>
     </div>
   </div>
-  <nav id="nav">
+  <nav id="nav" class="max-width">
     <a class="logo mw" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="149" height="83" viewBox="0 0 149 83" fill="none">
         <g clip-path="url(#clip0_1321_882)">
@@ -157,7 +157,7 @@
         {% endfor %}
       </div>
       <div class="right">
-        <a class="icon-link" href="/">
+        <a style="display: none" class="icon-link" href="/">
           <span>
             <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
                 <path d="M9.57028 17.9599L9.50257 18L9.46207 17.975C-3.41332 10.3098 1.00526 2.9114 5.78429 3.0008C5.93697 3.0008 6.09165 3.01593 6.24499 3.03434C8.16809 3.26519 9.07424 4.32208 9.5025 5.2317C9.92935 4.32279 10.8368 3.26518 12.7607 3.04293C17.6871 2.44181 22.818 10.0519 9.57028 17.9599Z" fill="#33336C"/>
@@ -178,7 +178,7 @@
             </svg>
           </span>
         </button>
-        <button class="icon-link search">
+        <button style="display: none" class="icon-link search">
             <span>
                 <svg xmlns="http://www.w3.org/2000/svg" width="19" height="19" viewBox="0 0 19 19" fill="none">
                 <g clip-path="url(#clip0_901_1989)">
@@ -192,7 +192,7 @@
             </svg>
             </span>
         </button>
-        <a class="icon-link account" href="">
+        <a style="display: none" class="icon-link account" href="">
           <img class="preload-critical" data-preload-desktop="" data-preload-mobile="">
         </a>
       </div>
@@ -249,8 +249,8 @@
     <div class="tag">{{ settings.footer_tag }}</div>
     <p class="footer-header">{{ settings.footer_header }}</p>
   </div>
-  <div class="marquee hover footer-marquee mw">
-    <div class="inner" data-dur="30">
+  <div class="marquee footer-marquee mw">
+    <div class="inner" data-dur="30" data-mobile-dur="15">
       <div class="group">
         <div class="block-wrapper">
           <div class="block">
@@ -707,8 +707,9 @@
         <img class="preload-critical" src="{{ settings.hover_image_4 | img_url }}">
         <div class="text-wrapper">{{ settings.social_copy_4 }}</div>
       </a>
-
     </div>
+    <a class="footer-address" href="https://www.google.com/maps/place/7390+NE+4th+Ct,+Miami,+FL+33138,+USA/@25.8106305,-80.2336193,12.52z/data=!4m5!3m4!1s0x88d9b17ded3257a1:0x2639f264e698ebaa!8m2!3d25.8431293!4d-80.1883565" target="_blank">Miami Studio<br>
+      7390 NE 4th Ct. Miami, Florida 33138</a>
   </div>
   <div class="utility-links">
     <p>{{ settings.copyright }}</p>

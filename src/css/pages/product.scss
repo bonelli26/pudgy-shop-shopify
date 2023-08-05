@@ -1,6 +1,6 @@
 .view-product {
   .pdp-hero {
-    z-index: 1;
+    z-index: 2;
     position: relative;
     background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
     border-bottom: 2px solid rgba(0, 20, 45, 1);
@@ -11,8 +11,8 @@
       z-index: 3;
       @include get-vw(padding-top, 190px, 190px);
       @include get-vw(padding-bottom, 67px);
-      @include get-vw(padding-left, 211px);
-      @include get-vw(padding-right, 206px);
+      //@include get-vw(padding-left, 211px);
+      //@include get-vw(padding-right, 206px);
       @include get-vw(gap, 80px, 16px);
     }
     .ribbon {
@@ -31,13 +31,17 @@
       display: flex;
       align-items: center;
       flex-direction: column;
-      @include get-vw(width, 484px, 142px);
+      //@include get-vw(min-width, 484px, 142px);
+      @include get-vw(padding-left, 20px, 0px);
+      width: calc(40% - 40px);
     }
     .right {
       display: flex;
       flex-direction: column;
       align-items: flex-start;
-      width: 33.611vw;
+      //min-width: 33.611vw;
+      width: calc(60% - 40px);
+      @include get-vw(padding-right, 20px, 0px);
     }
     .frame {
       position: relative;
@@ -45,6 +49,7 @@
       flex-direction: column;
       width: 100%;
       border: 8px solid #FFF;
+      overflow: hidden;
       box-shadow: 2px 4px 0 4px rgba(0, 0, 0, 0.15), 0 0 0 2px #00142D;
       @include get-vw(margin-bottom, 19px, 19px);
       @include get-vw(height, 603px, 340px);
@@ -57,31 +62,32 @@
       display: flex;
       overflow: hidden;
       height: 100%;
-      width: 32vw;
+      width: 100%;
       position: relative;
       min-width: 32vw;
       img {
         width: 100%;
         @include get-vw(border-radius, 24px, 22px);
+        @include get-vw(height, 603px, 340px);
       }
     }
     .thumbnails {
       display: flex;
-      align-items: center;
+      align-items: stretch;
+      justify-content: space-between;
       width: 100%;
-      gap: 1vw;
-      @include get-vw-no-max(height, 121px, 96px);
     }
     .thumbnail {
       position: relative;
       height: 100%;
-      width: 25%;
+      width: calc(25% - 0.5vw);
       border-radius: 24px;
       border: 1.5px solid #000;
       overflow: hidden;
       transition: .3s all $ease-in-out-sine;
       box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
-      aspect-ratio: 0.84 / 1;
+      aspect-ratio: 0.85 / 1;
+      max-height: 7vw;
       &.active {
         transform: rotate(-5deg);
         box-shadow: unset;
@@ -325,6 +331,7 @@
         height: 25%;
         border: unset;
         border-radius: 16.5px;
+        max-height: unset;
         &.active {
           border: 2.067px solid #00142D;
           transform: rotate(-5deg);
@@ -355,10 +362,14 @@
         height: 23.4vw;
         z-index: 100;
       }
+      .atc-form {
+        width: 100%;
+      }
     }
   }
   .about-section {
     position: relative;
+    z-index: 1;
     > .inner {
       position: relative;
       display: flex;
@@ -436,6 +447,8 @@
     }
   }
   .faq-section {
+    position: relative;
+    z-index: 1;
     @include get-vw(padding-top, 43px, 22px);
     @include get-vw(padding-bottom, 64px, 33px);
     @include get-vw(padding-left, 212px, 130px);
@@ -542,6 +555,8 @@
     }
   }
   .best-sellers {
+    position: relative;
+    z-index: 1;
     .top {
       @include get-vw(max-width, 600px, 427px);
     }

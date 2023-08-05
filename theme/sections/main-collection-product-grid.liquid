@@ -7,11 +7,45 @@
 </div>
 <div class="collection-grid mw">
     <div class="filters">
-        <button class="pink-btn active blue" data-trigger="all">all toys</button>
+        <button class="pink-btn blue active" data-trigger="all"><span>all toys</span></button>
         {% for tag in tags %}
-            <button class="pink-btn blue"  data-trigger="{{ tag | handle }}">{{ tag }}</button>
+            <button class="pink-btn blue"  data-trigger="{{ tag | handle }}"><span>{{ tag }}</span></button>
         {% endfor %}
     </div>
+
+    {% comment %}
+    <div class="filters-wrapper">
+        <div class="filters-mobile drawer replace-label" data-at="767">
+            <div class="label">
+                <p class="current-label">Filter By</p>
+                <span><svg width="20" height="14" viewBox="0 0 20 14" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g filter="url(#filter0_d_1470_11015)">
+<path fill-rule="evenodd" clip-rule="evenodd" d="M3.26256 1.40026C3.94598 0.716841 5.05402 0.716841 5.73744 1.40026L10.5 6.16282L15.2626 1.40026C15.946 0.716841 17.054 0.716841 17.7374 1.40026C18.4209 2.08368 18.4209 3.19171 17.7374 3.87513L10.5 11.1126L3.26256 3.87513C2.57915 3.19171 2.57915 2.08368 3.26256 1.40026Z" fill="#F5FDFF"/>
+<path d="M10.5 5.59714L6.02028 1.11742C5.18065 0.277789 3.81935 0.277789 2.97972 1.11742C2.14009 1.95704 2.14009 3.31835 2.97972 4.15797L10.2172 11.3954L10.5 11.6783L10.7828 11.3954L18.0203 4.15797C18.8599 3.31835 18.8599 1.95704 18.0203 1.11742C17.1807 0.277789 15.8193 0.277789 14.9797 1.11742L10.5 5.59714Z" stroke="#00142D" stroke-width="0.8"/>
+</g>
+<defs>
+<filter id="filter0_d_1470_11015" x="0.950195" y="0.0878906" width="18.0996" height="13.1562" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+<feFlood flood-opacity="0" result="BackgroundImageFix"/>
+<feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+<feOffset dx="-1" dy="1"/>
+<feComposite in2="hardAlpha" operator="out"/>
+<feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+<feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1470_11015"/>
+<feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1470_11015" result="shape"/>
+</filter>
+</defs>
+</svg></span>
+            </div>
+            <div class="drawer-items">
+                <button data-trigger="all"><span>all toys</span></button>
+                {% for tag in tags %}
+                    <button data-trigger="{{ tag | handle }}"><span>{{ tag }}</span></button>
+                {% endfor %}
+            </div>
+        </div>
+    </div>
+    {% endcomment %}
+
 
     <div class="grid mw">
         {% for thisProduct in collection.products %}
@@ -23,7 +57,11 @@
                     <svg class="svg-right" xmlns="http://www.w3.org/2000/svg" width="67" height="49" viewBox="0 0 67 49" fill="none">
                         <path d="M21.1155 1.81937C21.235 1.78886 21.3584 1.77665 21.4815 1.78317L43.7092 2.95928C44.3562 2.99352 44.8633 3.52816 44.8633 4.17612V6.0786L55.3693 3.00656C55.6403 2.9273 55.9305 2.94465 56.1901 3.05562L64.4462 6.58397C64.9531 6.80062 65.2514 7.33065 65.1736 7.87643L59.7755 45.7474C59.6988 46.2851 59.2756 46.7071 58.7378 46.7823C58.1999 46.8575 57.6773 46.5676 57.4561 46.0716L46.7574 22.0692L40.1265 23.7066C39.9207 23.7574 39.7052 23.7536 39.5013 23.6957L16.321 17.1094C16.217 17.0799 16.1174 17.0366 16.0248 16.9808L2.37064 8.748C1.94996 8.49434 1.72272 8.01289 1.79431 7.5269C1.8659 7.0409 2.22231 6.64542 2.69826 6.52385L21.1155 1.81937Z" fill="white" stroke="#00142D" stroke-width="2.43707" stroke-linejoin="round"/>
                     </svg>
-                    {% if thisProduct.tags[0] %}<div class="tag">{{ thisProduct.tags[0] }}</div>{% endif %}
+                     {% if thisProduct.tags[0] == 'LIMITED EDITION' %}
+                         <div class="tag" style="background: #FFE092;">{{ thisProduct.tags[0] }}</div>
+                     {% elsif thisProduct.tags[0] == 'ON SALE!' %}
+                         <div class="tag" style="background: #FF8B8B;">{{ thisProduct.tags[0] }}</div>
+                     {% endif %}
                     <div class="block">
                          <div class="img-wrapper">
                             <img class="preload-critical"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
@@ -40,7 +78,7 @@
                                     </strong>
                                 </p>
                             </div>
-                            <button class="pink-btn">Shop Now</button>
+                            <button class="pink-btn"><span>Shop Now</span></button>
                         </div>
                     </div>
                 </span>
@@ -53,20 +91,20 @@
 
 {% schema %}
 {
-  "name": "Collection Categories",
-  "tag": "section",
-  "class": "collection-wrapper mw tabs-inside c-24",
-  "settings": [
-        {
-          "id": "collections_header",
-          "type": "text",
-          "label": "Collections Header"
-        },
-        {
-          "id": "collections_copy",
-          "type": "text",
-          "label": "Collections Copy"
-        }
-    ]
+"name": "Collection Categories",
+"tag": "section",
+"class": "collection-wrapper mw tabs-inside c-24",
+"settings": [
+{
+"id": "collections_header",
+"type": "text",
+"label": "Collections Header"
+},
+{
+"id": "collections_copy",
+"type": "text",
+"label": "Collections Copy"
+}
+]
 }
 {% endschema %}
