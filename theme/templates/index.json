@@ -25,6 +25,31 @@
     },
     "best-sellers": {
       "type": "best-sellers",
+      "blocks": {
+        "e8f75052-7738-48fb-acb8-2a11acde5b8f": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins-cowboy-figurine"
+          }
+        },
+        "0196dddd-1806-4fac-9a89-91aa9af0e793": {
+          "type": "product-card",
+          "settings": {
+            "product": ""
+          }
+        },
+        "897dbcb9-4507-4b27-af0d-a0dede27b754": {
+          "type": "product-card",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "e8f75052-7738-48fb-acb8-2a11acde5b8f",
+        "0196dddd-1806-4fac-9a89-91aa9af0e793",
+        "897dbcb9-4507-4b27-af0d-a0dede27b754"
+      ],
       "settings": {
         "heading": "best sellers",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
@@ -36,23 +61,24 @@
         "9110167c-e0ed-4035-88e1-a08bafa83ca2": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-army-hat-figurine"
+            "product": "pudgy-penguins™-huggable-plush-golden-pudgy"
           }
         },
         "aa2c735d-077c-42fe-847d-e9d88e12084f": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-cowboy-figurine"
+            "product": "pudgy-penguins™-huggable-plush-pudgy-man"
           }
         },
         "090542dc-b5cc-4b21-8d20-1824095d9616": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-fish-head-figurine"
+            "product": "pudgy-penguins-huggable-plush-sushi-pudgy"
           }
         },
         "0f7f91a3-38f1-4621-82a6-8973523b70f7": {
           "type": "product-card",
+          "disabled": true,
           "settings": {
             "product": "pudgy-penguins-samurai-figurine"
           }
@@ -156,8 +182,8 @@
         "d7507adf-d969-4e27-873d-335e99f37fdf"
       ],
       "settings": {
-        "marquee_duration": "10",
-        "marquee_duration_mobile": "5",
+        "marquee_duration": "15",
+        "marquee_duration_mobile": "10",
         "header": "As seen on"
       }
     }
