@@ -546,7 +546,7 @@ export const newTabs = () => {
 export const filterTabs = () => {
 	if(globalStorage.namespace !== "collection") { return; }
 	let tabParent = document.querySelector(".collection-grid");
-	const triggers = tabParent.querySelectorAll('.filters .pink-btn');
+	const triggers = globalStorage.isGreaterThan767 ? tabParent.querySelectorAll('.filter') : tabParent.querySelectorAll('.filters-mobile');
 	const tabsWrapper = tabParent.querySelector('.grid');
 	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
 
@@ -562,7 +562,7 @@ export const filterTabs = () => {
 
 			gsap.delayedCall(.19, () => { animating = false; });
 
-			document.querySelector(".pink-btn.active").classList.remove("active");
+			document.querySelector(".filter.active").classList.remove("active");
 
 			trigger.classList.add("active");
 
