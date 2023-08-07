@@ -186,6 +186,9 @@
         "marquee_duration_mobile": "10",
         "header": "As seen on"
       }
+    },
+    "footer": {
+      "type": "footer"
     }
   },
   "order": [
@@ -195,6 +198,7 @@
     "home-product-grid",
     "fifty-fifty-tiles",
     "video-trio",
-    "bottom-marquee"
+    "bottom-marquee",
+    "footer"
   ]
 }

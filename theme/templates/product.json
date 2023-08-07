@@ -84,6 +84,9 @@
         "marquee_duration_mobile": "10",
         "header": "As seen on"
       }
+    },
+    "footer": {
+      "type": "footer"
     }
   },
   "order": [
@@ -91,6 +94,7 @@
     "about-section",
     "faq-section",
     "pdp-recirc",
-    "bottom-marquee"
+    "bottom-marquee",
+    "footer"
   ]
 }
