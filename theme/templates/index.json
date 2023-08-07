@@ -25,6 +25,31 @@
     },
     "best-sellers": {
       "type": "best-sellers",
+      "blocks": {
+        "e8f75052-7738-48fb-acb8-2a11acde5b8f": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins-cowboy-figurine"
+          }
+        },
+        "0196dddd-1806-4fac-9a89-91aa9af0e793": {
+          "type": "product-card",
+          "settings": {
+            "product": ""
+          }
+        },
+        "897dbcb9-4507-4b27-af0d-a0dede27b754": {
+          "type": "product-card",
+          "settings": {
+            "product": ""
+          }
+        }
+      },
+      "block_order": [
+        "e8f75052-7738-48fb-acb8-2a11acde5b8f",
+        "0196dddd-1806-4fac-9a89-91aa9af0e793",
+        "897dbcb9-4507-4b27-af0d-a0dede27b754"
+      ],
       "settings": {
         "heading": "best sellers",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
