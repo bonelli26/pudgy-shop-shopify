@@ -920,7 +920,7 @@ nav {
 		bottom: 0;
 		top: unset;
 		width: auto;
-		@include get-vw(height, 750px, 350px);
+		@include get-vw(height, 750px, 380px);
 	}
 
 	@include bp-1200 {
@@ -947,7 +947,8 @@ nav {
 			width: 286px;
 			height: 286px;
 			left: unset;
-			right: -50%;
+			right: -55%;
+			bottom: -35px
 		}
 		.hand {
 			right: unset;
@@ -1015,7 +1016,14 @@ nav {
 	@include bp-959 {
 		padding: 0 10px;
 		.block {
+			height: auto;
+			&:nth-of-type(2) {
+				height: 110px;
+				margin-left: 10px;
+				margin-right: 5px;
+			}
 			svg {
+				height: auto;
 				&:first-of-type {
 					display: none;
 				}
@@ -1090,7 +1098,7 @@ nav {
 	}
 
 	@include bp-767 {
-		padding: 0 20px 24px;
+		padding: 40px 20px 15px;
 		.best-sellers-wrapper {
 			padding: 0 0px;
 		}
@@ -1108,7 +1116,7 @@ nav {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		margin-bottom: 50px;
+		@include get-vw(margin-bottom, 50px, 40px);
 	}
 	h3 {
 		color: #E9F7FB;
@@ -1133,7 +1141,7 @@ nav {
 		display: flex;
 		justify-content: center;
 		flex-wrap: wrap;
-		@include get-vw(row-gap, 30px, 17px);
+		@include get-vw(row-gap, 30px, 10px);
 		@include get-vw(column-gap, 25px, 0px);
 		@include get-vw(padding-left, 40px, 0px);
 		@include get-vw(padding-right, 40px, 0px);
@@ -1369,6 +1377,7 @@ nav {
 	@include bp-767 {
 		padding-left: 30px;
 		padding-right: 30px;
+		padding-top: 80px;
 		h4 {
 			text-shadow: -2px 2px;
 		}
@@ -1834,12 +1843,13 @@ footer {
 		content: url("data:image/svg+xml, %3Csvg xmlns='http://www.w3.org/2000/svg' fill='none' class='svg-grid' viewBox='0 0 1439 3712'%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23a)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 3.5h1380M30 47.5h1380M30 91.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380M59.5 620V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4m44 616V4'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23b)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 619.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620m44 616V620'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23c)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 1239.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23d)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 1859.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23e)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 2479.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cg stroke='%23E1DDEC' clip-path='url(%23f)' opacity='.2'%3E%3Cpath vector-effect='non-scaling-stroke' d='M30 3095.5h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1380 44h1380m-1350.5.5v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616m44 616v-616'/%3E%3C/g%3E%3Cdefs%3E%3CclipPath id='a'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 0h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='b'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 616h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='c'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 1236h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='d'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 1856h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='e'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 2476h1439v620H0z'/%3E%3C/clipPath%3E%3CclipPath id='f'%3E%3Cpath vector-effect='non-scaling-stroke' fill='%23fff' d='M0 3092h1439v620H0z'/%3E%3C/clipPath%3E%3C/defs%3E%3C/svg%3E%0A");
 		background-repeat: repeat;
 		opacity: 0.6;
+		pointer-events: none;
 	}
 	h1 {
 		color: #FFF;
 		text-shadow: -3px 3px #00142d;
-		-webkit-text-stroke: 2px #00142d;
-		text-stroke: 2px #00142d;
+		-webkit-text-stroke: 1px #00142d;
+		text-stroke: 1px #00142d;
 		font-family: $ttBlack;
 		@include get-vw(font-size, 104px, 64px);
 		line-height: .91;
@@ -1884,7 +1894,7 @@ footer {
 		flex-wrap: wrap;
 		justify-content: center;
 		row-gap: 35px;
-		@include get-vw(row-gap, 35px, 15px);
+		@include get-vw(row-gap, 35px, 10px);
 		@include get-vw(column-gap, 20px, 0px);
 		max-width: 1200px;
 		width: 100%;
