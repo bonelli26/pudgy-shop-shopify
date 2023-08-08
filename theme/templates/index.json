@@ -35,13 +35,13 @@
         "0196dddd-1806-4fac-9a89-91aa9af0e793": {
           "type": "product-card",
           "settings": {
-            "product": ""
+            "product": "pudgy-penguins-fish-head-figurine"
           }
         },
         "897dbcb9-4507-4b27-af0d-a0dede27b754": {
           "type": "product-card",
           "settings": {
-            "product": ""
+            "product": "pudgy-penguins™-huggable-plush-pudgy-man"
           }
         }
       },
@@ -150,8 +150,8 @@
         "21c25fe4-138b-4194-9cf9-73ef655e7a5f"
       ],
       "settings": {
-        "header": "instagram",
-        "copy": "our content"
+        "header": "",
+        "copy": ""
       }
     },
     "bottom-marquee": {
