@@ -21,18 +21,18 @@ function recursiveIssuer(m) {
 	}
 }
 
-let compiledPath = "../compiled/";
+let compiledPath = "../../compiled/";
 
 module.exports = {
 	mode: "production",
 	entry: {
-		"main.js.liquid": [
+		"main.js": [
 			"./src/js/main.js"
 		],
-		"../compiled/init": [
+		"../../compiled/init": [
 			"./src/css/critical/init.scss"
 		],
-		"../compiled/main": [
+		"../../compiled/main": [
 			"./src/css/main.scss"
 		]
 	},
@@ -48,14 +48,14 @@ module.exports = {
 		splitChunks: {
 			cacheGroups: {
 				init: {
-					name: "_init.css.liquid",
-					test: (m,c,entry = "../compiled/init") => m.constructor.name === "CssModule" && recursiveIssuer(m) === entry,
+					name: "_init.css",
+					test: (m,c,entry = "../../compiled/init") => m.constructor.name === "CssModule" && recursiveIssuer(m) === entry,
 					chunks: "initial",
 					enforce: true
 				},
 				main: {
-					name: "_main.css.liquid",
-					test: (m,c,entry = "../compiled/main") => m.constructor.name === "CssModule" && recursiveIssuer(m) === entry,
+					name: "_main.css",
+					test: (m,c,entry = "../../compiled/main") => m.constructor.name === "CssModule" && recursiveIssuer(m) === entry,
 					chunks: "initial",
 					enforce: true
 				},

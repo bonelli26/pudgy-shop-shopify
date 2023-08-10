@@ -85,7 +85,7 @@
 /* ----- SIZE and auto Generate breakpoint for mobile size ----- */
 @mixin get-vw($property, $desktop-size, $mobile-size: false) {
 	// Viewport width of design
-	$reference-width: 1728;
+	$reference-width: 1440;
 
 	//Desktop size
 	$vw-context: $reference-width * 0.01 * 1px;

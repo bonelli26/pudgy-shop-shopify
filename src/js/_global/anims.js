@@ -86,7 +86,8 @@ export const prepDrawers = () => {
 		const childrenWrapperItems = childrenWrapper.querySelectorAll("*");
 		const childrenWrapperHeight = childrenWrapper.offsetHeight;
 		const childrenItems = thisDrawer.querySelectorAll(".drawer-items > *");
-
+		const bg = drawers[i].querySelector(".filters-bg");
+		console.log(bg);
 		if (thisDrawer.classList.contains("replace-label")) {
 			let label = thisDrawer.querySelector(".current-label");
 			childrenItems.forEach((item) => {
@@ -111,15 +112,27 @@ export const prepDrawers = () => {
 							$scroll.resize();
 						}
 					} })
+
 				gsap.fromTo(childrenWrapperItems, 0.7, { opacity: .2 }, { opacity: 1, force3D: true, ease: "sine.inOut" })
+
+				if (thisDrawer.classList.contains("replace-label")) {
+					gsap.to(bg, { borderRadius: "13", force3D: true, ease: "sine.inOut", duration: 0.3 });
+				}
 			} else {
+
 				thisDrawer.classList.remove("open")
+
 				gsap.to(childrenWrapper, 0.35, { height: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
 						if ($scroll) {
 							$scroll.resize();
 						}
 					} })
+
 				gsap.to(childrenWrapperItems, 0.35, { opacity: 0, force3D: true, ease: "sine.inOut" })
+
+				if (thisDrawer.classList.contains("replace-label")) {
+					gsap.to(bg, { borderRadius: "53", force3D: true, ease: "sine.inOut", duration: 0.3 });
+				}
 			}
 		})
 		gsap.set(childrenWrapper, { height: 0 })
@@ -546,7 +559,7 @@ export const newTabs = () => {
 export const filterTabs = () => {
 	if(globalStorage.namespace !== "collection") { return; }
 	let tabParent = document.querySelector(".collection-grid");
-	const triggers = tabParent.querySelectorAll('.filters .pink-btn');
+	const triggers = globalStorage.isGreaterThan767 ? tabParent.querySelectorAll('.filter') : tabParent.querySelectorAll('.filter-mobile');
 	const tabsWrapper = tabParent.querySelector('.grid');
 	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
 
@@ -562,7 +575,7 @@ export const filterTabs = () => {
 
 			gsap.delayedCall(.19, () => { animating = false; });
 
-			document.querySelector(".pink-btn.active").classList.remove("active");
+			document.querySelector("button.active").classList.remove("active");
 
 			trigger.classList.add("active");
 
