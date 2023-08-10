@@ -529,7 +529,7 @@ nav {
 	-webkit-tap-highlight-color: transparent;
 	position: relative;
 	color: var(--c, var(--color));
-	transition: color .3s 0s $ease-in-out-sine;
+	transition: all .25s 0s $ease-in-out-sine;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -606,7 +606,7 @@ nav {
 		&:hover {
 			transform: translate3d(1px, 1px, 0px);
 			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
-			transition: color .3s .1s $ease-in-out-sine;
+			transition: all .25s 0s $ease-in-out-sine;
 			--name: move;
 			--c: var(--color-hover);
 			span:not(.tag) {
@@ -963,7 +963,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	@include get-vw(padding-top, 30px, 12px);
-	@include get-vw(padding-bottom, 30px, 12px);
+	@include get-vw(padding-bottom, 71px, 12px);
 	overflow: hidden;
 	.block {
 		position: relative;
@@ -1054,7 +1054,7 @@ nav {
 }
 
 .best-sellers {
-	@include get-vw(padding-bottom, 25px, 25px);
+	@include get-vw(padding-bottom, 71px, 25px);
 	overflow: hidden;
 	position: relative;
 	z-index: 3;
@@ -1113,12 +1113,11 @@ nav {
 .pudgy-sale {
 	display: flex;
 	flex-direction: column;
-	@include get-vw(padding-top, 25px, 25px);
 	.top {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		@include get-vw(margin-bottom, 50px, 40px);
+		@include get-vw(margin-bottom, 20px, 20px);
 	}
 	h3 {
 		color: #E9F7FB;
@@ -1144,7 +1143,7 @@ nav {
 		justify-content: center;
 		flex-wrap: wrap;
 		@include get-vw(row-gap, 30px, 10px);
-		@include get-vw(column-gap, 25px, 0px);
+		@include get-vw(column-gap, 36px, 28px);
 		@include get-vw(padding-left, 40px, 0px);
 		@include get-vw(padding-right, 40px, 0px);
 	}
@@ -1154,6 +1153,7 @@ nav {
 		padding-right: 10px;
 		.blocks {
 			padding: 0;
+			column-gap: 0;
 			justify-content: space-between;
 		}
 		.card-wrapper {
@@ -1173,17 +1173,16 @@ nav {
 	@include get-vw(padding-bottom, 30px, 30px);
 	.tile-wrapper {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		@include get-vw(gap, 28px, 18px);
 		@include get-vw(margin-bottom, 40px, 30px);
-		@include get-vw(padding-left, 60px, 0px);
-		@include get-vw(padding-right, 60px, 0px);
+		@include get-vw(padding-left, 72px, 0px);
+		@include get-vw(padding-right, 72px, 0px);
 		width: 100%;
 	}
 	.tile {
-		max-width: calc(50% - 14px);
-		@include get-vw(width, 452px, 353px);
+		width: calc(50% - 14px);
 		position: relative;
 		overflow: visible;
 		@include get-vw(height, 536px, 443px);
@@ -1196,7 +1195,7 @@ nav {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: auto;
+		width: 100%;
 		transform: translate(-50%, -50%);
 		@include get-vw(height, 560px, 450px);
 	}
