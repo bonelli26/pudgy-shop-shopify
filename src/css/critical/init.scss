@@ -217,6 +217,7 @@ header {
 	height: 40px;
 	display: flex;
 	align-items: center;
+	text-transform: uppercase;
 	border-bottom: 1px solid #00142D;
 	background: linear-gradient(90deg, #9F8FFF 0%, #FFA3FF 25.33%, #FF8B8B 50.33%, #FFE092 74.81%, #A9FF99 100%);
 	z-index: 2;
@@ -1410,7 +1411,7 @@ nav {
 	@include get-vw(padding-top, 28px, 28px);
 	@include get-vw(padding-bottom, 90px, 90px);
 	position: relative;
-	overflow: hidden;
+	overflow: visible;
 	&:before, &:after {
 		content: '';
 		position: absolute;
@@ -1419,6 +1420,7 @@ nav {
 		background: #FFFFFF;
 		filter: blur(100px);
 		top: 0;
+		z-index: 2;
 	}
 	&:before {
 		left: 0;
