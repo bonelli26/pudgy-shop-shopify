@@ -57,7 +57,7 @@ export const globalEntrance = ()=>{
 	if(globalStorage.firstLoad !== true){
 		return;
 	}
-	gsap.set(domStorage.header, { zIndex: 102 })
+
 	gsap.to(domStorage.header,  { autoAlpha: 1, duration: .3, ease: "sine.inOut", force3D: true });
 	/* ----- Establish our timeline ----- */
 	// let timeline = new gsap.timeline({ paused: true });
