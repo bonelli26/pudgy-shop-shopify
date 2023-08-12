@@ -60,6 +60,30 @@ const globalEvents = (namespace = null)=>{
 			}
 		}, 20);
 	});
+
+
+	let prefetchArr = [];
+	const domain = window.location.origin
+	const prefetchUs = document.querySelectorAll(".prefetch-us:not(.checked)")
+
+	for (let i = 0; i < prefetchUs.length; i++) {
+		const url = prefetchUs[i].href
+
+		prefetchUs[i].classList.add("checked")
+		if (globalStorage.prefetchedUrls.includes(url)) {
+			continue
+		} else {
+			globalStorage.prefetchedUrls.push(url)
+			prefetchArr.push(url)
+			console.log(prefetchUs[i].href)
+		}
+
+	}
+	if ('requestIdleCallback' in window) {
+		window.requestIdleCallback(() => { new Prefetch(prefetchArr) }, { timeout: 4000 });
+	} else {
+		new Prefetch(prefetchArr)
+	}
 };
 
 /* --- DOMContentLoaded Function --- */
@@ -87,16 +111,6 @@ export const onReady = ()=>{
 	globalEvents(namespace);
 
 	getReviewOverviews();
-
-	// let prefetchArr;
-	// const domain = window.location.origin
-	//
-	// switch (namespace) {
-	// 	case "home":
-	// 		prefetchArr = [domain+'/products/dream-gummies'];
-	// 		new Prefetch(prefetchArr);
-	// 		break;
-	// }
 
 	const newsletterBtns = document.querySelectorAll(".newsletter:not(.prepped)");
 

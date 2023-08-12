@@ -16,6 +16,7 @@ export const globalStorage = {
 	"reducedMotion": window.matchMedia("(prefers-reduced-motion: reduce)").matches,
 	"headerShowing": true,
 	"marqueeData": [],
+	"prefetchedUrls": [],
 	"reviewOverviews": [],
 	"allReviewsOverview": ""
 };

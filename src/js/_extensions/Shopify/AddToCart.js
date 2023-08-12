@@ -275,7 +275,6 @@ export class AddToCart {
 		let html = ``;
 		for (let i = 0; i < items.length; i++) {
 			let item = items[i];
-			console.log(item)
 			/* --- Product --- */
 			html += `
 				<article class="line-item product-tile" data-id="${item.variant_id}" data-key="${item.key}" data-quantity="${item.quantity}">
@@ -313,7 +312,7 @@ export class AddToCart {
 								</svg>
 								</button>
 								<div class="price-wrapper">
-									<p class="line-item-price" data-orig-price="${item.price.toString().slice(0, -2)}">${parseFloat((item.price * item.quantity).toString().slice(0, -2)).toLocaleString('en-US', {style: 'currency', currency: 'USD'})}</p>
+									<p class="line-item-price" data-orig-price="${(item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2))}">${"$" + (item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2)) * item.quantity}</p>
 								</div>
 							</div>
 						</div>						

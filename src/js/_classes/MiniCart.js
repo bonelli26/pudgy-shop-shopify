@@ -10,7 +10,6 @@ export class MiniCart {
         this.fadeEls = document.querySelector(".mini-cart .inner");
         // this.yDist = this.fadeEls.getBoundingClientRect().height;
         this.closeCart = document.getElementById("nav-close");
-        this.shippingBar = this.miniCart.querySelector("#shipping-meter-bar");
         this.isOpen = false;
         this.timeline = new gsap.timeline();
         this.bindListeners();
@@ -45,7 +44,6 @@ export class MiniCart {
         this.timeline
             .to(this.backdrop, { duration: 0.25, opacity: 0.5, force3D: true, ease: "sine.inOut", pointerEvents: "all" })
             .to(this.miniCart, { duration: 0.8, autoAlpha: 1, xPercent: 0, force3D: true, ease: "expo.out" }, 0.05)
-            .fromTo(this.shippingBar, { scaleX: 0.3 }, { scaleX: 1, ease: "expo.out", duration: 0.95 }, 0.1);
     }
 
     close() {

@@ -256,7 +256,7 @@ export const beforeScroll = () => {
 	prepTabs();
 	prepDrawers();
 	prepVideos();
-	seeMore();
+	// seeMore();
 	prepModals(document.querySelectorAll(".modal-trigger"));
 	globalStorage.windowWidth = getViewport().width;
 };

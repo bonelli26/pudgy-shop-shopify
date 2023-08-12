@@ -22,7 +22,7 @@ export const pageEntrance = (namespace = null)=> {
 		gsap.to(domStorage.nav, { autoAlpha: 1, display: "flex", duration: 0.2, ease: "sine.out" });
 	}
 
-	gsap.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut" });
+	// gsap.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut" });
 
 	if (!globalStorage.firstLoad) {
 		timeline.to(domStorage.newNav, { duration: 0.3, autoAlpha: 1, ease: "sine.out" });

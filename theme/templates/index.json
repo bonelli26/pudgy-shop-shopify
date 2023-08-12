@@ -7,9 +7,8 @@
         "hero_header": "Pudgy  bowl cut",
         "hero_intro": "Send a Pudgy Penguin and spread the love! It's the perfect gift for your significant other, family, friends, or even yourself.",
         "hero_button_url": "\/collections\/all-toys",
-        "toy_image": "shopify:\/\/shop_images\/box-toy.png",
-        "hand_image": "shopify:\/\/shop_images\/PUP_Action_Figures_LF_SR1_1_1.png",
-        "hero_bg": "shopify:\/\/shop_images\/sky-hero.jpg"
+        "hero_bg": "shopify:\/\/shop_images\/Hero.jpg",
+        "hero_bg_mobile": "shopify:\/\/shop_images\/Hero_ecfb476b-64da-4984-b75d-10ba1d6151e4.jpg"
       }
     },
     "block-trio": {
@@ -61,7 +60,7 @@
         "9110167c-e0ed-4035-88e1-a08bafa83ca2": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins™-huggable-plush-golden-pudgy"
+            "product": "pudgy-penguins-samurai-figurine"
           }
         },
         "aa2c735d-077c-42fe-847d-e9d88e12084f": {
@@ -124,10 +123,10 @@
     },
     "video-trio": {
       "type": "video-trio",
-
+      "disabled": true,
       "settings": {
-        "header": "",
-        "copy": ""
+        "header": "instagram",
+        "copy": "our content"
       }
     },
     "bottom-marquee": {
@@ -158,13 +157,15 @@
         "d7507adf-d969-4e27-873d-335e99f37fdf"
       ],
       "settings": {
-        "marquee_duration": "15",
-        "marquee_duration_mobile": "10",
+        "marquee_duration": "30",
+        "marquee_duration_mobile": "20",
         "header": "As seen on"
       }
     },
     "footer": {
-      "type": "footer"
+      "type": "footer",
+      "settings": {
+      }
     }
   },
   "order": [

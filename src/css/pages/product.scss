@@ -74,7 +74,8 @@
     .thumbnails {
       display: flex;
       align-items: stretch;
-      justify-content: space-between;
+      justify-content: flex-start;
+      gap: 15px;
       width: 100%;
     }
     .thumbnail {
@@ -82,6 +83,7 @@
       height: 100%;
       width: calc(25% - 0.5vw);
       border-radius: 24px;
+      @include get-vw(border-radius, 24px, 16px);
       border: 1.5px solid #000;
       overflow: hidden;
       transition: .3s all $ease-in-out-sine;
@@ -101,7 +103,7 @@
     }
     .eyebrow {
       color: #00142D;
-      font-family: $mencoBlack;
+
       line-height: 1.45;
       text-transform: uppercase;
       margin-bottom: 8px;
@@ -164,12 +166,14 @@
       color: #000;
       text-align: center;
       font-family: $mencoBold;
+      font-weight: 700;
       line-height: 1.45;
       text-transform: uppercase;
       white-space: nowrap;
       font-size: 14px;
       @include get-vw(margin-bottom, 24px, 24px);
       strong {
+        font-weight: 900;
         font-family: $mencoBlack;
       }
       img {
@@ -181,6 +185,7 @@
     .copy {
       color: #00142D;
       font-family: $mencoBlack;
+font-weight: 900;
       line-height: 1.45;
       text-transform: uppercase;
       @include get-vw(font-size, 18px, 16px);
@@ -210,6 +215,7 @@
       color: #000;
       text-align: center;
       font-family: $mencoBold;
+font-weight: 700;
       font-size: 14px;
       line-height: 1.45;
       text-transform: uppercase;
@@ -347,6 +353,7 @@
       }
       .after-pay {
         font-family: $mencoBlack;
+font-weight: 900;
       }
       .variant-wrapper {
         margin-bottom: 0;

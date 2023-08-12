@@ -49,6 +49,7 @@ html {
 	width: 100%;
 	height: 100%;
 	z-index: 99999;
+	display: none;
 	background: linear-gradient(90deg, #9F8FFF 0%, #FFA3FF 25.33%, #FF8B8B 50.33%, #FFE092 74.81%, #A9FF99 100%);
 }
 nav > a, button {
@@ -192,12 +193,16 @@ body {
 	margin: 0 auto;
 	position: relative;
 	z-index: 2;
-	@include get-vw(padding-left, 190px, 190px);
-	@include get-vw(padding-right, 190px, 190px);
+	@include get-vw(padding-left, 190px, 17px);
+	@include get-vw(padding-right, 190px, 17px);
 	margin: 0 auto;
+	@include bp-1200 {
+		padding-left: 90px;
+		padding-right: 90px;
+	}
 	@include bp-1024 {
-		padding-left: 100px;
-		padding-right: 100px;
+		padding-left: 60px;
+		padding-right: 60px;
 	}
 	@include bp-959 {
 		padding-left: 20px;
@@ -228,6 +233,7 @@ header {
 	p {
 		color: var(--dark, #00142D);
 		font-family: $mencoBlack;
+		font-weight: 900;
 		font-size: 18px;
 		line-height: 1.48;
 		letter-spacing: 0.18px;
@@ -282,7 +288,7 @@ nav {
 		text-transform: uppercase;
 		transform-origin: 20% 80%;
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
-		padding: 7px 0;
+		padding: 11px 0 7px;
 		html:not(.touch) & {
 			&:hover {
 				transform: rotate(-3deg) translate3d(-2px, 1px, 0px);
@@ -529,7 +535,7 @@ nav {
 	-webkit-tap-highlight-color: transparent;
 	position: relative;
 	color: var(--c, var(--color));
-	transition: color .3s 0s $ease-in-out-sine;
+	transition: all .25s 0s $ease-in-out-sine;
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -606,7 +612,7 @@ nav {
 		&:hover {
 			transform: translate3d(1px, 1px, 0px);
 			box-shadow: 0 0 0 0 rgba(0, 0, 0, 0.25);
-			transition: color .3s .1s $ease-in-out-sine;
+			transition: all .25s 0s $ease-in-out-sine;
 			--name: move;
 			--c: var(--color-hover);
 			span:not(.tag) {
@@ -633,10 +639,8 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: calc(33.33% - 12px);
-	@include get-vw(min-width, 284px, 284px);
-	@include get-vw(max-width, 284px, 284px);
-	@include get-vw(height, 430px, 430px);
+	width: 30%;
+	aspect-ratio: 0.68/1;
 	&.dummy {
 		height: 0;
 	}
@@ -646,6 +650,7 @@ nav {
 	}
 	html:not(.touch) & {
 		&:hover {
+			z-index: 6;
 			> span {
 				transform: rotate(3deg);
 				.ribbon {
@@ -710,7 +715,7 @@ nav {
 		width: auto;
 		display: flex;
 		z-index: 4;
-		@include get-vw(width, 60px, 25px);
+		@include get-vw(width, 60px, 38px);
 		height: auto;
 		top: 10px;
 	}
@@ -729,6 +734,7 @@ nav {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
+		font-weight: 900;
 		@include get-vw(font-size, 16px, 12px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -749,10 +755,10 @@ nav {
 		img {
 			position: relative;
 			z-index: 2;
-			@include get-vw(height, 430px, 430px);
+			height: 100%;
+			width: 100%;
 			display: flex;
 			transition: all .3s $ease-in-out;
-			width: 100%;
 			&:last-of-type {
 				position: absolute;
 				top: 0;
@@ -800,7 +806,7 @@ nav {
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 		p {
 			color: #E9F7FB;
-			font-family: $mencoBlack;
+			font-family: $mencoMedium;
 			@include get-vw(font-size, 21px, 16px);
 			line-height: 1.45;
 		}
@@ -819,9 +825,17 @@ nav {
 	}
 
 	@include bp-959 {
-		height: 288px;
-		max-width: 184px;
 		@include get-vw(min-width, 184px, 170px);
+		.price {
+			margin-bottom: 5px;
+		}
+		.block-inner {
+			padding-bottom: 7px;
+			background: linear-gradient(192deg, rgba(14, 21, 29, 0.00) 59.21%, rgba(71, 122, 206, 0.90) 97.28%);
+		}
+		.block {
+			box-shadow: 1.2px 2.4px 0 2.4px rgba(0, 0, 0, 0.15), 0 0 0 1.2px #00142D;
+		}
 		.img-wrapper {
 			img {
 				height: 288px;
@@ -830,6 +844,8 @@ nav {
 	}
 
 	@include bp-767 {
+		aspect-ratio: 1/1.68;
+		min-width: 172px;
 		.pink-btn {
 			position: relative;
 			transform: scale(1);
@@ -870,6 +886,7 @@ nav {
 		p {
 			color: #00142D;
 			font-family: $mencoBlack;
+font-weight: 900;
 			@include get-vw(font-size, 18px, 16px);
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -884,6 +901,7 @@ nav {
 		background:  #A9FF99;
 		color: #00142D;
 		font-family: $mencoBlack;
+font-weight: 900;
 		@include get-vw(font-size, 16px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -963,7 +981,7 @@ nav {
 	justify-content: center;
 	align-items: center;
 	@include get-vw(padding-top, 30px, 12px);
-	@include get-vw(padding-bottom, 30px, 12px);
+	@include get-vw(padding-bottom, 71px, 12px);
 	overflow: hidden;
 	.block {
 		position: relative;
@@ -988,7 +1006,8 @@ nav {
 	}
 	svg {
 		position: absolute;
-		@include get-vw(height, 164px, 164px);
+		width: 100%;
+		height: 100%;
 		display: flex;
 	}
 	.inner {
@@ -998,6 +1017,7 @@ nav {
 			color: #00142D;
 			text-align: center;
 			font-family: $mencoBlack;
+font-weight: 900;
 			@include get-vw(font-size, 18px, 11px);
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -1054,7 +1074,7 @@ nav {
 }
 
 .best-sellers {
-	@include get-vw(padding-bottom, 25px, 25px);
+	@include get-vw(padding-bottom, 71px, 25px);
 	overflow: hidden;
 	position: relative;
 	z-index: 3;
@@ -1070,6 +1090,7 @@ nav {
 			color: #00142D;
 			text-align: center;
 			font-family: $mencoBlack;
+font-weight: 900;
 			font-size: 18px;
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -1113,12 +1134,11 @@ nav {
 .pudgy-sale {
 	display: flex;
 	flex-direction: column;
-	@include get-vw(padding-top, 25px, 25px);
 	.top {
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		@include get-vw(margin-bottom, 50px, 40px);
+		@include get-vw(margin-bottom, 20px, 20px);
 	}
 	h3 {
 		color: #E9F7FB;
@@ -1134,6 +1154,7 @@ nav {
 	.eyebrow {
 		color: #00142D;
 		font-family: $mencoBlack;
+font-weight: 900;
 		font-size: 18px;
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1144,7 +1165,7 @@ nav {
 		justify-content: center;
 		flex-wrap: wrap;
 		@include get-vw(row-gap, 30px, 10px);
-		@include get-vw(column-gap, 25px, 0px);
+		@include get-vw(column-gap, 36px, 28px);
 		@include get-vw(padding-left, 40px, 0px);
 		@include get-vw(padding-right, 40px, 0px);
 	}
@@ -1154,7 +1175,9 @@ nav {
 		padding-right: 10px;
 		.blocks {
 			padding: 0;
+			column-gap: 0;
 			justify-content: space-between;
+			row-gap: 0;
 		}
 		.card-wrapper {
 			min-width: 0;
@@ -1169,24 +1192,23 @@ nav {
 	justify-content: center;
 	flex-direction: column;
 	align-items: center;
+	max-width: 1540px;
 	@include get-vw(padding-top, 20px, 20px);
 	@include get-vw(padding-bottom, 30px, 30px);
 	.tile-wrapper {
 		display: flex;
-		justify-content: center;
+		justify-content: space-between;
 		flex-wrap: wrap;
 		@include get-vw(gap, 28px, 18px);
 		@include get-vw(margin-bottom, 40px, 30px);
-		@include get-vw(padding-left, 60px, 0px);
-		@include get-vw(padding-right, 60px, 0px);
+		@include get-vw(padding-left, 72px, 0px);
+		@include get-vw(padding-right, 72px, 0px);
 		width: 100%;
 	}
 	.tile {
-		max-width: calc(50% - 14px);
-		@include get-vw(width, 452px, 353px);
+		width: calc(50% - 17px);
 		position: relative;
 		overflow: visible;
-		@include get-vw(height, 536px, 443px);
 		display: flex;
 		align-items: center;
 		justify-content: center;
@@ -1196,13 +1218,12 @@ nav {
 		position: absolute;
 		top: 50%;
 		left: 50%;
-		width: auto;
 		transform: translate(-50%, -50%);
-		@include get-vw(height, 560px, 450px);
+		height: 105%;
+		width: 99%;
 	}
 	.tile-inner {
 		background: #FFF;
-		@include get-vw(height, 536px, 420px);
 		border-radius: 20px;
 		overflow: hidden;
 		width: calc(100% - 16px);
@@ -1230,6 +1251,7 @@ nav {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
+font-weight: 900;
 		@include get-vw(font-size, 16px, 12px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1262,17 +1284,20 @@ nav {
 	}
 	@include bp-767 {
 		padding: 0;
+		margin-top: 17px;
 		.tile-wrapper {
+			gap: 33px;
 			flex-direction: column;
-			padding: 0;
 		}
 		.tile {
 			width: 100%;
 			max-width: 100%;
 		}
 		.tile-inner {
-			max-width: 360px;
 			width: 100%;
+		}
+		.frame {
+			width: 104%;
 		}
 	}
 }
@@ -1287,6 +1312,7 @@ nav {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
+font-weight: 900;
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1434,6 +1460,7 @@ nav {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
+font-weight: 900;
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1444,6 +1471,7 @@ nav {
 		//width: 100%;
 		height: 52px;
 		margin-right: 48px;
+		object-fit: contain;
 	}
 	.marquee {
 		overflow: hidden;
@@ -1503,6 +1531,7 @@ footer {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
+		font-weight: 900;
 		font-size: 18px;
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1594,6 +1623,7 @@ footer {
 			p:last-of-type {
 				color: #477DFD;
 				font-family: $mencoBlack;
+font-weight: 900;
 				font-size: 10px;
 				line-height: 1.45;
 				text-transform: uppercase;
@@ -1656,8 +1686,8 @@ footer {
 		@include get-vw(margin-bottom, 40px, 35px);
 		svg {
 			display: flex;
-			@include get-vw(width, 140px, 140px);
-			@include get-vw(height, 144px, 144px);
+			@include get-vw(width, 140px, 95px);
+			@include get-vw(height, 144px, 140px);
 		}
 	}
 	.links {
@@ -1681,7 +1711,6 @@ footer {
 			position: relative;
 			html:not(.touch) & {
 				&:hover {
-					color: #c5fbff;
 					text-shadow: 0px 0px;
 					transform: translate3d(-2px, 2px, 0);
 
@@ -1698,17 +1727,21 @@ footer {
 			flex-direction: column;
 			align-items: center;
 			transition: all .4s cubic-bezier(.47,1.64,.41,.8);
+			img {
+				&:last-of-type {
+					opacity: 0;
+				}
+			}
 			html:not(.touch) & {
 				&:hover {
 					transform: translateY(-5px);
 					img {
-						&:first-of-type {
-							opacity: 0;
-							visibility: hidden;
-						}
 						&:last-of-type {
 							opacity: 1;
 						}
+					}
+					.text-wrapper {
+						box-shadow: 5px 6px 0px 0px rgba(0, 0, 0, 0.25);
 					}
 				}
 			}
@@ -1723,9 +1756,11 @@ footer {
 			@include get-vw(padding-left, 16px, 11px);
 			@include get-vw(padding-right, 16px, 11px);
 			margin-top: 5px;
+			transition: .2s all $ease-in-out-sine;
 			p {
 				text-align: center;
 				font-family: $mencoBlack;
+font-weight: 900;
 				text-transform: uppercase;
 				color: #00142D;
 				@include get-vw(font-size, 12px, 8px);
@@ -1743,27 +1778,26 @@ footer {
 			width: auto;
 			transition: all .2s $ease-in-out-sine;
 			position: relative;
-			&:first-of-type {
-				z-index: 2;
-			}
 			&:last-of-type {
 				position: absolute;
 				top: 0;
-				z-index: 1;
+				z-index: 2;
 				opacity: 0;
 			}
 		}
 	}
 	.utility-links {
 		display: flex;
-		justify-content: center;
-		@include get-vw(gap, 50px, 12px);
+		width: 90%;
+		max-width: 1340px;
+		justify-content: space-between;
 		position: relative;
 		z-index: 4;
 		p, a {
 			color: #80ABFF;
 			text-align: center;
 			font-family: $mencoBlack;
+font-weight: 900;
 			font-size: 18px;
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -1781,6 +1815,7 @@ footer {
 		color: #E9F7FB;
 		text-align: center;
 		font-family: $mencoBlack;
+font-weight: 900;
 		font-size: 18px;
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1851,6 +1886,11 @@ footer {
 			p {
 				width: 100%;
 			}
+			a {
+				&:last-of-type {
+					display: none;
+				}
+			}
 		}
 	}
 }
@@ -1892,6 +1932,7 @@ footer {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
+font-weight: 900;
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -2090,6 +2131,7 @@ footer {
 	p {
 		color: #00142D;
 		font-family: $mencoBlack;
+font-weight: 900;
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
