@@ -24,7 +24,7 @@
                 {% assign thisType = thisProduct.type %}
                 {% assign thisTitle = thisProduct.title %}
                 {% if thisType == product.type and thisTitle != product.title %}
-                    <a href="{{ thisProduct.url }}" data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
+                    <form data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
                         <div class="img-wrapper">
                             <img class="preload"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} src="https:{{ thisProduct.images[0] | image_url }}" data-preload-mobile="https:{{ thisProduct.images[0] | image_url }}">
                         </div>
@@ -33,7 +33,7 @@
                             <span>{{ thisProduct.price | money }}</span>
                         </div>
                         <div class="pink-btn"><span>Add</span></div>
-                    </a>
+                    </form>
                     {% assign placed = placed | plus: 1 %}
                 {% endif %}
             {% endfor %}

@@ -109,9 +109,11 @@
 <body>
 
 
-
+<div id="global-mask" data-url="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/loader-desktop.jpg?v=1691874771" data-url-mobile="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/loader-mobile.jpg?v=1691874770">
+  <img alt="A dreamy cloudscape while wait" loading="eager" decoding="async">
+</div>
 <header id="header">
-  <div class="pencil-bar marquee gradiant-marquee">
+  <div class="pencil-bar gradiant-marquee">
     <div class="inner" data-dur="25" data-mobile-dur="10">
       <div class="group">
         {% if settings.pencil_bar_url == blank and settings.pencil_bar_message != blank %}
@@ -130,7 +132,7 @@
     </div>
   </div>
   <nav id="nav" class="max-width">
-    <a class="logo mw" href="/">
+    <a class="logo mw prefetch-us" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="149" height="83" viewBox="0 0 149 83" fill="none">
         <g clip-path="url(#clip0_1321_882)">
           <path d="M129.405 8.49005L125.845 12.0822L125.059 7.18115C124.887 6.09311 124.582 5.16098 124.15 4.375L129.408 8.49005H129.405Z" fill="#477DFD"/>
@@ -274,7 +276,6 @@
 </main>
 {% render 'mini-cart' %}
 
-<div id="global-mask"></div>
 <div id="click-mask"></div>
 
 

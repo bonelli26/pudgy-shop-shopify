@@ -13,22 +13,6 @@ export const pageEntrance = (namespace = null)=> {
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
 
-	gsap.to(domStorage.header, { duration: 0.3, autoAlpha: 1, force3D: true, ease: "sine.inOut" });
-
-	if (globalStorage.firstLoad) {
-		gsap.set(domStorage.nav, { autoAlpha: 1, display: "flex", duration: 0.2, ease: "sine.out" });
-	} else {
-		gsap.set(domStorage.navHome, { autoAlpha: 0, display: "none", duration: 0.2, ease: "sine.out" });
-		gsap.to(domStorage.nav, { autoAlpha: 1, display: "flex", duration: 0.2, ease: "sine.out" });
-	}
-
-	// gsap.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut" });
-
-	if (!globalStorage.firstLoad) {
-		timeline.to(domStorage.newNav, { duration: 0.3, autoAlpha: 1, ease: "sine.out" });
-	}
-
-
 
 	/* ----- Setup cases for specific load-ins ----- */
 	switch(namespace){
@@ -37,15 +21,16 @@ export const pageEntrance = (namespace = null)=> {
 			break;
 
 	}
+	timeline.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut" })
+
 	gsap.set(domStorage.clickMask, { pointerEvents: "none" });
 
-
-	if (globalStorage.firstLoad) {
-		timeline.add(() => {
-		});
-	}
-
 	timeline.play();
+
+	if(globalStorage.firstLoad){
+		globalStorage.firstLoad = false
+		gsap.set(domStorage.header, { zIndex: 98 })
+	}
 };
 
 /*
@@ -57,19 +42,28 @@ export const globalEntrance = ()=>{
 	if(globalStorage.firstLoad !== true){
 		return;
 	}
+	new Marquees(true);
 
-	gsap.to(domStorage.header,  { autoAlpha: 1, duration: .3, ease: "sine.inOut", force3D: true });
 	/* ----- Establish our timeline ----- */
-	// let timeline = new gsap.timeline({ paused: true });
+	let timeline = new gsap.timeline({ paused: true });
 
-	// gsap.set(logo, { y: 26 });
+	const img = domStorage.globalMask.querySelector("img")
+	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile
 
-	// timeline
-	// 	.to("#header .logo", { duration: 0.4, y: 0, opacity: 1, ease: "sine.out", onComplete: ()=>{
-	// 	}});
-	globalStorage.transitionFinished = true;
+	img.addEventListener("load", () => {
+		globalStorage.pencilMarquee.tween.play()
+		gsap.set(img, { opacity: 1 })
+		timeline
+			.to(domStorage.header,  { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
+					gsap.delayedCall(.1, () => {
+						globalStorage.transitionFinished = true;
+					})
+				} }, 0.2)
+	})
 
-	// timeline.play();
+	img.src = url
+
+	timeline.play();
 }
 
 export const prepDrawers = () => {
@@ -145,8 +139,13 @@ export const prepDrawers = () => {
 
 export class Marquees {
 
-	constructor() {
-		this.marquees = document.querySelectorAll('.marquee:not(.prepped)');
+	constructor(pencilMarquee = false) {
+		this.pencilMarquee = pencilMarquee
+		if (pencilMarquee) {
+			this.marquees = document.querySelectorAll('.pencil-bar');
+		} else {
+			this.marquees = document.querySelectorAll('.marquee:not(.prepped)');
+		}
 
 		this.init();
 
@@ -167,7 +166,7 @@ export class Marquees {
 				continue;
 			}
 			let inner = this.marquees[i].querySelector('.inner'),
-				small = this.marquees[i].classList.contains('small') ? true : false,
+				small = this.marquees[i].classList.contains('small'),
 				containerWitdth = small ? this.marquees[i].offsetWidth : globalStorage.windowWidth,
 				copyEl = this.marquees[i].querySelector('[aria-hidden]'),
 				copyWidth = copyEl.offsetWidth,
@@ -190,11 +189,19 @@ export class Marquees {
 				});
 
 			} else {
-				globalStorage.marqueeData.push({
-					el: this.marquees[i],
-					tween: tween,
-					playing: false
-				});
+				if (this.pencilMarquee) {
+					globalStorage.pencilMarquee = {
+						el: this.marquees[i],
+						tween: tween,
+						playing: false
+					};
+				} else {
+					globalStorage.marqueeData.push({
+						el: this.marquees[i],
+						tween: tween,
+						playing: false
+					});
+				}
 			}
 
 		}

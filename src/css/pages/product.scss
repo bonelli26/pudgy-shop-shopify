@@ -64,10 +64,9 @@
       height: 100%;
       width: 100%;
       position: relative;
-      min-width: 32vw;
+      min-width: 100%;
       img {
         width: 100%;
-        @include get-vw(border-radius, 24px, 22px);
         @include get-vw(height, 603px, 340px);
       }
     }
@@ -103,7 +102,8 @@
     }
     .eyebrow {
       color: #00142D;
-
+      font-weight: 900;
+      font-family: $mencoBlack;
       line-height: 1.45;
       text-transform: uppercase;
       margin-bottom: 8px;
@@ -113,7 +113,7 @@
       color: #FFF;
       text-shadow: -3px 3px #00142D;
       -webkit-text-stroke: 1px #00142d;
-      text-strke: 1px #00142d;
+      text-stroke: 1px #00142d;
       font-family: $ttBlack;
       line-height: .91;
       letter-spacing: -0.02em;
@@ -130,7 +130,7 @@
     .price {
       color: #FFA3FF;
       -webkit-text-stroke: 1px #00142d;
-      text-strke: 1px #00142d;
+      text-stroke: 1px #00142d;
       text-shadow: -1px 1px #00142D;
       font-family: $ttBlack;
       line-height: .91;
@@ -142,7 +142,7 @@
     .old-price {
       color: #FFF;
       -webkit-text-stroke: 1px #00142d;
-      text-strke: 1px #00142d;
+      text-stroke: 1px #00142d;
       text-shadow: -1px 1px #00142D;
       font-family: $ttBlack;
       line-height: .88;
@@ -285,7 +285,7 @@ font-weight: 700;
       letter-spacing: -0.01em;
       text-transform: uppercase;
       -webkit-text-stroke: 1px #00142d;
-      text-strke: 1px #00142d;
+      text-stroke: 1px #00142d;
       text-shadow: -1px 1px #00142D;
       white-space: nowrap;
       @include get-vw(width, 275px, 180px);
@@ -472,7 +472,7 @@ font-weight: 900;
       color: #FBF7EB;
       text-shadow: -3px 3px #00142D;
       -webkit-text-stroke: 1px #00142d;
-      text-strke: 1px #00142d;
+      text-stroke: 1px #00142d;
       font-family: $ttBlack;
       line-height: .91;
       letter-spacing: -0.02em;
@@ -529,7 +529,7 @@ font-weight: 900;
       color: #FBF7EB;
       text-shadow: -2px 2px #00142D;
       -webkit-text-stroke: 1px #00142d;
-      text-strke: 1px #00142d;
+      text-stroke: 1px #00142d;
       font-family: $ttBlack;
       line-height: .91;
       letter-spacing: -0.02em;

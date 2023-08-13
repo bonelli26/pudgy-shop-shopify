@@ -6,6 +6,7 @@ export class AddToCart {
 
 	constructor(){
 		this.forms = document.querySelectorAll(".atc-form:not(.bound)");
+		this.shippingMeterBar = document.getElementById("shipping-meter-bar")
 		this.bindATCEvents();
 		this.getCurrentCart(true);
 	}
@@ -170,10 +171,17 @@ export class AddToCart {
 	addToCart(form){
 		let varID = form.querySelector(".add-to-cart").dataset.id;
 		console.log(varID);
+		const count = form.querySelector(".count")
+		let quantity
+		if (count) {
+			quantity = Number(count.textContent)
+		} else {
+			quantity = 1
+		}
 		let formData = {
 			'items': [{
 				'id': varID,
-				'quantity': 1
+				'quantity': quantity
 			}]
 		};
 
@@ -203,13 +211,28 @@ export class AddToCart {
 					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
 					this.buildMiniCart(data.items);
 					this.toggleEmptyCart(false);
+					const easyPrice = Number(((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2)))
+					console.log(easyPrice)
+					this.incentiveBarPercent = easyPrice / 25
+					if (this.incentiveBarPercent >= 1) {
+						this.incentiveBarPercent = 1
+					}
 					if (!firstBuild) {
 						$miniCart.open()
+						gsap.to(this.shippingMeterBar, { scaleX: this.incentiveBarPercent, ease: "expo.inOut", duration: 0.8 })
+					} else {
+						gsap.set(this.shippingMeterBar, { scaleX: this.incentiveBarPercent })
 					}
 				} else {
 					this.toggleEmptyCart(true, true);
+					if (!firstBuild) {
+						gsap.to(this.shippingMeterBar, { scaleX: 0, ease: "expo.inOut", duration: 0.8 })
+					} else {
+						gsap.set(this.shippingMeterBar, { scaleX: 0 })
+					}
 					// domStorage.cartCountEl.textContent = "0";
 				}
+				console.log(this.incentiveBarPercent)
 			});
 
 	}
@@ -254,6 +277,7 @@ export class AddToCart {
 			fetch(window.Shopify.routes.root + 'cart.js')
 				.then(response => response.json())
 				.then(data => {
+					this.getCurrentCart();
 					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
 				});
 		}).catch((error) => {
@@ -347,7 +371,7 @@ export class AddToCart {
 				increase = el.querySelector(".increase"),
 				parentLineItem = el.parentElement.parentElement.parentElement,
 				priceEl = parentLineItem.querySelector(".line-item-price"),
-				price = parseFloat(priceEl.dataset.origPrice),
+				price = Number(priceEl.dataset.origPrice),
 				count = parseInt(countEl.textContent);
 
 			decrease.addEventListener("click", () => {
@@ -358,14 +382,14 @@ export class AddToCart {
 				count = count - 1;
 				countEl.textContent = count;
 				parentLineItem.dataset.quantity = count;
-				priceEl.textContent = "$"+(count * price).toFixed(2);
+				priceEl.textContent = "$"+(count * price);
 				this.modifyLineItem(parentLineItem.dataset.key, count);
 			});
 			increase.addEventListener("click", () => {
 				count = count + 1;
 				countEl.textContent = count;
 				parentLineItem.dataset.quantity = count;
-				priceEl.textContent = "$"+(count * price).toFixed(2);
+				priceEl.textContent = "$"+(count * price);
 				this.modifyLineItem(parentLineItem.dataset.key, count);
 			});
 		}
