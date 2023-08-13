@@ -107,10 +107,10 @@ export const prepDrawers = () => {
 						}
 					} })
 
-				gsap.fromTo(childrenWrapperItems, 0.7, { opacity: .2 }, { opacity: 1, force3D: true, ease: "sine.inOut" })
+				gsap.fromTo(childrenWrapperItems, 0.35, { opacity: 0 }, { opacity: 1, force3D: true, ease: "sine.in" })
 
 				if (thisDrawer.classList.contains("replace-label")) {
-					gsap.to(bg, { borderRadius: "13", force3D: true, ease: "sine.inOut", duration: 0.3 });
+					gsap.to(bg, { borderRadius: "13", force3D: true, ease: "sine.out", duration: 0.3, delay: .1 });
 				}
 			} else {
 
@@ -125,7 +125,7 @@ export const prepDrawers = () => {
 				gsap.to(childrenWrapperItems, 0.35, { opacity: 0, force3D: true, ease: "sine.inOut" })
 
 				if (thisDrawer.classList.contains("replace-label")) {
-					gsap.to(bg, { borderRadius: "53", force3D: true, ease: "sine.inOut", duration: 0.3 });
+					gsap.to(bg, { borderRadius: "53", force3D: true, ease: "sine.out", duration: 0.3, delay: .1 });
 				}
 			}
 		})
@@ -310,8 +310,9 @@ export const prepSliders = () => {
 			dots = dotsWrapper.querySelectorAll('.dot');
 		}
 
+		console.log(slideAlignment)
 
-		const options = { loop: (globalStorage.windowWidth > 767 ? !el.classList.contains("no-loop") : !el.classList.contains("no-loop-mobile")), skipSnaps: true, inViewThreshold: el.dataset.inView ? Number(el.dataset.inView) : 0.3, containScroll: true, startIndex: parseInt(startIndex), align: slideAlignment, dragFree: !el.classList.contains("no-drag-free") };
+		const options = { loop: (globalStorage.windowWidth > 767 ? !el.classList.contains("no-loop") : !el.classList.contains("no-loop-mobile")), skipSnaps: true, inViewThreshold: el.dataset.inView ? Number(el.dataset.inView) : 0.3, startIndex: parseInt(startIndex), align: slideAlignment, dragFree: !el.classList.contains("no-drag-free") };
 
 		const slider = EmblaCarousel(slideWrapper, options);
 

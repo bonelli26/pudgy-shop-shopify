@@ -450,6 +450,7 @@ nav {
 			text-shadow: -1px 1px #00142d;
 			-webkit-text-stroke: 1px #00142d;
 			text-stroke: 1px #00142d;
+			padding: 11px 0 0;
 		}
 		.icon-link {
 			&.mobile {
@@ -645,6 +646,12 @@ nav {
 			}
 		}
 	}
+	@include bp-767 {
+		line-height: 1;
+		padding-top: 3px;
+		font-size: 29px;
+		letter-spacing: -0.16px;
+	}
 }
 
 .card-wrapper {
@@ -821,6 +828,7 @@ nav {
 			color: #E9F7FB;
 			font-family: $mencoMedium;
 			@include get-vw(font-size, 21px, 16px);
+			text-shadow: 0px 0px 2px #000;
 			line-height: 1.45;
 		}
 		strong {
@@ -859,10 +867,14 @@ nav {
 	@include bp-767 {
 		aspect-ratio: 1/1.68;
 		min-width: 172px;
+		.block {
+			border-width: 5px;
+			border-radius: 15px;
+		}
 		.pink-btn {
 			position: relative;
 			transform: scale(1);
-			font-size: 16px;
+			font-size: 20px;
 			max-width: 90%;
 			height: 40px;
 			text-shadow: -0.5px 0.5px;
@@ -872,7 +884,23 @@ nav {
 		}
 	}
 }
-
+.increment-wrapper {
+	button {
+		position: relative;
+		&:after {
+			width: 26px;
+			height: 26px;
+			left: -8px;
+			top: -2px;
+			content: "";
+			position: absolute;
+		}
+	}
+	.decrease {
+		position: relative;
+		top: -1px;
+	}
+}
 .hero {
 	position: relative;
 	height: calc((var(--vh, 1vh) * 100));
@@ -1068,6 +1096,7 @@ font-weight: 900;
 	}
 
 	@include bp-767 {
+		padding: 0 4px;
 		.block {
 			width: 29%;
 			&:nth-of-type(2) {
@@ -1077,6 +1106,17 @@ font-weight: 900;
 				}
 			}
 
+		}
+		.inner {
+			p {
+				&:last-of-type {
+					letter-spacing: -1.085px;
+					text-shadow: -2px 2px 0px #00142D;
+				}
+			}
+		}
+		svg {
+			width: 107%;
 		}
 		img {
 			height: 90px;
@@ -1138,6 +1178,10 @@ font-weight: 900;
 		}
 		.inner {
 			justify-content: normal;
+			gap: 0;
+			.slide {
+				margin: 0 7px;
+			}
 		}
 	}
 }
@@ -1299,6 +1343,8 @@ font-weight: 900;
 		.tile-wrapper {
 			gap: 33px;
 			flex-direction: column;
+			padding-left: 16px;
+			padding-right: 16px;
 		}
 		.tile {
 			width: 100%;
@@ -1887,6 +1933,7 @@ font-weight: 900;
 				width: calc(50% - 5px);
 				&:nth-of-type(even) {
 					padding-left: 20px;
+					text-align: right;
 				}
 			}
 		}

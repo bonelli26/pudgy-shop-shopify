@@ -39,7 +39,7 @@ export class MobileMenu {
 			.to(this.bar1, { rotate: 45, duration: 0.1, force3D: true, ease: "sine.out", transformOrigin: "top left" })
 			.to(this.bar3, { rotate: -45, duration: 0.1, force3D: true, ease: "sine.out", transformOrigin: "bottom left" }, "<")
 			.to(this.bar2, { autoAlpha: 0, duration: 0.1, force3D: true, ease: "sine.inOut" }, "<")
-			.to(this.navDrawer, { scale: 1, duration: 1.2, force3D: true, ease: "elastic.out(1, 0.4)", transformOrigin: "top left"}, "<");
+			.to(this.navDrawer, { scale: 1, duration: 1.1, force3D: true, ease: "expo.out", transformOrigin: "top left"}, 0);
 			// .to(this.main, { scale: 1.1, duration: 1.2, force3D: true, ease: "elastic.out", transformOrigin: "top left"}, "<");
 
 
