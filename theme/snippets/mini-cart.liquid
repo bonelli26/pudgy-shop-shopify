@@ -9,9 +9,10 @@
     <div class="top"><p>Cart</p></div>
     <div class="shipping-bar" id="shipping-bar">
         <div class="shipping-messages">
-            <p>Spend $25 to get FREE SHIPPING</p>
+            <p id="shipping-note-one">{{ settings.shipping_threshold_note }}</p>
+            <p id="shipping-note-two">{{ settings.shipping_threshold_success }}</p>
         </div>
-        <div class="track"><span id="shipping-meter-bar" class="shipping-meter-bar"></span></div>
+        <div class="track"><span id="shipping-meter-bar" class="shipping-meter-bar" data-threshold="{{ settings.shipping_threshold }}"></span></div>
     </div>
     <div class="inner-wrapper">
         <div class="inner c-24 products-wrapper" id="products-wrapper">

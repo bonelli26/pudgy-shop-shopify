@@ -18,7 +18,26 @@
       }
     ]
   },
-
+  {
+    "name": "Cart settings",
+    "settings": [
+      {
+        "type": "text",
+        "id": "shipping_threshold_note",
+        "label": "Shipping threshold note"
+      },
+      {
+        "type": "text",
+        "id": "shipping_threshold_success",
+        "label": "Shipping threshold success"
+      },
+      {
+        "type": "text",
+        "id": "shipping_threshold",
+        "label": "Shipping threshold"
+      }
+    ]
+  },
   {
     "name": "Nav Image",
     "settings": [

@@ -106,6 +106,24 @@
 	}
 }
 
+@mixin get-vw-mobile($property, $desktop-size, $mobile-size: false) {
+	// Viewport width of design
+	$reference-width: 375;
+
+	//Desktop size
+	$vw-context: $reference-width * 0.01 * 1px;
+	#{$property}: math.div($desktop-size, $vw-context) * 1vw;
+
+	// Mobile size
+	@if $mobile-size {
+		$bp: math.div($reference-width * strip-unit($mobile-size), strip-unit($desktop-size)) * 1px;
+
+		@media screen and (max-width: $bp) {
+			#{$property}: $mobile-size;
+		}
+	}
+}
+
 @function strip-unit($number) {
 	@if type-of($number) == "number" and not unitless($number) {
 		@return math.div($number, $number * 0 + 1);
