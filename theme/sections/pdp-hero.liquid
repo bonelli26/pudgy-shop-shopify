@@ -6,7 +6,7 @@
             <div class="frame">
                 {% if product.metafields.accentuate.ribbon %}
                     {% for ribbon in product.metafields.accentuate.ribbon %}
-                        <img class="preload-critical ribbon" data-preload-desktop="{{ ribbon.src }}" data-preload-mobile="{{ ribbon.src }}">
+                        {% comment %}<img class="preload-critical ribbon" data-preload-desktop="{{ ribbon.src }}" data-preload-mobile="{{ ribbon.src }}">{% endcomment %}
                     {% endfor %}
                 {% endif %}
                 <div class="slides">

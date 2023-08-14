@@ -19,7 +19,7 @@
                         <div class="block">
                             <div class="img-wrapper">
                                 <img class="preload bg"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[0] | img_url: '700x', format: 'jpg' }}" data-preload-mobile="https:{{ thisProduct.images[0] | img_url: '550x', format: 'jpg' }}">
-                                <img class="preload bg"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}">
+                                {% if thisProduct.images[1] %}<img class="preload-critical"{% if thisProduct.images[1].alt %} alt="{{ thisProduct.images[1].alt }}"{% endif %} data-preload-desktop="https:{{ thisProduct.images[1] | img_url: '700x', format: 'jpg' }}">{% endif %}
                             </div>
                             <div class="block-inner">
                                 <p class="type">{{ thisProduct.type }}</p>
