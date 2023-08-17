@@ -21,16 +21,17 @@ export const pageEntrance = (namespace = null)=> {
 			break;
 
 	}
-	timeline.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut" })
+	timeline.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
+			if(globalStorage.firstLoad){
+				globalStorage.firstLoad = false
+				gsap.set(domStorage.header, { zIndex: 98 })
+			}
+		} })
 
 	gsap.set(domStorage.clickMask, { pointerEvents: "none" });
 
 	timeline.play();
 
-	if(globalStorage.firstLoad){
-		globalStorage.firstLoad = false
-		gsap.set(domStorage.header, { zIndex: 98 })
-	}
 };
 
 /*
