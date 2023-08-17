@@ -13,6 +13,7 @@
                     <div class="inner">
                         {% for image in product.images limit: 4 %}
                             <div class="slide">
+                                <div class="frame-mobile"></div>
                                 <img class="preload-critical"{% if image.alt %} alt="{{ image.alt }}"{% endif %} data-preload-desktop="https:{{ image | image_url }}" data-preload-mobile="https:{{ image | image_url }}">
                             </div>
                         {% endfor %}

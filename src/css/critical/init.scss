@@ -1084,7 +1084,7 @@ nav {
 			text-transform: uppercase;
 		}
 		p:last-of-type {
-			color: #FFF;
+			color: #FAE19C;;
 			text-shadow: -3px 3px #00142d;
 			-webkit-text-stroke: 1px #00142d;
 			text-stroke: 1px #00142d;
@@ -1156,7 +1156,7 @@ nav {
 	.top {
 		display: flex;
 		flex-direction: column;
-		@include get-vw(max-width, 320px, 320px);
+		@include get-vw(max-width, 400px, 320px);
 		justify-content: center;
 		margin: 0 auto;
 		gap: 8px;
