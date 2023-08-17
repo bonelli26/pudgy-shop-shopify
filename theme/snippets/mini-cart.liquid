@@ -9,9 +9,10 @@
     <div class="top"><p>Cart</p></div>
     <div class="shipping-bar" id="shipping-bar">
         <div class="shipping-messages">
-            <p>Spend $25 to get FREE SHIPPING</p>
+            <p id="shipping-note-one">{{ settings.shipping_threshold_note }}</p>
+            <p id="shipping-note-two">{{ settings.shipping_threshold_success }}</p>
         </div>
-        <div class="track"><span id="shipping-meter-bar" class="shipping-meter-bar"></span></div>
+        <div class="track"><span id="shipping-meter-bar" class="shipping-meter-bar" data-threshold="{{ settings.shipping_threshold }}"></span></div>
     </div>
     <div class="inner-wrapper">
         <div class="inner c-24 products-wrapper" id="products-wrapper">
@@ -20,7 +21,7 @@
             <p>Frequently purchased Together</p>
             {% assign thisCollection = collections.all %}
             {% assign placed = 0 %}
-            {% for thisProduct in thisCollection.products limit: 2 %}
+            {% for thisProduct in thisCollection.products %}
                 {% assign thisType = thisProduct.type %}
                 {% assign thisTitle = thisProduct.title %}
                 {% if thisType == product.type and thisTitle != product.title %}
@@ -38,29 +39,6 @@
                 {% endif %}
             {% endfor %}
 
-            {% if placed < 2 %}
-                {% assign missingAmount = 2 | minus: placed %}
-                {% for thisProduct in thisCollection.products %}
-                    {% assign thisTitle = thisProduct.title %}
-                    {% assign thisType = thisProduct.type %}
-                    {% unless thisTitle == product.title or thisType == product.type %}
-                        <a href="{{ thisProduct.url }}" data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
-                            <div class="img-wrapper">
-                                <img class="preload"{% if thisProduct.images[0].alt %} alt="{{ thisProduct.images[0].alt }}"{% endif %} src="https:{{ thisProduct.images[0] | image_url }}" data-preload-mobile="https:{{ thisProduct.images[0] | image_url }}">
-                            </div>
-                            <div class="text-wrapper">
-                                <p>{{ thisProduct.title }}</p>
-                                <span>{{ thisProduct.price | money }}</span>
-                            </div>
-                            <div class="pink-btn"><span>Add</span></div>
-                        </a>
-                        {% assign missingAmount = missingAmount | minus: 1 %}
-                        {% if missingAmount == 0 %}
-                            {% break %}
-                        {% endif %}
-                    {% endunless %}
-                {% endfor %}
-            {% endif %}
         </div>
         <div class="bottom c-24">
             <div class="subtotal bottom-line">

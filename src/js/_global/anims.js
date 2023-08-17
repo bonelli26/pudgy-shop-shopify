@@ -96,36 +96,55 @@ export const prepDrawers = () => {
 				const openDrawers = document.querySelectorAll(".drawer.open")
 				for (let i = 0; i < openDrawers.length; i++) {
 					openDrawers[i].classList.remove("open")
-					gsap.to(openDrawers[i].querySelector(".drawer-items"), 0.35, { height: 0, force3D: true, ease: "sine.inOut" })
+					if (globalStorage.isMobile && thisDrawer.classList.contains("faq-drawer")) {
+						gsap.set(openDrawers[i].querySelector(".drawer-items"), { height: 0, force3D: true })
+					} else {
+						gsap.to(openDrawers[i].querySelector(".drawer-items"), 0.35, { height: 0, force3D: true, ease: "sine.inOut" })
+					}
 					gsap.to(openDrawers[i].querySelectorAll(".drawer-items > *"), 0.35, { opacity: 0, force3D: true, ease: "sine.inOut" })
 				}
 				thisDrawer.classList.add("open")
 
-				gsap.to(childrenWrapper, 0.35, { height: childrenWrapperHeight, force3D: true, ease: "sine.inOut", onComplete: () => {
-						if ($scroll) {
-							$scroll.resize();
-						}
-					} })
+				if (globalStorage.isMobile && thisDrawer.classList.contains("faq-drawer")) {
+					gsap.set(childrenWrapper, { height: childrenWrapperHeight, force3D: true })
+					if ($scroll) {
+						$scroll.resize();
+					}
+				} else {
+					gsap.to(childrenWrapper, 0.35, { height: childrenWrapperHeight, force3D: true, ease: "sine.inOut", onComplete: () => {
+							if ($scroll) {
+								$scroll.resize();
+							}
+						} })
+				}
 
-				gsap.fromTo(childrenWrapperItems, 0.7, { opacity: .2 }, { opacity: 1, force3D: true, ease: "sine.inOut" })
+
+				gsap.fromTo(childrenWrapperItems, 0.35, { opacity: 0 }, { opacity: 1, force3D: true, ease: "sine.in" })
 
 				if (thisDrawer.classList.contains("replace-label")) {
-					gsap.to(bg, { borderRadius: "13", force3D: true, ease: "sine.inOut", duration: 0.3 });
+					gsap.to(bg, { borderRadius: "13", force3D: true, ease: "sine.out", duration: 0.3, delay: .1 });
 				}
 			} else {
 
 				thisDrawer.classList.remove("open")
 
-				gsap.to(childrenWrapper, 0.35, { height: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
-						if ($scroll) {
-							$scroll.resize();
-						}
-					} })
+				if (globalStorage.isMobile && thisDrawer.classList.contains("faq-drawer")) {
+					gsap.set(childrenWrapper, { height: 0, force3D: true })
+					if ($scroll) {
+						$scroll.resize();
+					}
+				} else {
+					gsap.to(childrenWrapper, 0.35, { height: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
+							if ($scroll) {
+								$scroll.resize();
+							}
+						} })
+				}
 
 				gsap.to(childrenWrapperItems, 0.35, { opacity: 0, force3D: true, ease: "sine.inOut" })
 
 				if (thisDrawer.classList.contains("replace-label")) {
-					gsap.to(bg, { borderRadius: "53", force3D: true, ease: "sine.inOut", duration: 0.3 });
+					gsap.to(bg, { borderRadius: "53", force3D: true, ease: "sine.out", duration: 0.3, delay: .1 });
 				}
 			}
 		})
@@ -310,8 +329,9 @@ export const prepSliders = () => {
 			dots = dotsWrapper.querySelectorAll('.dot');
 		}
 
+		console.log(slideAlignment)
 
-		const options = { loop: (globalStorage.windowWidth > 767 ? !el.classList.contains("no-loop") : !el.classList.contains("no-loop-mobile")), skipSnaps: true, inViewThreshold: el.dataset.inView ? Number(el.dataset.inView) : 0.3, containScroll: true, startIndex: parseInt(startIndex), align: slideAlignment, dragFree: !el.classList.contains("no-drag-free") };
+		const options = { loop: (globalStorage.windowWidth > 767 ? !el.classList.contains("no-loop") : !el.classList.contains("no-loop-mobile")), skipSnaps: true, inViewThreshold: el.dataset.inView ? Number(el.dataset.inView) : 0.3, startIndex: parseInt(startIndex), align: slideAlignment, dragFree: !el.classList.contains("no-drag-free") };
 
 		const slider = EmblaCarousel(slideWrapper, options);
 

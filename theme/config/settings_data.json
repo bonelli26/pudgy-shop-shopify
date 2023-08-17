@@ -1,6 +1,9 @@
 {
   "current": {
     "favicon": "shopify:\/\/shop_images\/pp-fav_274f3538-1f78-4072-b116-a45c8946b477.png",
+    "shipping_threshold_note": "Spend $75 to get free shipping",
+    "shipping_threshold_success": "Free Shipping Unlocked!",
+    "shipping_threshold": "75",
     "nav_image": "shopify:\/\/shop_images\/PudgyP_Wordmark_Final.png",
     "small_image_1": "shopify:\/\/shop_images\/Exchange.png",
     "text_1": "EASY EXCHANGES",

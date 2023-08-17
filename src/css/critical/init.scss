@@ -49,6 +49,10 @@ header {
 	transform: translateY(-40px);
 	opacity: 0;
 	z-index: 100000;
+	pointer-events: none;
+	a, button {
+		pointer-events: all;
+	}
 }
 #global-mask {
 	position: fixed;
@@ -246,7 +250,7 @@ body {
 	p {
 		color: var(--dark, #00142D);
 		font-family: $mencoBlack;
-		font-weight: 900;
+
 		font-size: 18px;
 		line-height: 1.48;
 		letter-spacing: 0.18px;
@@ -293,19 +297,20 @@ nav {
 		@include get-vw(margin-right, 60px, 10px);
 	}
 	.link {
-		color: #00142d;
-		//text-shadow: -1px 1px #00142d;
+		color: #FFFFFF;
+		text-shadow: -1px 1px #00142d;
 		font-family: $ttBlack;
-		font-size: 25px;
-		letter-spacing: 1.75px;
+		-webkit-text-stroke: 0.5px #00142d;
+		text-stroke: 0.5px #00142d;
+		font-size: 28px;
+		letter-spacing: -0.56px;
 		text-transform: uppercase;
-		transform-origin: 20% 80%;
+		transform-origin: 0% 100%;
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 		padding: 11px 0 7px;
 		html:not(.touch) & {
 			&:hover {
-				transform: rotate(-3deg) translate3d(-2px, 1px, 0px);
-				text-shadow: 0px 0px #00142d;
+				transform: rotate(-3deg);
 			}
 		}
 	}
@@ -435,6 +440,7 @@ nav {
 		.left {
 			flex-direction: column;
 			gap: 0;
+			margin: 0;
 		}
 		.right {
 			justify-content: flex-end;
@@ -445,11 +451,11 @@ nav {
 			}
 		}
 		.link {
-			font-size: 72px;
-			color: #FBF7EB;
-			text-shadow: -1px 1px #00142d;
-			-webkit-text-stroke: 1px #00142d;
-			text-stroke: 1px #00142d;
+			font-size: 56px;
+			text-shadow: -2px 2px #00142d;
+			-webkit-text-stroke: 0.5px #00142d;
+			text-stroke: 0.5px #00142d;
+			padding: 11px 0 0;
 		}
 		.icon-link {
 			&.mobile {
@@ -557,13 +563,13 @@ nav {
 	max-width: 100%;
 	white-space: nowrap;
 	overflow: hidden;
-	text-shadow: -2px 2px #00142d;
-	-webkit-text-stroke: 1px #00142d;
-	text-stroke: 1px #00142d;
+	text-shadow: -1px 1px #00142d;
+	-webkit-text-stroke: 0.8px #00142d;
+	text-stroke: 0.8px #00142d;
 	font-family: $ttBlack;
 	@include get-vw(font-size, 29px, 29px);
 	line-height: .8;
-	letter-spacing: -.29px;
+	letter-spacing: -1px;
 	text-transform: uppercase;
 	background: #FFA3FF;
 	border: 1px solid #000000;
@@ -574,6 +580,14 @@ nav {
 		position: relative;
 		transform: scale(1) translateZ(0);
 		transition: transform .3s $ease-out-sine;
+		display: flex;
+		align-items: center;
+	}
+	img {
+		width: 21px;
+		position: relative;
+		margin-left: 7px;
+		top: -2px;
 	}
 	&:before,
 	&:after {
@@ -645,6 +659,15 @@ nav {
 			}
 		}
 	}
+	@include bp-767 {
+		line-height: 1;
+		padding-top: 3px;
+		font-size: 29px;
+		letter-spacing: -0.4px;
+		img {
+			width: 14px;
+		}
+	}
 }
 
 .card-wrapper {
@@ -652,7 +675,8 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	width: 30%;
+	@include get-vw(width, 284px, 200px);
+	@include get-vw(height, 415px, 292px);
 	aspect-ratio: 0.68/1;
 	&.dummy {
 		height: 0;
@@ -746,7 +770,7 @@ nav {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
-		font-weight: 900;
+
 		@include get-vw(font-size, 16px, 12px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -799,7 +823,7 @@ nav {
 		color: #FFF;
 		@include get-vw(font-size, 18px,12px);
 		font-style: normal;
-		font-weight: 900;
+
 		line-height: 1.45;
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 	}
@@ -808,19 +832,18 @@ nav {
 		font-family: $ttBlack;
 		@include get-vw(font-size, 46px, 32px);
 		line-height: .91;
+		text-shadow: 0px 0px 2px rgba(0, 20, 45, 0.45);
 		letter-spacing: -0.92px;
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
-		text-shadow: -2px 2px #00142d;
-		-webkit-text-stroke: 1px #00142d;
-		text-stroke: 1px #00142d;
 		max-width: 85%;
 	}
 	.price {
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 		p {
 			color: #E9F7FB;
-			font-family: $mencoMedium;
+			font-family: $mencoBold;
 			@include get-vw(font-size, 21px, 16px);
+			text-shadow: 0px 0px 2px #00142d;
 			line-height: 1.45;
 		}
 		strong {
@@ -834,11 +857,9 @@ nav {
 		transition: all .18s $ease-in-out;
 		position: absolute;
 		z-index: 4;
-
 	}
 
 	@include bp-959 {
-		@include get-vw(min-width, 184px, 170px);
 		.price {
 			margin-bottom: 5px;
 		}
@@ -849,30 +870,49 @@ nav {
 		.block {
 			box-shadow: 1.2px 2.4px 0 2.4px rgba(0, 0, 0, 0.15), 0 0 0 1.2px #00142D;
 		}
-		.img-wrapper {
-			img {
-				height: 288px;
-			}
-		}
 	}
 
 	@include bp-767 {
 		aspect-ratio: 1/1.68;
 		min-width: 172px;
+		height: auto;
+		width: auto;
+		.block {
+			border-width: 5px;
+			border-radius: 15px;
+		}
 		.pink-btn {
 			position: relative;
 			transform: scale(1);
 			font-size: 16px;
 			max-width: 90%;
 			height: 40px;
-			text-shadow: -0.5px 0.5px;
+			-webkit-text-stroke: 0.5px #00142d;
+			text-stroke: 0.5px #00142d;
+			text-shadow: -0.5px 0.5px #00142d;
 			svg {
 				height: 13px;
 			}
 		}
 	}
 }
-
+.increment-wrapper {
+	button {
+		position: relative;
+		&:after {
+			width: 26px;
+			height: 26px;
+			left: -8px;
+			top: -2px;
+			content: "";
+			position: absolute;
+		}
+	}
+	.decrease {
+		position: relative;
+		top: -1px;
+	}
+}
 .hero {
 	position: relative;
 	height: calc((var(--vh, 1vh) * 100));
@@ -897,7 +937,7 @@ nav {
 		p {
 			color: #00142D;
 			font-family: $mencoBlack;
-font-weight: 900;
+
 			@include get-vw(font-size, 18px, 16px);
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -912,7 +952,7 @@ font-weight: 900;
 		background:  #A9FF99;
 		color: #00142D;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		@include get-vw(font-size, 16px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -923,13 +963,13 @@ font-weight: 900;
 	h1 {
 		color: #FFF;
 		text-shadow: -3px 3px #00142d;
-		-webkit-text-stroke: 1px #00142d;
-		text-stroke: 1px #00142d;
+		-webkit-text-stroke: 1.5px #00142d;
+		text-stroke: 1.5px #00142d;
 		font-family: $ttBlack;
 		//@include get-vw(font-size, 104px, 64px);
 		font-size: 104px;
 		line-height: .91;
-		letter-spacing: -1.4px;
+		letter-spacing: -2px;
 		text-transform: uppercase;
 		max-width: 320px;
 	}
@@ -968,11 +1008,21 @@ font-weight: 900;
 			padding-right: 16px;
 			padding-left: 16px;
 		}
+		.tag {
+			margin-bottom: 23px;
+		}
 		h1 {
-			white-space: nowrap;
+			-webkit-text-stroke: 1.28px #00142d;
+			text-stroke: 1.28px #00142d;
+			margin-bottom: 8px;
+			max-width: none;
+		}
+		.pink-btn {
+			margin-top: 24px;
 		}
 		.left {
 			max-width: 100%;
+			gap: 0;
 		}
 		.toy {
 			width: 286px;
@@ -1028,7 +1078,7 @@ font-weight: 900;
 			color: #00142D;
 			text-align: center;
 			font-family: $mencoBlack;
-font-weight: 900;
+
 			@include get-vw(font-size, 18px, 11px);
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -1049,14 +1099,11 @@ font-weight: 900;
 	@include bp-959 {
 		padding: 0 10px;
 		.block {
-			height: auto;
 			&:nth-of-type(2) {
-				height: 110px;
 				margin-left: 10px;
 				margin-right: 5px;
 			}
 			svg {
-				height: auto;
 				&:first-of-type {
 					display: none;
 				}
@@ -1068,15 +1115,32 @@ font-weight: 900;
 	}
 
 	@include bp-767 {
+		padding: 8vw 4px 0;
+		overflow: visible;
 		.block {
 			width: 29%;
+			height: auto;
+			svg {
+				height: auto;
+			}
 			&:nth-of-type(2) {
 				width: 36%;
+				height: auto;
 				img {
 					height: 90px;
 				}
 			}
-
+		}
+		.inner {
+			p {
+				&:last-of-type {
+					letter-spacing: -1.085px;
+					text-shadow: -2px 2px 0px #00142D;
+				}
+			}
+		}
+		svg {
+			width: 107%;
 		}
 		img {
 			height: 90px;
@@ -1101,7 +1165,7 @@ font-weight: 900;
 			color: #00142D;
 			text-align: center;
 			font-family: $mencoBlack;
-font-weight: 900;
+
 			font-size: 18px;
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -1130,14 +1194,28 @@ font-weight: 900;
 		justify-content: center;
 		overflow: visible;
 	}
-
+	@include bp-959 {
+		padding-top: 40px;
+	}
 	@include bp-767 {
-		padding: 40px 20px 15px;
+		padding: 40px 20px 25px;
 		.best-sellers-wrapper {
 			padding: 0 0px;
 		}
+		svg {
+			height: auto;
+		}
+		.top p {
+			font-size: 16px;
+			max-width: 285px;
+			margin: 0 auto;
+		}
 		.inner {
 			justify-content: normal;
+			gap: 0;
+			.slide {
+				margin: 0 7px;
+			}
 		}
 	}
 }
@@ -1165,7 +1243,7 @@ font-weight: 900;
 	.eyebrow {
 		color: #00142D;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		font-size: 18px;
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1262,7 +1340,7 @@ font-weight: 900;
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		@include get-vw(font-size, 16px, 12px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1299,6 +1377,11 @@ font-weight: 900;
 		.tile-wrapper {
 			gap: 33px;
 			flex-direction: column;
+			padding-left: 16px;
+			padding-right: 16px;
+		}
+		.pink-btn {
+			@include get-vw-mobile(width, 230px, 230px);
 		}
 		.tile {
 			width: 100%;
@@ -1323,7 +1406,7 @@ font-weight: 900;
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1441,7 +1524,12 @@ font-weight: 900;
 		}
 	}
 }
-
+.mobile-only {
+	display: none;
+	@include bp-767 {
+		display: flex;
+	}
+}
 .bottom-marquee {
 	display: flex;
 	flex-direction: column;
@@ -1471,7 +1559,7 @@ font-weight: 900;
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1542,7 +1630,7 @@ footer {
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
-		font-weight: 900;
+
 		font-size: 18px;
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1634,7 +1722,7 @@ footer {
 			p:last-of-type {
 				color: #477DFD;
 				font-family: $mencoBlack;
-font-weight: 900;
+
 				font-size: 10px;
 				line-height: 1.45;
 				text-transform: uppercase;
@@ -1771,7 +1859,7 @@ font-weight: 900;
 			p {
 				text-align: center;
 				font-family: $mencoBlack;
-font-weight: 900;
+
 				text-transform: uppercase;
 				color: #00142D;
 				@include get-vw(font-size, 12px, 8px);
@@ -1808,7 +1896,7 @@ font-weight: 900;
 			color: #80ABFF;
 			text-align: center;
 			font-family: $mencoBlack;
-font-weight: 900;
+
 			font-size: 18px;
 			line-height: 1.45;
 			text-transform: uppercase;
@@ -1826,7 +1914,7 @@ font-weight: 900;
 		color: #E9F7FB;
 		text-align: center;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		font-size: 18px;
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -1887,6 +1975,7 @@ font-weight: 900;
 				width: calc(50% - 5px);
 				&:nth-of-type(even) {
 					padding-left: 20px;
+					text-align: right;
 				}
 			}
 		}
@@ -1943,7 +2032,7 @@ font-weight: 900;
 		color: #00142D;
 		text-align: center;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
@@ -2040,6 +2129,14 @@ font-weight: 900;
 		gap: 10px;
 		span {
 			transition: all 0.18s $ease-in;
+			width: 18px;
+			display: flex;
+			position: relative;
+			top: -2px;
+		}
+		img {
+			width: 100%;
+			object-fit: contain;
 		}
 	}
 	.drawer-items {
@@ -2090,7 +2187,7 @@ font-weight: 900;
 			justify-content: space-between;
 		}
 		.card-wrapper {
-			min-width: calc(50% - 5px);
+			width: calc(50% - 6px);
 		}
 	}
 }
@@ -2142,7 +2239,7 @@ font-weight: 900;
 	p {
 		color: #00142D;
 		font-family: $mencoBlack;
-font-weight: 900;
+
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;

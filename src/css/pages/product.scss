@@ -48,11 +48,12 @@
       display: flex;
       flex-direction: column;
       width: 100%;
+      height: auto;
+      aspect-ratio: 0.75/1;
       border: 8px solid #FFF;
       overflow: hidden;
       box-shadow: 2px 4px 0 4px rgba(0, 0, 0, 0.15), 0 0 0 2px #00142D;
       @include get-vw(margin-bottom, 19px, 19px);
-      @include get-vw(height, 603px, 340px);
       @include get-vw(border-radius, 24px, 22px);
     }
     .slider {
@@ -67,7 +68,7 @@
       min-width: 100%;
       img {
         width: 100%;
-        @include get-vw(height, 603px, 340px);
+        height: 100%;
       }
     }
     .thumbnails {
@@ -102,7 +103,7 @@
     }
     .eyebrow {
       color: #00142D;
-      font-weight: 900;
+
       font-family: $mencoBlack;
       line-height: 1.45;
       text-transform: uppercase;
@@ -173,7 +174,7 @@
       font-size: 14px;
       @include get-vw(margin-bottom, 24px, 24px);
       strong {
-        font-weight: 900;
+
         font-family: $mencoBlack;
       }
       img {
@@ -185,7 +186,7 @@
     .copy {
       color: #00142D;
       font-family: $mencoBlack;
-font-weight: 900;
+
       line-height: 1.45;
       text-transform: uppercase;
       @include get-vw(font-size, 18px, 16px);
@@ -215,7 +216,7 @@ font-weight: 900;
       color: #000;
       text-align: center;
       font-family: $mencoBold;
-font-weight: 700;
+      font-weight: 700;
       font-size: 14px;
       line-height: 1.45;
       text-transform: uppercase;
@@ -275,6 +276,8 @@ font-weight: 700;
       border-radius: 100px;
       border: 1px solid #000;
       background: #FFA3FF;
+      padding-top: 1px;
+      padding-bottom: 0px;
       box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
       height: 100%;
       color: #F5FDFF;
@@ -282,15 +285,19 @@ font-weight: 700;
       font-family: $ttBlack;
       font-size: 29px;
       line-height: .80;
-      letter-spacing: -0.01em;
+      letter-spacing: -1px;
       text-transform: uppercase;
-      -webkit-text-stroke: 1px #00142d;
-      text-stroke: 1px #00142d;
-      text-shadow: -1px 1px #00142D;
+      text-shadow: -1px 1px #00142d;
+      -webkit-text-stroke: 0.8px #00142d;
+      text-stroke: 0.8px #00142d;
       white-space: nowrap;
       @include get-vw(width, 275px, 180px);
       span {
         margin-left: 8px;
+        span {
+          display: inline-flex;
+          bottom: -3px;
+        }
       }
     }
     @include bp-767 {
@@ -308,13 +315,15 @@ font-weight: 700;
       .slider {
         display: flex;
         gap: 12px;
-        height: 340px;
+        height: auto;
+        aspect-ratio: 0.75/1;
       }
       .slide {
         width: 100%;
         min-width: 100%;
         img {
           border-radius: 0;
+          height: 100%;
         }
       }
       .frame {
@@ -353,7 +362,6 @@ font-weight: 700;
       }
       .after-pay {
         font-family: $mencoBlack;
-font-weight: 900;
       }
       .variant-wrapper {
         margin-bottom: 0;
@@ -371,6 +379,21 @@ font-weight: 900;
       }
       .atc-form {
         width: 100%;
+      }
+      .add-to-cart {
+        width: auto;
+        flex: 1;
+        -webkit-text-stroke: 0.5px #00142d;
+        text-stroke: 0.5px #00142d;
+        text-shadow: -0.5px 0.5px #00142d;
+        img {
+          width: 21px;
+        }
+      }
+      .quantity {
+        max-width: 90px;
+        min-width: 0;
+        padding: 0 14px 2px;
       }
     }
   }

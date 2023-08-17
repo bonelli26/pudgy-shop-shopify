@@ -156,6 +156,7 @@
         "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5",
         "d7507adf-d969-4e27-873d-335e99f37fdf"
       ],
+      "disabled": true,
       "settings": {
         "marquee_duration": "30",
         "marquee_duration_mobile": "20",

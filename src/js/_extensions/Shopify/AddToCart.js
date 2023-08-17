@@ -7,6 +7,9 @@ export class AddToCart {
 	constructor(){
 		this.forms = document.querySelectorAll(".atc-form:not(.bound)");
 		this.shippingMeterBar = document.getElementById("shipping-meter-bar")
+		this.shippingNoteOne = document.getElementById("shipping-note-one")
+		this.shippingNoteTwo = document.getElementById("shipping-note-two")
+		this.shippingThreshold = Number(this.shippingMeterBar.dataset.threshold)
 		this.bindATCEvents();
 		this.getCurrentCart(true);
 	}
@@ -213,9 +216,14 @@ export class AddToCart {
 					this.toggleEmptyCart(false);
 					const easyPrice = Number(((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2)))
 					console.log(easyPrice)
-					this.incentiveBarPercent = easyPrice / 25
+					this.incentiveBarPercent = easyPrice / this.shippingThreshold
 					if (this.incentiveBarPercent >= 1) {
 						this.incentiveBarPercent = 1
+						gsap.set(this.shippingNoteOne, { display: "none" })
+						gsap.set(this.shippingNoteTwo, { display: "block" })
+					} else {
+						gsap.set(this.shippingNoteOne, { display: "block" })
+						gsap.set(this.shippingNoteTwo, { display: "none" })
 					}
 					if (!firstBuild) {
 						$miniCart.open()
@@ -225,6 +233,8 @@ export class AddToCart {
 					}
 				} else {
 					this.toggleEmptyCart(true, true);
+					gsap.set(this.shippingNoteOne, { display: "block" })
+					gsap.set(this.shippingNoteTwo, { display: "none" })
 					if (!firstBuild) {
 						gsap.to(this.shippingMeterBar, { scaleX: 0, ease: "expo.inOut", duration: 0.8 })
 					} else {
