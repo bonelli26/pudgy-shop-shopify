@@ -77,7 +77,6 @@ const globalEvents = (namespace = null)=>{
 			prefetchArr.push(url)
 			console.log(prefetchUs[i].href)
 		}
-
 	}
 	if ('requestIdleCallback' in window) {
 		window.requestIdleCallback(() => { new Prefetch(prefetchArr) }, { timeout: 4000 });
