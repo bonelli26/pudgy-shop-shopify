@@ -19,6 +19,16 @@
     ]
   },
   {
+    "name": "Social share image",
+    "settings": [
+      {
+        "type": "image_picker",
+        "id": "share_image",
+        "label": "Social share image"
+      }
+    ]
+  },
+  {
     "name": "Cart settings",
     "settings": [
       {
@@ -221,7 +231,6 @@
         "type": "image_picker",
         "label": "Footer Image 4"
       }
-
     ]
   },
   {

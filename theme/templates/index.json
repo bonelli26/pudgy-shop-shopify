@@ -4,22 +4,22 @@
       "type": "hero-home",
       "settings": {
         "hero_tag": "NEW DROP",
-        "hero_header": "Pudgy  bowl cut",
+        "hero_header": "Welcome to the huddle!",
         "hero_intro": "Send a Pudgy Penguin and spread the love! It's the perfect gift for your significant other, family, friends, or even yourself.",
         "hero_button_url": "\/collections\/all-toys",
-        "hero_bg": "shopify:\/\/shop_images\/Hero.jpg",
-        "hero_bg_mobile": "shopify:\/\/shop_images\/Hero_ecfb476b-64da-4984-b75d-10ba1d6151e4.jpg"
+        "hero_bg": "shopify:\/\/shop_images\/Hero.png",
+        "hero_bg_mobile": "shopify:\/\/shop_images\/Hero-mobile.png"
       }
     },
     "block-trio": {
       "type": "block-trio",
       "settings": {
-        "eyebrow_1": "Traits minted",
-        "copy_1": "5000",
+        "eyebrow_1": "Instagram",
+        "copy_1": "700K+",
         "eyebrow_2": "Toys Sold",
         "copy_2": "10,000+",
-        "eyebrow_3": "Market Value",
-        "copy_3": "10m"
+        "eyebrow_3": "Giphy Views",
+        "copy_3": "5B+"
       }
     },
     "best-sellers": {
@@ -40,7 +40,7 @@
         "897dbcb9-4507-4b27-af0d-a0dede27b754": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins™-huggable-plush-pudgy-man"
+            "product": "polar-bear-plushie"
           }
         }
       },
@@ -50,7 +50,7 @@
         "897dbcb9-4507-4b27-af0d-a0dede27b754"
       ],
       "settings": {
-        "heading": "best sellers",
+        "heading": "The worlds new favorite Penguin",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
       }
     },
@@ -66,7 +66,7 @@
         "aa2c735d-077c-42fe-847d-e9d88e12084f": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins™-huggable-plush-pudgy-man"
+            "product": "huggable-plush-golden-pudgy"
           }
         },
         "090542dc-b5cc-4b21-8d20-1824095d9616": {
