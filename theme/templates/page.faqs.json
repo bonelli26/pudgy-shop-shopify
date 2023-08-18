@@ -1,0 +1,90 @@
+{
+  "sections": {
+    "faq-main": {
+      "type": "faq-main",
+      "blocks": {
+        "daf2490c-67fd-4fad-adb5-ab3659d9a8d2": {
+          "type": "block_1",
+          "settings": {
+            "question": "Do you ship worldwide?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "4fd92708-3136-4002-94cd-14e9cf0632a9": {
+          "type": "block_1",
+          "settings": {
+            "question": "What happens when a collectible is sold out?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "216053f1-ee90-498c-9d5c-a965c64ead84": {
+          "type": "block_1",
+          "settings": {
+            "question": "What happens when a collectible is sold out?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "95d70a83-afa9-4e80-b708-65f99588ce55": {
+          "type": "block_1",
+          "settings": {
+            "question": "Do you ship worldwide?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "069a3312-b035-4095-87f7-1920f315df88": {
+          "type": "block_2",
+          "settings": {
+            "question": "Do you ship worldwide?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "2bf5814b-9e14-4d68-97c2-9c8b239785cc": {
+          "type": "block_2",
+          "settings": {
+            "question": "What happens when a collectible is sold out?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "71df9c94-4348-4d59-8641-bd357b73ff45": {
+          "type": "block_2",
+          "settings": {
+            "question": "What happens when a collectible is sold out?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        },
+        "6e13c69d-ba4c-477d-9496-6228f63c7596": {
+          "type": "block_2",
+          "settings": {
+            "question": "Do you ship worldwide?",
+            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "daf2490c-67fd-4fad-adb5-ab3659d9a8d2",
+        "4fd92708-3136-4002-94cd-14e9cf0632a9",
+        "216053f1-ee90-498c-9d5c-a965c64ead84",
+        "95d70a83-afa9-4e80-b708-65f99588ce55",
+        "069a3312-b035-4095-87f7-1920f315df88",
+        "2bf5814b-9e14-4d68-97c2-9c8b239785cc",
+        "71df9c94-4348-4d59-8641-bd357b73ff45",
+        "6e13c69d-ba4c-477d-9496-6228f63c7596"
+      ],
+      "settings": {
+        "page_header": "Frequently asked questions",
+        "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "block_title_1": "Section Title",
+        "block_title_2": "Section Title"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "faq-main",
+    "footer"
+  ]
+}

@@ -1,23 +1,26 @@
-
+<div class="top">
     <h1 class="form-content form-fade-el">{{ section.settings.header }}</h1>
     <p class="form-content form-fade-el">{{ section.settings.copy }}</p>
-    <div class="bottom">
-        <p class="success-message">{{ settings.contact_form_success }}</p>
-        <form>
-            <div class="form-content form-fade-el">
-                <input required type="text" id="name" name="name" placeholder="Name">
-                <input required type="email" name="email" placeholder="Email" id="email">
-                <input required type="text" name="subject" placeholder="Subject" id="subject">
-                <textarea required name="message" id="message" placeholder="Message"></textarea>
-                <button class="btn black" type="submit" value="Submit">Submit</button>
-            </div>
-            <div class="success-content">
-                <p>{{ section.settings.success_header }}</p>
-                <p>{{ section.settings.success_copy }}</p>
-                <a href="/" class="btn black">Back to Home</a>
-            </div>
-        </form>
-    </div>
+</div>
+<div class="bottom">
+    {% comment %}<p class="success-message">{{ settings.contact_form_success }}</p>{% endcomment %}
+    <form>
+        <div class="form-content form-fade-el">
+            <label for="name">Name</label>
+            <input required type="text" id="name" name="name" placeholder="Enter your name">
+            <label for="email">Email</label>
+            <input required type="email" name="email" placeholder="Enter your Email" id="email">
+            <label for="message">Message</label>
+            <textarea required name="message" id="message" placeholder="Enter your Message  "></textarea>
+            <button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>
+        </div>
+        <div class="success-content">
+            <p>{{ section.settings.success_header }}</p>
+            <p>{{ section.settings.success_copy }}</p>
+            <a href="/" class="pink-btn"><span>Back to Home</span></a>
+        </div>
+    </form>
+</div>
 
 
 

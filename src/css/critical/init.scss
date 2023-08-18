@@ -529,7 +529,7 @@ nav {
 		@include get-vw(top, 800px, 800px);
 	}
 }
-.view-page {
+.view-page, .view-faqs, .view-contact {
 	background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
 	footer {
 		.footer-marquee, .top {
@@ -2266,6 +2266,364 @@ footer {
 		}
 		h2, h3, h4 {
 			text-shadow: -1px 1px #00142D;
+		}
+	}
+}
+
+
+.faq-main {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include get-vw(padding-top, 220px, 170px);
+	@include get-vw(padding-bottom, 200px, 110px);
+	@include get-vw(padding-left, 220px, 20px);
+	@include get-vw(padding-right, 200px, 20px);
+	max-width: 1440px;
+	margin: 0 auto;
+	.top {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include get-vw(margin-bottom, 48px, 34px);
+		p {
+			color: #00142D;
+			font-family: $mencoBold;
+			@include get-vw(font-size, 18px, 16px);
+			line-height: 1.45;
+			text-transform: uppercase;
+			max-width: 700px;
+		}
+	}
+	h1 {
+		color: #FFF;
+		text-shadow: -3px 3px #00142D;
+		-webkit-text-stroke: 1px #00142d;
+		text-stroke: 1px #00142d;
+		font-family: $ttBlack;
+		line-height: .91;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		@include get-vw(font-size, 104px, 64px);
+		@include get-vw(margin-bottom, 62px, 16px);
+	}
+	.faq-body {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+	}
+	.title {
+		color: #FFF;
+		text-shadow: -2px 2px #00142D;
+		-webkit-text-stroke: 1px #00142d;
+		text-stroke: 1px #00142d;
+		font-family: $ttBlack;
+		line-height: .91;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		@include get-vw(font-size, 72px, 56px);
+		@include get-vw(margin-bottom, 43px, 24px);
+		&:nth-of-type(2) {
+			@include get-vw(margin-top, 120px, 47px);
+		}
+	}
+	.block {
+		display: flex;
+		flex-direction: column;
+		width: 100%;
+		@include get-vw(gap, 11px, 8px);
+	}
+	.drawer {
+		position: relative;
+		width: 100%;
+		display: flex;
+		flex-direction: column;
+		align-items: flex-start;
+		z-index: 2;
+		height: auto;
+		@include get-vw(padding-left, 58px, 25px);
+		@include get-vw(padding-top, 15px, 15px);
+		@include get-vw(padding-bottom, 18px, 18px);
+		@include get-vw(padding-right, 52px, 25px);
+		border-radius: 5px;
+		border: 2px solid #00142D;
+		background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
+		box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+		&.open {
+			span {
+				transform: rotate(45deg);
+			}
+		}
+		.drawer-items {
+			overflow: hidden;
+			transform-origin: 0 center;
+			p {
+				@include get-vw(padding-top, 12px, 12px);
+				@include get-vw(margin-bottom, 70px, 34px);
+			}
+		}
+	}
+	.label {
+		width: 100%;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		color: #FBF7EB;
+		text-shadow: -2px 2px #00142D;
+		-webkit-text-stroke: 1px #00142d;
+		text-stroke: 1px #00142d;
+		font-family: $ttBlack;
+		line-height: .91;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		@include get-vw(font-size, 46px, 32px);
+		@include get-vw(height, 95px, 51px);
+		span {
+			display: flex;
+			transition: all .25s $ease-in-out-sine;
+			//text-shadow: -3px 3px #00142D;
+			//@include get-vw(font-size, 104px, 56px);
+		}
+	}
+	.drawer-items {
+		* {
+			color: #00142D;
+			font-family: $mencoMedium;
+			line-height: 1.45;
+			@include get-vw(font-size, 21px, 16px);
+		}
+	}
+	@include bp-767 {
+		padding-left: 18px;
+		padding-right: 18px;
+		h1 {
+			text-shadow: -2px 2px #00142D;
+		}
+		.drawer {
+			padding-top: 28px;
+			padding-bottom: 28px;
+		}
+		.label {
+			text-shadow: -1px 1px #00142D;
+		}
+	}
+}
+
+
+.contact {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	@include get-vw(padding-top, 220px, 170px);
+	@include get-vw(padding-bottom, 200px, 110px);
+	@include get-vw(padding-left, 220px, 20px);
+	@include get-vw(padding-right, 220px, 20px);
+	max-width: 1440px;
+	margin: 0 auto;
+	.top {
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		@include get-vw(margin-bottom, 47px, 26px);
+		p {
+			color: #00142D;
+			font-family: $mencoBold;
+			@include get-vw(font-size, 18px, 16px);
+			line-height: 1.45;
+			text-transform: uppercase;
+			max-width: 700px;
+		}
+	}
+	h1 {
+		color: #FFF;
+		text-shadow: -3px 3px #00142D;
+		-webkit-text-stroke: 1px #00142d;
+		text-stroke: 1px #00142d;
+		font-family: $ttBlack;
+		line-height: .91;
+		letter-spacing: -0.02em;
+		text-transform: uppercase;
+		@include get-vw(font-size, 104px, 64px);
+		@include get-vw(margin-bottom, 24px, 16px);
+	}
+	.bottom {
+		position: relative;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		width: 640px;
+		border-radius: 13px;
+		border: 2px solid #00142D;
+		background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
+		box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+		@include get-vw(padding-top, 39px, 24px);
+		@include get-vw(padding-bottom, 39px, 24px);
+		@include get-vw(padding-right, 35px, 24px);
+		@include get-vw(padding-left, 35px, 24px);
+	}
+	form {
+		width: 100%;
+		&.success {
+			.form-content {
+				opacity: 0;
+				pointer-events: none;
+				height: 0;
+			}
+			.success-content {
+				opacity: 1;
+				visibility: visible;
+				position: relative;
+			}
+		}
+	}
+	.form-content {
+		display: flex;
+		flex-direction: column;
+	}
+	input, textarea {
+		width: 100%;
+	}
+	label {
+		color: var(--dark, #00142D);
+		font-family: $mencoBold;
+		font-size: 16px;
+		line-height: 1.45;
+		text-transform: uppercase;
+		padding: 0 0 8px 20px;
+	}
+	input {
+		color: #00142D;
+		font-family: $mencoMedium;
+		@include get-vw(font-size, 18px, 16px);
+		line-height: 1.45;
+		text-transform: uppercase;
+		border-radius: 29px;
+		border: 1px solid #00142D;
+		background: #FFF;
+		box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+		outline: none;
+		margin-bottom: 24px;
+		padding: 16px 24px;
+		&:not(:placeholder-shown) {
+			background: #FFFFFF;
+		}
+		&:focus {
+			background: $white;
+		}
+		&::placeholder {
+			color: #00142D;
+			font-family: $mencoMedium;
+			@include get-vw(font-size, 18px, 16px);
+			line-height: 1.45;
+			text-transform: uppercase;
+		}
+		&:-webkit-autofill {
+			background: #FFFFFF !important;
+			color: #00142D;
+			&:focus, &:active {
+				background: #FFFFFF !important;
+				color: #00142D;
+				transition: .23s all $ease-in-out-sine;
+			}
+		}
+	}
+	textarea {
+		color: #00142D;
+		font-family: $mencoMedium;
+		@include get-vw(font-size, 18px, 16px);
+		line-height: 1.45;
+		text-transform: uppercase;
+		border-radius: 29px;
+		border: 1px solid #00142D;
+		background: #FFF;
+		box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+		outline: none;
+		min-height: 110px;
+		padding: 16px 24px;
+		max-width: 100%;
+		min-width: 100%;
+		&.error {
+			border: 1px solid red;
+		}
+		&:not(:placeholder-shown) {
+			background: #FFFFFF;
+		}
+		&:focus {
+			background: $white;
+			color: #00142D;
+		}
+		&::placeholder {
+			color: #00142D;
+			font-family: $mencoMedium;
+			@include get-vw(font-size, 18px, 16px);
+			line-height: 1.45;
+			text-transform: uppercase;
+		}
+		&:-webkit-autofill {
+			background: #FFFFFF !important;
+			color: #00142D;
+			-webkit-box-shadow: 0 0 0 1000px white inset;
+			-webkit-text-fill-color: #585689;
+			&:focus, &:active {
+				background: #FFFFFF !important;
+				color: #585689;
+				transition: .23s all $ease-in-out-sine;
+				-webkit-box-shadow: 0 0 0 1000px white inset;
+				-webkit-text-fill-color: #585689;
+			}
+		}
+	}
+	[type=submit] {
+		width: 100%;
+		@include get-vw(margin-top, 24px, 24px);
+	}
+	.success-content {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		position: absolute;
+		opacity: 0;
+		visibility: hidden;
+		text-align: center;
+		transition: .25s opacity $ease-in-out-sine;
+		top: 0;
+		width: 100%;
+		//transform: translateY(-50%);
+		z-index: 3;
+	}
+	.success-content .pink-btn {
+		width: 100%;
+	}
+	.success-content p {
+		&:first-of-type {
+			color: #FFF;
+			text-shadow: -3px 3px #00142D;
+			-webkit-text-stroke: 1px #00142d;
+			text-stroke: 1px #00142d;
+			font-family: $ttBlack;
+			line-height: .91;
+			letter-spacing: -0.02em;
+			text-transform: uppercase;
+			@include get-vw(font-size, 46px, 29px);
+			@include get-vw(margin-bottom, 24px, 16px);
+		}
+		&:last-of-type {
+			color: var(--dark, #00142D);
+			font-family: $mencoBold;
+			font-size: 16px;
+			line-height: 1.45;
+			text-transform: uppercase;
+			@include get-vw(margin-bottom, 42px, 24px);
+		}
+	}
+
+	@include bp-767 {
+		padding-left: 20px;
+		padding-right: 20px;
+		.bottom {
+			width: 100%;
 		}
 	}
 }
