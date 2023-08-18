@@ -300,6 +300,70 @@
         }
       }
     }
+    .drawers-wrapper {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+      @include get-vw(margin-top, 32px, 24px);
+      @include get-vw(gap, 8px, 8px);
+      .drawer {
+        position: relative;
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        z-index: 2;
+        height: auto;
+        @include get-vw(padding-left, 24px, 24px);
+        @include get-vw(padding-top, 16px, 16px);
+        @include get-vw(padding-bottom, 16px, 16px);
+        @include get-vw(padding-right, 24px, 24px);
+        border-radius: 2.5px;
+        border: 1px solid #00142D;
+        background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
+        box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+        &.open {
+          span {
+            transform: rotate(45deg);
+          }
+        }
+        .drawer-items {
+          overflow: hidden;
+          transform-origin: 0 center;
+          * {
+            @include get-vw(padding-top, 12px, 12px);
+            @include get-vw(padding-bottom, 12px, 12px);
+          }
+        }
+      }
+      .label {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        color: #FBF7EB;
+        text-shadow: -2px 2px #00142D;
+        -webkit-text-stroke: 1px #00142d;
+        text-stroke: 1px #00142d;
+        font-family: $ttBlack;
+        line-height: .91;
+        letter-spacing: -0.02em;
+        text-transform: uppercase;
+        @include get-vw(font-size, 29px, 29px);
+        span {
+          display: flex;
+          transition: all .25s $ease-in-out-sine;
+        }
+      }
+      .drawer-items {
+        * {
+          color: #00142D;
+          font-family: $mencoMedium;
+          line-height: 1.45;
+          @include get-vw(font-size, 18px, 16px);
+        }
+      }
+    }
     @include bp-767 {
       .pdp-hero-inner {
         flex-direction: column;
@@ -627,5 +691,3 @@
     }
   }
 }
-
-

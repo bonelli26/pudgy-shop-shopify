@@ -110,6 +110,36 @@
                 </button>
             </form>
         </div>
+        <div class="drawers-wrapper">
+            {% for title in product.metafields.accentuate.drawer_title %}
+                <div class="col drawer detail-drawer">
+                    <div class="label">{{ title }}
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+  <g filter="url(#filter0_d_1769_3223)">
+    <path d="M11.6988 25.551V17.0862H3.55957V9.92374H11.6988V1.45898H18.8612V9.92374H27.0004V17.0862H18.8612V25.551H11.6988Z" fill="white"/>
+    <path d="M11.2292 25.551V26.0205H11.6988H18.8612H19.3308V25.551V17.5558H27.0004H27.47V17.0862V9.92374V9.45417H27.0004H19.3308V1.45898V0.989416H18.8612H11.6988H11.2292V1.45898V9.45417H3.55957H3.09V9.92374V17.0862V17.5558H3.55957H11.2292V25.551Z" stroke="#00142D" stroke-width="0.939137"/>
+  </g>
+  <defs>
+    <filter id="filter0_d_1769_3223" x="0.620117" y="0.52002" width="27.3193" height="27.9702" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+      <feOffset dx="-2" dy="2"/>
+      <feComposite in2="hardAlpha" operator="out"/>
+      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1769_3223"/>
+      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1769_3223" result="shape"/>
+    </filter>
+  </defs>
+</svg>
+                        </span>
+                    </div>
+                    <div class="drawer-items drawer-text">
+                        {{ product.metafields.accentuate.drawer_content[forloop.index0] }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
     </div>
 </div>
 
