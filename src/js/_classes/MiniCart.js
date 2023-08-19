@@ -4,7 +4,7 @@ import {globalStorage} from "../_global/storage";
 export class MiniCart {
     constructor() {
         this.backdrop = document.getElementById("mini-cart-backdrop");
-        this.trigger = globalStorage.windowWidth > 767 ? document.getElementById("mini-cart-trigger") : document.getElementById("mini-cart-trigger-mobile") ;
+        this.trigger = globalStorage.isGreaterThan767 ? document.getElementById("mini-cart-trigger") : document.getElementById("mini-cart-trigger-mobile") ;
         // this.homeTrigger = document.getElementById("mini-cart-trigger-home");
         this.miniCart = document.getElementById("mini-cart");
         this.fadeEls = document.querySelector(".mini-cart .inner");

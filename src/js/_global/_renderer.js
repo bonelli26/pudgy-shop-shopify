@@ -126,7 +126,7 @@ export const onReady = ()=>{
 	loadGlobalScopeImages(type);
 
 
-	if (globalStorage.windowWidth < 767) {
+	if (!globalStorage.isGreaterThan767) {
 		$mobileMenu = new MobileMenu();
 	}
 
