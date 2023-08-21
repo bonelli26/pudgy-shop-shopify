@@ -105,8 +105,6 @@ export const onReady = ()=>{
 
 	document.body.style.setProperty('--vh', `${vh}px`);
 
-
-
 	globalEvents(namespace);
 
 	getReviewOverviews();
@@ -121,12 +119,9 @@ export const onReady = ()=>{
 		})
 	}
 
-
-
 	loadGlobalScopeImages(type);
 
-
-	if (!globalStorage.isGreaterThan767) {
+	if (!globalStorage.isGreaterThan767 || document.body.classList.contains("force-mobile")) {
 		$mobileMenu = new MobileMenu();
 	}
 
