@@ -89,7 +89,8 @@
       transition: .3s all $ease-in-out-sine;
       box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
       aspect-ratio: 0.85 / 1;
-      max-height: 7vw;
+      @include get-vw(max-height, 120px, 120px);
+      @include get-vw(max-width, 105px, 105px);
       &.active {
         transform: rotate(-5deg);
         box-shadow: unset;
