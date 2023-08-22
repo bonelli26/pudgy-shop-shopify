@@ -426,7 +426,7 @@
         --d-d: .06s;
       }
       &.active {
-        transform: translate3d(1px, 1px, 0px) rotate(3deg);
+        transform: translate3d(1px, 1px, 0px);
         border-radius: 100px;
         border: 1px solid rgba(125, 0, 125, 0.23);
         background: linear-gradient(90deg, #9F8FFF 0%, #FFA3FF 25.33%, #FF8B8B 50.33%, #FFE092 74.81%, #A9FF99 100%);
@@ -533,6 +533,7 @@
         box-shadow: none;
         border: none;
         overflow: visible;
+        height: 100%;
       }
       .thumbnails {
         height: 100%;
@@ -583,11 +584,17 @@
         width: 100%;
       }
 
-
+      .add-to-cart {
+        width: 100%;
+      }
       .quantity {
         max-width: 90px;
-        min-width: 0;
+        min-width: 90px;
         padding: 0 14px 2px;
+      }
+      .options {
+        padding-bottom: 0;
+        padding-top: 25px;
       }
     }
   }
