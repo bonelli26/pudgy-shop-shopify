@@ -579,7 +579,7 @@ nav {
 		z-index: 3;
 		position: relative;
 		transform: scale(1) translateZ(0);
-		transition: transform .3s $ease-out-sine;
+		//transition: all .3s $ease-out-sine;
 		display: flex;
 		align-items: center;
 	}
@@ -642,9 +642,9 @@ nav {
 			transition: all .25s 0s $ease-in-out-sine;
 			--name: move;
 			--c: var(--color-hover);
-			span:not(.tag) {
-				transform: scale(0.975) translateZ(0);
-			}
+			//span:not(.tag) {
+			//	transform: scale(0.975) translateZ(0);
+			//}
 			&:before,
 			&:after {
 				--y: 0;

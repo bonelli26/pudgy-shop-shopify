@@ -117,7 +117,6 @@ export class AddToCart {
 				for (let j = 0; j < varData.length; j++) {
 					let matches = 0;
 					for (let z = 0; z < optionArr.length; z++) {
-						console.log(varData[j].title, optionArr[z])
 						if (varData[j].title === optionArr[z]) {
 							matches++;
 						} else {

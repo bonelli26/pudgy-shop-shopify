@@ -36,9 +36,7 @@
         <h1>{{ product.title }}</h1>
         <div class="price-wrapper">
             <p class="price">{{ product.price | money }}</p>
-            {% if product.first_available_variant.compare_at_price %}
-            <p class="old-price">{{ product.first_available_variant.compare_at_price | money }}<span><svg width="58" height="28" viewBox="0 0 58 28" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.38793" y1="26.7724" x2="55.7664" y2="1.41531" stroke="#EF928E" stroke-width="2"/><line x1="2.23317" y1="1.41498" x2="56.6116" y2="26.7721" stroke="#EF928E" stroke-width="2"/></svg></span></p>
-            {% endif %}
+            <p class="old-price compare-at-price">{% if product.first_available_variant.compare_at_price %}{{ product.first_available_variant.compare_at_price | money }}<span><svg width="58" height="28" viewBox="0 0 58 28" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.38793" y1="26.7724" x2="55.7664" y2="1.41531" stroke="#EF928E" stroke-width="2"/><line x1="2.23317" y1="1.41498" x2="56.6116" y2="26.7721" stroke="#EF928E" stroke-width="2"/></svg></span>{% endif %}</p>
         </div>
 
         {% comment %}<div class="after-pay desktop-only">{% endcomment %}
@@ -114,7 +112,10 @@
                     <span class="count">1</span>
                     <button type="button" class="increase">+</button>
                 </div>
-                <button class="pink-btn add-to-cart{% unless product.available %} disabled{% endunless %}" data-id="{{ product.first_available_variant.id }}" data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}" type="submit">
+                <button class="pink-btn add-to-cart{% unless product.available %} disabled{% endunless %}"
+                        data-id="{{ product.first_available_variant.id }}"
+                        data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}"
+                        type="submit">
                     <span class="in-stock">
                         Add To Cart
                         <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Vector.png?v=1691970255">
@@ -129,22 +130,22 @@
                     <div class="label">{{ title }}
                         <span>
                             <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
-  <g filter="url(#filter0_d_1769_3223)">
-    <path d="M11.6988 25.551V17.0862H3.55957V9.92374H11.6988V1.45898H18.8612V9.92374H27.0004V17.0862H18.8612V25.551H11.6988Z" fill="white"/>
-    <path d="M11.2292 25.551V26.0205H11.6988H18.8612H19.3308V25.551V17.5558H27.0004H27.47V17.0862V9.92374V9.45417H27.0004H19.3308V1.45898V0.989416H18.8612H11.6988H11.2292V1.45898V9.45417H3.55957H3.09V9.92374V17.0862V17.5558H3.55957H11.2292V25.551Z" stroke="#00142D" stroke-width="0.939137"/>
-  </g>
-  <defs>
-    <filter id="filter0_d_1769_3223" x="0.620117" y="0.52002" width="27.3193" height="27.9702" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-      <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-      <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-      <feOffset dx="-2" dy="2"/>
-      <feComposite in2="hardAlpha" operator="out"/>
-      <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
-      <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1769_3223"/>
-      <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1769_3223" result="shape"/>
-    </filter>
-  </defs>
-</svg>
+                              <g filter="url(#filter0_d_1769_3223)">
+                                <path d="M11.6988 25.551V17.0862H3.55957V9.92374H11.6988V1.45898H18.8612V9.92374H27.0004V17.0862H18.8612V25.551H11.6988Z" fill="white"/>
+                                <path d="M11.2292 25.551V26.0205H11.6988H18.8612H19.3308V25.551V17.5558H27.0004H27.47V17.0862V9.92374V9.45417H27.0004H19.3308V1.45898V0.989416H18.8612H11.6988H11.2292V1.45898V9.45417H3.55957H3.09V9.92374V17.0862V17.5558H3.55957H11.2292V25.551Z" stroke="#00142D" stroke-width="0.939137"/>
+                              </g>
+                              <defs>
+                                <filter id="filter0_d_1769_3223" x="0.620117" y="0.52002" width="27.3193" height="27.9702" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                  <feOffset dx="-2" dy="2"/>
+                                  <feComposite in2="hardAlpha" operator="out"/>
+                                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+                                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1769_3223"/>
+                                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1769_3223" result="shape"/>
+                                </filter>
+                              </defs>
+                            </svg>
                         </span>
                     </div>
                     <div class="drawer-items drawer-text">
