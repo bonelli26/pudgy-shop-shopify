@@ -1,11 +1,12 @@
 import { gsap } from "gsap";
+import {globalStorage} from "../_global/storage";
 
 export class MobileMenu {
 
 	constructor() {
 		this.nav = document.querySelector("nav");
 		if(!this.nav) { return; }
-		if(window.innerWidth < 767) {
+		if(!globalStorage.isGreaterThan767) {
 			this.navDrawer = document.getElementById("nav-bar");
 			this.navMask = document.querySelector(".nav-mask");
 			gsap.set(this.navDrawer, { scale: 0 });

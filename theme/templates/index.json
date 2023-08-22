@@ -28,13 +28,13 @@
         "e8f75052-7738-48fb-acb8-2a11acde5b8f": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-cowboy-figurine"
+            "product": "pudgy-penguins™-plush-buddy-carrot-pudgy"
           }
         },
         "0196dddd-1806-4fac-9a89-91aa9af0e793": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-fish-head-figurine"
+            "product": "pudgy-penguins™-plush-buddy-flower-princess"
           }
         },
         "897dbcb9-4507-4b27-af0d-a0dede27b754": {
@@ -60,7 +60,7 @@
         "9110167c-e0ed-4035-88e1-a08bafa83ca2": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-samurai-figurine"
+            "product": "pudgy-penguins™-positive-penguin-grey-purple"
           }
         },
         "aa2c735d-077c-42fe-847d-e9d88e12084f": {
@@ -77,9 +77,20 @@
         },
         "0f7f91a3-38f1-4621-82a6-8973523b70f7": {
           "type": "product-card",
-          "disabled": true,
           "settings": {
-            "product": "pudgy-penguins-samurai-figurine"
+            "product": "pudgy-penguins™-positive-penguin-black-red"
+          }
+        },
+        "dc21a677-d5f3-4007-afb4-ad7842580980": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins™-plush-buddy-flower-princess"
+          }
+        },
+        "b3004937-8f4d-44be-8a2e-7af6f91ab259": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins™-plush-buddy-huffle-pudge"
           }
         }
       },
@@ -87,7 +98,9 @@
         "9110167c-e0ed-4035-88e1-a08bafa83ca2",
         "aa2c735d-077c-42fe-847d-e9d88e12084f",
         "090542dc-b5cc-4b21-8d20-1824095d9616",
-        "0f7f91a3-38f1-4621-82a6-8973523b70f7"
+        "0f7f91a3-38f1-4621-82a6-8973523b70f7",
+        "dc21a677-d5f3-4007-afb4-ad7842580980",
+        "b3004937-8f4d-44be-8a2e-7af6f91ab259"
       ],
       "settings": {
         "heading": "Live Now",
