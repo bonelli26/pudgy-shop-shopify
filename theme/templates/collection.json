@@ -4,9 +4,7 @@
       "type": "main-collection-product-grid",
       "settings": {
         "collections_header": "SHOP ALL",
-        "collections_copy": "Welcome to Pudgy Penguins! Shop our line of cute plushies and figurines.",
-        "collections_link": "plushies",
-        "collections_link_2": "figurines"
+        "collections_copy": "Welcome to Pudgy Penguins! Shop our line of cute plushies and figurines."
       }
     },
     "footer": {

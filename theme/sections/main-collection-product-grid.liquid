@@ -1,6 +1,6 @@
 {% assign tags = collection.all_tags %}
 {% assign tagsSize = tags | size %}
-{{ collection.handle }}
+
 <div class="collection-hero">
     <h1>{{ section.settings.collections_header }}</h1>
     <p>{{ section.settings.collections_copy }}</p>
@@ -11,12 +11,6 @@
         {% for tag in tags %}
             <button class="pink-btn filter blue" data-trigger="{{ tag | handle }}"><span>{{ tag }}</span></button>
         {% endfor %}
-        {% if collection.handle == "figurines" %}
-            <a href="{{ section.settings.collections_link_1 }}" class="pink-btn blue filter "><span>{{ section.settings.collections_link_1 }}</span></a>
-        {% elsif collection.handle == "plushies" %}
-            <a href="{{ section.settings.collections_link_2 }}" class="pink-btn blue filter "><span>{{ section.settings.collections_link_2 }}</span></a>
-        {% endif %}
-
     </div>
 
 
@@ -31,15 +25,10 @@
                     </p>
                 </button>
                 <div class="drawer-items">
-                    <button data-trigger="all" class="filter-mobile all"><span>all toys</span></button>
+                    <button data-trigger="all" class="filter-mobile"><span>all toys</span></button>
                     {% for tag in tags %}
                         <button data-trigger="{{ tag | handle }}" class="filter-mobile"><span>{{ tag }}</span></button>
                     {% endfor %}
-                    {% if collection.handle == "figurines" %}
-                        <a href="{{ section.settings.collections_link_1 }}" class="filter-mobile"><span>{{ section.settings.collections_link_1 }}</span></a>
-                    {% elsif collection.handle == "plushies" %}
-                        <a href="{{ section.settings.collections_link_2 }}" class="filter-mobile"><span>{{ section.settings.collections_link_2 }}</span></a>
-                    {% endif %}
                 </div>
             </div>
         </div>
@@ -94,31 +83,21 @@
 </div>
 
 {% schema %}
-    {
-        "name": "Collection Categories",
-        "tag": "section",
-        "class": "collection-wrapper mw tabs-inside c-24",
-        "settings": [
-            {
-                "id": "collections_header",
-                "type": "text",
-                "label": "Collections Header"
-            },
-            {
-                "id": "collections_copy",
-                "type": "text",
-                "label": "Collections Copy"
-            },
-            {
-                "id": "collections_link_1",
-                "type": "text",
-                "label": "Collections Link"
-            },
-            {
-              "id": "collections_link_2",
-              "type": "text",
-              "label": "Collections Link"
-            }
-        ]
-    }
+{
+"name": "Collection Categories",
+"tag": "section",
+"class": "collection-wrapper mw tabs-inside c-24",
+"settings": [
+{
+"id": "collections_header",
+"type": "text",
+"label": "Collections Header"
+},
+{
+"id": "collections_copy",
+"type": "text",
+"label": "Collections Copy"
+}
+]
+}
 {% endschema %}
