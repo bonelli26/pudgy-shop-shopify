@@ -2089,6 +2089,7 @@ footer {
 	.filters {
 		display: flex;
 		justify-content: center;
+		flex-wrap: wrap;
 		@include get-vw(padding-bottom, 48px, 24px);
 		@include get-vw(gap, 11px, 11px);
 	}
