@@ -324,8 +324,8 @@ export const bindGorgiasForms = () => {
 			event.preventDefault();
 			if (submittedOnce) { return }
 			submittedOnce = true;
-			gsap.to(document.querySelectorAll(".form-fade-el"), { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" });
-			gsap.to(form.querySelector(".success-content"), { autoAlpha: 1, duration: 0.25, delay: 0.3, ease: "sine.inOut" });
+			// gsap.to(document.querySelectorAll(".form-fade-el"), { autoAlpha: 0, duration: 0.3, ease: "sine.inOut" });
+			gsap.to(form.querySelector(".success-content"), { position: "relative", autoAlpha: 1, duration: 0.25, delay: 0.3, ease: "sine.inOut" });
 
 			let ajax = new XMLHttpRequest(),
 				name = form.querySelector("#name").value,

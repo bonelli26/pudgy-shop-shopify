@@ -2453,18 +2453,14 @@ footer {
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		width: 640px;
-		border-radius: 13px;
-		border: 2px solid #00142D;
-		background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
-		box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
-		@include get-vw(padding-top, 39px, 24px);
-		@include get-vw(padding-bottom, 39px, 24px);
-		@include get-vw(padding-right, 35px, 24px);
-		@include get-vw(padding-left, 35px, 24px);
+		max-width: 640px;
+		width: 100%;
 	}
 	form {
 		width: 100%;
+		display: flex;
+		flex-direction: column;
+		@include get-vw(gap, 36px, 21px);
 		&.success {
 			.form-content {
 				opacity: 0;
@@ -2481,6 +2477,17 @@ footer {
 	.form-content {
 		display: flex;
 		flex-direction: column;
+		width: 100%;
+		border-radius: 13px;
+		border: 2px solid #00142D;
+		background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
+		box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+		@include get-vw(padding-top, 39px, 24px);
+		@include get-vw(padding-bottom, 39px, 24px);
+		@include get-vw(padding-right, 35px, 24px);
+		@include get-vw(padding-left, 35px, 24px);
+		//opacity: 0;
+		//visibility: hidden;
 	}
 	input, textarea {
 		width: 100%;
@@ -2583,6 +2590,7 @@ footer {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+		justify-content: center;
 		position: absolute;
 		opacity: 0;
 		visibility: hidden;
@@ -2590,33 +2598,21 @@ footer {
 		transition: .25s opacity $ease-in-out-sine;
 		top: 0;
 		width: 100%;
-		//transform: translateY(-50%);
 		z-index: 3;
+		border-radius: 41px;
+		border: 2px solid #00142D;
+		background: #A9FF99;
+		padding: 14px 22px;
 	}
 	.success-content .pink-btn {
 		width: 100%;
 	}
 	.success-content p {
-		&:first-of-type {
-			color: #FFF;
-			text-shadow: -3px 3px #00142D;
-			-webkit-text-stroke: 1px #00142d;
-			text-stroke: 1px #00142d;
-			font-family: $ttBlack;
-			line-height: .91;
-			letter-spacing: -0.02em;
-			text-transform: uppercase;
-			@include get-vw(font-size, 46px, 29px);
-			@include get-vw(margin-bottom, 24px, 16px);
-		}
-		&:last-of-type {
-			color: var(--dark, #00142D);
-			font-family: $mencoBold;
-			font-size: 16px;
-			line-height: 1.45;
-			text-transform: uppercase;
-			@include get-vw(margin-bottom, 42px, 24px);
-		}
+		color: #00142D;
+		font-family: $mencoBlack;
+		font-size: 16px;
+		line-height: 1.45;
+		text-transform: uppercase;
 	}
 
 	@include bp-767 {

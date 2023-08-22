@@ -1,10 +1,12 @@
 <div class="top">
-    <h1 class="form-content form-fade-el">{{ section.settings.header }}</h1>
-    <p class="form-content form-fade-el">{{ section.settings.copy }}</p>
+    <h1 class="form-fade-el">{{ section.settings.header }}</h1>
+    <p class="form-fade-el">{{ section.settings.copy }}</p>
 </div>
 <div class="bottom">
-    {% comment %}<p class="success-message">{{ settings.contact_form_success }}</p>{% endcomment %}
-    <form>
+    <form class="bind-gorgias">
+        <div class="success-content">
+            <p>{{ section.settings.success_copy }}</p>
+        </div>
         <div class="form-content form-fade-el">
             <label for="name">Name</label>
             <input required type="text" id="name" name="name" placeholder="Enter your name">
@@ -13,11 +15,6 @@
             <label for="message">Message</label>
             <textarea required name="message" id="message" placeholder="Enter your Message  "></textarea>
             <button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>
-        </div>
-        <div class="success-content">
-            <p>{{ section.settings.success_header }}</p>
-            <p>{{ section.settings.success_copy }}</p>
-            <a href="/" class="pink-btn"><span>Back to Home</span></a>
         </div>
     </form>
 </div>
