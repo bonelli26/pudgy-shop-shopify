@@ -31,10 +31,15 @@
                     </p>
                 </button>
                 <div class="drawer-items">
-                    <button data-trigger="all" class="filter-mobile"><span>all toys</span></button>
+                    <button data-trigger="all" class="filter-mobile all"><span>all toys</span></button>
                     {% for tag in tags %}
                         <button data-trigger="{{ tag | handle }}" class="filter-mobile"><span>{{ tag }}</span></button>
                     {% endfor %}
+                    {% if collection.handle == "figurines" %}
+                        <a href="{{ section.settings.collections_link_1 }}" class="filter-mobile"><span>{{ section.settings.collections_link_1 }}</span></a>
+                    {% elsif collection.handle == "plushies" %}
+                        <a href="{{ section.settings.collections_link_2 }}" class="filter-mobile"><span>{{ section.settings.collections_link_2 }}</span></a>
+                    {% endif %}
                 </div>
             </div>
         </div>
