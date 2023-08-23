@@ -12,7 +12,7 @@
                 {% assign thisTag = thisProduct.tags[0] %}
                 {% assign thisTitle = thisProduct.title %}
                 {% if count < productsToShow %}
-                    {% if thisTag == product.tags[0] and thisTitle != product.title  %}
+                    {% if thisTag == product.tags[0] and thisTitle != product.title and thisProduct.available == true %}
                         <a href="/products/{{ thisProduct.handle }}" class="slide card-wrapper prefetch-us">
                             <span>
                                 <svg class="svg-left" xmlns="http://www.w3.org/2000/svg" width="67" height="49" viewBox="0 0 67 49" fill="none">

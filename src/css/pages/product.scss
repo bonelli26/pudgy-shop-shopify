@@ -714,10 +714,10 @@
       gap: 5px;
       z-index: 2;
       height: auto;
-      @include get-vw(padding-left, 58px, 25px);
-      @include get-vw(padding-top, 15px, 15px);
-      @include get-vw(padding-bottom, 18px, 18px);
-      @include get-vw(padding-right, 52px, 25px);
+      @include get-vw(padding-left, 48px, 24px);
+      @include get-vw(padding-top, 32px, 16px);
+      @include get-vw(padding-bottom, 32px, 16px);
+      @include get-vw(padding-right, 48px, 24px);
       border-radius: 5px;
       border: 2px solid #00142D;
       background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
@@ -756,12 +756,9 @@
       line-height: .91;
       letter-spacing: -0.02em;
       text-transform: uppercase;
-      @include get-vw(font-size, 46px, 32px);
-      @include get-vw(height, 95px, 51px);
+      @include get-vw(font-size, 46px, 29px);
       span {
         transition: all .25s $ease-in-out-sine;
-        text-shadow: -3px 3px #00142D;
-        @include get-vw(font-size, 104px, 56px);
       }
     }
     .drawer-items {
