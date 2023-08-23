@@ -4,6 +4,7 @@
     position: relative;
     background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
     border-bottom: 2px solid rgba(0, 20, 45, 1);
+    min-height: 800px;
     .pdp-hero-inner {
       display: flex;
       align-items: flex-start;
@@ -739,7 +740,7 @@
         transform-origin: 0 center;
         p {
           @include get-vw(padding-top, 12px, 12px);
-          @include get-vw(margin-bottom, 70px, 34px);
+          //@include get-vw(margin-bottom, 70px, 34px);
         }
       }
     }
@@ -756,9 +757,14 @@
       line-height: .91;
       letter-spacing: -0.02em;
       text-transform: uppercase;
+      gap: 20px;
       @include get-vw(font-size, 46px, 29px);
       span {
         transition: all .25s $ease-in-out-sine;
+      }
+      svg {
+        display: flex;
+        @include get-vw(height, 38px, 18px);
       }
     }
     .drawer-items {
@@ -773,11 +779,13 @@
       padding-left: 18px;
       padding-right: 18px;
       .drawer {
-        padding-top: 28px;
-        padding-bottom: 28px;
+        border-radius: 2px;
+        border: 1px solid #00142D;
+        box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
       }
       .label {
         text-shadow: -1px 1px #00142D;
+        color: #F5FDFF;
       }
     }
   }
