@@ -225,20 +225,19 @@
     .atc-wrapper {
       width: 100%;
       display: flex;
-      align-items: center;
+      align-items: flex-start;
       justify-content: space-between;
       gap: 8px;
       transform: translateZ(0);
-      @include get-vw(height, 58px, 58px);
-
+      flex-direction: column;
       .quantity, .icon-link {
         height: 100%;
-
         flex: 1;
         border-radius: 29px;
         border: 1px solid #00142D;
         background: #FFF;
         box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
+        @include get-vw(height, 58px, 58px);
       }
     }
     .quantity {
@@ -247,7 +246,7 @@
       justify-content: space-between;
       padding: 0 24px;
       min-width: 112px;
-      max-height: 58px;
+      @include get-vw(max-height, 58px, 58px);
       button, span {
         color: #00142D;
         font-family: $mencoBlack;
@@ -387,11 +386,10 @@
       border: 1px solid #000;
       background: #FFF;
       box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
-      @include get-vw(height, 58px, 58px);
+      @include get-vw(height, 58px, 45px);
       @include get-vw(min-width, 100px, 100px);
-      padding: 0 32px;
+      padding: 0 24px;
       text-align: center;
-
       font-family: $ttBlack;
       @include get-vw(font-size, 29px, 26px);
       line-height: .8;
@@ -580,8 +578,8 @@
         padding: 14px 14px 16px;
         border-radius: 40px 40px 0 0;
         background: #FFFFFF;
-        height: 23.4vw;
         z-index: 100;
+        gap: 12px;
       }
       .atc-form {
         width: 100%;
@@ -597,7 +595,6 @@
       }
       .options {
         padding-bottom: 0;
-        padding-top: 25px;
       }
     }
   }
@@ -688,13 +685,6 @@
     @include get-vw(padding-bottom, 64px, 33px);
     @include get-vw(padding-left, 212px, 130px);
     @include get-vw(padding-right, 205px, 130px);
-    .ice-block {
-      position: absolute;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-    }
     h3 {
       color: #FBF7EB;
       text-shadow: -3px 3px #00142D;
@@ -710,7 +700,7 @@
     }
     .inner {
       width: 100%;
-      gap: 5px;
+      @include get-vw(gap, 11px, 8px);
       display: flex;
       flex-direction: column;
       align-items: center;
@@ -721,12 +711,17 @@
       display: flex;
       flex-direction: column;
       align-items: flex-start;
+      gap: 5px;
       z-index: 2;
       height: auto;
       @include get-vw(padding-left, 58px, 25px);
       @include get-vw(padding-top, 15px, 15px);
       @include get-vw(padding-bottom, 18px, 18px);
       @include get-vw(padding-right, 52px, 25px);
+      border-radius: 5px;
+      border: 2px solid #00142D;
+      background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
+      box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
       &.open {
         span {
           transform: rotate(45deg);
