@@ -24,9 +24,28 @@
                 <button class="label">
                     <p class="current-label">Filter By
                         <span>
-                            <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/arrow.png?v=1691978133">
+                            <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14"><g filter="url(#filter0_d_1470_11015)"><path fill="#F5FDFF" fill-rule="evenodd" d="M3.263 1.4a1.75 1.75 0 0 1 2.474 0L10.5 6.163 15.263 1.4a1.75 1.75 0 1 1 2.474 2.475L10.5 11.113 3.263 3.875a1.75 1.75 0 0 1 0-2.475Z" clip-rule="evenodd"/><path stroke="#00142D" stroke-width=".8" d="m10.5 5.597-4.48-4.48a2.15 2.15 0 1 0-3.04 3.041l7.237 7.237.283.283.283-.283 7.237-7.237a2.15 2.15 0 0 0-3.04-3.04l-4.48 4.48Z"/></g></svg>
                         </span>
                     </p>
+                    <div class="close">
+                        <svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" viewBox="0 0 32 32" fill="none">
+                            <g filter="url(#filter0_d_1885_11880)">
+                                <path fill-rule="evenodd" clip-rule="evenodd" d="M6.97631 6.97631C8.27806 5.67456 10.3886 5.67456 11.6904 6.97631L16 11.286L20.3096 6.97631C21.6114 5.67456 23.7219 5.67456 25.0237 6.97631C26.3254 8.27806 26.3254 10.3886 25.0237 11.6904L20.714 16L25.0236 20.3096C26.3254 21.6113 26.3254 23.7219 25.0236 25.0236C23.7219 26.3254 21.6113 26.3254 20.3096 25.0236L16 20.714L11.6904 25.0237C10.3886 26.3254 8.27806 26.3254 6.97631 25.0237C5.67456 23.7219 5.67456 21.6114 6.97631 20.3096L11.286 16L6.97631 11.6904C5.67456 10.3886 5.67456 8.27806 6.97631 6.97631Z" fill="#F5FDFF"/>
+                                <path d="M12.0439 6.62276C10.5469 5.12575 8.11977 5.12575 6.62276 6.62276C5.12575 8.11977 5.12575 10.5469 6.62276 12.0439L10.5788 16L6.62276 19.9561C5.12575 21.4531 5.12575 23.8802 6.62276 25.3772C8.11977 26.8743 10.5469 26.8743 12.0439 25.3772L16 21.4212L19.956 25.3772C21.453 26.8742 23.8802 26.8742 25.3772 25.3772C26.8742 23.8802 26.8742 21.453 25.3772 19.956L21.4212 16L25.3772 12.0439C26.8743 10.5469 26.8743 8.11977 25.3772 6.62276C23.8802 5.12575 21.4531 5.12575 19.9561 6.62276L16 10.5788L12.0439 6.62276Z" stroke="#00142D"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_1885_11880" x="4" y="5" width="23" height="23" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dx="-1" dy="1"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1885_11880"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1885_11880" result="shape"/>
+                                </filter>
+                            </defs>
+                        </svg>
+                    </div>
                 </button>
                 <div class="drawer-items">
                     <button data-trigger="all" class="filter-mobile all"><span>all toys</span></button>
@@ -34,7 +53,7 @@
                         <button data-trigger="{{ tag | handle }}" class="filter-mobile"><span>{{ tag }}</span></button>
                     {% endfor %}
                     {% if collection.metafields.accentuate.extra_collection_filter %}
-                        <a href="{{ collection.metafields.accentuate.extra_collection_filter }}" class="pink-btn blue filter "><span>{{ collection.metafields.accentuate.extra_collection_filter }}</span></a>
+                        <a href="{{ collection.metafields.accentuate.extra_collection_filter }}" class="filter-mobile"><span>{{ collection.metafields.accentuate.extra_collection_filter }}</span></a>
                     {% endif %}
                 </div>
             </div>
