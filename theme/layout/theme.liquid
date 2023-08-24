@@ -66,30 +66,28 @@
 
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
 
-  {% comment %}
-  {%- if settings.favicon != blank -%}
-    <link rel="icon" type="image/png" sizes="32x32" href="https:{{ settings.favicon | image_url: width: 32 }}"/>
-    <link rel="icon" type="image/png" sizes="57x57" href="https:{{ settings.favicon | image_url: width: 57 }}"/>
-    <link rel="icon" type="image/png" sizes="76x76" href="https:{{ settings.favicon | image_url: width: 76 }}"/>
-    <link rel="icon" type="image/png" sizes="96x96" href="https:{{ settings.favicon | image_url: width: 96 }}"/>
-    <link rel="icon" type="image/png" sizes="128x128" href="https:{{ settings.favicon | image_url: width: 128 }}"/>
-    <link rel="icon" type="image/png" sizes="192x192" href="https:{{ settings.favicon | image_url: width: 192 }}"/>
 
-    <link rel="icon" type="image/png" sizes="196x196" href="https:{{ settings.favicon | image_url: width: 196 }}"/>
+  <link rel="icon" type="image/png" sizes="32x32" href="https:{{ settings.favicon | image_url: width: 32 }}"/>
+  <link rel="icon" type="image/png" sizes="57x57" href="https:{{ settings.favicon | image_url: width: 57 }}"/>
+  <link rel="icon" type="image/png" sizes="76x76" href="https:{{ settings.favicon | image_url: width: 76 }}"/>
+  <link rel="icon" type="image/png" sizes="96x96" href="https:{{ settings.favicon | image_url: width: 96 }}"/>
+  <link rel="icon" type="image/png" sizes="128x128" href="https:{{ settings.favicon | image_url: width: 128 }}"/>
+  <link rel="icon" type="image/png" sizes="192x192" href="https:{{ settings.favicon | image_url: width: 192 }}"/>
 
-    <link rel="apple-touch-icon" sizes="120x120" href="https:{{ settings.favicon | image_url: width: 120 }}"/>
-    <link rel="apple-touch-icon" sizes="152x152" href="https:{{ settings.favicon | image_url: width: 152 }}"/>
-    <link rel="apple-touch-icon" sizes="180x180" href="https:{{ settings.favicon | image_url: width: 180 }}"/>
+  <link rel="icon" type="image/png" sizes="196x196" href="https:{{ settings.favicon | image_url: width: 196 }}"/>
 
-    <meta name="application-name" content="&nbsp;"/>
-    <meta name="msapplication-TileColor" content="#FFFFFF"/>
-    <meta name="msapplication-TileImage" content="{{ settings.favicon | image_url: width: 144 }}"/>
-    <meta name="msapplication-square70x70logo" content="{{ settings.favicon | image_url: width: 70 }}"/>
-    <meta name="msapplication-square150x150logo" content="{{ settings.favicon | image_url: width: 150 }}"/>
-    <meta name="msapplication-wide310x150logo" content="{{ settings.favicon | image_url: width: 310, height: 150 }}"/>
-    <meta name="msapplication-square310x310logo" content="{{ settings.favicon | image_url: width: 310 }}"/>
-  {%- endif -%}
-{% endcomment %}
+  <link rel="apple-touch-icon" sizes="120x120" href="https:{{ settings.favicon | image_url: width: 120 }}"/>
+  <link rel="apple-touch-icon" sizes="152x152" href="https:{{ settings.favicon | image_url: width: 152 }}"/>
+  <link rel="apple-touch-icon" sizes="180x180" href="https:{{ settings.favicon | image_url: width: 180 }}"/>
+
+  <meta name="application-name" content="&nbsp;"/>
+  <meta name="msapplication-TileColor" content="#FFFFFF"/>
+  <meta name="msapplication-TileImage" content="{{ settings.favicon | image_url: width: 144 }}"/>
+  <meta name="msapplication-square70x70logo" content="{{ settings.favicon | image_url: width: 70 }}"/>
+  <meta name="msapplication-square150x150logo" content="{{ settings.favicon | image_url: width: 150 }}"/>
+  <meta name="msapplication-wide310x150logo" content="{{ settings.favicon | image_url: width: 310, height: 150 }}"/>
+  <meta name="msapplication-square310x310logo" content="{{ settings.favicon | image_url: width: 310 }}"/>
+
   {{ '_init.css' | asset_url | stylesheet_tag }}
   {{ '_fonts.css' | asset_url | stylesheet_tag }}
   <script>

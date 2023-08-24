@@ -1,0 +1,18 @@
+{% for block in section.blocks %}
+    {%- case block.type -%}
+        {%- when '@app' -%}
+            {% render block %}
+    {%- endcase -%}
+{% endfor %}
+
+{% schema %}
+{
+  "name": "Store locator main",
+  "tag": "section",
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
+}
+{% endschema %}

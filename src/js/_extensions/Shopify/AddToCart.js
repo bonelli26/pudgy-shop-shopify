@@ -172,7 +172,7 @@ export class AddToCart {
 	 */
 	addToCart(form){
 		let varID = form.querySelector(".add-to-cart").dataset.id;
-		console.log(varID);
+
 		const count = form.querySelector(".count")
 		let quantity
 		if (count) {
@@ -214,7 +214,7 @@ export class AddToCart {
 					this.buildMiniCart(data.items);
 					this.toggleEmptyCart(false);
 					const easyPrice = Number(((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2)))
-					console.log(easyPrice)
+
 					this.incentiveBarPercent = easyPrice / this.shippingThreshold
 					if (this.incentiveBarPercent >= 1) {
 						this.incentiveBarPercent = 1
@@ -241,7 +241,7 @@ export class AddToCart {
 					}
 					// domStorage.cartCountEl.textContent = "0";
 				}
-				console.log(this.incentiveBarPercent)
+
 			});
 
 	}
@@ -345,7 +345,7 @@ export class AddToCart {
 								</svg>
 								</button>
 								<div class="price-wrapper">
-									<p class="line-item-price" data-orig-price="${(item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2))}">${"$" + (item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2)) * item.quantity}</p>
+									<p class="line-item-price" data-orig-price="${(item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2))}">${"$" + ((item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2)) * item.quantity).toFixed(2)}</p>
 								</div>
 							</div>
 						</div>						
@@ -391,14 +391,14 @@ export class AddToCart {
 				count = count - 1;
 				countEl.textContent = count;
 				parentLineItem.dataset.quantity = count;
-				priceEl.textContent = "$"+(count * price);
+				priceEl.textContent = "$"+(count * price).toFixed(2);
 				this.modifyLineItem(parentLineItem.dataset.key, count);
 			});
 			increase.addEventListener("click", () => {
 				count = count + 1;
 				countEl.textContent = count;
 				parentLineItem.dataset.quantity = count;
-				priceEl.textContent = "$"+(count * price);
+				priceEl.textContent = "$"+(count * price).toFixed(2);
 				this.modifyLineItem(parentLineItem.dataset.key, count);
 			});
 		}

@@ -75,7 +75,6 @@ const globalEvents = (namespace = null)=>{
 		} else {
 			globalStorage.prefetchedUrls.push(url)
 			prefetchArr.push(url)
-			console.log(prefetchUs[i].href)
 		}
 	}
 	if ('requestIdleCallback' in window) {

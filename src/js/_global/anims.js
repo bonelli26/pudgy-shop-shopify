@@ -82,7 +82,7 @@ export const prepDrawers = () => {
 		const childrenWrapperHeight = childrenWrapper.offsetHeight;
 		const childrenItems = thisDrawer.querySelectorAll(".drawer-items > *");
 		const bg = drawers[i].querySelector(".filters-bg");
-		console.log(bg);
+
 		if (thisDrawer.classList.contains("replace-label")) {
 			let label = thisDrawer.querySelector(".current-label");
 			childrenItems.forEach((item) => {
@@ -276,7 +276,7 @@ export class Marquees {
 }
 
 export const prepSliders = () => {
-
+	if (globalStorage.namespace === "store-locator") { return }
 	let prepControls = (slider, dots, prev, next) => {
 
 		if (prev) {
@@ -329,8 +329,6 @@ export const prepSliders = () => {
 		if (dotsWrapper) {
 			dots = dotsWrapper.querySelectorAll('.dot');
 		}
-
-		console.log(slideAlignment)
 
 		const options = { loop: (globalStorage.windowWidth > 767 ? !el.classList.contains("no-loop") : !el.classList.contains("no-loop-mobile")), skipSnaps: true, inViewThreshold: el.dataset.inView ? Number(el.dataset.inView) : 0.3, startIndex: parseInt(startIndex), align: slideAlignment, dragFree: !el.classList.contains("no-drag-free") };
 
@@ -541,8 +539,6 @@ export const newTabs = () => {
 				img = tab.querySelector(".img-wrapper"),
 				splitLines = false;
 
-				console.log(splitEl);
-
 			if (splitEl) {
 				splitLines = new SplitText(splitEl, {type: "lines"}).lines;
 				if (j !== 0) {
@@ -652,7 +648,6 @@ export const seeMore = () => {
 	const trigger = seeMoreSection.querySelector(".see-more")
 
 	gsap.set(tiles, { display: "none", autoAlpha: 0 })
-	console.log(trigger)
 	trigger.addEventListener('click', () => {
 		gsap.to(trigger, { display: "none" })
 		gsap.to(tiles, { display: "flex", autoAlpha: 1, ease: "sine.inOut", force3D: true, duration: 0.2 })
