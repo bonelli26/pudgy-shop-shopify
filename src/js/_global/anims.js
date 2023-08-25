@@ -17,6 +17,9 @@ export const pageEntrance = (namespace = null)=> {
 	/* ----- Setup cases for specific load-ins ----- */
 	switch(namespace){
 		/* ----- Our default page entrance ----- */
+		case "get-notified":
+			gsap.set(domStorage.header, { display: "none" });
+			break;
 		default:
 			break;
 
