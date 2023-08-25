@@ -6,57 +6,72 @@
         "daf2490c-67fd-4fad-adb5-ab3659d9a8d2": {
           "type": "block_1",
           "settings": {
-            "question": "Do you ship worldwide?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "How do I find out when new styles are releasing and when?",
+            "answer": "<p>Your best bet is to sign up for our newsletter or by following us on social media, you'll be first to know about new styles and promotions.<\/p>"
           }
         },
         "4fd92708-3136-4002-94cd-14e9cf0632a9": {
           "type": "block_1",
           "settings": {
-            "question": "What happens when a collectible is sold out?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "An item I want is sold out. When will it become available again?",
+            "answer": "<p>If an item is listed as sold out, it is unavailable for purchase. You can click the ‘size sold out?’ link on the product page and sign up to receive restock notifications. <\/p><p>You can also reach out to us at support@pudgypenguins.io for more information.<\/p>"
           }
         },
         "216053f1-ee90-498c-9d5c-a965c64ead84": {
           "type": "block_1",
           "settings": {
-            "question": "What happens when a collectible is sold out?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "How can I check the balance on my gift card?",
+            "answer": "<p>If you would like to check the balance on your gift card, email us at support@pudgypenguins.io<\/p>"
           }
         },
         "95d70a83-afa9-4e80-b708-65f99588ce55": {
           "type": "block_1",
           "settings": {
-            "question": "Do you ship worldwide?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "What if I need to modify my order?",
+            "answer": "<p>If you would like to modify your order and it has not been processed, please email support@pudgypenguins.io. Once your order has been prepped for shipping, it cannot be modified.<\/p>"
+          }
+        },
+        "de751aff-2cc7-4b35-9e11-30c42f389ca7": {
+          "type": "block_1",
+          "settings": {
+            "question": "Where is my order?",
+            "answer": "<p>Domestic delivery times can take up to 5-7 business days or longer depending on location. <\/p><p>If after 7 days your package still has yet to arrive, please email us at <strong>support@pudgypenguins.io <\/strong>with your order number and details. <\/p>"
+          }
+        },
+        "3d2bc78c-8396-4963-886c-254059b07139": {
+          "type": "block_1",
+          "disabled": true,
+          "settings": {
+            "question": "",
+            "answer": ""
           }
         },
         "069a3312-b035-4095-87f7-1920f315df88": {
           "type": "block_2",
           "settings": {
-            "question": "Do you ship worldwide?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "What currencies are supported?",
+            "answer": "<p>All available currencies are listed in the drop-down menu under the flag icon. The flag icon can found in the header at the top right off the screen.<\/p>"
           }
         },
         "2bf5814b-9e14-4d68-97c2-9c8b239785cc": {
           "type": "block_2",
           "settings": {
-            "question": "What happens when a collectible is sold out?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "Are duties and taxes included at checkout?",
+            "answer": "<p>Unfortunately international orders may be subject to customs fees\/delays, which we have no control over.<\/p>"
           }
         },
         "71df9c94-4348-4d59-8641-bd357b73ff45": {
           "type": "block_2",
           "settings": {
-            "question": "What happens when a collectible is sold out?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "How do I track my international order?",
+            "answer": "<p>International orders can be tracked on your Order Page, or email us at support@pudgypenguins.io<\/p>"
           }
         },
         "6e13c69d-ba4c-477d-9496-6228f63c7596": {
           "type": "block_2",
           "settings": {
-            "question": "Do you ship worldwide?",
-            "answer": "<p>Nullam quis risus eget urna mollis ornare vel eu leo. Donec id elit non mi porta gravida at eget metus. Nulla vitae elit libero, a pharetra augue. Etiam porta sem malesuada magna mollis euismod. Nullam id dolor id nibh ultricies vehicula ut id elit. Donec sed odio dui.<\/p>"
+            "question": "Where is my order?",
+            "answer": "<p>International delivery times typically take 14-25 business days, but can be longer depending on location. <\/p><p>If after 14-25 days your package still has yet to arrive, please email us at <strong>support@pudgypenguins.io <\/strong>with your order number and details. <\/p><p>International orders may be subject to customs delays\/fees, which we have no control over.<\/p>"
           }
         }
       },
@@ -65,6 +80,8 @@
         "4fd92708-3136-4002-94cd-14e9cf0632a9",
         "216053f1-ee90-498c-9d5c-a965c64ead84",
         "95d70a83-afa9-4e80-b708-65f99588ce55",
+        "de751aff-2cc7-4b35-9e11-30c42f389ca7",
+        "3d2bc78c-8396-4963-886c-254059b07139",
         "069a3312-b035-4095-87f7-1920f315df88",
         "2bf5814b-9e14-4d68-97c2-9c8b239785cc",
         "71df9c94-4348-4d59-8641-bd357b73ff45",
@@ -72,9 +89,9 @@
       ],
       "settings": {
         "page_header": "Frequently asked questions",
-        "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
-        "block_title_1": "Section Title",
-        "block_title_2": "Section Title"
+        "copy": "Find answers to our most frequently asked questions below. If you can't find what you're looking for please contact us and we'll get in touch with 24 hours.",
+        "block_title_1": "General",
+        "block_title_2": "International"
       }
     },
     "footer": {

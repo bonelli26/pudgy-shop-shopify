@@ -115,8 +115,8 @@
     h1 {
       color: #FFF;
       text-shadow: -3px 3px #00142D;
-      -webkit-text-stroke: 1px #00142d;
-      text-stroke: 1px #00142d;
+      -webkit-text-stroke: 1.5px #00142d;
+      text-stroke: 1.5px #00142d;
       font-family: $ttBlack;
       line-height: .91;
       letter-spacing: -0.02em;
@@ -599,6 +599,8 @@
       }
       h1 {
         text-shadow: -3px 3px #00142dbf;
+
+
       }
     }
   }

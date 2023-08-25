@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "rarity-page": {
+      "type": "rarity-page",
+      "settings": {
+        "collections_header": "SHOP ALL",
+        "collections_copy": "Welcome to Pudgy Penguins! Shop our line of cute plushies and figurines."
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "rarity-page",
+    "footer"
+  ]
+}

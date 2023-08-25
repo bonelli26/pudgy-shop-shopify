@@ -1,0 +1,16 @@
+{
+  "sections": {
+    "contact": {
+      "type": "contact",
+      "settings": {
+        "header": "Contact us",
+        "copy": "For questions or concerns regarding your order, please fill out the form below and one of our care members will reach back out to you. We typically respond within a few hours.",
+        "success_header": "thank you",
+        "success_copy": "We will reach out to you shortly."
+      }
+    }
+  },
+  "order": [
+    "contact"
+  ]
+}
