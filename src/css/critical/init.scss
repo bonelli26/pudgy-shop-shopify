@@ -2700,6 +2700,9 @@ footer {
 		&:nth-of-type(even) {
 			margin-top: 120px;
 		}
+		&.dummy {
+			pointer-events: none;
+		}
 	}
 	.frame {
 		width: 100%;
