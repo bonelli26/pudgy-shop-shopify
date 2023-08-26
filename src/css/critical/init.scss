@@ -2787,11 +2787,16 @@ footer {
 		-webkit-text-stroke: 1.5px #00142d;
 		text-stroke: 1.5px #00142d;
 		font-family: $ttBlack;
-		@include get-vw(font-size, 104px, 64px);
+		font-size: 104px;
 		line-height: .91;
 		letter-spacing: -2px;
 		text-transform: uppercase;
 		margin-bottom: 24px;
+		white-space: nowrap;
+		@include bp-767 {
+			font-size: 64px;
+		}
+
 	}
 	.bottom {
 		position: absolute;
