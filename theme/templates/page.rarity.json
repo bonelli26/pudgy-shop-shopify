@@ -2,9 +2,49 @@
   "sections": {
     "rarity-page": {
       "type": "rarity-page",
+      "blocks": {
+        "6bc88455-61f1-4a27-b6de-fee145592932": {
+          "type": "rarity-card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/diamond.png",
+            "title": "Epic",
+            "copy": "These special silver foil Rare tag means only 75,000 of these Squishmallows exist in the whole world! Get them while they last!"
+          }
+        },
+        "80eaba12-1230-4cb6-a50a-63ad97f3e34e": {
+          "type": "rarity-card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/pink-pengu.png",
+            "title": "Rare",
+            "copy": "These special silver foil Rare tag means only 75,000 of these Squishmallows exist in the whole world! Get them while they last!"
+          }
+        },
+        "c537ab03-8005-461a-9974-5e4cfb9210e2": {
+          "type": "rarity-card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/snow-flake.png",
+            "title": "Rare",
+            "copy": "These special silver foil Rare tag means only 75,000 of these Squishmallows exist in the whole world! Get them while they last!"
+          }
+        },
+        "995aca30-7c82-468f-bf3c-9d6b005d9e49": {
+          "type": "rarity-card",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/skull.png",
+            "title": "Rare",
+            "copy": "These special silver foil Rare tag means only 75,000 of these Squishmallows exist in the whole world! Get them while they last!"
+          }
+        }
+      },
+      "block_order": [
+        "6bc88455-61f1-4a27-b6de-fee145592932",
+        "80eaba12-1230-4cb6-a50a-63ad97f3e34e",
+        "c537ab03-8005-461a-9974-5e4cfb9210e2",
+        "995aca30-7c82-468f-bf3c-9d6b005d9e49"
+      ],
       "settings": {
-        "collections_header": "SHOP ALL",
-        "collections_copy": "Welcome to Pudgy Penguins! Shop our line of cute plushies and figurines."
+        "collections_header": "Rarity",
+        "collections_copy": "Get ready to chase and collect all-new, limited quantity Pudgies featuring special seals on their hangtags."
       }
     },
     "footer": {

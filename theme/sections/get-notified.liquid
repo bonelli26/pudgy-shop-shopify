@@ -51,24 +51,25 @@
         </defs>
     </svg>
 </a>
-<div class="top">
-    <h1 class="form-fade-el">{{ section.settings.header }}</h1>
-    <p class="form-fade-el">{{ section.settings.copy }}</p>
+<div class="bind-form" data-id="Newsletter">
+    <div class="top" id="initial-state">
+        <h1 >{{ section.settings.header }}</h1>
+        <p>{{ section.settings.copy }}</p>
+        <form>
+            <div class="form-content">
+                <label for="email">Email</label>
+                <input required type="email" name="email" placeholder="Enter your Email" id="email">
+                <button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>
+            </div>
+        </form>
+    </div>
+    <div class="bottom" id="completed-state">
+        <h1>{{ section.settings.success_header }}</h1>
+        <p>{{ section.settings.success_copy }}</p>
+        <a href="{{ section.settings.success_button_url }}" class="pink-btn"><span>{{ section.settings.success_button_text }}</span></a>
+    </div>
 </div>
-<div class="bottom">
-    <form class="">
-        <div class="success-content">
-            <h1>{{ section.settings.success_header }}</h1>
-            <p>{{ section.settings.success_copy }}</p>
-            <a href="{{ section.settings.success_button_url }}" class="pink-btn"><span>{{ section.settings.success_button_text }}</span></a>
-        </div>
-        <div class="form-content form-fade-el">
-            <label for="email">Email</label>
-            <input required type="email" name="email" placeholder="Enter your Email" id="email">
-            <button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>
-        </div>
-    </form>
-</div>
+
 
 
 

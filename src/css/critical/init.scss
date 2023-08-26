@@ -2791,13 +2791,18 @@ footer {
 		margin-bottom: 24px;
 	}
 	.bottom {
-		position: relative;
+		position: absolute;
+		top: 40%;
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
+		align-items: center;
 		text-align: center;
 		max-width: 425px;
 		width: 100%;
+		pointer-events: none;
+		opacity: 0;
+		visibility: hidden;
 	}
 	p {
 		color: #00142D;
@@ -2820,8 +2825,6 @@ footer {
 		@include get-vw(padding-bottom, 39px, 24px);
 		@include get-vw(padding-right, 35px, 24px);
 		@include get-vw(padding-left, 35px, 24px);
-		//opacity: 0;
-		//visibility: hidden;
 		.pink-btn {
 			width: 100%;
 		}
@@ -2874,9 +2877,7 @@ footer {
 		}
 	}
 	.success-content {
-		position: absolute;
-		opacity: 0;
-		visibility: hidden;
+		position: relative;
 		text-align: center;
 		transition: .25s opacity $ease-in-out-sine;
 	}
@@ -2885,17 +2886,5 @@ footer {
 		display: flex;
 		flex-direction: column;
 		@include get-vw(gap, 36px, 21px);
-		&.success {
-			.form-content {
-				opacity: 0;
-				pointer-events: none;
-				height: 0;
-			}
-			.success-content {
-				opacity: 1;
-				visibility: visible;
-				position: relative;
-			}
-		}
 	}
 }

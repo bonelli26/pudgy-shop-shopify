@@ -73,6 +73,111 @@
             "question": "Where is my order?",
             "answer": "<p>International delivery times typically take 14-25 business days, but can be longer depending on location. <\/p><p>If after 14-25 days your package still has yet to arrive, please email us at <strong>support@pudgypenguins.io <\/strong>with your order number and details. <\/p><p>International orders may be subject to customs delays\/fees, which we have no control over.<\/p>"
           }
+        },
+        "ccc39d00-2e31-4102-bc86-0c4b27c7873d": {
+          "type": "block_2",
+          "settings": {
+            "question": "Do you ship internationally?",
+            "answer": "<p>Yes! We partnered with vendors who allow us to provide the best possible user experience to our international customers. Once you are in checkout, you will see local payment methods and calculations for any appropriate shipping and fees.<\/p>"
+          }
+        },
+        "9c748ed8-a570-4232-9312-b3e235b9b8dd": {
+          "type": "block_1",
+          "settings": {
+            "question": "When will my order ship?",
+            "answer": "<p>Pudgy Penguins aims to ship out your order as quickly as possible. Orders typically take 1-3 business days to be packed in our warehouse, but may take as long as 3-5 business days to leave our warehouse.<\/p><p>After that, it will arrive to you based off of the shipping estimate given to you at checkout. You will receive an email notification with tracking information once your order ships. Please check to see if you purchased a back order item, which normally ship within 1-2 weeks. If you have any questions, please <a href=\"https:\/\/shop.pudgypenguins.com\/pages\/contact\" target=\"_blank\" title=\"Get In Touch\">contact us.<\/a><\/p><p>Exclusive pieces, limited drops, and other custom items may take longer than 3-5 days to ship. We appreciate your patience! We have an extremely high overall customer service and satisfaction rating for a reason.<\/p>"
+          }
+        },
+        "7d093335-f651-40db-9009-e22f5ce0644c": {
+          "type": "block_1",
+          "settings": {
+            "question": "When will my backordered item ship?",
+            "answer": "<p>Pudgy Penguins aims to ship out all back ordered items as quickly as possible. Please allow 1-2 weeks for any pre-orders or backorders to ship. If you have any questions, please <a href=\"https:\/\/shop.pudgypenguins.com\/pages\/contact\" target=\"_blank\" title=\"Get In Touch\">contact us.<\/a><\/p>"
+          }
+        },
+        "6e44987e-d18f-4997-8a23-9d877704dba1": {
+          "type": "block_2",
+          "settings": {
+            "question": "Which countries do you ship to?",
+            "answer": "<p>We offer domestic aswell as international shipping to majority of countries with exception of a few.<\/p><p>Email us at support@pudgypenguins.io and we can give you more information. While we do everything we can to prevent any customs fees, holds, or taxes charged to you upon arrival, we cannot guarantee this.<\/p>"
+          }
+        },
+        "cc2202c5-533f-45f8-be14-3fcbc8ef2a88": {
+          "type": "block_1",
+          "settings": {
+            "question": "Do You Ship to PO Boxes?",
+            "answer": "<p>For domestic orders we do ship to PO Boxes.<\/p>"
+          }
+        },
+        "2fba6850-10d2-4d19-94f1-a5bde682a919": {
+          "type": "block_1",
+          "settings": {
+            "question": "Where does my order ship from?",
+            "answer": "<p>All orders are shipped from our facility in Los Angeles, California.<\/p>"
+          }
+        },
+        "99d7643c-22db-4a71-81e7-969e70fdd9cb": {
+          "type": "block_1",
+          "settings": {
+            "question": "My tracking states that my order was already delivered but I have not received it. What does this mean?",
+            "answer": "<p>Please email support@pudgypenguins.io. We will do our best to resolve the issue as quickly as possible.<\/p>"
+          }
+        },
+        "4ebadf04-6e78-419a-b3f2-fd9fec12fde3": {
+          "type": "block_1",
+          "settings": {
+            "question": "How do I return an item from my order?",
+            "answer": "<p>Returns are offered within 30 days after product delivery on items that are unworn, unaltered and in new condition with all tags attached. Please note that return shipping charges are the responsibility of the customer.<\/p><p>In order to return an item, please email us at <a href=\"mailto:support@pudgypenguins.io\" target=\"_blank\" title=\"mailto:support@pudgypenguins.io\">support@pudgypenguins.io<\/a> or <a href=\"https:\/\/shop.pudgypenguins.com\/pages\/contact\" title=\"Get In Touch\">submit a return here.<\/a><\/p>"
+          }
+        },
+        "ce2b7f1a-fe81-4b9c-a154-c6c3ffa27205": {
+          "type": "block_1",
+          "settings": {
+            "question": "How do I exchange an item from my order?",
+            "answer": "<p>If you wish to exchange your purchase for a different size or style, we recommend simply buying the product you desire (this will ensure the product does not sell out by the time we receive your item back). You may then return your original purchase to us using the instructions above. If you have any questions, please email us at support@pudgypenguins.io<\/p>"
+          }
+        },
+        "ca63efea-5987-4df0-9165-cc0431ee3c11": {
+          "type": "block_1",
+          "settings": {
+            "question": "I received a damaged product. What should I do?",
+            "answer": "<p>Please email us at support@pudgypenguins.io as soon as you receive your order.<\/p>"
+          }
+        },
+        "e3780d28-c67d-4a07-b506-6e401dbb8764": {
+          "type": "block_2",
+          "settings": {
+            "question": "What is your return policy for international orders?",
+            "answer": "<p>Returns are offered within 30 days after product delivery on items that are unworn, unaltered and in new condition with all tags attached. Please note that return shipping charges are the responsibility of the customer.<\/p><p>In order to return an item, please email us at support@pudgypenguins.io or <a href=\"https:\/\/shop.pudgypenguins.com\/pages\/contact\" title=\"Get In Touch\">submit a return here.<\/a><\/p>"
+          }
+        },
+        "e7c59642-0a54-4a82-bd23-147695037acb": {
+          "type": "block_1",
+          "settings": {
+            "question": "How do I know what size will fit me best?",
+            "answer": "<p>We include a 'spec chart' feature on all product pages. We also add in the description of each product the height of the model and other notable sizing callouts.<\/p><p>If you have any other questions, please email support@pudgypenguins.io.<\/p>"
+          }
+        },
+        "0d9d883c-b7c0-431e-ba6c-a2d6f00ae717": {
+          "type": "block_1",
+          "settings": {
+            "question": "How do I care for the items I purchased?",
+            "answer": "<p>Each style has special care instructions attached to the item. If you have any questions regarding care, please reach out to us at support@pudgypenguins.io<\/p>"
+          }
+        },
+        "ab9b4797-c72d-4432-9e31-d6b4268c23d0": {
+          "type": "block_1",
+          "settings": {
+            "question": "Why was my order cancelled?",
+            "answer": "<p>We will be unable to fulfill your order\/item if one of the following scenarios takes place:<br\/><br\/>-The item is out of stock.<br\/>-Unreachable Shipping Destination<br\/><br\/>Canceling an order is one of the last things we want to do, but some situations come up where cancellation is the best option to save you time and money. You will receive an email if any part of your order is canceled and you will not be charged for the canceled items.<\/p>"
+          }
+        },
+        "54bfa508-ed9f-4ee2-aa29-310d6d283b91": {
+          "type": "block_1",
+          "settings": {
+            "question": "The Pudgy Way",
+            "answer": "<p>If your order doesn’t arrive within 45 days, we will automatically issue a full refund.<\/p><p>Please email us at <strong>support@pudgypenguins.io <\/strong>to see if your order qualifies.<\/p>"
+          }
         }
       },
       "block_order": [
@@ -85,7 +190,22 @@
         "069a3312-b035-4095-87f7-1920f315df88",
         "2bf5814b-9e14-4d68-97c2-9c8b239785cc",
         "71df9c94-4348-4d59-8641-bd357b73ff45",
-        "6e13c69d-ba4c-477d-9496-6228f63c7596"
+        "6e13c69d-ba4c-477d-9496-6228f63c7596",
+        "ccc39d00-2e31-4102-bc86-0c4b27c7873d",
+        "9c748ed8-a570-4232-9312-b3e235b9b8dd",
+        "7d093335-f651-40db-9009-e22f5ce0644c",
+        "6e44987e-d18f-4997-8a23-9d877704dba1",
+        "cc2202c5-533f-45f8-be14-3fcbc8ef2a88",
+        "2fba6850-10d2-4d19-94f1-a5bde682a919",
+        "99d7643c-22db-4a71-81e7-969e70fdd9cb",
+        "4ebadf04-6e78-419a-b3f2-fd9fec12fde3",
+        "ce2b7f1a-fe81-4b9c-a154-c6c3ffa27205",
+        "ca63efea-5987-4df0-9165-cc0431ee3c11",
+        "e3780d28-c67d-4a07-b506-6e401dbb8764",
+        "e7c59642-0a54-4a82-bd23-147695037acb",
+        "0d9d883c-b7c0-431e-ba6c-a2d6f00ae717",
+        "ab9b4797-c72d-4432-9e31-d6b4268c23d0",
+        "54bfa508-ed9f-4ee2-aa29-310d6d283b91"
       ],
       "settings": {
         "page_header": "Frequently asked questions",
