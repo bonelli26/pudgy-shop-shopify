@@ -503,7 +503,7 @@ nav {
 }
 .view-home {
 	&:before {
-		@include get-vw(top, 720px, 720px);
+		@include get-vw(top, 600px, 600px);
 		background: linear-gradient(180deg, #C2ECFF 4.69%, #3E83FE 20.31%, #97BDFF 30.73%, #6EBACA 51.13%, #5964D0 61.09%, #F1A7FA 76.46%, #074FCF 100%), #F5FDFF;
 	}
 	&:after {
@@ -597,7 +597,7 @@ nav {
 	}
 	.range-radius .slider {
 		border-radius: 2.418px !important;
-		border: 0.967px solid var(--dark, #00142D) !important;
+		border: 0.967px solid #00142D !important;
 		background: #FFF !important;
 		box-shadow: 1.9346132278442383px 1.9346132278442383px 0px 0px rgba(0, 0, 0, 0.25) !important;
 	}
@@ -750,9 +750,9 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	@include get-vw(width, 284px, 200px);
-	@include get-vw(height, 415px, 292px);
-	aspect-ratio: 0.68/1;
+	height: 600px;
+	width: 400px;
+	//aspect-ratio: 0.68/1;
 	&.dummy {
 		height: 0;
 	}
@@ -963,6 +963,11 @@ nav {
 		}
 	}
 
+	@include bp-1680 {
+		@include get-vw(width, 284px, 200px);
+		@include get-vw(height, 415px, 292px);
+	}
+
 	@include bp-959 {
 		.price {
 			margin-bottom: 5px;
@@ -1015,6 +1020,7 @@ nav {
 	position: relative;
 	height: calc((var(--vh, 1vh) * 100));
 	border-bottom: 3px solid #00142D;
+	max-height: 1000px;
 	.hero-wrapper {
 		display: flex;
 		justify-content: space-between;
@@ -1092,6 +1098,10 @@ nav {
 		@include get-vw(height, 750px, 380px);
 	}
 
+	@include bp-1680 {
+		max-height: unset;
+	}
+
 	@include bp-1200 {
 		h1 {
 			@include get-vw(font-size, 104px, 64px);
@@ -1150,16 +1160,12 @@ nav {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		@include get-vw(height, 164px, 164px);
-		@include get-vw(width, 270px, 270px);
+		height: 330px;
+		width: 400px;
 		&:nth-of-type(2) {
-			@include get-vw(height, 150px, 150px);
-			@include get-vw(width, 300px, 300px);
+			height: 360px;
 			margin-left: 30px;
 			margin-right: 20px;
-			img {
-				@include get-vw(height, 150px, 150px);
-			}
 		}
 		svg:last-of-type {
 			display: none;
@@ -1193,6 +1199,17 @@ nav {
 			line-height: .91;
 			letter-spacing: -1.929px;
 			text-transform: uppercase;
+		}
+	}
+
+	@include bp-1680 {
+		.block {
+			@include get-vw(height, 164px, 164px);
+			@include get-vw(width, 270px, 270px);
+			&:nth-of-type(2) {
+				@include get-vw(height, 150px, 150px);
+				@include get-vw(width, 300px, 300px);
+			}
 		}
 	}
 
@@ -1397,8 +1414,6 @@ nav {
 		flex-wrap: wrap;
 		@include get-vw(gap, 28px, 18px);
 		@include get-vw(margin-bottom, 40px, 30px);
-		@include get-vw(padding-left, 72px, 0px);
-		@include get-vw(padding-right, 72px, 0px);
 		width: 100%;
 	}
 	.tile {
@@ -1423,6 +1438,7 @@ nav {
 		border-radius: 20px;
 		overflow: hidden;
 		width: calc(100% - 16px);
+		height: 100%;
 	}
 	.top {
 		display: flex;
@@ -1478,6 +1494,14 @@ nav {
 		line-height: 1.45;
 		margin-bottom: 15px;
 	}
+
+	@include bp-1680 {
+		.tile-wrapper {
+			@include get-vw(padding-left, 72px, 0px);
+			@include get-vw(padding-right, 72px, 0px);
+		}
+	}
+
 	@include bp-767 {
 		padding: 0;
 		margin-top: 17px;
@@ -2180,7 +2204,7 @@ footer {
 		row-gap: 35px;
 		@include get-vw(row-gap, 35px, 10px);
 		@include get-vw(column-gap, 20px, 0px);
-		max-width: 1200px;
+		@include get-vw(max-width, 1400px, 1200px);
 		width: 100%;
 	}
 	.filters-wrapper {
@@ -2873,7 +2897,7 @@ footer {
 	}
 	.bottom {
 		position: absolute;
-		top: 40%;
+		@include get-vw(top, 180px, 180px);
 		display: flex;
 		flex-direction: column;
 		justify-content: center;
@@ -2967,5 +2991,13 @@ footer {
 		display: flex;
 		flex-direction: column;
 		@include get-vw(gap, 36px, 21px);
+	}
+
+	@include bp-767 {
+		padding-right: 15px;
+		padding-left: 15px;
+		.bottom {
+			max-width: 90%;
+		}
 	}
 }

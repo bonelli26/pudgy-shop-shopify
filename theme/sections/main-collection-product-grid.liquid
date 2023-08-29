@@ -6,17 +6,13 @@
     <p>{{ section.settings.collections_copy }}</p>
 </div>
 <div class="collection-grid mw">
+
     <div class="filters">
-        <button class="pink-btn blue filter active" data-trigger="all"><span>all toys</span></button>
-        {% for tag in tags %}
-            <button class="pink-btn filter blue" data-trigger="{{ tag | handle }}"><span>{{ tag }}</span></button>
+        {% for block in section.blocks %}
+            {% assign thisCollection = block.settings.collection %}
+            <a class="pink-btn filter blue{% if collection.handle == thisCollection.handle %} active{% endif %}" href="{{ thisCollection.handle }}"><span>{{ thisCollection.handle }}</span></a>
         {% endfor %}
-        {% if collection.metafields.accentuate.extra_collection_filter %}
-            <a href="{{ collection.metafields.accentuate.extra_collection_filter }}" class="pink-btn blue filter "><span>{{ collection.metafields.accentuate.extra_collection_filter }}</span></a>
-        {% endif %}
-
     </div>
-
 
     <div class="filters-wrapper">
         <div class="filters-mobile drawer replace-label" data-at="767">
@@ -47,14 +43,12 @@
                         </svg>
                     </div>
                 </button>
+                
                 <div class="drawer-items">
-                    <button data-trigger="all" class="filter-mobile all"><span>all toys</span></button>
-                    {% for tag in tags %}
-                        <button data-trigger="{{ tag | handle }}" class="filter-mobile"><span>{{ tag }}</span></button>
+                    {% for block in section.blocks %}
+                        {% assign thisCollection = block.settings.collection %}
+                        <a class="filter-mobile" href="{{ thisCollection.handle }}"><span>{{ thisCollection.handle }}</span></a>
                     {% endfor %}
-                    {% if collection.metafields.accentuate.extra_collection_filter %}
-                        <a href="{{ collection.metafields.accentuate.extra_collection_filter }}" class="filter-mobile"><span>{{ collection.metafields.accentuate.extra_collection_filter }}</span></a>
-                    {% endif %}
                 </div>
             </div>
         </div>
@@ -134,6 +128,19 @@
               "type": "text",
               "label": "Collections Link"
             }
-        ]
+        ],
+      "blocks": [
+        {
+          "name": "Collection",
+          "type": "collection",
+          "settings": [
+            {
+              "id": "collection",
+              "type": "collection",
+              "label": "Collection"
+            }
+          ]
+        }
+      ]
     }
 {% endschema %}

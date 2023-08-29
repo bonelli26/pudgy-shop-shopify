@@ -580,7 +580,7 @@
         border-radius: 40px 40px 0 0;
         background: #FFFFFF;
         z-index: 100;
-        gap: 12px;
+        gap: 0;
       }
       .atc-form {
         width: 100%;
@@ -594,9 +594,7 @@
         min-width: 90px;
         padding: 0 14px 2px;
       }
-      .options {
-        padding-bottom: 0;
-      }
+
       h1 {
         text-shadow: -3px 3px #00142dbf;
 
