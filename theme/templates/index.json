@@ -5,7 +5,7 @@
       "settings": {
         "hero_tag": "NEW DROP",
         "hero_header": "Welcome to the huddle!",
-        "hero_intro": "Send a Pudgy Penguin and spread the love! It's the perfect gift for your significant other, family, friends, or even yourself.",
+        "hero_intro": "Experience being a pudgy penguin and spread good vibes with us. Join our community and waddle into the huddle.",
         "hero_button_url": "\/collections\/all-toys",
         "hero_bg": "shopify:\/\/shop_images\/ca88d16c-97bf-4ece-9268-4f086b32c31c.jpg",
         "hero_bg_mobile": "shopify:\/\/shop_images\/Hero-mobile.png"
@@ -14,10 +14,10 @@
     "block-trio": {
       "type": "block-trio",
       "settings": {
-        "eyebrow_1": "Instagram",
-        "copy_1": "700K+",
+        "eyebrow_1": "Members",
+        "copy_1": "10k+",
         "eyebrow_2": "Toys Sold",
-        "copy_2": "10,000+",
+        "copy_2": "100k+",
         "eyebrow_3": "Giphy Views",
         "copy_3": "5B+"
       }

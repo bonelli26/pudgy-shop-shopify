@@ -867,8 +867,8 @@ nav {
 	display: flex;
 	flex-direction: column;
 	align-items: center;
-	height: 600px;
-	width: 400px;
+	@include get-vw(width, 284px, 200px);
+	@include get-vw(height, 415px, 292px);
 	//aspect-ratio: 0.68/1;
 	&.dummy {
 		height: 0;
@@ -1080,11 +1080,6 @@ nav {
 		}
 	}
 
-	@include bp-1680 {
-		@include get-vw(width, 284px, 200px);
-		@include get-vw(height, 415px, 292px);
-	}
-
 	@include bp-959 {
 		.price {
 			margin-bottom: 5px;
@@ -1277,10 +1272,11 @@ nav {
 		flex-direction: column;
 		justify-content: center;
 		align-items: center;
-		height: 330px;
-		width: 400px;
+		@include get-vw(height, 164px, 164px);
+		@include get-vw(width, 270px, 270px);
 		&:nth-of-type(2) {
-			height: 360px;
+			@include get-vw(height, 150px, 150px);
+			@include get-vw(width, 300px, 300px);
 			margin-left: 30px;
 			margin-right: 20px;
 		}
@@ -1319,16 +1315,7 @@ nav {
 		}
 	}
 
-	@include bp-1680 {
-		.block {
-			@include get-vw(height, 164px, 164px);
-			@include get-vw(width, 270px, 270px);
-			&:nth-of-type(2) {
-				@include get-vw(height, 150px, 150px);
-				@include get-vw(width, 300px, 300px);
-			}
-		}
-	}
+
 
 	@include bp-959 {
 		padding: 0 10px;
