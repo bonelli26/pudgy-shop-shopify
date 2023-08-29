@@ -13,6 +13,8 @@
         "ca4a80fe-6f0d-493c-b262-cd62bfb55b03"
       ],
       "settings": {
+        "header": "Store locator",
+        "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
       }
     },
     "footer": {

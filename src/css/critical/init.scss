@@ -473,7 +473,7 @@ nav {
 	}
 }
 
-.view-product, .view-home, .view-collection, .view-page, .view-rarity, .view-get-notified {
+.view-product, .view-home, .view-collection, .view-page, .view-rarity, .view-get-notified, .view-store-locator {
 	position: relative;
 	overflow: hidden;
 	section {
@@ -530,7 +530,80 @@ nav {
 		@include get-vw(top, 800px, 800px);
 	}
 }
-.view-page, .view-faqs, .view-contact {
+.view-store-locator {
+	section {
+		@include get-vw(padding-top, 190px, 150px);
+		@include get-vw(padding-left, 150px, 15px);
+		@include get-vw(padding-right, 150px, 15px);
+		display: flex;
+		flex-direction: column;
+		.top {
+			display: flex;
+			flex-direction: column;
+			text-align: center;
+			max-width: 600px;
+			//@include get-vw(margin-bottom, 48px, 34px);
+			margin: 0 auto 48px;
+		}
+		h1 {
+			color: #FFF;
+			text-shadow: -3px 3px #00142d;
+			-webkit-text-stroke: 1.5px #00142d;
+			text-stroke: 1.5px #00142d;
+			font-family: $ttBlack;
+			font-size: 104px;
+			line-height: .91;
+			letter-spacing: -2px;
+			text-transform: uppercase;
+			@include get-vw(margin-bottom, 64px, 32px);
+		}
+		p {
+			color: #00142D;
+			font-family: $mencoBold;
+			font-size: 18px;
+			line-height: 1.45;
+			text-transform: uppercase;
+		}
+	}
+	.storelocator-search {
+		border-color: #1a192e;
+	}
+	.storeify-sear-box {
+		border-radius: 13px;
+		border: 2px solid var(--dark, #00142D);
+		background: linear-gradient(135deg, #C1ECFF 0%, #C1ECFF 25%, #FFF 38.17%, #C2ECFF 60.83%, #C1ECFF 100%);
+		box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);
+		padding: 20px;
+		color: #00142D;
+		font-family: $mencoBold;
+		font-size: 16px;
+		line-height: 1.45;
+		text-transform: uppercase;
+	}
+	.search-address-box {
+		display: flex;
+		flex-direction: column;
+	}
+	input, select {
+		width: 100%;
+		border-radius: 29px;
+		border: 1px solid #00142D;
+		background: #FFF;
+		box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+	}
+	.gr-search-slt {
+		width: 100% !important;
+		margin-top: 10px;
+	}
+	.range-radius .slider {
+		border-radius: 2.418px !important;
+		border: 0.967px solid var(--dark, #00142D) !important;
+		background: #FFF !important;
+		box-shadow: 1.9346132278442383px 1.9346132278442383px 0px 0px rgba(0, 0, 0, 0.25) !important;
+	}
+
+}
+.view-page, .view-faqs, .view-contact, .view-store-locator {
 	background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
 	footer {
 		.footer-marquee, .top {

@@ -1,3 +1,7 @@
+<div class="top">
+    <h1>{{ section.settings.header }}</h1>
+    <p>{{ section.settings.copy }}</p>
+</div>
 {% for block in section.blocks %}
     {%- case block.type -%}
         {%- when '@app' -%}
@@ -9,6 +13,18 @@
 {
   "name": "Store locator main",
   "tag": "section",
+  "settings": [
+    {
+      "id": "header",
+      "type": "text",
+      "label": "Header"
+    },
+    {
+      "id": "copy",
+      "type": "text",
+      "label": "Copy"
+    }
+  ],
   "blocks": [
     {
       "type": "@app"
