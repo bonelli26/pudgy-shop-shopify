@@ -1,13 +1,15 @@
-<div class="top">
+<div class="section-hero">
     <h1>{{ section.settings.header }}</h1>
     <p>{{ section.settings.copy }}</p>
 </div>
-{% for block in section.blocks %}
-    {%- case block.type -%}
-        {%- when '@app' -%}
-            {% render block %}
-    {%- endcase -%}
-{% endfor %}
+<div class="bottom">
+    {% for block in section.blocks %}
+        {%- case block.type -%}
+            {%- when '@app' -%}
+                {% render block %}
+        {%- endcase -%}
+    {% endfor %}
+</div>
 
 {% schema %}
 {

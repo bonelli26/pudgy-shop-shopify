@@ -10,7 +10,7 @@
     <div class="filters">
         {% for block in section.blocks %}
             {% assign thisCollection = block.settings.collection %}
-            <a class="pink-btn filter blue{% if collection.handle == thisCollection.handle %} active{% endif %}" href="{{ thisCollection.handle }}"><span>{{ thisCollection.handle }}</span></a>
+            <a class="prefetch-us pink-btn filter blue{% if collection.handle == thisCollection.handle %} active{% endif %}" href="{{ thisCollection.handle }}"><span>{{ block.settings.collection_name }}</span></a>
         {% endfor %}
     </div>
 
@@ -43,11 +43,11 @@
                         </svg>
                     </div>
                 </button>
-                
+
                 <div class="drawer-items">
                     {% for block in section.blocks %}
                         {% assign thisCollection = block.settings.collection %}
-                        <a class="filter-mobile" href="{{ thisCollection.handle }}"><span>{{ thisCollection.handle }}</span></a>
+                        <a class="filter-mobile" href="{{ thisCollection.handle }}"><span>{{ block.settings.collection_name }}</span></a>
                     {% endfor %}
                 </div>
             </div>
@@ -117,16 +117,6 @@
                 "id": "collections_copy",
                 "type": "text",
                 "label": "Collections Copy"
-            },
-            {
-                "id": "collections_link_1",
-                "type": "text",
-                "label": "Collections Link"
-            },
-            {
-              "id": "collections_link_2",
-              "type": "text",
-              "label": "Collections Link"
             }
         ],
       "blocks": [
@@ -138,6 +128,11 @@
               "id": "collection",
               "type": "collection",
               "label": "Collection"
+            },
+            {
+              "id": "collection_name",
+              "type": "text",
+              "label": "Collection Name"
             }
           ]
         }

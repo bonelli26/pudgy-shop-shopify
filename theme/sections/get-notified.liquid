@@ -51,12 +51,13 @@
         </defs>
     </svg>
 </a>
-<div class="bind-form" data-id="Newsletter">
+<div>
     <div class="top" id="initial-state">
-        <h1 >{{ section.settings.header }}</h1>
+        <h1>{{ section.settings.header }}</h1>
         <p>{{ section.settings.copy }}</p>
-        <form>
+        <form class="bind-form" data-id="StSMAC">
             <div class="form-content">
+                <input class="password" type="text">
                 <label for="email">Email</label>
                 <input required type="email" name="email" placeholder="Enter your Email" id="email">
                 <button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>
