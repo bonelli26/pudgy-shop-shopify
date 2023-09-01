@@ -330,7 +330,6 @@ export const bindGorgiasForms = () => {
 			let ajax = new XMLHttpRequest(),
 				name = form.querySelector("#name").value,
 				email = form.querySelector("#email").value,
-				subject = form.querySelector("#subject").value,
 				message = JSON.stringify(form.querySelector("#message").value).replaceAll('"', '');
 
 			ajax.onreadystatechange = () => {
@@ -342,7 +341,7 @@ export const bindGorgiasForms = () => {
 			ajax.open("POST","https://joshkirk.dev/server/gorgias-ticket-pp-brand.php",true);
 			ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 
-			ajax.send("name="+name+"&email="+email+"&subject="+subject+"&message="+message);
+			ajax.send("name="+name+"&email="+email+"&message="+message);
 		});
 
 	}
