@@ -6,6 +6,16 @@
 
 <html lang="en">
 <head>
+  
+  <!--- Hyros --->
+  <script>
+  var head = document.head;
+  var script = document.createElement('script');
+  script.type = 'text/javascript';
+  script.src = "https://185906.t.hyros.com/v1/lst/universal-script?ph=afee9d7384ff578e25f9153792e0c2b259916f5f66fa68f9d099a61061b17869&tag=!clicked&origin=SHOPIFY&ref_url=" + encodeURI(document.URL) ;
+  head.appendChild(script);
+  </script>
+  
   {{ locksmith_initializations }}
   <title>{{ page_title }}</title>
   <meta charset="utf-8">
