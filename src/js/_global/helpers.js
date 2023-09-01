@@ -330,8 +330,8 @@ export const bindGorgiasForms = () => {
 			let ajax = new XMLHttpRequest(),
 				name = form.querySelector("#name").value,
 				email = form.querySelector("#email").value,
-				subject = form.classList.contains("wholesale") ? "Wholesale request" : form.querySelector("#subject").value,
-				message = form.querySelector("#message").value;
+				subject = form.querySelector("#subject").value,
+				message = JSON.stringify(form.querySelector("#message").value).replaceAll('"', '');
 
 			ajax.onreadystatechange = () => {
 				if (ajax.readyState === 4 && ajax.status === 200) {
@@ -339,7 +339,7 @@ export const bindGorgiasForms = () => {
 				}
 			};
 
-			ajax.open("POST","https://joshkirk.dev/server/gorgias-ticket-sweet-dreams.php",true);
+			ajax.open("POST","https://joshkirk.dev/server/gorgias-ticket-pp-brand.php",true);
 			ajax.setRequestHeader("Content-type","application/x-www-form-urlencoded");
 
 			ajax.send("name="+name+"&email="+email+"&subject="+subject+"&message="+message);
