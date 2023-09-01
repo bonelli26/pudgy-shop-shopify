@@ -350,23 +350,32 @@ export const bindGorgiasForms = () => {
 
 export const bindKlaviyoForms = () => {
 	const forms = document.querySelectorAll(".bind-form:not(.bound)");
+	console.log('hello');
 	for (let i = 0; i < forms.length; i++) {
 		let form = forms[i];
-		form.classList.add("bound");
+		let showingError = false
+		let submittedOnce = false;
+		const completedState = document.getElementById("completed-state")
+		const initialState = document.getElementById("initial-state")
+		const emailField = form.querySelector('#email')
+		const honeyPotField = form.querySelector(".password")
 		form.addEventListener("submit", (event)=>{
 			event.preventDefault();
+			if (submittedOnce || honeyPotField.value !== "") { return; }
 			const listId = form.dataset.id;
-			const email = form.querySelector("#email").value;
-			gsap.to(form, { opacity: 0, duration: 0.3, ease: "sine.inOut", onComplete: () => {
-					// form.removeChild(form.querySelector("#email"));
-					// form.removeChild(form.querySelector("button"));
-					gsap.to(form.nextElementSibling, { autoAlpha: 1, duration: 0.3, ease: "sine.inOut" });
+			const email = emailField.value;
+
+			submittedOnce = true;
+			gsap.to(initialState, { autoAlpha: 0, duration: 0.3, ease: "sine.inOut", pointerEvents: "none", onComplete: () => {
+					gsap.delayedCall(0.3, () => {
+						gsap.to(completedState, { autoAlpha: 1, duration: 0.3, ease: "sine.inOut", pointerEvents: "all" });
+					})
 				}
 			});
 			subscribe(listId, email, {
 				// any optional traits
 			}).then((response) => {
-				// console.log(response)
+				console.log(response)
 			});
 		});
 	}

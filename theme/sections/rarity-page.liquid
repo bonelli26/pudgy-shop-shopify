@@ -1,0 +1,62 @@
+<div class="collection-hero">
+    <h1>{{ section.settings.collections_header }}</h1>
+    <p>{{ section.settings.collections_copy }}</p>
+</div>
+<div class="rarity-grid mw">
+    <div class="tile-wrapper">
+        {% for block in section.blocks %}
+            <div class="tile">
+                <svg class="frame" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 458 338"><rect width="430" height="319" x="15.5" y="8.5" fill="#fff" stroke="#00142D" stroke-width="3" rx="9.5"/><path fill="#fff" stroke="#00142D" stroke-width="2" d="M453.177 52.437c1.158-.658 1.794-1.5 1.794-2.358V24.146c0-9.473-15.537-23.146-34.72-23.146l-285.49.86c-1.967 0-3.877.257-5.584.757l-1.186.357c-3.067.9-6.915.815-9.78-.243-1.504-.557-3.356-.871-5.265-.871H39.485c-19.183 0-34.72 13.672-34.72 23.145v80.543c0 .486.087.972.231 1.458l1.07 3.157c.29.843-.26 1.701-1.504 2.315C3.55 112.978 3 113.65 3 114.35v3.643c0 .843.868 1.643 2.286 2.101 1.794.6 2.662 1.686 2.14 2.714l-.636 1.229c-.173.343-.26.7-.26 1.058v189.759C6.53 324.327 22.067 337 41.25 337l379.03-.86c19.183 0 34.72-12.673 34.72-22.146V60.295c0-1.057-1.736-1.9-3.848-1.9-3.299 0-5.092-1.93-2.893-3.158l4.947-2.8h-.029Zm-11.469-1.254c0 .8-.579 1.557-1.65 2.157l-4.513 2.558c-1.996 1.129-.376 2.886 2.662 2.886 1.938 0 3.501.772 3.501 1.743v243.166c0 8.644-3.501 17.897-36.241 17.897l-349.722.86c-28.808 0-36.241-9.253-36.241-17.897V123.694c0-.328.087-.643.231-.957l.58-1.129c.49-.943-.29-1.943-1.94-2.486-1.301-.429-2.083-1.157-2.083-1.929v-3.329c0-.643.521-1.257 1.447-1.715 1.128-.557 1.62-1.343 1.36-2.114l-.984-2.886a4.284 4.284 0 0 1-.231-1.329V32.321c0-7.316 0-17.897 36.24-17.897h67.068c1.736 0 3.414.271 4.802 3.037 2.604-1.294 6.134-1.194 8.912-2.022l1.099 1.922c1.534-2.708 3.299-2.951 5.092-2.951l264.37-.86c30.078 0 36.241 9.253 36.241 17.897v19.736Z"/><path fill="#fff" stroke="#00142D" stroke-linejoin="round" stroke-width="2.437" d="M45.852 1.31a1.219 1.219 0 0 0-.366-.037L23.258 2.45a1.219 1.219 0 0 0-1.154 1.216V5.57L11.598 2.497a1.219 1.219 0 0 0-.82.049L2.52 6.074a1.219 1.219 0 0 0-.727 1.293l5.398 37.87a1.219 1.219 0 0 0 2.32.325L20.21 21.56l6.63 1.637c.207.05.422.047.626-.011l23.18-6.586c.104-.03.204-.073.297-.129l13.654-8.233a1.219 1.219 0 0 0-.328-2.224L45.852 1.31Z"/></svg>
+                <img class="preload" {% if block.settings.image.alt %} alt="{{ block.settings.image.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.image | image_url }}" data-preload-mobile="https:{{ block.settings.image | image_url }}">
+                <div class="tile-inner">
+                    <p class="title">{{ block.settings.title }}</p>
+                    <p class="copy">{{ block.settings.copy }}</p>
+                </div>
+            </div>
+        {% endfor %}
+        <div class="tile dummy"></div>
+    </div>
+</div>
+
+{% schema %}
+    {
+        "name": "Rarity Page",
+        "tag": "section",
+        "class": "rarity-page",
+        "settings": [
+            {
+                "id": "collections_header",
+                "type": "text",
+                "label": "Collections Header"
+            },
+            {
+                "id": "collections_copy",
+                "type": "text",
+                "label": "Collections Copy"
+            }
+        ],
+      "blocks": [
+        {
+          "name": "Rarity Card",
+          "type": "rarity-card",
+          "settings": [
+            {
+              "id": "image",
+              "type": "image_picker",
+              "label": "Top Image"
+            },
+            {
+              "id": "title",
+              "type": "text",
+              "label": "Title"
+            },
+            {
+              "id": "copy",
+              "type": "text",
+              "label": "Copy"
+            }
+          ]
+        }
+      ]
+    }
+{% endschema %}

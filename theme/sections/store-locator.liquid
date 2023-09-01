@@ -1,14 +1,32 @@
-{% for block in section.blocks %}
-    {%- case block.type -%}
-        {%- when '@app' -%}
-            {% render block %}
-    {%- endcase -%}
-{% endfor %}
+<div class="section-hero">
+    <h1>{{ section.settings.header }}</h1>
+    <p>{{ section.settings.copy }}</p>
+</div>
+<div class="bottom">
+    {% for block in section.blocks %}
+        {%- case block.type -%}
+            {%- when '@app' -%}
+                {% render block %}
+        {%- endcase -%}
+    {% endfor %}
+</div>
 
 {% schema %}
 {
   "name": "Store locator main",
   "tag": "section",
+  "settings": [
+    {
+      "id": "header",
+      "type": "text",
+      "label": "Header"
+    },
+    {
+      "id": "copy",
+      "type": "text",
+      "label": "Copy"
+    }
+  ],
   "blocks": [
     {
       "type": "@app"

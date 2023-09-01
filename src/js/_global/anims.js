@@ -13,10 +13,17 @@ export const pageEntrance = (namespace = null)=> {
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
 
+	if(globalStorage.namespace === "get-notified") {
+		gsap.set(domStorage.header, { display: "none" });
+	} else {
+		gsap.set(domStorage.header, { display: "block" });
+	}
+
 
 	/* ----- Setup cases for specific load-ins ----- */
 	switch(namespace){
 		/* ----- Our default page entrance ----- */
+
 		default:
 			break;
 

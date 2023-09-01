@@ -115,8 +115,8 @@
     h1 {
       color: #FFF;
       text-shadow: -3px 3px #00142D;
-      -webkit-text-stroke: 1px #00142d;
-      text-stroke: 1px #00142d;
+      -webkit-text-stroke: 1.5px #00142d;
+      text-stroke: 1.5px #00142d;
       font-family: $ttBlack;
       line-height: .91;
       letter-spacing: -0.02em;
@@ -580,7 +580,7 @@
         border-radius: 40px 40px 0 0;
         background: #FFFFFF;
         z-index: 100;
-        gap: 12px;
+        gap: 0;
       }
       .atc-form {
         width: 100%;
@@ -594,8 +594,11 @@
         min-width: 90px;
         padding: 0 14px 2px;
       }
-      .options {
-        padding-bottom: 0;
+
+      h1 {
+        text-shadow: -3px 3px #00142dbf;
+
+
       }
     }
   }
@@ -675,7 +678,7 @@
       }
       h2 {
         max-width: 85%;
-        text-shadow: -1px 1px #00142D;
+        text-shadow: -3px 3px #00142dbf;
       }
     }
   }
@@ -778,13 +781,16 @@
     @include bp-767 {
       padding-left: 18px;
       padding-right: 18px;
+      h3 {
+        text-shadow: -3px 3px #00142dbf;
+      }
       .drawer {
         border-radius: 2px;
         border: 1px solid #00142D;
         box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
       }
       .label {
-        text-shadow: -1px 1px #00142D;
+        text-shadow: -1px 1px #00142dbf;
         color: #F5FDFF;
       }
     }
@@ -810,6 +816,9 @@
     @include bp-767 {
       .top {
         max-width: 100%;
+      }
+      h2 {
+        text-shadow: -3px 3px #00142dbf;
       }
     }
   }

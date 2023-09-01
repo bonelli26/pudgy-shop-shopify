@@ -1,0 +1,20 @@
+{
+  "sections": {
+    "get-notified": {
+      "type": "get-notified",
+      "settings": {
+        "header": "join our list",
+        "copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "success_header": "success!",
+        "success_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+        "success_button_url": "\/",
+        "success_button_text": "shop now",
+        "hero_bg": "shopify:\/\/shop_images\/loader-desktop.jpg",
+        "hero_bg_mobile": "shopify:\/\/shop_images\/loader-mobile.jpg"
+      }
+    }
+  },
+  "order": [
+    "get-notified"
+  ]
+}
