@@ -13,39 +13,32 @@ export const pageEntrance = (namespace = null)=> {
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
 
-	gsap.to(domStorage.header, { duration: 0.3, autoAlpha: 1, force3D: true, ease: "sine.inOut" });
-
-	if (globalStorage.firstLoad) {
-		gsap.set(domStorage.nav, { autoAlpha: 1, display: "flex", duration: 0.2, ease: "sine.out" });
+	if(globalStorage.namespace === "get-notified") {
+		gsap.set(domStorage.header, { display: "none" });
 	} else {
-		gsap.set(domStorage.navHome, { autoAlpha: 0, display: "none", duration: 0.2, ease: "sine.out" });
-		gsap.to(domStorage.nav, { autoAlpha: 1, display: "flex", duration: 0.2, ease: "sine.out" });
+		gsap.set(domStorage.header, { display: "block" });
 	}
-
-	gsap.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut" });
-
-	if (!globalStorage.firstLoad) {
-		timeline.to(domStorage.newNav, { duration: 0.3, autoAlpha: 1, ease: "sine.out" });
-	}
-
 
 
 	/* ----- Setup cases for specific load-ins ----- */
 	switch(namespace){
 		/* ----- Our default page entrance ----- */
+
 		default:
 			break;
 
 	}
+	timeline.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
+			if(globalStorage.firstLoad){
+				globalStorage.firstLoad = false
+				gsap.set(domStorage.header, { zIndex: 98 })
+			}
+		} })
+
 	gsap.set(domStorage.clickMask, { pointerEvents: "none" });
 
-
-	if (globalStorage.firstLoad) {
-		timeline.add(() => {
-		});
-	}
-
 	timeline.play();
+
 };
 
 /*
@@ -57,19 +50,28 @@ export const globalEntrance = ()=>{
 	if(globalStorage.firstLoad !== true){
 		return;
 	}
-	gsap.set(domStorage.header, { zIndex: 102 })
-	gsap.to(domStorage.header,  { autoAlpha: 1, duration: .3, ease: "sine.inOut", force3D: true });
+	new Marquees(true);
+
 	/* ----- Establish our timeline ----- */
-	// let timeline = new gsap.timeline({ paused: true });
+	let timeline = new gsap.timeline({ paused: true });
 
-	// gsap.set(logo, { y: 26 });
+	const img = domStorage.globalMask.querySelector("img")
+	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile
 
-	// timeline
-	// 	.to("#header .logo", { duration: 0.4, y: 0, opacity: 1, ease: "sine.out", onComplete: ()=>{
-	// 	}});
-	globalStorage.transitionFinished = true;
+	img.addEventListener("load", () => {
+		globalStorage.pencilMarquee.tween.play()
+		gsap.set(img, { opacity: 1 })
+		timeline
+			.to(domStorage.header,  { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
+					gsap.delayedCall(.1, () => {
+						globalStorage.transitionFinished = true;
+					})
+				} }, 0.2)
+	})
 
-	// timeline.play();
+	img.src = url
+
+	timeline.play();
 }
 
 export const prepDrawers = () => {
@@ -86,6 +88,7 @@ export const prepDrawers = () => {
 		const childrenWrapperItems = childrenWrapper.querySelectorAll("*");
 		const childrenWrapperHeight = childrenWrapper.offsetHeight;
 		const childrenItems = thisDrawer.querySelectorAll(".drawer-items > *");
+		const bg = drawers[i].querySelector(".filters-bg");
 
 		if (thisDrawer.classList.contains("replace-label")) {
 			let label = thisDrawer.querySelector(".current-label");
@@ -101,25 +104,56 @@ export const prepDrawers = () => {
 				const openDrawers = document.querySelectorAll(".drawer.open")
 				for (let i = 0; i < openDrawers.length; i++) {
 					openDrawers[i].classList.remove("open")
-					gsap.to(openDrawers[i].querySelector(".drawer-items"), 0.35, { height: 0, force3D: true, ease: "sine.inOut" })
+					if (globalStorage.isMobile && thisDrawer.classList.contains("faq-drawer")) {
+						gsap.set(openDrawers[i].querySelector(".drawer-items"), { height: 0, force3D: true })
+					} else {
+						gsap.to(openDrawers[i].querySelector(".drawer-items"), 0.35, { height: 0, force3D: true, ease: "sine.inOut" })
+					}
 					gsap.to(openDrawers[i].querySelectorAll(".drawer-items > *"), 0.35, { opacity: 0, force3D: true, ease: "sine.inOut" })
 				}
 				thisDrawer.classList.add("open")
 
-				gsap.to(childrenWrapper, 0.35, { height: childrenWrapperHeight, force3D: true, ease: "sine.inOut", onComplete: () => {
-						if ($scroll) {
-							$scroll.resize();
-						}
-					} })
-				gsap.fromTo(childrenWrapperItems, 0.7, { opacity: .2 }, { opacity: 1, force3D: true, ease: "sine.inOut" })
+				if (globalStorage.isMobile && thisDrawer.classList.contains("faq-drawer")) {
+					gsap.set(childrenWrapper, { height: childrenWrapperHeight, force3D: true })
+					if ($scroll) {
+						$scroll.resize();
+					}
+				} else {
+					gsap.to(childrenWrapper, 0.35, { height: childrenWrapperHeight, force3D: true, ease: "sine.inOut", onComplete: () => {
+							if ($scroll) {
+								$scroll.resize();
+							}
+						} })
+				}
+
+
+				gsap.fromTo(childrenWrapperItems, 0.35, { opacity: 0 }, { opacity: 1, force3D: true, ease: "sine.in" })
+
+				if (thisDrawer.classList.contains("replace-label")) {
+					gsap.to(bg, { borderRadius: "13", force3D: true, ease: "sine.out", duration: 0.3, delay: .1 });
+				}
 			} else {
+
 				thisDrawer.classList.remove("open")
-				gsap.to(childrenWrapper, 0.35, { height: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
-						if ($scroll) {
-							$scroll.resize();
-						}
-					} })
+
+				if (globalStorage.isMobile && thisDrawer.classList.contains("faq-drawer")) {
+					gsap.set(childrenWrapper, { height: 0, force3D: true })
+					if ($scroll) {
+						$scroll.resize();
+					}
+				} else {
+					gsap.to(childrenWrapper, 0.35, { height: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
+							if ($scroll) {
+								$scroll.resize();
+							}
+						} })
+				}
+
 				gsap.to(childrenWrapperItems, 0.35, { opacity: 0, force3D: true, ease: "sine.inOut" })
+
+				if (thisDrawer.classList.contains("replace-label")) {
+					gsap.to(bg, { borderRadius: "53", force3D: true, ease: "sine.out", duration: 0.3, delay: .1 });
+				}
 			}
 		})
 		gsap.set(childrenWrapper, { height: 0 })
@@ -132,8 +166,13 @@ export const prepDrawers = () => {
 
 export class Marquees {
 
-	constructor() {
-		this.marquees = document.querySelectorAll('.marquee:not(.prepped)');
+	constructor(pencilMarquee = false) {
+		this.pencilMarquee = pencilMarquee
+		if (pencilMarquee) {
+			this.marquees = document.querySelectorAll('.pencil-bar');
+		} else {
+			this.marquees = document.querySelectorAll('.marquee:not(.prepped)');
+		}
 
 		this.init();
 
@@ -154,7 +193,7 @@ export class Marquees {
 				continue;
 			}
 			let inner = this.marquees[i].querySelector('.inner'),
-				small = this.marquees[i].classList.contains('small') ? true : false,
+				small = this.marquees[i].classList.contains('small'),
 				containerWitdth = small ? this.marquees[i].offsetWidth : globalStorage.windowWidth,
 				copyEl = this.marquees[i].querySelector('[aria-hidden]'),
 				copyWidth = copyEl.offsetWidth,
@@ -177,11 +216,19 @@ export class Marquees {
 				});
 
 			} else {
-				globalStorage.marqueeData.push({
-					el: this.marquees[i],
-					tween: tween,
-					playing: false
-				});
+				if (this.pencilMarquee) {
+					globalStorage.pencilMarquee = {
+						el: this.marquees[i],
+						tween: tween,
+						playing: false
+					};
+				} else {
+					globalStorage.marqueeData.push({
+						el: this.marquees[i],
+						tween: tween,
+						playing: false
+					});
+				}
 			}
 
 		}
@@ -236,7 +283,7 @@ export class Marquees {
 }
 
 export const prepSliders = () => {
-
+	if (globalStorage.namespace === "store-locator") { return }
 	let prepControls = (slider, dots, prev, next) => {
 
 		if (prev) {
@@ -290,8 +337,7 @@ export const prepSliders = () => {
 			dots = dotsWrapper.querySelectorAll('.dot');
 		}
 
-
-		const options = { loop: (globalStorage.windowWidth > 767 ? !el.classList.contains("no-loop") : !el.classList.contains("no-loop-mobile")), skipSnaps: true, inViewThreshold: el.dataset.inView ? Number(el.dataset.inView) : 0.3, containScroll: true, startIndex: parseInt(startIndex), align: slideAlignment, dragFree: !el.classList.contains("no-drag-free") };
+		const options = { loop: (globalStorage.windowWidth > 767 ? !el.classList.contains("no-loop") : !el.classList.contains("no-loop-mobile")), skipSnaps: true, inViewThreshold: el.dataset.inView ? Number(el.dataset.inView) : 0.3, startIndex: parseInt(startIndex), align: slideAlignment, dragFree: !el.classList.contains("no-drag-free") };
 
 		const slider = EmblaCarousel(slideWrapper, options);
 
@@ -500,8 +546,6 @@ export const newTabs = () => {
 				img = tab.querySelector(".img-wrapper"),
 				splitLines = false;
 
-				console.log(splitEl);
-
 			if (splitEl) {
 				splitLines = new SplitText(splitEl, {type: "lines"}).lines;
 				if (j !== 0) {
@@ -546,7 +590,7 @@ export const newTabs = () => {
 export const filterTabs = () => {
 	if(globalStorage.namespace !== "collection") { return; }
 	let tabParent = document.querySelector(".collection-grid");
-	const triggers = tabParent.querySelectorAll('.filters .pink-btn');
+	const triggers = globalStorage.isGreaterThan767 ? tabParent.querySelectorAll('.filter') : tabParent.querySelectorAll('.filter-mobile');
 	const tabsWrapper = tabParent.querySelector('.grid');
 	const tiles = tabsWrapper.querySelectorAll('.card-wrapper:not(.dummy)');
 
@@ -562,7 +606,7 @@ export const filterTabs = () => {
 
 			gsap.delayedCall(.19, () => { animating = false; });
 
-			document.querySelector(".pink-btn.active").classList.remove("active");
+			document.querySelector("button.active").classList.remove("active");
 
 			trigger.classList.add("active");
 
@@ -611,7 +655,6 @@ export const seeMore = () => {
 	const trigger = seeMoreSection.querySelector(".see-more")
 
 	gsap.set(tiles, { display: "none", autoAlpha: 0 })
-	console.log(trigger)
 	trigger.addEventListener('click', () => {
 		gsap.to(trigger, { display: "none" })
 		gsap.to(tiles, { display: "flex", autoAlpha: 1, ease: "sine.inOut", force3D: true, duration: 0.2 })

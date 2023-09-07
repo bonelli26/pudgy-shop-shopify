@@ -3,14 +3,10 @@
         <div class="tag">{{ section.settings.hero_tag }}</div>
         <h1>{{ section.settings.hero_header }}</h1>
         <p>{{ section.settings.hero_intro }}</p>
-        <a class="pink-btn" href="{{ section.settings.hero_button_url }}"><span>Shop Now</span></a>
+        <a class="pink-btn prefetch-us" href="{{ section.settings.hero_button_url }}"><span>Shop Now</span></a>
     </div>
-    <div class="right">
-        <img class="preload-critical bg toy"{% if section.settings.toy_image.alt %} alt="{{ section.settings.toy_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.toy_image | image_url }}" data-preload-mobile="https:{{ section.settings.toy_image | image_url }}">
-    </div>
-    <img class="preload-critical bg hand"{% if section.settings.hand_image.alt %} alt="{{ section.settings.hand_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hand_image | image_url }}" data-preload-mobile="https:{{ section.settings.hand_image | image_url }}">
 </div>
-<img class="preload-critical bg"{% if section.settings.hero_bg.alt %} alt="{{ section.settings.hero_bg.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_bg | image_url }}" data-preload-mobile="https:{{ section.settings.hero_bg | image_url }}">
+<img class="preload-critical bg"{% if section.settings.hero_bg.alt %} alt="{{ section.settings.hero_bg.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_bg | image_url }}" data-preload-mobile="https:{{ section.settings.hero_bg_mobile | image_url }}">
 
 
 {% schema %}
@@ -23,30 +19,31 @@
               "id": "hero_tag",
               "type": "text",
               "label": "Hero Tag"
-            },{
+            },
+            {
               "id": "hero_header",
               "type": "text",
               "label": "Hero Header"
-            },{
+            },
+            {
               "id": "hero_intro",
               "type": "text",
               "label": "Hero Intro"
-            },{
+            },
+            {
               "id": "hero_button_url",
               "type": "text",
               "label": "Hero Button URL"
-            },{
-              "id": "toy_image",
-              "type": "image_picker",
-              "label": "Toy Image"
-            },{
-              "id": "hand_image",
-              "type": "image_picker",
-              "label": "Hand Image"
-            },{
+            },
+            {
               "id": "hero_bg",
               "type": "image_picker",
               "label": "Hero BG"
+            },
+            {
+              "id": "hero_bg_mobile",
+              "type": "image_picker",
+              "label": "Hero BG mobile"
             }
         ]
     }

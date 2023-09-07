@@ -4,9 +4,13 @@
       "type": "main-page",
       "settings": {
       }
+    },
+    "footer": {
+      "type": "footer"
     }
   },
   "order": [
-    "main"
+    "main",
+    "footer"
   ]
 }

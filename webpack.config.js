@@ -26,7 +26,7 @@ let compiledPath = "../../compiled/";
 module.exports = {
 	mode: "production",
 	entry: {
-		"main.js.liquid": [
+		"main.js": [
 			"./src/js/main.js"
 		],
 		"../../compiled/init": [
@@ -48,13 +48,13 @@ module.exports = {
 		splitChunks: {
 			cacheGroups: {
 				init: {
-					name: "_init.css.liquid",
+					name: "_init.css",
 					test: (m,c,entry = "../../compiled/init") => m.constructor.name === "CssModule" && recursiveIssuer(m) === entry,
 					chunks: "initial",
 					enforce: true
 				},
 				main: {
-					name: "_main.css.liquid",
+					name: "_main.css",
 					test: (m,c,entry = "../../compiled/main") => m.constructor.name === "CssModule" && recursiveIssuer(m) === entry,
 					chunks: "initial",
 					enforce: true

@@ -6,6 +6,10 @@ export class AddToCart {
 
 	constructor(){
 		this.forms = document.querySelectorAll(".atc-form:not(.bound)");
+		this.shippingMeterBar = document.getElementById("shipping-meter-bar")
+		this.shippingNoteOne = document.getElementById("shipping-note-one")
+		this.shippingNoteTwo = document.getElementById("shipping-note-two")
+		this.shippingThreshold = Number(this.shippingMeterBar.dataset.threshold)
 		this.bindATCEvents();
 		this.getCurrentCart(true);
 	}
@@ -113,7 +117,6 @@ export class AddToCart {
 				for (let j = 0; j < varData.length; j++) {
 					let matches = 0;
 					for (let z = 0; z < optionArr.length; z++) {
-						console.log(varData[j].title, optionArr[z])
 						if (varData[j].title === optionArr[z]) {
 							matches++;
 						} else {
@@ -169,11 +172,18 @@ export class AddToCart {
 	 */
 	addToCart(form){
 		let varID = form.querySelector(".add-to-cart").dataset.id;
-		console.log(varID);
+
+		const count = form.querySelector(".count")
+		let quantity
+		if (count) {
+			quantity = Number(count.textContent)
+		} else {
+			quantity = 1
+		}
 		let formData = {
 			'items': [{
 				'id': varID,
-				'quantity': 1
+				'quantity': quantity
 			}]
 		};
 
@@ -203,13 +213,35 @@ export class AddToCart {
 					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
 					this.buildMiniCart(data.items);
 					this.toggleEmptyCart(false);
+					const easyPrice = Number(((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2)))
+
+					this.incentiveBarPercent = easyPrice / this.shippingThreshold
+					if (this.incentiveBarPercent >= 1) {
+						this.incentiveBarPercent = 1
+						gsap.set(this.shippingNoteOne, { display: "none" })
+						gsap.set(this.shippingNoteTwo, { display: "block" })
+					} else {
+						gsap.set(this.shippingNoteOne, { display: "block" })
+						gsap.set(this.shippingNoteTwo, { display: "none" })
+					}
 					if (!firstBuild) {
 						$miniCart.open()
+						gsap.to(this.shippingMeterBar, { scaleX: this.incentiveBarPercent, ease: "expo.inOut", duration: 0.8 })
+					} else {
+						gsap.set(this.shippingMeterBar, { scaleX: this.incentiveBarPercent })
 					}
 				} else {
 					this.toggleEmptyCart(true, true);
+					gsap.set(this.shippingNoteOne, { display: "block" })
+					gsap.set(this.shippingNoteTwo, { display: "none" })
+					if (!firstBuild) {
+						gsap.to(this.shippingMeterBar, { scaleX: 0, ease: "expo.inOut", duration: 0.8 })
+					} else {
+						gsap.set(this.shippingMeterBar, { scaleX: 0 })
+					}
 					// domStorage.cartCountEl.textContent = "0";
 				}
+
 			});
 
 	}
@@ -254,6 +286,7 @@ export class AddToCart {
 			fetch(window.Shopify.routes.root + 'cart.js')
 				.then(response => response.json())
 				.then(data => {
+					this.getCurrentCart();
 					domStorage.miniCartTotal.textContent = "$" + ((data.total_price.toString()).slice(0, -2) + "." + (data.total_price.toString()).slice(-2));
 				});
 		}).catch((error) => {
@@ -275,7 +308,6 @@ export class AddToCart {
 		let html = ``;
 		for (let i = 0; i < items.length; i++) {
 			let item = items[i];
-			console.log(item)
 			/* --- Product --- */
 			html += `
 				<article class="line-item product-tile" data-id="${item.variant_id}" data-key="${item.key}" data-quantity="${item.quantity}">
@@ -313,7 +345,7 @@ export class AddToCart {
 								</svg>
 								</button>
 								<div class="price-wrapper">
-									<p class="line-item-price" data-orig-price="${item.price.toString().slice(0, -2)}">${parseFloat((item.price * item.quantity).toString().slice(0, -2)).toLocaleString('en-US', {style: 'currency', currency: 'USD'})}</p>
+									<p class="line-item-price" data-orig-price="${(item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2))}">${"$" + ((item.price.toString().slice(0, -2) + "." + (item.price.toString()).slice(-2)) * item.quantity).toFixed(2)}</p>
 								</div>
 							</div>
 						</div>						
@@ -348,7 +380,7 @@ export class AddToCart {
 				increase = el.querySelector(".increase"),
 				parentLineItem = el.parentElement.parentElement.parentElement,
 				priceEl = parentLineItem.querySelector(".line-item-price"),
-				price = parseFloat(priceEl.dataset.origPrice),
+				price = Number(priceEl.dataset.origPrice),
 				count = parseInt(countEl.textContent);
 
 			decrease.addEventListener("click", () => {

@@ -16,10 +16,10 @@ class BasicFade extends Highway.Transition{
 		if ($miniCart.isOpen) {
 			$miniCart.close()
 		}
-		gsap.fromTo(globalMask, 0.3, { autoAlpha: 0 }, { autoAlpha: 1, ease: "sine.out", onComplete: () => {
-			gsap.to(domStorage.header, { yPercent: 0, duration: 0.25, force3D: true, ease: "sine.inOut" });
-			done();
-		} });
+		// gsap.fromTo(globalMask, 0.3, { autoAlpha: 0 }, { autoAlpha: 1, ease: "sine.out", onComplete: () => {
+		// } });
+		gsap.to(domStorage.header, { yPercent: 0, duration: 0.25, force3D: true, ease: "sine.inOut" });
+		done();
 	}
 
 	in({from, to, trigger, done}){

@@ -16,13 +16,15 @@ export const globalStorage = {
 	"reducedMotion": window.matchMedia("(prefers-reduced-motion: reduce)").matches,
 	"headerShowing": true,
 	"marqueeData": [],
+	"prefetchedUrls": [],
 	"reviewOverviews": [],
 	"allReviewsOverview": ""
 };
 
 export const domStorage = {
 	"header": document.getElementById("header"),
-	"navHome": document.getElementById("nav-home"),
+	"navHome": document.getElementById("nav-bar"),
+	"pencilMarquee": document.querySelector(".pencil-bar"),
 	"nav": document.getElementById("nav"),
 	"mainEl": document.getElementById("main"),
 	"containerEl": document.getElementById("container"),

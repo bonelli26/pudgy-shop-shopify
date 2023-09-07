@@ -3,14 +3,20 @@
     "contact": {
       "type": "contact",
       "settings": {
-        "header": "get in touch",
-        "copy": "For order related questions or concerns, please fill out the form and one of our concierge members will get back to you.",
+        "header": "Contact us",
+        "copy": "For questions or concerns regarding your order, please fill out the form below and one of our care members will reach back out to you. We typically respond within a few hours.",
         "success_header": "thank you",
         "success_copy": "We will reach out to you shortly."
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
       }
     }
   },
   "order": [
-    "contact"
+    "contact",
+    "footer"
   ]
 }

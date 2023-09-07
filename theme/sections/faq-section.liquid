@@ -3,36 +3,32 @@
 <div class="inner">
     {% for block in section.blocks %}
         <div class="drawer">
-            <svg class="ice-block" width="1028" height="134" preserveAspectRatio="none" viewBox="0 0 1028 134" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_1320_2045)">
-                    <path d="M8.47198 9.751C9.1999 9.3387 10.0171 9.11349 10.8495 9.0958L65.295 7.93872L129.184 7.43798L193.073 6.93724L225.012 7.93253L256.961 6.4365L512.517 4.43355L768.072 2.4306L831.961 1.92987L863.9 2.92515L895.849 1.42913L959.738 0.928392L986.814 4.07935L1018.87 5.53757C1021.53 5.65827 1023.6 7.83537 1023.59 10.4933L1023.59 11.078L1023.55 21.7284L1023.46 43.0291L1023.31 82.426L1023.24 102.124L1023.2 111.974L1023.19 114.14C1023.19 115.857 1022.3 117.461 1020.84 118.388L1017.55 120.482C1016.77 120.983 1015.86 121.257 1014.93 121.273L959.274 122.245L895.386 122.667L831.497 123.09L767.609 123.512L703.721 123.698L639.832 124.356L512.055 125.2L256.497 127.832L192.608 128.333L128.722 128.205L64.8308 129.334L17.7396 128.209C17.4493 128.202 17.1604 128.17 16.8762 128.113L4.93514 125.71C2.61971 125.244 0.967313 123.214 0.976367 120.847L0.97966 119.985L1.01733 110.136L1.09266 90.4378L1.24333 51.0409L1.32479 29.7402L1.36552 19.0898L1.37467 16.6958C1.3816 14.8857 2.36623 13.2094 3.94902 12.3128L8.47198 9.751Z" fill="url(#paint0_linear_1320_2045)"/>
-                    <path d="M224.969 8.93207L225.008 8.93328L225.047 8.93146L256.977 7.43634L512.513 5.43355L768.068 3.4306L831.937 2.93001L831.957 2.92986L863.857 3.92469L863.896 3.92591L863.935 3.92408L895.845 2.42912L895.865 2.42897L959.672 1.92887L986.687 5.07269L986.722 5.07675L986.757 5.07834L1018.82 6.53656C1020.94 6.63312 1022.6 8.37481 1022.59 10.5012L1022.59 11.0859L1022.55 21.7362L1022.46 43.0369L1022.31 82.4338L1022.24 102.132L1022.2 111.982L1022.19 114.148C1022.19 115.521 1021.48 116.804 1020.31 117.546L1017.02 119.64C1016.39 120.041 1015.67 120.26 1014.93 120.273L959.279 121.245L959.274 121.245L895.391 121.667L831.502 122.09L767.617 122.512L767.614 122.512L703.73 122.698L703.722 122.698L639.837 123.356L639.833 123.356L512.06 124.2L512.056 124.201L256.501 126.832L256.499 126.832L192.617 127.332L192.612 127.333L128.736 127.205L128.726 127.205L128.716 127.205L64.8455 128.334L17.7752 127.209C17.5429 127.204 17.3118 127.178 17.0844 127.132L5.14336 124.729C3.29101 124.357 1.96909 122.733 1.97634 120.839L1.97963 119.978L2.0173 110.128L2.09263 90.43L2.2433 51.0331L2.32476 29.7323L2.36549 19.082L2.37464 16.688C2.38018 15.2399 3.16789 13.8988 4.43412 13.1816L8.95708 10.6198C9.53941 10.2899 10.1932 10.1097 10.8591 10.0956L65.2979 8.93866L129.18 8.43797L193.049 7.93739L224.969 8.93207Z" stroke="#00142D" stroke-width="2" vector-effect="non-scaling-stroke"/>
-                </g>
-                <defs>
-                    <filter id="filter0_d_1320_2045" x="0.976562" y="0.928467" width="1026.61" height="132.406" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                        <feOffset dx="4" dy="4"/>
-                        <feComposite in2="hardAlpha" operator="out"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1320_2045"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1320_2045" result="shape"/>
-                    </filter>
-                    <linearGradient id="paint0_linear_1320_2045" x1="-1.5479" y1="8.13349" x2="497.649" y2="579.397" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#C1ECFF"/>
-                        <stop offset="0.25" stop-color="#C1ECFF"/>
-                        <stop offset="0.381662" stop-color="white"/>
-                        <stop offset="0.608286" stop-color="#C2ECFF"/>
-                        <stop offset="1" stop-color="#C1ECFF"/>
-                    </linearGradient>
-                </defs>
-            </svg>
             <div class="label">
                 <p>{{ block.settings.question }}</p>
-                <span>+</span>
+                <span>
+                    <svg xmlns="http://www.w3.org/2000/svg" width="44" height="45" viewBox="0 0 44 45" fill="none">
+                      <g filter="url(#filter0_d_1762_1293)">
+                        <path d="M17.5596 40.2398V26.7198H4.55957V15.2798H17.5596V1.75977H28.9996V15.2798H41.9996V26.7198H28.9996V40.2398H17.5596Z" fill="white"/>
+                        <path d="M16.8096 40.2398V40.9898H17.5596H28.9996H29.7496V40.2398V27.4698H41.9996H42.7496V26.7198V15.2798V14.5298H41.9996H29.7496V1.75977V1.00977H28.9996H17.5596H16.8096V1.75977V14.5298H4.55957H3.80957V15.2798V26.7198V27.4698H4.55957H16.8096V40.2398Z" stroke="#00142D" stroke-width="1.5"/>
+                      </g>
+                      <defs>
+                        <filter id="filter0_d_1762_1293" x="0.0595703" y="0.259766" width="43.4404" height="44.48" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                          <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                          <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                          <feOffset dx="-3" dy="3"/>
+                          <feComposite in2="hardAlpha" operator="out"/>
+                          <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+                          <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1762_1293"/>
+                          <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1762_1293" result="shape"/>
+                        </filter>
+                      </defs>
+                    </svg>
+                </span>
             </div>
             <div class="drawer-items">
-                <div>{{ block.settings.answer }}</div>
+                <div class="content">
+                    {{ block.settings.answer }}
+                </div>
             </div>
         </div>
     {% endfor %}

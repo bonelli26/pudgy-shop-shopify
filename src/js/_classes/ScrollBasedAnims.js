@@ -192,14 +192,14 @@ export class ScrollBasedAnims {
 	hideShowHeader() {
 		this.dist = this.adjustHeaderDist / 2;
 		if (this.direction === "untouched") {
-			return;
+			gsap.set(domStorage.header, { y: 0 });
 		}
 
 		if (this.direction === "down" && !this.headerScrolled && this.data.scrollY >= this.dist) {
-			console.log(this.dist);
 			this.headerScrolled = true;
-			gsap.to(domStorage.header, { y: -40, duration: 0.3, force3D: true, ease: "sine.inOut", delay: 0.2 });
-		} else if (this.direction === "up" && this.headerScrolled && this.data.scrollY <= this.adjustHeaderDist) {
+			gsap.to(domStorage.header, { y: globalStorage.windowWidth > 767 ? -40 : -130, duration: 0.3, force3D: true, ease: "sine.inOut", delay: 0.2 });
+		}
+		if (this.direction === "up" && this.headerScrolled && this.data.scrollY <= this.dist) {
 			this.headerScrolled = false;
 			gsap.to(domStorage.header, { y: 0, duration: 0.3, force3D: true, ease: "sine.inOut" });
 		}

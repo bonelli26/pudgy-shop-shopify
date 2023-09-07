@@ -4,23 +4,22 @@
       "type": "hero-home",
       "settings": {
         "hero_tag": "NEW DROP",
-        "hero_header": "Pudgy  bowl cut",
-        "hero_intro": "Send a Pudgy Penguin and spread the love! It's the perfect gift for your significant other, family, friends, or even yourself.",
+        "hero_header": "Welcome to the huddle!",
+        "hero_intro": "Experience being a pudgy penguin and spread good vibes with us. Join our community and waddle into the huddle.",
         "hero_button_url": "\/collections\/all-toys",
-        "toy_image": "shopify:\/\/shop_images\/box-toy.png",
-        "hand_image": "shopify:\/\/shop_images\/PUP_Action_Figures_LF_SR1_1_1.png",
-        "hero_bg": "shopify:\/\/shop_images\/sky-hero.jpg"
+        "hero_bg": "shopify:\/\/shop_images\/ca88d16c-97bf-4ece-9268-4f086b32c31c.jpg",
+        "hero_bg_mobile": "shopify:\/\/shop_images\/Hero-mobile.png"
       }
     },
     "block-trio": {
       "type": "block-trio",
       "settings": {
-        "eyebrow_1": "Traits minted",
-        "copy_1": "5000",
+        "eyebrow_1": "Members",
+        "copy_1": "10k+",
         "eyebrow_2": "Toys Sold",
-        "copy_2": "10,000+",
-        "eyebrow_3": "Market Value",
-        "copy_3": "10m"
+        "copy_2": "100k+",
+        "eyebrow_3": "Giphy Views",
+        "copy_3": "5B+"
       }
     },
     "best-sellers": {
@@ -29,19 +28,19 @@
         "e8f75052-7738-48fb-acb8-2a11acde5b8f": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins-cowboy-figurine"
+            "product": "pudgy-penguins™-plush-buddy-carrot-pudgy"
           }
         },
         "0196dddd-1806-4fac-9a89-91aa9af0e793": {
           "type": "product-card",
           "settings": {
-            "product": ""
+            "product": "pudgy-penguins™-plush-buddy-flower-princess"
           }
         },
         "897dbcb9-4507-4b27-af0d-a0dede27b754": {
           "type": "product-card",
           "settings": {
-            "product": ""
+            "product": "polar-bear-plushie"
           }
         }
       },
@@ -51,7 +50,7 @@
         "897dbcb9-4507-4b27-af0d-a0dede27b754"
       ],
       "settings": {
-        "heading": "best sellers",
+        "heading": "The worlds new favorite Penguin",
         "copy": "meet pudgy penguins! internets  new favorite penguin."
       }
     },
@@ -61,13 +60,13 @@
         "9110167c-e0ed-4035-88e1-a08bafa83ca2": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins™-huggable-plush-golden-pudgy"
+            "product": "pudgy-penguins™-positive-penguin-grey-purple"
           }
         },
         "aa2c735d-077c-42fe-847d-e9d88e12084f": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins™-huggable-plush-pudgy-man"
+            "product": "huggable-plush-golden-pudgy"
           }
         },
         "090542dc-b5cc-4b21-8d20-1824095d9616": {
@@ -78,9 +77,20 @@
         },
         "0f7f91a3-38f1-4621-82a6-8973523b70f7": {
           "type": "product-card",
-          "disabled": true,
           "settings": {
-            "product": "pudgy-penguins-samurai-figurine"
+            "product": "pudgy-penguins™-positive-penguin-black-red"
+          }
+        },
+        "dc21a677-d5f3-4007-afb4-ad7842580980": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins™-plush-buddy-flower-princess"
+          }
+        },
+        "b3004937-8f4d-44be-8a2e-7af6f91ab259": {
+          "type": "product-card",
+          "settings": {
+            "product": "pudgy-penguins™-plush-buddy-huffle-pudge"
           }
         }
       },
@@ -88,7 +98,9 @@
         "9110167c-e0ed-4035-88e1-a08bafa83ca2",
         "aa2c735d-077c-42fe-847d-e9d88e12084f",
         "090542dc-b5cc-4b21-8d20-1824095d9616",
-        "0f7f91a3-38f1-4621-82a6-8973523b70f7"
+        "0f7f91a3-38f1-4621-82a6-8973523b70f7",
+        "dc21a677-d5f3-4007-afb4-ad7842580980",
+        "b3004937-8f4d-44be-8a2e-7af6f91ab259"
       ],
       "settings": {
         "heading": "Live Now",
@@ -124,34 +136,10 @@
     },
     "video-trio": {
       "type": "video-trio",
-      "blocks": {
-        "caee1b52-d16d-4cab-b918-01dfda9bb08f": {
-          "type": "tile",
-          "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
-          }
-        },
-        "6a11ed60-0ce9-467a-b573-b52db82bfeb2": {
-          "type": "tile",
-          "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
-          }
-        },
-        "21c25fe4-138b-4194-9cf9-73ef655e7a5f": {
-          "type": "tile",
-          "settings": {
-            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/e9a250ee3832476c8be6979546849a95.mp4"
-          }
-        }
-      },
-      "block_order": [
-        "caee1b52-d16d-4cab-b918-01dfda9bb08f",
-        "6a11ed60-0ce9-467a-b573-b52db82bfeb2",
-        "21c25fe4-138b-4194-9cf9-73ef655e7a5f"
-      ],
+      "disabled": true,
       "settings": {
-        "header": "",
-        "copy": ""
+        "header": "instagram",
+        "copy": "our content"
       }
     },
     "bottom-marquee": {
@@ -182,9 +170,14 @@
         "d7507adf-d969-4e27-873d-335e99f37fdf"
       ],
       "settings": {
-        "marquee_duration": "15",
-        "marquee_duration_mobile": "10",
+        "marquee_duration": "30",
+        "marquee_duration_mobile": "20",
         "header": "As seen on"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
       }
     }
   },
@@ -195,6 +188,7 @@
     "home-product-grid",
     "fifty-fifty-tiles",
     "video-trio",
-    "bottom-marquee"
+    "bottom-marquee",
+    "footer"
   ]
 }

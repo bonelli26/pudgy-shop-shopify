@@ -2,13 +2,47 @@
   "sections": {
     "product-grid": {
       "type": "main-collection-product-grid",
+      "blocks": {
+        "b4577593-a12c-45f5-aaff-585084c71318": {
+          "type": "collection",
+          "settings": {
+            "collection": "all-toys",
+            "collection_name": "All toys"
+          }
+        },
+        "bda50de0-5fe3-4033-bbb5-8516b80c1c40": {
+          "type": "collection",
+          "settings": {
+            "collection": "figurines",
+            "collection_name": "Figurines"
+          }
+        },
+        "7d7ee1cc-d472-472a-8de7-edc3589f0663": {
+          "type": "collection",
+          "settings": {
+            "collection": "plushies",
+            "collection_name": "Plushies"
+          }
+        }
+      },
+      "block_order": [
+        "b4577593-a12c-45f5-aaff-585084c71318",
+        "bda50de0-5fe3-4033-bbb5-8516b80c1c40",
+        "7d7ee1cc-d472-472a-8de7-edc3589f0663"
+      ],
       "settings": {
         "collections_header": "SHOP ALL",
-        "collections_copy": "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas sed diam eget risus varius blandit sit amet non magna."
+        "collections_copy": "Welcome to Pudgy Penguins! Shop our line of cute plushies and figurines."
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
       }
     }
   },
   "order": [
-    "product-grid"
+    "product-grid",
+    "footer"
   ]
 }

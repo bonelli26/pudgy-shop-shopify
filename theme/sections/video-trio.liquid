@@ -38,7 +38,7 @@
                 </defs>
               </svg>
             </button>
-            <video preload muted loop playsinline class="preload-critical bg auto" data-preload-desktop="{{ block.settings.video_url }}" data-preload-mobile="{{ block.settings.video_url }}"></video>
+            {% render block %}
           </div>
         {% endfor %}
       </div>
@@ -64,16 +64,7 @@
     ],
     "blocks": [
       {
-        "name": "Tile",
-        "type": "tile",
-        "limit": 3,
-        "settings": [
-          {
-            "type": "url",
-            "id": "video_url",
-            "label": "Video URL"
-          }
-        ]
+        "type": "@app"
       }
     ]
   }

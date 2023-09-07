@@ -1,11 +1,12 @@
 import { gsap } from "gsap";
+import {globalStorage} from "../_global/storage";
 
 export class MobileMenu {
 
 	constructor() {
 		this.nav = document.querySelector("nav");
 		if(!this.nav) { return; }
-		if(window.innerWidth < 767) {
+		if(!globalStorage.isGreaterThan767) {
 			this.navDrawer = document.getElementById("nav-bar");
 			this.navMask = document.querySelector(".nav-mask");
 			gsap.set(this.navDrawer, { scale: 0 });
@@ -36,11 +37,11 @@ export class MobileMenu {
 		this.timeline.progress(0);
 		this.timeline
 			.set(this.navDrawer, {pointerEvents: "all"})
-			.to(this.bar1, { rotate: 45, duration: 1, force3D: true, ease: "expo.out", transformOrigin: "top left" })
-			.to(this.bar3, { rotate: -45, duration: 1, force3D: true, ease: "expo.out", transformOrigin: "bottom left" }, "<")
-			.to(this.bar2, { rotate: 45, autoAlpha: 0, duration: 0.8, force3D: true, ease: "expo.out" }, "<")
-			.to(this.navDrawer, { scale: 1, duration: 1.2, force3D: true, ease: "elastic.out", transformOrigin: "top left"}, "<")
-			.to(this.main, { scale: 1.1, duration: 1.2, force3D: true, ease: "elastic.out", transformOrigin: "top left"}, "<");
+			.to(this.bar1, { rotate: 45, duration: 0.1, force3D: true, ease: "sine.out", transformOrigin: "top left" })
+			.to(this.bar3, { rotate: -45, duration: 0.1, force3D: true, ease: "sine.out", transformOrigin: "bottom left" }, "<")
+			.to(this.bar2, { autoAlpha: 0, duration: 0.1, force3D: true, ease: "sine.inOut" }, "<")
+			.to(this.navDrawer, { scale: 1, duration: 1.1, force3D: true, ease: "expo.out", transformOrigin: "top left"}, 0);
+			// .to(this.main, { scale: 1.1, duration: 1.2, force3D: true, ease: "elastic.out", transformOrigin: "top left"}, "<");
 
 
 		this.trigger.classList.add('open');
@@ -55,8 +56,8 @@ export class MobileMenu {
 			.to(this.bar1, { rotate: 0, duration: 0.18, force3D: true, ease: "expo.out", transformOrigin: "top left" })
 			.to(this.bar3, { rotate: 0, duration: 0.18, force3D: true, ease: "expo.out", transformOrigin: "bottom left" }, "<")
 			.to(this.bar2, { autoAlpha: 1, rotate: 0, duration: 0.18, force3D: true, ease: "expo.out" }, "<")
-			.to(this.navDrawer, { scale: 0, duration: 0.2, force3D: true, ease: "expo.in", transformOrigin: "top left" }, "<")
-			.to(this.main, { scale: 1, duration: 0.4, force3D: true, ease: "elastic.out", transformOrigin: "top left"}, "<");
+			.to(this.navDrawer, { scale: 0, duration: 0.3, force3D: true, ease: "expo.in", transformOrigin: "top left" }, "<");
+			// .to(this.main, { scale: 1, duration: 0.4, force3D: true, ease: "elastic.out", transformOrigin: "top left"}, "<");
 
 		this.trigger.classList.remove('open');
 	}
