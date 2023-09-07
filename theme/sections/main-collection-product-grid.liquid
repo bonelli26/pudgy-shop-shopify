@@ -2,7 +2,10 @@
 {% assign tagsSize = tags | size %}
 
 <div class="collection-hero">
-    <h1>{{ section.settings.collections_header }}</h1>
+    {% assign thisCollection = block.settings.collection %}
+    <h1>
+        {{ collection.title }}
+    </h1>
     <p>{{ section.settings.collections_copy }}</p>
 </div>
 <div class="collection-grid mw">
@@ -10,7 +13,9 @@
     <div class="filters">
         {% for block in section.blocks %}
             {% assign thisCollection = block.settings.collection %}
-            <a class="prefetch-us pink-btn filter blue{% if collection.handle == thisCollection.handle %} active{% endif %}" href="{{ thisCollection.handle }}"><span>{{ block.settings.collection_name }}</span></a>
+            <a class="prefetch-us pink-btn filter blue{% if collection.handle == thisCollection.handle %} active{% endif %}" href="{{ thisCollection.handle }}">
+                <span>{{ block.settings.collection }}</span>
+            </a>
         {% endfor %}
     </div>
 
