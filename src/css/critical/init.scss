@@ -584,6 +584,16 @@ nav {
 	.storelocator-search {
 		border-color: #1a192e;
 	}
+	.inner-item .item-thumb, .storeify-header-inner > .col-md-12, .storeify-storelocator-social-maker, .item-envelope {
+		display: none !important;
+	}
+	.storeifystorelocator-seach-action-box {
+		overflow: auto !important;
+		width: 250px;
+	}
+	.search-address-box {
+		padding: 0 !important;
+	}
 	.storeify-sear-box {
 		border-radius: 13px;
 		border: 2px solid var(--dark, #00142D);
@@ -648,7 +658,8 @@ nav {
 		margin-top: 10px;
 	}
 	.range-radius .slider {
-		border-radius: 2.418px !important;
+		border-radius: 6px !important;
+		height: 15px !important;
 		border: 0.967px solid #00142D !important;
 		background: #FFF !important;
 		box-shadow: 1.9346132278442383px 1.9346132278442383px 0px 0px rgba(0, 0, 0, 0.25) !important;
@@ -697,12 +708,17 @@ nav {
 		gap: 5px;
 	}
 	.item-content {
-		a {
+		a, span {
 			color: #00142D;
 			font-family: $mencoBold;
 			font-size: 15px;
 			line-height: 1.45;
 		}
+	}
+	.results-slt .title {
+		color: #00142D;
+		font-family: $mencoBold;
+		font-size: 15px;
 	}
 	.store-name {
 		color: #00142D;
@@ -712,11 +728,56 @@ nav {
 		letter-spacing: -0.64px;
 		text-transform: uppercase;
 	}
+	#getbylocal {
+		float: left !important;
+		font-family: $mencoBold;
+		.my_location {
+			position: relative !important;
+			top: -1px !important;
+		}
+	}
+	#radius-value {
+		font-family: $mencoMedium;
+		label {
+			font-family: $mencoBold;
+		}
+	}
+	.map-tab-mobile-bnt-item {
+		font-family: $mencoMedium !important;
+	}
 	.form-control-storeify {
 		margin-top: 5px;
+		position: relative;
+		color: #00142D;
+		font-family: $ttBlack;
+		font-size: 20px !important;
+		&:after {
+			content: "▼";
+			position: absolute;
+			right: 20px;
+			top: 10px;
+			font-size: 18px;
+		}
+	}
+	.linkdetailstore, .getdirectionstore {
+		float: left !important;
+		padding: 0 !important;
 	}
 	.linkdetailstore {
 		display: none !important;
+	}
+	@include bp-767 {
+		.storeifystorelocator-seach-action-box {
+			width: 100% !important;
+			padding: 0 !important;
+		}
+		.search-radius-box {
+			padding: 0 !important;
+		}
+		.bottom {
+			padding-left: 20px !important;
+			padding-right: 20px !important;
+		}
 	}
 }
 

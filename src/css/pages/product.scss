@@ -267,7 +267,7 @@
         height: 26px;
       }
     }
-    .atc-form {
+    .atc-form, .atc-form-walmart {
       display: flex;
       height: 100%;
       gap: 8px;
@@ -582,7 +582,7 @@
         z-index: 100;
         gap: 0;
       }
-      .atc-form {
+      .atc-form, .atc-form-walmart {
         width: 100%;
       }
 

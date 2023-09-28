@@ -103,23 +103,34 @@
                     </div>
                 {% endif %}
             </div>
-            <form class="atc-form">
-                <div class="quantity increment-wrapper">
-                    <button type="button" class="decrease">-</button>
-                    <span class="count">1</span>
-                    <button type="button" class="increase">+</button>
+            {% if product.metafields.accentuate.walmart_link %}
+                <div class="atc-form-walmart">
+                    <a href="{{ product.metafields.accentuate.walmart_link }}" target="_blank" class="pink-btn add-to-cart" type="button">
+                        <span class="in-stock">
+                            Buy Now
+                            <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Vector.png?v=1691970255">
+                        </span>
+                    </a>
                 </div>
-                <button class="pink-btn add-to-cart{% unless product.available %} disabled{% endunless %}"
-                        data-id="{{ product.first_available_variant.id }}"
-                        data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}"
-                        type="submit">
+            {% else %}
+                <form class="atc-form">
+                    <div class="quantity increment-wrapper">
+                        <button type="button" class="decrease">-</button>
+                        <span class="count">1</span>
+                        <button type="button" class="increase">+</button>
+                    </div>
+                    <button class="pink-btn add-to-cart{% unless product.available %} disabled{% endunless %}"
+                            data-id="{{ product.first_available_variant.id }}"
+                            data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}"
+                            type="submit">
                     <span class="in-stock">
                         Add To Cart
                         <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Vector.png?v=1691970255">
                     </span>
-                    <span class="out-of-stock">Sold out</span>
-                </button>
-            </form>
+                        <span class="out-of-stock">Sold out</span>
+                    </button>
+                </form>
+            {% endif %}
         </div>
         <div class="drawers-wrapper">
             {% for title in product.metafields.accentuate.drawer_title %}

@@ -90,7 +90,7 @@
                                     </strong>
                                 </p>
                             </div>
-                            <button class="pink-btn {% unless thisProduct.available %} disabled{% endunless %}">
+                            <button class="pink-btn {% unless thisProduct.available or thisProduct.metafields.accentuate.walmart_link %} disabled{% endunless %}">
                                 <span class="in-stock">
                                     Shop now
                                     <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Vector.png?v=1691970255">
