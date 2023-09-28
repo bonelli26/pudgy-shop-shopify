@@ -1,77 +1,77 @@
-{%- comment %}<locksmith:6f8d>{% endcomment -%}
+{%- comment %}<locksmith:8c80>{% endcomment -%}
   {%- include 'locksmith' -%}
-{%- comment %}</locksmith:6f8d>{% endcomment -%}
+{%- comment %}</locksmith:8c80>{% endcomment -%}
 
 <!doctype html>
 
 <html lang="en">
 <head>
+  {{ locksmith_initializations }}
   
   <!--- Hyros --->
   <script>
   var head = document.head;
   var script = document.createElement('script');
   script.type = 'text/javascript';
-  script.src = "https://185906.t.hyros.com/v1/lst/universal-script?ph=afee9d7384ff578e25f9153792e0c2b259916f5f66fa68f9d099a61061b17869&tag=!clicked&origin=SHOPIFY&ref_url=" + encodeURI(document.URL) ;
+  script.src = "https://t.pudgypenguins.com/v1/lst/universal-script?ph=afee9d7384ff578e25f9153792e0c2b259916f5f66fa68f9d099a61061b17869&tag=!clicked&origin=SHOPIFY&embed=true&ref_url=" + encodeURI(document.URL) ;
   head.appendChild(script);
   </script>
   
-  {{ locksmith_initializations }}
   <title>{{ page_title }}</title>
   <meta charset="utf-8">
   <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-  {%- comment %}<locksmith:20b5>{% endcomment -%}
+  {%- comment %}<locksmith:5697>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="description" content="{{ page_description }}">{% endif -%}
     {%- comment %}original: <meta name="description" content="{{ page_description }}">{%- endcomment %}
-  {%- comment %}</locksmith:20b5>{% endcomment -%}
+  {%- comment %}</locksmith:5697>{% endcomment -%}
   <link rel="canonical" href="{{ canonical_url }}">
 
 
   <!--- Facebook --->
-  {%- comment %}<locksmith:53c7>{% endcomment -%}
+  {%- comment %}<locksmith:c6c7>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:description" content="{{ page_description }}"/>{% endif -%}
     {%- comment %}original: <meta property="og:description" content="{{ page_description }}"/>{%- endcomment %}
-  {%- comment %}</locksmith:53c7>{% endcomment -%}
-  {%- comment %}<locksmith:fdc9>{% endcomment -%}
+  {%- comment %}</locksmith:c6c7>{% endcomment -%}
+  {%- comment %}<locksmith:dc0a>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:image" content="{{ settings.share_image | img_url: '1200x600' }}"/>{% endif -%}
     {%- comment %}original: <meta property="og:image" content="{{ settings.share_image | img_url: '1200x600' }}"/>{%- endcomment %}
-  {%- comment %}</locksmith:fdc9>{% endcomment -%}
+  {%- comment %}</locksmith:dc0a>{% endcomment -%}
   <meta property="og:site_name" content="Pudgy Brand"/>
-  {%- comment %}<locksmith:a752>{% endcomment -%}
+  {%- comment %}<locksmith:02f7>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:title" content="{{ page_title }}"/>{% endif -%}
     {%- comment %}original: <meta property="og:title" content="{{ page_title }}"/>{%- endcomment %}
-  {%- comment %}</locksmith:a752>{% endcomment -%}
-  {%- comment %}<locksmith:f145>{% endcomment -%}
+  {%- comment %}</locksmith:02f7>{% endcomment -%}
+  {%- comment %}<locksmith:2c0f>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta property="og:type" content="website"/>{% endif -%}
     {%- comment %}original: <meta property="og:type" content="website"/>{%- endcomment %}
-  {%- comment %}</locksmith:f145>{% endcomment -%}
+  {%- comment %}</locksmith:2c0f>{% endcomment -%}
   <meta property="og:url" content="{{ canonical_url }}"/>
 
   <meta name="twitter:card" content="summary_large_image"/>
   <meta name="twitter:creator" content=""/>
-  {%- comment %}<locksmith:3aab>{% endcomment -%}
+  {%- comment %}<locksmith:b95d>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="twitter:description" content="{{ page_description }}"/>{% endif -%}
     {%- comment %}original: <meta name="twitter:description" content="{{ page_description }}"/>{%- endcomment %}
-  {%- comment %}</locksmith:3aab>{% endcomment -%}
-  {%- comment %}<locksmith:dea5>{% endcomment -%}
+  {%- comment %}</locksmith:b95d>{% endcomment -%}
+  {%- comment %}<locksmith:90a9>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="twitter:image" content="{{ settings.share_image | img_url: '1200x600' }}"/>{% endif -%}
     {%- comment %}original: <meta name="twitter:image" content="{{ settings.share_image | img_url: '1200x600' }}"/>{%- endcomment %}
-  {%- comment %}</locksmith:dea5>{% endcomment -%}
+  {%- comment %}</locksmith:90a9>{% endcomment -%}
   <meta name="twitter:site" content="{{ canonical_url }}"/>
-  {%- comment %}<locksmith:547a>{% endcomment -%}
+  {%- comment %}<locksmith:fa83>{% endcomment -%}
     {%- capture var %}{% render 'locksmith-variables', variable: 'transparent', hiding_scope: 'resource' %}{% endcapture %}{% if var == 'true' %}<meta name="twitter:title" content="{{ page_title }}"/>{% endif -%}
     {%- comment %}original: <meta name="twitter:title" content="{{ page_title }}"/>{%- endcomment %}
-  {%- comment %}</locksmith:547a>{% endcomment -%}
+  {%- comment %}</locksmith:fa83>{% endcomment -%}
 
   {%- if request.page_type == 'product' -%}
-    {%- comment %}<locksmith:5510>{% endcomment -%}
+    {%- comment %}<locksmith:2656>{% endcomment -%}
       {%- capture var %}{% render 'locksmith-variables', variable: 'access_granted' %}{% endcapture %}{% if var == 'true' %}<meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">{% endif -%}
       {%- comment %}original: <meta property="og:price:amount" content="{{ product.price | money_without_currency | strip_html }}">{%- endcomment %}
-    {%- comment %}</locksmith:5510>{% endcomment -%}
-    {%- comment %}<locksmith:dd0f>{% endcomment -%}
+    {%- comment %}</locksmith:2656>{% endcomment -%}
+    {%- comment %}<locksmith:dca9>{% endcomment -%}
       {%- capture var %}{% render 'locksmith-variables', variable: 'access_granted' %}{% endcapture %}{% if var == 'true' %}<meta property="og:price:currency" content="{{ cart.currency.iso_code }}">{% endif -%}
       {%- comment %}original: <meta property="og:price:currency" content="{{ cart.currency.iso_code }}">{%- endcomment %}
-    {%- comment %}</locksmith:dd0f>{% endcomment -%}
+    {%- comment %}</locksmith:dca9>{% endcomment -%}
   {%- endif -%}
 
   <meta name="viewport" content="width=device-width,initial-scale=1,shrink-to-fit=no">
@@ -127,6 +127,15 @@
 	<script src="https://doui4jqs03un3.cloudfront.net/vendors.js.gz"></script>
 	<script src="https://doui4jqs03un3.cloudfront.net/client.js.gz" defer="defer"></script>
 {% comment %} End Videowise section.{% endcomment %}
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-RK44BEB5CP"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-RK44BEB5CP');
+</script>
 </head>
 <body>
 
