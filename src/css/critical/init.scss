@@ -587,6 +587,9 @@ nav {
 	.inner-item .item-thumb, .storeify-header-inner > .col-md-12, .storeify-storelocator-social-maker, .item-envelope {
 		display: none !important;
 	}
+	.storeify-header-inner {
+		display: flex !important;
+	}
 	.storeifystorelocator-seach-action-box {
 		overflow: auto !important;
 		width: 250px;
