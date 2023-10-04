@@ -318,6 +318,7 @@ nav {
 		display: flex;
 		align-items: center;
 		@include get-vw(gap, 16px, 16px);
+		margin-bottom: 0;
 	}
 	.icon-link {
 		display: flex;
