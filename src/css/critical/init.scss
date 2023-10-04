@@ -2947,7 +2947,7 @@ footer {
 	display: flex;
 	justify-content: center;
 	z-index: 4;
-	@include get-vw(padding-top, 120px, 80px);
+	@include get-vw(padding-top, 120px, 100px);
 	@include get-vw(padding-bottom, 90px, 80px);
 	padding-right: 15px;
 	padding-left: 15px;
@@ -2986,18 +2986,18 @@ footer {
 		@include get-vw(height, 180px, 138px);
 		z-index: 2;
 		top: 0;
-		transform: translateY(-40%);
+		transform: translateY(-50%);
 	}
 	.tile-inner {
 		position: relative;
 		z-index: 2;
 		display: flex;
 		align-items: center;
-		justify-content: flex-end;
+		justify-content: flex-start;
 		flex-direction: column;
 		width: calc(100% - 80px);
 		height: 100%;
-		@include get-vw(padding-bottom , 70px, 50px);
+		@include get-vw(padding-top, 100px, 80px);
 	}
 	.title {
 		color: #00142D;
@@ -3019,10 +3019,13 @@ footer {
 
 	@include bp-767 {
 		.tile-wrapper {
-			gap: 80px;
+			gap: 100px;
 		}
 		.tile:nth-of-type(even) {
 			margin-top: 0;
+		}
+		.tile.dummy {
+			height: 0;
 		}
 	}
 }
