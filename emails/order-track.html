@@ -19,9 +19,17 @@
                         <tbody>
                         <tr>
                             <td style="border:0;padding:0px 0px 0px 0px" valign="top">
-                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="" target="_blank">
-                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-track-2.png?v=1696459895" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
-                                </a>
+                                {% if fulfillment.tracking_numbers.size == 1 %}
+                                    <a href="{{ fulfillment.tracking_url }}">
+                                        <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-track-2.png?v=1696459895" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                    </a>
+                                {% else %}
+                                    {% for tracking_number in fulfillment.tracking_numbers %}
+                                        <a href="{{ fulfillment.tracking_urls[forloop.index0] }}">
+                                            <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-track-2.png?v=1696459895" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                        </a>
+                                    {% endfor %}
+                                {% endif %}
                             </td>
                         </tr>
                         </tbody>
@@ -30,7 +38,7 @@
                         <tbody>
                         <tr>
                             <td style="border:0;padding:0px 32px 0px 32px" valign="top">
-                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="" target="_blank">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="mailto:{{ shop.email }}" target="_blank">
                                     <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-track-3.png?v=1696459894" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
                                 </a>
                             </td>
@@ -42,8 +50,40 @@
                         <tr>
                             <td style="border:0;padding:0px 32px 0px 32px" valign="top">
                                 <span>
-                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-track-4.png?v=1696459895" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/top-footer.png?v=1696615593" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
                                 </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody style="display: flex; padding: 0 32px; justify-content: center">
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="https://www.youtube.com/@pudgypenguinsofficial" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/youtube_504afcb0-a365-4984-85a3-771a1018dcd2.png?v=1696615592" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="https://www.tiktok.com/@pudgypenguins?lang=en" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/tiktok_c5110a08-b11e-450d-925f-db2cea72d1a4.png?v=1696615593" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="https://www.instagram.com/pudgypenguins/" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/instagram_27d1746b-e0b8-40c3-b1bc-0ee734466643.png?v=1696615593" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="https://twitter.com/pudgypenguins" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/x.png?v=1696615592" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
                             </td>
                         </tr>
                         </tbody>
@@ -52,9 +92,9 @@
                         <tbody>
                         <tr>
                             <td style="border:0;padding:0px 32px 0px 32px" valign="top">
-                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="" target="_blank">
-                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-track-5.png?v=1696459894" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
-                                </a>
+                                <span>
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/bottom-footer.png?v=1696615592" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </span>
                             </td>
                         </tr>
                         </tbody>
