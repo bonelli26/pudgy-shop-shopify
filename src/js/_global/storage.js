@@ -23,9 +23,10 @@ export const globalStorage = {
 
 export const domStorage = {
 	"header": document.getElementById("header"),
-	"navHome": document.getElementById("nav-bar"),
 	"pencilMarquee": document.querySelector(".pencil-bar"),
+	"pencilMarqueeDark": document.querySelector(".pencil-bar.giveaway"),
 	"nav": document.getElementById("nav"),
+	"navBar": document.getElementById("nav-bar"),
 	"mainEl": document.getElementById("main"),
 	"containerEl": document.getElementById("container"),
 	"globalMask": document.getElementById("global-mask"),

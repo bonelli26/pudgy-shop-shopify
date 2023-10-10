@@ -1,0 +1,153 @@
+{
+  "sections": {
+    "giveaway-hero": {
+      "type": "giveaway-hero",
+      "settings": {
+        "hero_tag": "Very Special Offer!",
+        "header": "Sign up for a chance to win a free collectible!",
+        "copy": "Pudgy Penguins is giving away 3 free collectibles this month in celebration of our launch in Walmart.",
+        "available": "<p>Offer available from: <strong>&lcub;publish.date&rcub;<\/strong> to <strong>&lcub;30days.from.pusblish&rcub;<\/strong><\/p>",
+        "success_copy": "",
+        "hero_bg": "shopify:\/\/shop_images\/heroBG.jpg",
+        "hero_bg_mobile": "shopify:\/\/shop_images\/hero_e300724c-8fc0-4df4-9d6e-991168883d4d.jpg"
+      }
+    },
+    "giveaway-richtext": {
+      "type": "giveaway-richtext",
+      "blocks": {
+        "0c8f3cc9-6920-4029-8216-e710db6c5c98": {
+          "type": "richtext",
+          "settings": {
+            "title": "1. Eligibility:",
+            "copy": "<p>The Give-Away (the “Give-Away”) is open only to those who sign up at the page located at <a href=\"\/pages\/contact\" title=\"Get In Touch\">https:\/\/shop.pudgypenguins.com\/pages\/get-notified<\/a>, who provide their email, and who are at least 18 or older as of the date of entry (or 21 or older if required in their state of residence). The Give-Away is only open to legal residents of the United States and is void where prohibited by law. Employees of LSLTTT Holdings Inc. (the “Pudgy Penguins” or the “Sponsor”) their respective affiliates, subsidiaries, advertising and promotion agencies, suppliers and their immediate family members and\/or those living in the same household of each are not eligible to participate in the Give-Away. The Give-Away is subject to all applicable federal, state and local laws and regulations.<\/p>"
+          }
+        },
+        "e9152c08-2696-4327-8efe-a3f89d6fe4bc": {
+          "type": "richtext",
+          "settings": {
+            "title": "2. Agreement to Rules:",
+            "copy": "<p>By participating, you agree to be fully unconditionally bound by these Rules, and you represent and warrant that you meet the eligibility requirements set forth herein. In addition, you agree to accept the decisions of Pudgy Penguins as final and binding as it relates to the content.<\/p>"
+          }
+        },
+        "a361e79c-0284-4e4b-8990-e3618727595b": {
+          "type": "richtext",
+          "settings": {
+            "title": "3. Entry Period:",
+            "copy": "<p>Entries will be accepted online starting on or about [start date] and ending [end date]. All online entries must be received by [end date] 11:59PM EST, which is the close of the Entry Period.<\/p>"
+          }
+        },
+        "01edc856-15c7-4b65-b449-d095f8b4a36b": {
+          "type": "richtext",
+          "settings": {
+            "title": "4. How to Enter:",
+            "copy": "<p>The Give-Away must be entered by submitting an entry using the online form provided on this site, located at  <a href=\"\/pages\/contact\" title=\"Get In Touch\">https:\/\/shop.pudgypenguins.com\/pages\/get-notified<\/a>. The entry must fulfill all requirements, and give all information requested as specified, to be eligible to win a prize. Entries that are not complete or do not adhere to the rules or specifications may be disqualified at the sole discretion of Pudgy Penguins. You may enter only once and you must fill in the information requested. You may not enter more times than indicated by using multiple email addresses, identities or devices in an attempt to circumvent the rules. If you use fraudulent methods or otherwise attempt to circumvent the rules your submission may be removed from eligibility at the sole discretion of Pudgy Penguins.<br\/><\/p>"
+          }
+        },
+        "d6414eb0-7ed0-4cc1-9ccd-355165605ed5": {
+          "type": "richtext",
+          "settings": {
+            "title": "5. Prizes:",
+            "copy": "<p>There will be three (3) winners chosen and each winner will be eligible to receive a Pudgy Penguins collectible with a suggested retail price at or about $249 USD. Actual\/appraised value may differ at time of the prize award. The specifics of the prize shall be solely determined by the Sponsor; meaning, that any Pudgy Penguins collectible (e.g., a Pudgy Penguins Mohawk collectible or substantially similar collectible) may be awarded at Pudgy Penguins’ sole discretion. No cash substitution will be permitted except at Sponsor's sole discretion. The prize is non transferable. Any and all prize related expenses, including without limitation any and all federal, state, and\/or local taxes shall be the sole responsibility of the winner. No substitution of prize or transfer\/assignment of prize to others or request for the cash equivalent by winners is permitted. Acceptance of prize constitutes permission for Pudgy Penguins to use the winner's name, likeness, and entry information for purposes of advertising and trade without further compensation, unless prohibited by law.<\/p>"
+          }
+        },
+        "980f2d88-8704-4f06-ae17-3a17e0e51fba": {
+          "type": "richtext",
+          "settings": {
+            "title": "6. Odds:",
+            "copy": "<p>The odds of winning depend on the number of eligible entries received.<\/p>"
+          }
+        },
+        "7609178d-333a-49e1-8a7b-4787d6c01a6f": {
+          "type": "richtext",
+          "settings": {
+            "title": "7. Winner selection and notification:",
+            "copy": "<p>Winners of the Give-Away will be selected in a random drawing under the supervision of Pudgy Penguins within a reasonable time period after the closing of the Entry Period. The three (3) winners will be notified via email to the email address they used to enter the Give-Away within five (5) business days following the winner selection. Pudgy Penguins shall have no liability for a winner's failure to receive notices due to winners' spam, junk e-mail or other security settings or for winners' provision of incorrect or otherwise non-functioning contact information. If any or all of the selected winners cannot be contacted, are ineligible, fails to claim the prize within 72 hours from the time that award notification is sent out, or fails to timely return any completed and executed declaration with requested information and\/or any releases that may be required, the prize(s) will be forfeited. Pudgy Penguins will have the right, but not the obligation, to select alternate winner(s) if prizes are forfeited. <br\/><br\/>The receipt by a winner of the prize offered in this Give-Away is conditioned upon compliance with any and all federal and state laws and regulations. <strong>ANY VIOLATION OF THESE OFFICIAL RULES BY ANY WINNER (AT SPONSOR'S SOLE DISCRETION) WILL RESULT IN SUCH WINNER'S DISQUALIFICATION AS A WINNER AND ALL PRIVILEGES AS WINNER WILL BE IMMEDIATELY TERMINATED.<\/strong><br\/><\/p>"
+          }
+        },
+        "9ed0b15f-bc2b-4d5c-84ee-5c94dd551084": {
+          "type": "richtext",
+          "settings": {
+            "title": "8. Rights Granted by you:",
+            "copy": "<p>By entering this Give-Away and providing your contact information, you understand and agree that that Pudgy Penguins, anyone acting on behalf of Pudgy Penguins, or its respective licensees, successors and assigns will have the right to use your email and send you promotions for its products, mass emails, newsletters, and\/or other forms of digital communication. You can opt-out of receiving these email communications at any time by clicking the unsubscribe link in them. You also understand and agree that that Pudgy Penguins, anyone acting on behalf of Pudgy Penguins, or its respective licensees, successors and assigns will have the right to, where permitted by law without your further notice, review or consent, to print, publish, broadcast, distribute, and use, worldwide in any media and\/or chanel now known or that hereafter comes into existence, the details of your entry, including, without limitation, information provided in the entry and, in the case of the winners, their name, portrait, picture, voice, likeness, image or statements about the Pudgy Penguins’ toys, collectibles and\/or Give-Away, and biographical information as news, publicity or information and for trade, advertising, public relations, compliance and\/or promotional purposes, without any further compensation.<\/p>"
+          }
+        },
+        "1a660f56-2c95-4351-a4c3-d4696aad607f": {
+          "type": "richtext",
+          "settings": {
+            "title": "9. Terms:",
+            "copy": "<p>Pudgy Penguins reserves the right, in its sole discretion to cancel, terminate, modify or suspend the Give-Away should a virus, bugs, non-authorized human intervention, fraud or other causes beyond its control corrupt or materially impact the administration, security, fairness or proper conduct of the Give-Away. In such a case, Pudgy Penguins may select the winners from all eligible entries received prior to and\/or after (if appropriate) the corrective action taken by Pudgy Penguins. Pudgy Penguins reserves the right at its sole discretion to disqualify any individual or group of individuals who tamper or attempt to tamper with the entry process or the operation of the Give-Away, the website or violates these Rules.<br\/> <br\/>Pudgy Penguins has the right but not the obligation, in its sole discretion, to maintain the integrity of the Give-Away, to void entries for any reason, including, but not limited to; multiple entries from the same user from different IP addresses; multiple entries from the same computer in excess of that allowed by the Rules; or the use of bots, macros or scripts or other technical means for entering.<br\/>Any attempt by an entrant to deliberately damage any website or undermine the legitimate operation of the Give-Away may be a violation of criminal and civil laws and should such an attempt be made, Pudgy Penguins reserves the right to seek equitable relief and\/or damages from any such person to the fullest extent permitted by law.<br\/><\/p>"
+          }
+        },
+        "9c549805-5f97-4803-9d3b-5a9f116043a8": {
+          "type": "richtext",
+          "settings": {
+            "title": "10. Limitation of Liability:",
+            "copy": "<p>By entering you agree to release and hold harmless Pudgy Penguins and its subsidiaries, affiliates, advertising and promotion agencies, partners, representatives, agents, successors, assigns, employees, officers and directors from any liability, illness, injury, death, loss, litigation, claim or damage that may occur, directly or indirectly, whether caused by negligence or not, from (i) such entrant's participation in the Give-Away and\/or his\/her acceptance, possession, use, or misuse of any prize or any portion thereof, (ii) technical failures of any kind, including but not limited to the malfunctioning of any computer, cable, network, hardware or software; (iii) the unavailability or inaccessibility of any transmissions or telephone or Internet service; (iv) unauthorized human intervention in any part of the entry process or the Give-Away; (v) electronic or human error which may occur in the administration of the Give-Away or the processing of entries.<br\/><\/p>"
+          }
+        },
+        "b5e0b1c6-1c14-4c59-930f-5309a6726216": {
+          "type": "richtext",
+          "settings": {
+            "title": "11. Disputes:",
+            "copy": "<p><strong>THIS GIVE-AWAY IS GOVERNED BY THE LAWS OF FLORIDA, WITHOUT RESPECT TO CONFLICT OF LAW DOCTRINES<\/strong>. As a condition of participating in this Give-Away, participant agrees that any and all disputes which cannot be resolved between the parties, and causes of action arising out of or connected with this Give-Away, shall be resolved individually, without resort to any form of class action, exclusively before a court located in Miami, Florida having jurisdiction. Further, in any such dispute, under no circumstances will participant be permitted to obtain awards for, and hereby waives all rights to claim punitive, incidental, or consequential damages, including reasonable attorneys' fees, other than participant's actual out-of-pocket expenses (i.e. costs associated with entering this Give-Away), and participant further waives all rights to have damages multiplied or increased.<br\/><\/p>"
+          }
+        },
+        "637abe50-94a7-4624-9cdd-b6fb92bb7e91": {
+          "type": "richtext",
+          "settings": {
+            "title": "12. Privacy Policy:",
+            "copy": "<p> Information submitted with an entry is subject to the Privacy Policy stated on the Pudgy Penguins Website. To read the Privacy Policy, <a href=\"\/pages\/privacy-policy\" title=\"Privacy Policy\">click here<\/a>.<\/p>"
+          }
+        },
+        "9c8b26dd-c00a-4da4-b34f-31b7a7c1d0a3": {
+          "type": "richtext",
+          "settings": {
+            "title": "13. Winners List:",
+            "copy": "<p>To obtain a copy of the winners’ names and\/or a copy of these Rules, mail your request along with a stamped, self-addressed envelope to: Pudgy Penguins, 3651 SW 26th Street, Miami Florida 33133, USA. Requests must be received no later than 30 calendar days after the close of the Entry Period.<br\/> <\/p>"
+          }
+        },
+        "b7a166c9-7527-4b3e-8f33-b48dd2fe5566": {
+          "type": "richtext",
+          "settings": {
+            "title": "14. Sponsor:",
+            "copy": "<p>The Sponsor of the Give-Away is Pudgy Penguins, 3651 SW 26th Street, Miami Florida 33133, USA.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "0c8f3cc9-6920-4029-8216-e710db6c5c98",
+        "e9152c08-2696-4327-8efe-a3f89d6fe4bc",
+        "a361e79c-0284-4e4b-8990-e3618727595b",
+        "01edc856-15c7-4b65-b449-d095f8b4a36b",
+        "d6414eb0-7ed0-4cc1-9ccd-355165605ed5",
+        "980f2d88-8704-4f06-ae17-3a17e0e51fba",
+        "7609178d-333a-49e1-8a7b-4787d6c01a6f",
+        "9ed0b15f-bc2b-4d5c-84ee-5c94dd551084",
+        "1a660f56-2c95-4351-a4c3-d4696aad607f",
+        "9c549805-5f97-4803-9d3b-5a9f116043a8",
+        "b5e0b1c6-1c14-4c59-930f-5309a6726216",
+        "637abe50-94a7-4624-9cdd-b6fb92bb7e91",
+        "9c8b26dd-c00a-4da4-b34f-31b7a7c1d0a3",
+        "b7a166c9-7527-4b3e-8f33-b48dd2fe5566"
+      ],
+      "settings": {
+        "header": "Pudgy Penguins Is Promoting Its New Toy Line & Giving Away 3 Collectibles!",
+        "copy": "PROVIDE YOUR EMAIL TO ENTER THE GIVE-AWAY. NO PURCHASE IS NECESSARY TO ENTER OR WIN. A PURCHASE DOES NOT INCREASE YOUR CHANCES OF WINNING."
+      }
+    },
+    "dark-footer": {
+      "type": "dark-footer",
+      "settings": {
+        "social_image_1": "shopify:\/\/shop_images\/image_6.png",
+        "social_image_2": "shopify:\/\/shop_images\/image_8.png",
+        "social_image_3": "shopify:\/\/shop_images\/image_9.png",
+        "social_image_4": "shopify:\/\/shop_images\/image_10.png"
+      }
+    }
+  },
+  "order": [
+    "giveaway-hero",
+    "giveaway-richtext",
+    "dark-footer"
+  ]
+}

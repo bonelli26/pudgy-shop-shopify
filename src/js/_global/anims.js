@@ -15,9 +15,15 @@ export const pageEntrance = (namespace = null)=> {
 
 	if(globalStorage.namespace === "get-notified") {
 		gsap.set(domStorage.header, { display: "none" });
+	} else if (globalStorage.namespace === "giveaway") {
+		domStorage.nav.classList.add("giveaway");
+		gsap.set(domStorage.pencilMarquee, { display: "none" });
 	} else {
 		gsap.set(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
 	}
+
+
 
 
 	/* ----- Setup cases for specific load-ins ----- */
