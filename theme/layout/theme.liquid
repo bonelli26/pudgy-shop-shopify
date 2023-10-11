@@ -98,6 +98,13 @@
   <meta name="msapplication-wide310x150logo" content="{{ settings.favicon | image_url: width: 310, height: 150 }}"/>
   <meta name="msapplication-square310x310logo" content="{{ settings.favicon | image_url: width: 310 }}"/>
 
+  <style>
+    @media (max-width: 767px) {
+    	.storeify-header-inner {
+    		flex-wrap: wrap;
+    	}
+    }
+  </style>
   {{ '_init.css' | asset_url | stylesheet_tag }}
   {{ '_fonts.css' | asset_url | stylesheet_tag }}
   <script>
@@ -110,7 +117,7 @@
 
   <script>
   !function(){var o=window.tdl=window.tdl||[];if(o.invoked)window.console&&console.error&&console.error("Tune snippet has been included more than once.");else{o.invoked=!0,o.methods=["init","identify","convert"],o.factory=function(n){return function(){var e=Array.prototype.slice.call(arguments);return e.unshift(n),o.push(e),o}};for(var e=0;e<o.methods.length;e++){var n=o.methods[e];o[n]=o.factory(n)}o.init=function(e){var n=document.createElement("script");n.type="text/javascript",n.async=!0,n.src="https://js.go2sdk.com/v2/tune.js";var t=document.getElementsByTagName("script")[0];t.parentNode.insertBefore(n,t),o.domain=e}}}();
-  
+
   tdl.init("https://glitchy.go2cloud.org")
   tdl.identify(
     {},
@@ -157,24 +164,45 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
   <img alt="A dreamy cloudscape while wait" loading="eager" decoding="async">
 </div>
 <header id="header">
-  <div class="pencil-bar gradiant-marquee">
+  {% if template.name == "giveaway" %}
+    <div class="pencil-bar giveaway">
+      <div class="inner" data-dur="25" data-mobile-dur="10">
+        <div class="group">
+          {% if settings.pencil_bar_link_g == blank and settings.pencil_bar_message_g != blank %}
+            <p>{{ settings.pencil_bar_message_g }}</p>
+          {% elsif settings.pencil_bar_link_g != blank %}
+            <a target="_blank" href="{{ settings.pencil_bar_link_g }}">{{ settings.pencil_bar_message_g }}</a>
+          {% endif %}
+        </div>
+        <div class="group" aria-hidden="true">
+          {% if settings.pencil_bar_link_g == blank and settings.pencil_bar_message_g != blank %}
+            <p>{{ settings.pencil_bar_message_g }}</p>
+          {% elsif settings.pencil_bar_link_g != blank %}
+            <a target="_blank" href="{{ settings.pencil_bar_link_g }}">{{ settings.pencil_bar_message_g }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
+  {% else %}
+    <div class="pencil-bar gradiant-marquee">
     <div class="inner" data-dur="25" data-mobile-dur="10">
       <div class="group">
-        {% if settings.pencil_bar_url == blank and settings.pencil_bar_message != blank %}
+        {% if settings.pencil_bar_link == blank and settings.pencil_bar_message != blank %}
           <p>{{ settings.pencil_bar_message }}</p>
-        {% elsif settings.pencil_bar_url != blank %}
-          <a class="message" href="{{ settings.pencil_bar_url }}">{{ settings.pencil_bar_message }}</a>
+        {% elsif settings.pencil_bar_link != blank %}
+          <a target="_blank" href="{{ settings.pencil_bar_link }}">{{ settings.pencil_bar_message }}</a>
         {% endif %}
       </div>
       <div class="group" aria-hidden="true">
-        {% if settings.pencil_bar_url == blank and settings.pencil_bar_message != blank %}
+        {% if settings.pencil_bar_link == blank and settings.pencil_bar_message != blank %}
           <p>{{ settings.pencil_bar_message }}</p>
-        {% elsif settings.pencil_bar_url != blank %}
-          <a class="message" href="{{ settings.pencil_bar_url }}">{{ settings.pencil_bar_message }}</a>
+        {% elsif settings.pencil_bar_link != blank %}
+          <a target="_blank" href="{{ settings.pencil_bar_link }}">{{ settings.pencil_bar_message }}</a>
         {% endif %}
       </div>
     </div>
   </div>
+  {% endif %}
   <nav id="nav" class="max-width">
     <a class="logo mw prefetch-us" href="/">
       <svg xmlns="http://www.w3.org/2000/svg" width="149" height="83" viewBox="0 0 149 83" fill="none">

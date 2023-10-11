@@ -66,7 +66,7 @@ header {
 		position: absolute;
 		width: 100%;
 		opacity: 0;
-		z-index: 2;
+		z-index: 100;
 		height: 100%;
 		top: 0;
 		left: 0;
@@ -258,9 +258,9 @@ body {
 	}
 	&.giveaway {
 		background: #00142D;
-	}
-	p,a {
-		color: #FFE092;
+		p,a {
+			color: #FFE092;
+		}
 	}
 }
 nav {
@@ -3452,6 +3452,12 @@ footer {
 		}
 		a {
 			color: #477DFD;
+			transition: all .15s $ease-out-sine;
+			html:not(.touch) & {
+				&:hover {
+					color: #0049fc;
+				}
+			}
 		}
 		strong {
 			font-family: $mencoBlack;

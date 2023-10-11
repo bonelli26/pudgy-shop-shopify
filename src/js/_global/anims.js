@@ -25,26 +25,26 @@ export const pageEntrance = (namespace = null)=> {
 
 
 
-
 	/* ----- Setup cases for specific load-ins ----- */
 	switch(namespace){
 		/* ----- Our default page entrance ----- */
-
 		default:
 			break;
 
 	}
+
 	timeline.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
-			if(globalStorage.firstLoad){
-				globalStorage.firstLoad = false
-				gsap.set(domStorage.header, { zIndex: 98 })
-			}
-		} })
+			gsap.fromTo(domStorage.header, { autoAlpha: 0 }, { duration: 0.3, autoAlpha: 1, force3D: true, ease: "sine.inOut" })
+			gsap.set(domStorage.header, { zIndex: 90 });
+		} });
 
 	gsap.set(domStorage.clickMask, { pointerEvents: "none" });
 
 	timeline.play();
 
+	if (globalStorage.firstLoad) {
+		globalStorage.firstLoad = false
+	}
 };
 
 /*
