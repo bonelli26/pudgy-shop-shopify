@@ -13,15 +13,20 @@ export const pageEntrance = (namespace = null)=> {
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
 
-	if(globalStorage.namespace === "get-notified") {
-		gsap.set(domStorage.header, { display: "none" });
-	} else if (globalStorage.namespace === "giveaway") {
-		domStorage.nav.classList.add("giveaway");
-		gsap.set(domStorage.pencilMarquee, { display: "none" });
-	} else {
-		gsap.set(domStorage.header, { display: "block" });
-		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
-	}
+
+	timeline.to(domStorage.header, { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
+		if(globalStorage.namespace === "get-notified") {
+			gsap.set(domStorage.header, { display: "none" });
+		} else if (globalStorage.namespace === "giveaway") {
+			domStorage.nav.classList.add("giveaway");
+			gsap.set(domStorage.pencilMarquee, { display: "none" });
+			gsap.to(domStorage.header, { display: "block" });
+		} else {
+			gsap.to(domStorage.header, { display: "block" });
+			gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		}
+	} }, 0.2)
+
 
 
 
@@ -34,7 +39,6 @@ export const pageEntrance = (namespace = null)=> {
 	}
 
 	timeline.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
-			gsap.fromTo(domStorage.header, { autoAlpha: 0 }, { duration: 0.3, autoAlpha: 1, force3D: true, ease: "sine.inOut" })
 			gsap.set(domStorage.header, { zIndex: 90 });
 		} });
 
@@ -78,6 +82,7 @@ export const globalEntrance = ()=>{
 	img.src = url
 
 	timeline.play();
+
 }
 
 export const prepDrawers = () => {

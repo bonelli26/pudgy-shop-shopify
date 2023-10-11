@@ -50,6 +50,8 @@ header {
 	opacity: 0;
 	z-index: 100000;
 	pointer-events: none;
+	visibility: hidden;
+	opacity: 0;
 	a, button {
 		pointer-events: all;
 	}
@@ -256,7 +258,7 @@ body {
 		letter-spacing: 0.18px;
 		white-space: nowrap;
 	}
-	&.giveaway {
+	&.giveaway-marquee {
 		background: #00142D;
 		p, a {
 			color: #FFE092;
@@ -3263,7 +3265,17 @@ footer {
 		width: auto;
 		@include get-vw(height, 35px, 35px);
 		@include get-vw(margin-bottom, 16px, 16px);
+		animation: wiggle 2.5s infinite;
 	}
+
+	@keyframes wiggle {
+		0% { transform: rotate(0deg); background: #FFE092; box-shadow: none; }
+		80% { transform: rotate(0deg); background: #FFE092; }
+		85% { transform: rotate(5deg); background: linear-gradient(0deg, rgba(237, 198, 2, 0.36) 0%, rgba(237, 198, 2, 0.36) 100%), radial-gradient(52.07% 49.21% at 48.18% 50%, #FCB52B 0%, #F3DD6D 100%); box-shadow: 0px 3px 20px 0px rgba(255, 168, 0, 0.67), 0px 0px 3px 0px rgba(0, 0, 0, 0.25); }
+		95% { transform: rotate(-5deg); background: linear-gradient(0deg, rgba(237, 198, 2, 0.36) 0%, rgba(237, 198, 2, 0.36) 100%), radial-gradient(52.07% 49.21% at 48.18% 50%, #FCB52B 0%, #F3DD6D 100%); box-shadow: 0px 3px 20px 0px rgba(255, 168, 0, 0.67), 0px 0px 3px 0px rgba(0, 0, 0, 0.25);}
+		100% { transform: rotate(0deg); background: #FFE092; box-shadow: none; }
+	}
+
 	h1 {
 		color: #FFF;
 		text-shadow: -3px 3px #00142d;
@@ -3351,10 +3363,14 @@ footer {
 		visibility: hidden;
 		color: #00142D;
 		font-family: $mencoBlack;
-		@include get-vw(font-size, 18px, 16px);
+		@include get-vw(font-size, 16px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
-
+		border-radius: 41px;
+		border: 2px solid #00142D;
+		background: #A9FF99;
+		padding: 16px 22px;
+		gap: 8px;
 	}
 	@include bp-1680 {
 		max-height: unset;
@@ -3383,6 +3399,9 @@ footer {
 			max-width: none;
 			text-shadow: -3px 3px #00142dbf;
 			line-height: -1.28px;
+		}
+		.available {
+			width: 80%;
 		}
 	}
 }
