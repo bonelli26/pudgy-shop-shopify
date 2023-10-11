@@ -3354,6 +3354,7 @@ footer {
 		@include get-vw(font-size, 18px, 16px);
 		line-height: 1.45;
 		text-transform: uppercase;
+
 	}
 	@include bp-1680 {
 		max-height: unset;
