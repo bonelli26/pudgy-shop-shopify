@@ -7,7 +7,7 @@
         "header": "Sign up for a chance to win a free collectible!",
         "copy": "Pudgy Penguins is giving away 3 free collectibles this month in celebration of our launch in Walmart.",
         "available": "<p>Offer available from: <strong>Oct 10, 2023 <\/strong>to <strong>Nov 10, 2023<\/strong><\/p>",
-        "success_copy": "",
+        "success_copy": "Congratulations! You successfully signed up",
         "hero_bg": "shopify:\/\/shop_images\/heroBG.jpg",
         "hero_bg_mobile": "shopify:\/\/shop_images\/hero_e300724c-8fc0-4df4-9d6e-991168883d4d.jpg"
       }

@@ -4,6 +4,7 @@ import {$scroll} from "./_renderer";
 import EmblaCarousel  from "embla-carousel";
 import {normalizeRange} from "./helpers";
 import { SplitText } from "../_extensions/splitText";
+import {namespace} from "stylelint-scss/dist/utils";
 gsap.registerPlugin(SplitText);
 /*
 	Page specific animations
@@ -14,20 +15,19 @@ export const pageEntrance = (namespace = null)=> {
 	let timeline = new gsap.timeline({ paused: true });
 
 
-	timeline.to(domStorage.header, { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
-		if(globalStorage.namespace === "get-notified") {
-			gsap.set(domStorage.header, { display: "none" });
-		} else if (globalStorage.namespace === "giveaway") {
-			domStorage.nav.classList.add("giveaway");
-			gsap.set(domStorage.pencilMarquee, { display: "none" });
-			gsap.to(domStorage.header, { display: "block" });
-		} else {
-			gsap.to(domStorage.header, { display: "block" });
-			gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
-		}
-	} }, 0.2)
-
-
+	if(globalStorage.namespace === "get-notified") {
+		gsap.set(domStorage.header, { display: "none" });
+	} else if (globalStorage.namespace === "giveaway") {
+		domStorage.nav.classList.add("giveaway");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "flex" });
+	} else {
+		domStorage.nav.classList.remove("giveaway");
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "flex" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+	}
 
 
 	/* ----- Setup cases for specific load-ins ----- */
@@ -55,7 +55,7 @@ export const pageEntrance = (namespace = null)=> {
 	Global element animations
 -------------------------------------------------- */
 export let $slideShow;
-export const globalEntrance = ()=>{
+export const globalEntrance = (namespace = null)=>{
 
 	if(globalStorage.firstLoad !== true){
 		return;
@@ -65,11 +65,25 @@ export const globalEntrance = ()=>{
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
 
+	if(globalStorage.namespace === "get-notified") {
+		gsap.set(domStorage.header, { display: "none" });
+	} else if (globalStorage.namespace === "giveaway") {
+		domStorage.nav.classList.add("giveaway");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "flex" });
+	} else {
+		domStorage.nav.classList.remove("giveaway");
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "flex" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+	}
+
 	const img = domStorage.globalMask.querySelector("img")
 	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile
 
 	img.addEventListener("load", () => {
-		globalStorage.pencilMarquee.tween.play()
+		domStorage.pencilMarquee.tween.play()
 		gsap.set(img, { opacity: 1 })
 		timeline
 			.to(domStorage.header,  { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
@@ -178,7 +192,7 @@ export const prepDrawers = () => {
 export class Marquees {
 
 	constructor(pencilMarquee = false) {
-		this.pencilMarquee = pencilMarquee
+		this.pencilMarquee = pencilMarquee;
 		if (pencilMarquee) {
 			this.marquees = document.querySelectorAll('.pencil-bar');
 		} else {
@@ -228,7 +242,7 @@ export class Marquees {
 
 			} else {
 				if (this.pencilMarquee) {
-					globalStorage.pencilMarquee = {
+					domStorage.pencilMarquee = {
 						el: this.marquees[i],
 						tween: tween,
 						playing: false
