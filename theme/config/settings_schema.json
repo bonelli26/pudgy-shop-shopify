@@ -194,21 +194,6 @@
     ]
   },
   {
-    "name": "Pencil Bar Giveaway",
-    "settings": [
-      {
-        "type": "text",
-        "id": "pencil_bar_link_g",
-        "label": "Pencil Bar Link"
-      },
-      {
-        "type": "text",
-        "id": "pencil_bar_message_g",
-        "label": "Pencil Bar Message"
-      }
-    ]
-  },
-  {
     "name": "Footer Content",
     "settings": [
       {
