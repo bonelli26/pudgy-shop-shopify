@@ -17,13 +17,19 @@ export const pageEntrance = (namespace = null)=> {
 
 	if(globalStorage.namespace === "get-notified") {
 		gsap.set(domStorage.header, { display: "none" });
+		globalStorage.pencilMarqueeDark.tween.pause()
+		globalStorage.pencilMarquee.tween.pause()
 	} else if (globalStorage.namespace === "giveaway") {
 		domStorage.nav.classList.add("giveaway");
 		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
 		gsap.to(domStorage.header, { display: "block" });
 		gsap.set(domStorage.pencilMarqueeDark, { display: "flex" });
+		globalStorage.pencilMarqueeDark.tween.play()
+		globalStorage.pencilMarquee.tween.pause()
 	} else {
 		domStorage.nav.classList.remove("giveaway");
+		globalStorage.pencilMarqueeDark.tween.pause()
+		globalStorage.pencilMarquee.tween.play()
 		gsap.to(domStorage.header, { display: "block" });
 		gsap.set(domStorage.pencilMarqueeRainbow, { display: "flex" });
 		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
@@ -83,7 +89,11 @@ export const globalEntrance = (namespace = null)=>{
 	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile
 
 	img.addEventListener("load", () => {
-		domStorage.pencilMarquee.tween.play()
+		if (namespace === "giveaway") {
+			globalStorage.pencilMarqueeDark.tween.play()
+		} else {
+			globalStorage.pencilMarquee.tween.play()
+		}
 		gsap.set(img, { opacity: 1 })
 		timeline
 			.to(domStorage.header,  { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
@@ -242,11 +252,19 @@ export class Marquees {
 
 			} else {
 				if (this.pencilMarquee) {
-					domStorage.pencilMarquee = {
-						el: this.marquees[i],
-						tween: tween,
-						playing: false
-					};
+					if (i === 0) {
+						globalStorage.pencilMarqueeDark = {
+							el: this.marquees[i],
+							tween: tween,
+							playing: false
+						};
+					} else if (i === 1) {
+						globalStorage.pencilMarquee = {
+							el: this.marquees[i],
+							tween: tween,
+							playing: false
+						};
+					}
 				} else {
 					globalStorage.marqueeData.push({
 						el: this.marquees[i],

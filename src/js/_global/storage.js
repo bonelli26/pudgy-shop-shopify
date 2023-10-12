@@ -18,12 +18,14 @@ export const globalStorage = {
 	"marqueeData": [],
 	"prefetchedUrls": [],
 	"reviewOverviews": [],
-	"allReviewsOverview": ""
+	"allReviewsOverview": "",
+	"pencilMarquee": "",
+	"pencilMarqueeDark": "",
 };
 
 export const domStorage = {
 	"header": document.getElementById("header"),
-	"pencilMarquee": document.querySelector(".pencil-bar"),
+	"pencilMarquee": document.querySelectorAll(".pencil-bar"),
 	"pencilMarqueeDark": document.querySelector(".giveaway-marquee"),
 	"pencilMarqueeRainbow": document.querySelector(".gradiant-marquee"),
 	"nav": document.getElementById("nav"),

@@ -183,23 +183,23 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
       </div>
     </div>
     <div class="pencil-bar gradiant-marquee">
-    <div class="inner" data-dur="25" data-mobile-dur="10">
-      <div class="group">
-        {% if settings.pencil_bar_link == blank and settings.pencil_bar_message != blank %}
-          <p>{{ settings.pencil_bar_message }}</p>
-        {% elsif settings.pencil_bar_link != blank %}
-          <a target="_blank" href="{{ settings.pencil_bar_link }}">{{ settings.pencil_bar_message }}</a>
-        {% endif %}
-      </div>
-      <div class="group" aria-hidden="true">
-        {% if settings.pencil_bar_link == blank and settings.pencil_bar_message != blank %}
-          <p>{{ settings.pencil_bar_message }}</p>
-        {% elsif settings.pencil_bar_link != blank %}
-          <a target="_blank" href="{{ settings.pencil_bar_link }}">{{ settings.pencil_bar_message }}</a>
-        {% endif %}
+      <div class="inner" data-dur="25" data-mobile-dur="10">
+        <div class="group">
+          {% if settings.pencil_bar_link == blank and settings.pencil_bar_message != blank %}
+            <p>{{ settings.pencil_bar_message }}</p>
+          {% elsif settings.pencil_bar_link != blank %}
+            <a target="_blank" href="{{ settings.pencil_bar_link }}">{{ settings.pencil_bar_message }}</a>
+          {% endif %}
+        </div>
+        <div class="group" aria-hidden="true">
+          {% if settings.pencil_bar_link == blank and settings.pencil_bar_message != blank %}
+            <p>{{ settings.pencil_bar_message }}</p>
+          {% elsif settings.pencil_bar_link != blank %}
+            <a target="_blank" href="{{ settings.pencil_bar_link }}">{{ settings.pencil_bar_message }}</a>
+          {% endif %}
+        </div>
       </div>
     </div>
-  </div>
     <nav id="nav" class="max-width">
       <a class="logo mw prefetch-us" href="/">
         <svg xmlns="http://www.w3.org/2000/svg" width="149" height="83" viewBox="0 0 149 83" fill="none">
