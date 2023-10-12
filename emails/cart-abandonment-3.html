@@ -302,7 +302,7 @@ h4 {
                                                                                                 <tr>
                                                                                                     <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
                                                                                                         <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/7a3f5829-a6c9-46c2-bad0-9e87b6f654a4.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
+                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/33210e0f-650f-429e-becf-c96e1f8e304e.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
                                                                                                         </a>
                                                                                                     </td>
                                                                                                 </tr>
@@ -330,8 +330,8 @@ h4 {
                                                                                                 <tbody>
                                                                                                 <tr>
                                                                                                     <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/a0f4f881-8d6d-479e-8a60-4dc1daa6d162.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
+                                                                                                        <a href="{{ event.extra.checkout_url }}&amp;discount={% coupon_code 'CODEPENGU1' %}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
+                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/f291f968-7643-4ff1-8097-72d1978c7c4d.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
                                                                                                         </a>
                                                                                                     </td>
                                                                                                 </tr>
@@ -394,6 +394,33 @@ h4 {
                                                                     <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
                                                                         <tbody>
                                                                         <tr>
+                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
+                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
+                                                                                    <tbody>
+                                                                                    <tr>
+                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
+                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
+                                                                                                <tbody>
+                                                                                                <tr>
+                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
+                                                                                                        <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/a4462186-d058-4ded-8c7a-5ee0eac4bd6b.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
+                                                                                                    </td>
+                                                                                                </tr>
+                                                                                                </tbody>
+                                                                                            </table>
+                                                                                        </td>
+                                                                                    </tr>
+                                                                                    </tbody>
+                                                                                </table>
+                                                                            </td>
+                                                                        </tr>
+                                                                        </tbody>
+                                                                    </table>
+                                                                </div>
+                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
+                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
+                                                                        <tbody>
+                                                                        <tr>
                                                                             <td class="" style="background-color:#BDE5FF;vertical-align:top;padding-top:0px;padding-right:100px;padding-bottom:0px;padding-left:100px;">
                                                                                 <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
                                                                                     <tbody>
@@ -407,7 +434,7 @@ h4 {
                                                                                                     <table cellpadding="0" cellspacing="0" height="100%" role="presentation" style="" width="100%">
                                                                                                         <tbody>
                                                                                                         <tr>
-                                                                                                            <td style="font-size:0px;padding:10px 0px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:0 %}
+                                                                                                            <td style="font-size:0px;padding:10px 50px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:0 %}
                                                                                                                 {% with item=feeds.abandoned_cart|index:0%}
                                                                                                                 {% with Title=item.title|safe Price=item.price|default:"" Compare_at=item.regular_price|default:"" %}
 
@@ -416,7 +443,7 @@ h4 {
                                                                                                                     <tr>
                                                                                                                         <td align="center" width="50%">
                                                                                                                             <a href="{{ item.url }}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:200px;" width="176"/>
+                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:150px;" width="176"/>
                                                                                                                             </a>
                                                                                                                         </td>
                                                                                                                         <td width="50%">
@@ -454,7 +481,7 @@ h4 {
                                                                                                     <table cellpadding="0" cellspacing="0" height="100%" role="presentation" style="" width="100%">
                                                                                                         <tbody>
                                                                                                         <tr>
-                                                                                                            <td style="font-size:0px;padding:10px 0px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:1 %}
+                                                                                                            <td style="font-size:0px;padding:10px 50px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:1 %}
                                                                                                                 {% with item=feeds.abandoned_cart|index:1%}
                                                                                                                 {% with Title=item.title|safe Price=item.price|default:"" Compare_at=item.regular_price|default:"" %}
 
@@ -463,7 +490,7 @@ h4 {
                                                                                                                     <tr>
                                                                                                                         <td align="center" width="50%">
                                                                                                                             <a href="{{ item.url }}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:200px;" width="176"/>
+                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:150px;" width="176"/>
                                                                                                                             </a>
                                                                                                                         </td>
                                                                                                                         <td width="50%">
@@ -501,7 +528,7 @@ h4 {
                                                                                                     <table cellpadding="0" cellspacing="0" height="100%" role="presentation" style="" width="100%">
                                                                                                         <tbody>
                                                                                                         <tr>
-                                                                                                            <td style="font-size:0px;padding:10px 0px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:2 %}
+                                                                                                            <td style="font-size:0px;padding:10px 50px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:2 %}
                                                                                                                 {% with item=feeds.abandoned_cart|index:2%}
                                                                                                                 {% with Title=item.title|safe Price=item.price|default:"" Compare_at=item.regular_price|default:"" %}
 
@@ -510,7 +537,7 @@ h4 {
                                                                                                                     <tr>
                                                                                                                         <td align="center" width="50%">
                                                                                                                             <a href="{{ item.url }}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:200px;" width="176"/>
+                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:150px;" width="176"/>
                                                                                                                             </a>
                                                                                                                         </td>
                                                                                                                         <td width="50%">
@@ -563,7 +590,7 @@ h4 {
                                                                                                 <tr>
                                                                                                     <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
                                                                                                         <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/c8d655c3-aeb3-4f0e-bbe2-ada0b13c2796.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
+                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/e6defc20-5d81-4877-be23-2b473b8b699f.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
                                                                                                         </a>
                                                                                                     </td>
                                                                                                 </tr>
@@ -591,9 +618,7 @@ h4 {
                                                                                                 <tbody>
                                                                                                 <tr>
                                                                                                     <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/709b7c80-b514-4ede-bbd6-02f10389670d.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                        </a>
+                                                                                                        <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/709b7c80-b514-4ede-bbd6-02f10389670d.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
                                                                                                     </td>
                                                                                                 </tr>
                                                                                                 </tbody>

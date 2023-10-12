@@ -3245,7 +3245,7 @@ footer {
 			@include get-vw(font-size, 18px, 16px);
 			line-height: 1.45;
 			text-transform: uppercase;
-			@include get-vw(margin-bottom, 24px, 24px);
+			@include get-vw(margin-bottom, 24px, 16px);
 			max-width: 490px;
 		}
 	}
@@ -3282,18 +3282,18 @@ footer {
 		-webkit-text-stroke: 1.5px #00142d;
 		text-stroke: 1.5px #00142d;
 		font-family: $ttBlack;
-		//@include get-vw(font-size, 104px, 64px);
 		font-size: 104px;
 		line-height: .91;
 		letter-spacing: -2px;
 		text-transform: uppercase;
 		@include get-vw(margin-bottom, 16px, 16px);
+		width: 600px;
 	}
 	.form-content {
 		display: flex;
 		flex-direction: column;
 		width: 100%;
-		@include get-vw(margin-bottom, 24px, 24px);
+		@include get-vw(margin-bottom, 24px, 16px);
 		width: 321px;
 		.pink-btn {
 			width: 100%;
@@ -3376,6 +3376,12 @@ footer {
 		max-height: unset;
 	}
 
+	@include bp-1440 {
+		h1 {
+			width: 100%;
+		}
+	}
+
 	@include bp-1200 {
 		h1 {
 			@include get-vw(font-size, 104px, 64px);
@@ -3395,13 +3401,17 @@ footer {
 		h1 {
 			-webkit-text-stroke: 1px #00142d;
 			text-stroke: 1px #00142d;
-			margin-bottom: 8px;
 			max-width: none;
 			text-shadow: -3px 3px #00142dbf;
 			line-height: -1.28px;
 		}
 		.available {
 			width: 80%;
+		}
+		.completed {
+			padding: 14px 20px;
+			text-align: center;
+			justify-content: center;
 		}
 	}
 }
@@ -3452,7 +3462,7 @@ footer {
 	}
 	.header {
 		color: #FFF;
-		text-shadow: -1.5px 1.5px #00142d;
+		text-shadow: -2px 2px #00142d;
 		-webkit-text-stroke: 1px #00142d;
 		text-stroke: 1px #00142d;
 		font-family: $ttBlack;
