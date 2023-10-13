@@ -1,933 +1,196 @@
-<!DOCTYPE html>
-<html xmlns="http://www.w3.org/1999/xhtml" xmlns:o="urn:schemas-microsoft-com:office:office" xmlns:v="urn:schemas-microsoft-com:vml">
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
 <head>
-    <title>
-    </title>
-    <!--[if !mso]><!-->
-    <meta content="IE=edge" http-equiv="X-UA-Compatible"/>
-    <!--<![endif]-->
-    <meta content="text/html; charset=utf-8" http-equiv="Content-Type"/>
-    <meta content="width=device-width, initial-scale=1" name="viewport"/>
-    <!--[if mso]>
-    <noscript>
-        <xml>
-            <o:OfficeDocumentSettings>
-                <o:AllowPNG/>
-                <o:PixelsPerInch>96</o:PixelsPerInch>
-            </o:OfficeDocumentSettings>
-        </xml>
-    </noscript>
-    <![endif]-->
-    <!--[if lte mso 11]>
-    <style type="text/css" data-inliner="ignore">
-        .mj-outlook-group-fix { width:100% !important; }
+    <title></title>
+    <style type="text/css">
+        body {
+            background: #eee;
+            font-family: 'Helvetica Neue', Helvetica, Arial, san-serif;
+        }
+        #outer {
+            width: 95%;
+            min-width: 320px;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #f9f9f9;
+            position: relative;
+        }
+        #inner {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        p {
+            margin: 0 0 9px;
+        }
+        img + div {
+            display: none;
+            pointer-events: none;
+        }
     </style>
-    <![endif]-->
-    <!--[if !mso]><!--><!--<![endif]-->
-    <style>a:link {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
-    a:visited {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
-    a:active {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}
-    a:hover {color:#197bbd;font-weight:normal;text-decoration:underline;font-style:normal}</style><style>@import url(https://static-forms.klaviyo.com/fonts/api/v1/SZYpWE/custom_fonts.css);
-#outlook a {
-    padding: 0
-}
-body {
-    margin: 0;
-    padding: 0;
-    -webkit-text-size-adjust: 100%;
-    -ms-text-size-adjust: 100%
-}
-table, td {
-    border-collapse: collapse;
-    mso-table-lspace: 0;
-    mso-table-rspace: 0
-}
-img {
-    border: 0;
-    line-height: 100%;
-    outline: none;
-    text-decoration: none;
-    -ms-interpolation-mode: bicubic
-}
-p {
-    display: block;
-    margin: 13px 0
-}
-@media only screen and (min-width: 480px) {
-    .mj-column-per-100 {
-        width: 100% !important;
-        max-width: 100%
-    }
-}
-.moz-text-html .mj-column-per-100 {
-    width: 100% !important;
-    max-width: 100%
-}
-@media only screen and (max-width: 480px) {
-    div.kl-row.colstack div.kl-column {
-        display: block !important;
-        width: 100% !important
-    }
-}
-@media only screen and (max-width: 480px) {
-    .component-wrapper .mob-no-spc {
-        padding-left: 0 !important;
-        padding-right: 0 !important
-    }
-}
-@media only screen and (max-width: 480px) {
-    td.kl-img-base-auto-width {
-        width: 100% !important
-    }
-}
-@media only screen and (max-width: 480px) {
-    .kl-product-cell-stack {
-        display: block !important;
-        width: 100% !important;
-        padding-left: 0 !important;
-        padding-right: 0 !important
-    }
-}
-@media only screen and (max-width: 480px) {
-    table.mj-full-width-mobile {
-        width: 100% !important
-    }
-    td.mj-full-width-mobile {
-        width: auto !important
-    }
-}
-img {
-    border: 0;
-    height: auto;
-    line-height: 100%;
-    outline: none;
-    text-decoration: none;
-    max-width: 100%
-}
-.root-container {
-    background-repeat: repeat !important;
-    background-size: auto !important;
-    background-position: left top !important
-}
-.root-container-spacing {
-    padding-top: 50px !important;
-    padding-bottom: 20px !important;
-    font-size: 0 !important
-}
-.content-padding {
-    padding-left: 1px !important;
-    padding-right: 1px !important
-}
-.content-padding.first {
-    padding-top: 0 !important
-}
-.content-padding.last {
-    padding-bottom: 0 !important
-}
-@media only screen and (max-width: 480px) {
-    td.mobile-only {
-        display: table-cell !important
-    }
-    div.mobile-only {
-        display: block !important
-    }
-    table.mobile-only {
-        display: table !important
-    }
-    .desktop-only {
-        display: none !important
-    }
-}
-@media only screen and (max-width: 480px) {
-    .table-mobile-only {
-        display: table-cell !important;
-        max-height: none !important
-    }
-    .table-mobile-only.block {
-        display: block !important
-    }
-    .table-mobile-only.inline-block {
-        display: inline-block !important
-    }
-    .table-desktop-only {
-        max-height: 0 !important;
-        display: none !important;
-        mso-hide: all !important;
-        overflow: hidden !important
-    }
-}
-p {
-    margin-left: 0;
-    margin-right: 0;
-    margin-top: 0;
-    margin-bottom: 0;
-    padding-bottom: 1em
-}
-@media only screen and (max-width: 480px) {
-    .kl-text > div, .kl-table-subblock div, .kl-split-subblock > div {
-        font-size: 14px !important;
-        line-height: 1.3 !important
-    }
-}
-h1 {
-    color: #222427;
-    font-family: "Helvetica Neue", Arial;
-    font-size: 40px;
-    font-style: normal;
-    font-weight: normal;
-    line-height: 1.1;
-    letter-spacing: 0;
-    margin: 0;
-    margin-bottom: 20px;
-    text-align: left
-}
-@media only screen and (max-width: 480px) {
-    h1 {
-        font-size: 40px !important;
-        line-height: 1.1 !important
-    }
-}
-h2 {
-    color: #222427;
-    font-family: "Helvetica Neue", Arial;
-    font-size: 32px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.1;
-    letter-spacing: 0;
-    margin: 0;
-    margin-bottom: 16px;
-    text-align: left
-}
-@media only screen and (max-width: 480px) {
-    h2 {
-        font-size: 32px !important;
-        line-height: 1.1 !important
-    }
-}
-h3 {
-    color: #222427;
-    font-family: "Helvetica Neue", Arial;
-    font-size: 24px;
-    font-style: normal;
-    font-weight: bold;
-    line-height: 1.1;
-    letter-spacing: 0;
-    margin: 0;
-    margin-bottom: 12px;
-    text-align: left
-}
-@media only screen and (max-width: 480px) {
-    h3 {
-        font-size: 24px !important;
-        line-height: 1.1 !important
-    }
-}
-h4 {
-    color: #222427;
-    font-family: "Helvetica Neue", Arial;
-    font-size: 18px;
-    font-style: normal;
-    font-weight: 400;
-    line-height: 1.1;
-    letter-spacing: 0;
-    margin: 0;
-    margin-bottom: 9px;
-    text-align: left
-}
-@media only screen and (max-width: 480px) {
-    h4 {
-        font-size: 18px !important;
-        line-height: 1.1 !important
-    }
-}
-@media only screen and (max-width: 480px) {
-    .root-container {
-        width: 100% !important
-    }
-    .root-container-spacing {
-        padding: 10px !important
-    }
-    .content-padding {
-        padding-left: 0 !important;
-        padding-right: 0 !important
-    }
-    .content-padding.first {
-        padding-top: 0 !important
-    }
-    .content-padding.last {
-        padding-bottom: 0 !important
-    }
-    .component-wrapper {
-        padding-left: 0 !important;
-        padding-right: 0 !important
-    }
-}</style></head>
-<body style="word-spacing:normal;background-color:#FFFFFF;">
-<div class="root-container" id="bodyTable" style="background-color:#FFFFFF;">
-    <div class="root-container-spacing">
-        <table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section" role="presentation" style="width:100%;">
-            <tbody>
-            <tr>
-                <td>
-                    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div style="margin:0px auto;max-width:600px;">
-                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
-                            <tbody>
-                            <tr>
-                                <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
-                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#BDE5FF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                                    <div style="background:#BDE5FF;background-color:#BDE5FF;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#BDE5FF;background-color:#BDE5FF;width:100%;border-radius:0px 0px 0px 0px;">
-                                            <tbody>
-                                            <tr>
-                                                <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
-                                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                                                    <div class="content-padding first">
-                                                        <!--[if true]><table border="0" cellpadding="0" cellspacing="0" width="598" style="width:598px;direction:ltr"><tr><![endif]-->
-                                                        <div class="kl-row colstack" style="display:table;table-layout:fixed;width:100%;">
-                                                            <!--[if true]><td style="vertical-align:top;width:598px;"><![endif]-->
-                                                            <div class="kl-column" style="display:table-cell;vertical-align:top;width:100%;">
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/33210e0f-650f-429e-becf-c96e1f8e304e.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <a href="{{ event.extra.checkout_url }}&amp;discount={% coupon_code 'CODEPENGU1' %}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/f291f968-7643-4ff1-8097-72d1978c7c4d.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <!--[if true]></td><![endif]-->
-                                                        </div>
-                                                        <!--[if true]></tr></table><![endif]-->
-                                                    </div>
-                                                    <!--[if mso | IE]></table><![endif]-->
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!--[if mso | IE]></td></tr></table></table><![endif]-->
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!--[if mso | IE]></td></tr></table><![endif]-->
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section" role="presentation" style="width:100%;">
-            <tbody>
-            <tr>
-                <td>
-                    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div style="margin:0px auto;max-width:600px;">
-                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
-                            <tbody>
-                            <tr>
-                                <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
-                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#BDE5FF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                                    <div style="background:#BDE5FF;background-color:#BDE5FF;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#BDE5FF;background-color:#BDE5FF;width:100%;border-radius:0px 0px 0px 0px;">
-                                            <tbody>
-                                            <tr>
-                                                <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
-                                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                                                    <div class="content-padding">
-                                                        <!--[if true]><table border="0" cellpadding="0" cellspacing="0" width="598" style="width:598px;direction:ltr"><tr><![endif]-->
-                                                        <div class="kl-row colstack" style="display:table;table-layout:fixed;width:100%;">
-                                                            <!--[if true]><td style="vertical-align:top;width:598px;"><![endif]-->
-                                                            <div class="kl-column" style="display:table-cell;vertical-align:top;width:100%;">
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/a4462186-d058-4ded-8c7a-5ee0eac4bd6b.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="background-color:#BDE5FF;vertical-align:top;padding-top:0px;padding-right:100px;padding-bottom:0px;padding-left:100px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="left" style="font-size:0px;padding:0px;word-break:break-word;">
-                                                                                            <div style="font-family:Ubuntu, Helvetica, Arial, sans-serif;font-size:13px;line-height:1;text-align:left;color:#000000;"><!--[if true]><table class="kl-product" role="presentation" width="100%" style="all:unset;opacity:0;"><tr><![endif]-->
-                                                                                                <!--[if false]></td></tr></table><![endif]-->
-                                                                                                <div class="kl-product" style="display:table;width:100%;height:100%">
-                                                                                                    <!--[if true]><td width="100%" style="vertical-align:top;""><![endif]-->
-                                                                                                    <!--[if !true]><!--><div class="kl-product-cell-stack" style="display:table-cell;vertical-align:top;font-size:0;width:100%;"><!--<![endif]-->
-                                                                                                    <table cellpadding="0" cellspacing="0" height="100%" role="presentation" style="" width="100%">
-                                                                                                        <tbody>
-                                                                                                        <tr>
-                                                                                                            <td style="font-size:0px;padding:10px 50px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:0 %}
-                                                                                                                {% with item=feeds.abandoned_cart|index:0%}
-                                                                                                                {% with Title=item.title|safe Price=item.price|default:"" Compare_at=item.regular_price|default:"" %}
-
-                                                                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="kl-product-subblock" style="table-layout:fixed;height:100%;" width="100%">
-                                                                                                                    <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" width="50%">
-                                                                                                                            <a href="{{ item.url }}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:150px;" width="176"/>
-                                                                                                                            </a>
-                                                                                                                        </td>
-                                                                                                                        <td width="50%">
-                                                                                                                            <table width="100%">
-                                                                                                                                <tr><td align="left"><table align="left"><tr><td align="left" style="color:#000;font-family:'menco', 'Arial Black', 'Arial Bold', Gadget, sans-serif;font-size:18px;font-weight:700;font-style:Normal;text-align:left;letter-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">{{ Title }}</td></tr></table></td></tr>
-                                                                                                                                <tr>
-                                                                                                                                    <td align="left">
-                                                                                                                                        <table align="left">
-                                                                                                                                            <tr>
-                                                                                                                                                <td align="left" style="color:#222427;font-family:'menco', 'Arial Black', 'Arial Bold', Gadget, sans-serif;font-size:14px;font-weight:700;font-style:Normal;text-align:left;letter-spacing:0px;padding-top:5px;padding-bottom:0px;padding-left:1.5px;padding-right:1.5px;line-height:1.3;display:inline-block;">{{ Price }}</td>
-                                                                                                                                            </tr>
-                                                                                                                                        </table></td>
-                                                                                                                                </tr>
-                                                                                                                            </table>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-                                                                                                                    </tbody>
-                                                                                                                </table>
-
-                                                                                                                {% endwith %}
-                                                                                                                {% endwith %}
-                                                                                                                {% endif %}</td>
-                                                                                                        </tr>
-                                                                                                        </tbody>
-                                                                                                    </table>
-                                                                                                    <!--[if !true]><!--></div><!--<![endif]-->
-                                                                                                    <!--[if true]></td><![endif]-->
-                                                                                                </div>
-                                                                                                <!--[if true]></tr></table><![endif]-->
-                                                                                                <!--[if true]><table class="kl-product" role="presentation" width="100%" style="all:unset;opacity:0;"><tr><![endif]-->
-                                                                                                <!--[if false]></td></tr></table><![endif]-->
-                                                                                                <div class="kl-product" style="display:table;width:100%;height:100%">
-                                                                                                    <!--[if true]><td width="100%" style="vertical-align:top;""><![endif]-->
-                                                                                                    <!--[if !true]><!--><div class="kl-product-cell-stack" style="display:table-cell;vertical-align:top;font-size:0;width:100%;"><!--<![endif]-->
-                                                                                                    <table cellpadding="0" cellspacing="0" height="100%" role="presentation" style="" width="100%">
-                                                                                                        <tbody>
-                                                                                                        <tr>
-                                                                                                            <td style="font-size:0px;padding:10px 50px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:1 %}
-                                                                                                                {% with item=feeds.abandoned_cart|index:1%}
-                                                                                                                {% with Title=item.title|safe Price=item.price|default:"" Compare_at=item.regular_price|default:"" %}
-
-                                                                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="kl-product-subblock" style="table-layout:fixed;height:100%;" width="100%">
-                                                                                                                    <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" width="50%">
-                                                                                                                            <a href="{{ item.url }}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:150px;" width="176"/>
-                                                                                                                            </a>
-                                                                                                                        </td>
-                                                                                                                        <td width="50%">
-                                                                                                                            <table width="100%">
-                                                                                                                                <tr><td align="left"><table align="left"><tr><td align="left" style="color:#000;font-family:'menco', 'Arial Black', 'Arial Bold', Gadget, sans-serif;font-size:18px;font-weight:700;font-style:Normal;text-align:left;letter-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">{{ Title }}</td></tr></table></td></tr>
-                                                                                                                                <tr>
-                                                                                                                                    <td align="left">
-                                                                                                                                        <table align="left">
-                                                                                                                                            <tr>
-                                                                                                                                                <td align="left" style="color:#222427;font-family:'menco', 'Arial Black', 'Arial Bold', Gadget, sans-serif;font-size:14px;font-weight:700;font-style:Normal;text-align:left;letter-spacing:0px;padding-top:5px;padding-bottom:0px;padding-left:1.5px;padding-right:1.5px;line-height:1.3;display:inline-block;">{{ Price }}</td>
-                                                                                                                                            </tr>
-                                                                                                                                        </table></td>
-                                                                                                                                </tr>
-                                                                                                                            </table>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-                                                                                                                    </tbody>
-                                                                                                                </table>
-
-                                                                                                                {% endwith %}
-                                                                                                                {% endwith %}
-                                                                                                                {% endif %}</td>
-                                                                                                        </tr>
-                                                                                                        </tbody>
-                                                                                                    </table>
-                                                                                                    <!--[if !true]><!--></div><!--<![endif]-->
-                                                                                                    <!--[if true]></td><![endif]-->
-                                                                                                </div>
-                                                                                                <!--[if true]></tr></table><![endif]-->
-                                                                                                <!--[if true]><table class="kl-product" role="presentation" width="100%" style="all:unset;opacity:0;"><tr><![endif]-->
-                                                                                                <!--[if false]></td></tr></table><![endif]-->
-                                                                                                <div class="kl-product" style="display:table;width:100%;height:100%">
-                                                                                                    <!--[if true]><td width="100%" style="vertical-align:top;""><![endif]-->
-                                                                                                    <!--[if !true]><!--><div class="kl-product-cell-stack" style="display:table-cell;vertical-align:top;font-size:0;width:100%;"><!--<![endif]-->
-                                                                                                    <table cellpadding="0" cellspacing="0" height="100%" role="presentation" style="" width="100%">
-                                                                                                        <tbody>
-                                                                                                        <tr>
-                                                                                                            <td style="font-size:0px;padding:10px 50px 10px 0px;word-break:break-word;vertical-align:top;">{% if feeds.abandoned_cart|index:2 %}
-                                                                                                                {% with item=feeds.abandoned_cart|index:2%}
-                                                                                                                {% with Title=item.title|safe Price=item.price|default:"" Compare_at=item.regular_price|default:"" %}
-
-                                                                                                                <table align="left" border="0" cellpadding="0" cellspacing="0" class="kl-product-subblock" style="table-layout:fixed;height:100%;" width="100%">
-                                                                                                                    <tbody>
-                                                                                                                    <tr>
-                                                                                                                        <td align="center" width="50%">
-                                                                                                                            <a href="{{ item.url }}" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                                                <img alt="Image of {{ Title }}" src="{{ item.image_full_url }}" style="display:block;max-width:100%;width:auto;max-height:150px;" width="176"/>
-                                                                                                                            </a>
-                                                                                                                        </td>
-                                                                                                                        <td width="50%">
-                                                                                                                            <table width="100%">
-                                                                                                                                <tr><td align="left"><table align="left"><tr><td align="left" style="color:#000;font-family:'menco', 'Arial Black', 'Arial Bold', Gadget, sans-serif;font-size:18px;font-weight:700;font-style:Normal;text-align:left;letter-spacing:0px;padding-top:5px;padding-bottom:0px;line-height:1.3;">{{ Title }}</td></tr></table></td></tr>
-                                                                                                                                <tr>
-                                                                                                                                    <td align="left">
-                                                                                                                                        <table align="left">
-                                                                                                                                            <tr>
-                                                                                                                                                <td align="left" style="color:#222427;font-family:'menco', 'Arial Black', 'Arial Bold', Gadget, sans-serif;font-size:14px;font-weight:700;font-style:Normal;text-align:left;letter-spacing:0px;padding-top:5px;padding-bottom:0px;padding-left:1.5px;padding-right:1.5px;line-height:1.3;display:inline-block;">{{ Price }}</td>
-                                                                                                                                            </tr>
-                                                                                                                                        </table></td>
-                                                                                                                                </tr>
-                                                                                                                            </table>
-                                                                                                                        </td>
-                                                                                                                    </tr>
-                                                                                                                    </tbody>
-                                                                                                                </table>
-
-                                                                                                                {% endwith %}
-                                                                                                                {% endwith %}
-                                                                                                                {% endif %}</td>
-                                                                                                        </tr>
-                                                                                                        </tbody>
-                                                                                                    </table>
-                                                                                                    <!--[if !true]><!--></div><!--<![endif]-->
-                                                                                                    <!--[if true]></td><![endif]-->
-                                                                                                </div>
-                                                                                                <!--[if true]></tr></table><![endif]--></div>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/e6defc20-5d81-4877-be23-2b473b8b699f.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/709b7c80-b514-4ede-bbd6-02f10389670d.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <!--[if true]></td><![endif]-->
-                                                        </div>
-                                                        <!--[if true]></tr></table><![endif]-->
-                                                        <!--[if true]><table border="0" cellpadding="0" cellspacing="0" width="598" style="width:598px;direction:ltr"><tr><![endif]-->
-                                                        <div class="kl-row colstack" style="display:table;table-layout:fixed;width:100%;">
-                                                            <!--[if true]><td style="vertical-align:top;width:149.5px;"><![endif]-->
-                                                            <div class="kl-column" style="display:table-cell;vertical-align:top;width:25%;">
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="" style="border:0;padding:0px 0px 0px 0px;width:61px;" valign="top">
-                                                                                                        <a href="https://www.youtube.com/@pudgypenguinsofficial" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/8846acaa-3ab8-4a70-b941-bb1cba5584c1.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="61"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <!--[if true]></td><![endif]-->
-                                                            <!--[if true]><td style="vertical-align:top;width:149.5px;"><![endif]-->
-                                                            <div class="kl-column" style="display:table-cell;vertical-align:top;width:25%;">
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="" style="border:0;padding:0px 0px 0px 0px;width:61px;" valign="top">
-                                                                                                        <a href="https://www.tiktok.com/@pudgypenguins?lang=en" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/18d49260-9863-4449-bc6d-0073fd5627d4.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="61"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <!--[if true]></td><![endif]-->
-                                                            <!--[if true]><td style="vertical-align:top;width:149.5px;"><![endif]-->
-                                                            <div class="kl-column" style="display:table-cell;vertical-align:top;width:25%;">
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="" style="border:0;padding:0px 0px 0px 0px;width:61px;" valign="top">
-                                                                                                        <a href="https://www.instagram.com/pudgypenguins/" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/74c87014-2ef7-4f0a-9930-d248ca0ec9c6.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="61"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <!--[if true]></td><![endif]-->
-                                                            <!--[if true]><td style="vertical-align:top;width:149.5px;"><![endif]-->
-                                                            <div class="kl-column" style="display:table-cell;vertical-align:top;width:25%;">
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="" style="border:0;padding:0px 0px 0px 0px;width:61px;" valign="top">
-                                                                                                        <a href="https://twitter.com/pudgypenguins" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/985019b1-1ca6-42b5-967b-08a727a10cbe.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="61"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <!--[if true]></td><![endif]-->
-                                                        </div>
-                                                        <!--[if true]></tr></table><![endif]-->
-                                                    </div>
-                                                    <!--[if mso | IE]></table><![endif]-->
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!--[if mso | IE]></td></tr></table></table><![endif]-->
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!--[if mso | IE]></td></tr></table><![endif]-->
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section" role="presentation" style="width:100%;">
-            <tbody>
-            <tr>
-                <td>
-                    <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="kl-section-outlook" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                    <div style="margin:0px auto;max-width:600px;">
-                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
-                            <tbody>
-                            <tr>
-                                <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
-                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" bgcolor="#BDE5FF" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-                                    <div style="background:#BDE5FF;background-color:#BDE5FF;margin:0px auto;border-radius:0px 0px 0px 0px;max-width:600px;">
-                                        <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="background:#BDE5FF;background-color:#BDE5FF;width:100%;border-radius:0px 0px 0px 0px;">
-                                            <tbody>
-                                            <tr>
-                                                <td style="direction:ltr;font-size:0px;padding:20px 0;padding-bottom:0px;padding-left:0px;padding-right:0px;padding-top:0px;text-align:center;">
-                                                    <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><![endif]-->
-                                                    <div class="content-padding">
-                                                        <!--[if true]><table border="0" cellpadding="0" cellspacing="0" width="598" style="width:598px;direction:ltr"><tr><![endif]-->
-                                                        <div class="kl-row colstack" style="display:table;table-layout:fixed;width:100%;">
-                                                            <!--[if true]><td style="vertical-align:top;width:598px;"><![endif]-->
-                                                            <div class="kl-column" style="display:table-cell;vertical-align:top;width:100%;">
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/a1244859-def8-4070-9a4d-2ef3f12340fe.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                                <div class="mj-column-per-100 mj-outlook-group-fix component-wrapper" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                                                                    <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;" width="100%">
-                                                                        <tbody>
-                                                                        <tr>
-                                                                            <td class="" style="vertical-align:top;padding-top:0px;padding-right:0px;padding-bottom:0px;padding-left:0px;">
-                                                                                <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="" width="100%">
-                                                                                    <tbody>
-                                                                                    <tr>
-                                                                                        <td align="center" class="kl-image" style="font-size:0px;word-break:break-word;">
-                                                                                            <table border="0" cellpadding="0" cellspacing="0" style="border-collapse:collapse;border-spacing:0px;">
-                                                                                                <tbody>
-                                                                                                <tr>
-                                                                                                    <td class="kl-img-base-auto-width" style="border:0;padding:0px 0px 0px 0px;width:598px;" valign="top">
-                                                                                                        <a href='{{ emptyURL|add:"#" }}' style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline">
-                                                                                                            <img src="https://d3k81ch9hvuctc.cloudfront.net/company/SZYpWE/images/4887bebc-2be6-4708-911e-df2493f3b592.png" style="display:block;outline:none;text-decoration:none;height:auto;font-size:13px;width:100%;" width="598"/>
-                                                                                                        </a>
-                                                                                                    </td>
-                                                                                                </tr>
-                                                                                                </tbody>
-                                                                                            </table>
-                                                                                        </td>
-                                                                                    </tr>
-                                                                                    </tbody>
-                                                                                </table>
-                                                                            </td>
-                                                                        </tr>
-                                                                        </tbody>
-                                                                    </table>
-                                                                </div>
-                                                            </div>
-                                                            <!--[if true]></td><![endif]-->
-                                                        </div>
-                                                        <!--[if true]></tr></table><![endif]-->
-                                                    </div>
-                                                    <!--[if mso | IE]></table><![endif]-->
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </div>
-                                    <!--[if mso | IE]></td></tr></table></table><![endif]-->
-                                </td>
-                            </tr>
-                            </tbody>
-                        </table>
-                    </div>
-                    <!--[if mso | IE]></td></tr></table><![endif]-->
-                </td>
-            </tr>
-            </tbody>
-        </table>
-        <!--[if mso | IE]><table align="center" border="0" cellpadding="0" cellspacing="0" class="" style="width:600px;" width="600" ><tr><td style="line-height:0px;font-size:0px;mso-line-height-rule:exactly;"><![endif]-->
-        <div style="margin:0px auto;max-width:600px;">
-            <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%;">
-                <tbody>
-                <tr>
-                    <td style="direction:ltr;font-size:0px;padding:0px;text-align:center;">
-                        <!--[if mso | IE]><table role="presentation" border="0" cellpadding="0" cellspacing="0"><tr><td class="" style="vertical-align:top;width:600px;" ><![endif]-->
-                        <div class="mj-column-per-100 mj-outlook-group-fix" style="font-size:0px;text-align:left;direction:ltr;vertical-align:top;width:100%;">
-                            <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="vertical-align:top;width:100%;" width="100%">
-                                <tbody>
-                                <tr>
-                                    <td align="center" class="klBranding" style="font-size:0px;padding:25px 0;word-break:break-word;">
-                                        <table border="0" cellpadding="0" cellspacing="0" role="presentation" style="border-collapse:collapse;border-spacing:0px;">
-                                            <tbody>
-                                            <tr>
-                                                <td style="width:122px;">
-                                                    <a href="https://www.klaviyo.com/?utm_medium=freebie&amp;utm_source=brand&amp;utm_term=SZYpWE" style="color:#197bbd; font-style:normal; font-weight:normal; text-decoration:underline" target="_blank">
-                                                        <img alt="Powered by Klaviyo" height="50" src="https://d3k81ch9hvuctc.cloudfront.net/assets/email/branding/klaviyo-branding-option-0.png" style="border:0;display:block;outline:none;text-decoration:none;height:50px;width:100%;font-size:13px;" width="122"/>
-                                                    </a>
-                                                </td>
-                                            </tr>
-                                            </tbody>
-                                        </table>
-                                    </td>
-                                </tr>
-                                </tbody>
-                            </table>
-                        </div>
-                        <!--[if mso | IE]></td></tr></table><![endif]-->
-                    </td>
-                </tr>
-                </tbody>
-            </table>
-        </div>
-        <!--[if mso | IE]></td></tr></table><![endif]-->
-    </div>
+</head>
+<body>
+<div  style="font-size:0;padding-bottom:20px;padding-top:10px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%">
+        <tbody>
+        <tr>
+            <td>
+                <div style="margin:0px auto;max-width:600px">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-1.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px;pointer-events: none;" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="{{ event.extra.responsive_checkout_url }}&discount=CODEPENGU1" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-2.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-3.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 15px 0px 15px" valign="top">
+                                <table class="row" style="width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                    {% for line in event.extra.line_items %}
+                                    <tr class="order-list__item" style="border-top: none;width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                        <td class="order-list__item__cell" style="position: relative; padding: 24px 0;width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                            <table style="border-spacing: 0;border-collapse: collapse; width: 100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td width="60" height="60">
+                                                        <a href="#">
+                                                            <img src="{{ line.product.images.0.src }}" align="left" width="150" height="150" class="order-list__product-image" style="border-radius: 5px; border: 1px solid #000"/>
+                                                        </a>
+                                                    </td>
+                                                    <td class="order-list__product-description-cell" style="color: #000; vertical-align: baseline; padding-left: 5px">
+                                                        {% if line.product.title != 'Default Title' %}
+                                                        <span class="order-list__item-variant" style=" color: #000;line-height: 150%;font-size: 20px;font-weight: 600; font-family:sans-serif">{{ line.product.title }}</span>
+                                                        {% endif %}
+                                                    </td>
+                                                    <td class="order-list__price-cell" style="text-align: right; vertical-align: baseline; width: 70px">
+                                                        <p class="order-list__item-price" style="color: #000;line-height: 150%;font-size: 22px;font-weight: 600;margin: 0 0 0 15px; font-family:sans-serif">
+                                                            {% if line.line_price > 0 %}
+                                                            ${{ line.line_price }}
+                                                            {% else %}
+                                                            Free
+                                                            {% endif %}
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:48px 0px 0px 0px" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="{{ event.extra.responsive_checkout_url }}&discount=CODEPENGU1" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-4.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/footer-1.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody style="display: flex; padding: 0 130px; justify-content: center">
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.youtube.com/@pudgypenguinsofficial" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/youtube_11e08b34-fc0f-478f-ba75-b934d1fd17f7.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.tiktok.com/@pudgypenguins?lang=en" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/tiktok_2a5adcda-dbf7-4e1d-bd43-6f2dbbbe587d.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.instagram.com/pudgypenguins/" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/instagram_5399825e-f8c3-42fc-b40a-9f636688abc4.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://twitter.com/pudgypenguins" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/x.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 32px 0px 32px" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/footer-2.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 32px 0px 32px" valign="top">
+                                <a href="{% unsubscribe_link %}">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Property_1_Alt_Solid_BG.png?v=1697131826" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px;" width="600"/>
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
 </div>
 </body>
 </html>
