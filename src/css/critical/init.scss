@@ -3389,7 +3389,11 @@ footer {
 	}
 
 	@include bp-767 {
-		height: 100vh;
+		height: auto;
+		.max-width {
+			padding-bottom: 150px;
+			min-height: 900px;
+		}
 		.hero-wrapper {
 			flex-direction: column;
 			padding-right: 16px;
@@ -3402,7 +3406,7 @@ footer {
 			-webkit-text-stroke: 1px #00142d;
 			text-stroke: 1px #00142d;
 			max-width: none;
-			text-shadow: -3px 3px #00142dbf;
+			text-shadow: -2px 2px #00142dbf;
 			line-height: -1.28px;
 		}
 		.available {
@@ -3490,6 +3494,12 @@ footer {
 		}
 		strong {
 			font-family: $mencoBlack;
+		}
+	}
+
+	@include bp-767 {
+		h2, .header {
+			text-shadow: -1.5px 1.5px #00142d;
 		}
 	}
 }
