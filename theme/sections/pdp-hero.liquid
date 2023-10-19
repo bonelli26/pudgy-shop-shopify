@@ -103,11 +103,11 @@
                     </div>
                 {% endif %}
             </div>
-            {% if product.metafields.accentuate.walmart_link %}
+            {% if product.metafields.accentuate.store_locator %}
                 <div class="atc-form-walmart">
-                    <a href="{{ product.metafields.accentuate.walmart_link }}" target="_blank" class="pink-btn add-to-cart" type="button">
+                    <a href="/pages/store-locator" class="pink-btn add-to-cart" type="button" data-router-disabled>
                         <span class="in-stock">
-                            Buy Now
+                            Find Store
                             <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Vector.png?v=1691970255">
                         </span>
                     </a>
