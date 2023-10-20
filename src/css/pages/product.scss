@@ -609,6 +609,12 @@
       &.bundle {
         .option-wrapper {
           aspect-ratio: unset;
+          .slides {
+            overflow: hidden;
+          }
+          .inner {
+            flex-direction: row !important;
+          }
         }
         .options {
           overflow: hidden;
@@ -627,6 +633,14 @@
     &.bundle {
       .option-wrapper {
         width: 100%;
+        .slides {
+          overflow: visible;
+        }
+        .inner {
+          flex-direction: column;
+          gap: 8px;
+          padding-bottom: 8px;
+        }
       }
       .bullet-variants {
         display: flex;
