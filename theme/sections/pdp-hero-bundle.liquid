@@ -1,0 +1,210 @@
+<div class="max-width pdp-hero-inner">
+    <div class="left">
+        {% assign imageSize = product.images | size %}
+        <div class="slider no-drag-free" data-align="start">
+            <div class="frame">
+                {% if product.metafields.accentuate.ribbon %}
+                    {% for ribbon in product.metafields.accentuate.ribbon %}
+                        {% comment %}<img class="preload-critical ribbon" data-preload-desktop="{{ ribbon.src }}" data-preload-mobile="{{ ribbon.src }}">{% endcomment %}
+                    {% endfor %}
+                {% endif %}
+                <div class="slides">
+                    <div class="inner">
+                        {% for image in product.images limit: 4 %}
+                            <div class="slide">
+                                <div class="frame-mobile"></div>
+                                <img class="preload-critical"{% if image.alt %} alt="{{ image.alt }}"{% endif %} data-preload-desktop="https:{{ image | image_url }}" data-preload-mobile="https:{{ image | image_url }}">
+                            </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+            {% if imageSize > 1 %}
+                <div class="thumbnails dots">
+                    {% for image in product.images limit: 4 %}
+                        <div class="thumbnail dot{% if forloop.first %} active{% endif %}">
+                            <img class="preload-critical bg"{% if image.alt %} alt="{{ image.alt }}"{% endif %} data-preload-desktop="https:{{ image | image_url }}" data-preload-mobile="https:{{ image | image_url }}">
+                        </div>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        </div>
+    </div>
+    <div class="right">
+        <p class="eyebrow">{{ product.type }}</p>
+        <h1>{{ product.title }}</h1>
+        <div class="price-wrapper">
+            <p class="price">{{ product.price | money }}</p>
+            <p class="old-price compare-at-price">{% if product.first_available_variant.compare_at_price %}{{ product.first_available_variant.compare_at_price | money }}<span><svg width="58" height="28" viewBox="0 0 58 28" fill="none" xmlns="http://www.w3.org/2000/svg"><line x1="1.38793" y1="26.7724" x2="55.7664" y2="1.41531" stroke="#EF928E" stroke-width="2"/><line x1="2.23317" y1="1.41498" x2="56.6116" y2="26.7721" stroke="#EF928E" stroke-width="2"/></svg></span>{% endif %}</p>
+        </div>
+
+        <div class="copy">{{ product.description }}</div>
+        {% if product.metafields.accentuate.attribute %}
+            <div class="variant-wrapper mw" {% if product.metafields.accentuate.attribute[1] %}style="width: 50%"{% endif %}>
+                {% if product.metafields.accentuate.attribute[0] %}
+                    <div class="left-variant variant">
+                        <svg class="bg" xmlns="http://www.w3.org/2000/svg" width="244" height="55" viewBox="0 0 244 55" fill="none">
+                            <g filter="url(#filter0_d_2470_24979)">
+                                <path d="M1.54292 1.02732C1.98627 0.575741 2.58757 0.314305 3.21847 0.298815L15.3889 2.92739e-10H30.4721H45.5553L52.9217 0.526004C53.0362 0.534186 53.1513 0.534186 53.266 0.526004L60.6385 2.92739e-10H120.971H181.304H196.387L203.754 0.526004C203.868 0.534186 203.983 0.534186 204.098 0.526004L211.471 2.92739e-10H226.554H232.945L239.358 0.398159C240.628 0.477014 241.613 1.5273 241.612 2.80023L241.61 4.6024L241.583 9.20481L241.53 18.4096L241.43 35.4344L241.381 43.9468L241.356 48.203L241.349 49.4291C241.345 50.0109 241.132 50.5732 240.749 51.0128L240.435 51.3726C239.982 51.8914 239.331 52.1946 238.645 52.2067L226.248 52.4253L211.165 52.3914L196.082 52.3574L180.999 52.3235L165.916 52.1877L150.833 52.2556L120.667 52.1877L60.3324 52.4593H45.2492L30.1676 52.1877L15.0828 52.4593L4.13866 51.8235C3.95658 51.8129 3.77377 51.823 3.59372 51.8535L2.83208 51.9826C1.35925 52.2323 0.0217473 51.1027 0.0231112 49.6104L0.0243974 48.203L0.0492326 43.9468L0.0989028 35.4344L0.198243 18.4096L0.251954 9.20481L0.278809 4.6024L0.286492 3.28566C0.290175 2.6545 0.540475 2.04836 0.983943 1.59666L1.54292 1.02732Z" fill="url(#paint0_linear_2470_24979)"/>
+                                <path d="M165.924 51.7041L165.917 51.7041L150.837 51.772H150.833L120.671 51.7041L120.667 51.7041L60.3352 51.9756L60.333 51.9756L45.2563 51.9756L30.1791 51.7042L30.1704 51.704L30.1617 51.7042L15.0953 51.9754L4.16952 51.3407C3.95103 51.328 3.73165 51.3401 3.51558 51.3767L2.75395 51.5058C1.57569 51.7055 0.505681 50.8019 0.506773 49.608L0.508051 48.203L0.508058 48.2019L0.532886 43.9468L0.582556 35.4344L0.681897 18.4096L0.735607 9.20481L0.762462 4.6024L0.770145 3.28566C0.773092 2.78073 0.973332 2.29582 1.32811 1.93446L1.88708 1.36512C2.24176 1.00385 2.7228 0.794706 3.22752 0.782314L15.392 0.483645H30.4693H45.5352L52.8844 1.00842C53.0219 1.01824 53.16 1.01824 53.2976 1.00842L60.6529 0.483645H120.969H181.301H196.367L203.717 1.00842C203.854 1.01824 203.992 1.01824 204.13 1.00842L211.485 0.483645H226.551H232.927L239.325 0.880875C240.341 0.943959 241.13 1.78419 241.128 2.80253L241.127 4.6024L241.127 4.6047L241.1 9.20481L241.046 18.4096L240.947 35.4344L240.897 43.9468L240.872 48.203L240.865 49.4291C240.862 49.8946 240.692 50.3444 240.385 50.6961L240.071 51.0558C239.709 51.4709 239.188 51.7135 238.639 51.7232L226.252 51.9417L226.247 51.9417L211.169 51.9077L196.086 51.8738L181.006 51.8399L181.003 51.8398L165.924 51.7041Z" stroke="#00142D" stroke-width="0.967307"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_2470_24979" x="0.0234375" y="0" width="243.523" height="54.3941" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dx="1.93461" dy="1.93461"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2470_24979"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2470_24979" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_2470_24979" x1="-0.391235" y1="-0.142229" x2="195.414" y2="124.111" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C1ECFF"/>
+                                    <stop offset="0.25" stop-color="#C1ECFF"/>
+                                    <stop offset="0.381662" stop-color="white"/>
+                                    <stop offset="0.608286" stop-color="#C2ECFF"/>
+                                    <stop offset="1" stop-color="#C1ECFF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        {% for attribute in product.metafields.accentuate.attribute[0] %}
+                            <p>{{ attribute }}</p>
+                        {% endfor %}
+                        {% for attribute_value in product.metafields.accentuate.attribute_value[0] %}
+                            <p>{{ attribute_value }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+                {% if product.metafields.accentuate.attribute[1] %}
+                    <div class="right-variant variant">
+                        <svg class="bg" xmlns="http://www.w3.org/2000/svg" width="244" height="55" viewBox="0 0 244 55" fill="none">
+                            <g filter="url(#filter0_d_2470_24979)">
+                                <path d="M1.54292 1.02732C1.98627 0.575741 2.58757 0.314305 3.21847 0.298815L15.3889 2.92739e-10H30.4721H45.5553L52.9217 0.526004C53.0362 0.534186 53.1513 0.534186 53.266 0.526004L60.6385 2.92739e-10H120.971H181.304H196.387L203.754 0.526004C203.868 0.534186 203.983 0.534186 204.098 0.526004L211.471 2.92739e-10H226.554H232.945L239.358 0.398159C240.628 0.477014 241.613 1.5273 241.612 2.80023L241.61 4.6024L241.583 9.20481L241.53 18.4096L241.43 35.4344L241.381 43.9468L241.356 48.203L241.349 49.4291C241.345 50.0109 241.132 50.5732 240.749 51.0128L240.435 51.3726C239.982 51.8914 239.331 52.1946 238.645 52.2067L226.248 52.4253L211.165 52.3914L196.082 52.3574L180.999 52.3235L165.916 52.1877L150.833 52.2556L120.667 52.1877L60.3324 52.4593H45.2492L30.1676 52.1877L15.0828 52.4593L4.13866 51.8235C3.95658 51.8129 3.77377 51.823 3.59372 51.8535L2.83208 51.9826C1.35925 52.2323 0.0217473 51.1027 0.0231112 49.6104L0.0243974 48.203L0.0492326 43.9468L0.0989028 35.4344L0.198243 18.4096L0.251954 9.20481L0.278809 4.6024L0.286492 3.28566C0.290175 2.6545 0.540475 2.04836 0.983943 1.59666L1.54292 1.02732Z" fill="url(#paint0_linear_2470_24979)"/>
+                                <path d="M165.924 51.7041L165.917 51.7041L150.837 51.772H150.833L120.671 51.7041L120.667 51.7041L60.3352 51.9756L60.333 51.9756L45.2563 51.9756L30.1791 51.7042L30.1704 51.704L30.1617 51.7042L15.0953 51.9754L4.16952 51.3407C3.95103 51.328 3.73165 51.3401 3.51558 51.3767L2.75395 51.5058C1.57569 51.7055 0.505681 50.8019 0.506773 49.608L0.508051 48.203L0.508058 48.2019L0.532886 43.9468L0.582556 35.4344L0.681897 18.4096L0.735607 9.20481L0.762462 4.6024L0.770145 3.28566C0.773092 2.78073 0.973332 2.29582 1.32811 1.93446L1.88708 1.36512C2.24176 1.00385 2.7228 0.794706 3.22752 0.782314L15.392 0.483645H30.4693H45.5352L52.8844 1.00842C53.0219 1.01824 53.16 1.01824 53.2976 1.00842L60.6529 0.483645H120.969H181.301H196.367L203.717 1.00842C203.854 1.01824 203.992 1.01824 204.13 1.00842L211.485 0.483645H226.551H232.927L239.325 0.880875C240.341 0.943959 241.13 1.78419 241.128 2.80253L241.127 4.6024L241.127 4.6047L241.1 9.20481L241.046 18.4096L240.947 35.4344L240.897 43.9468L240.872 48.203L240.865 49.4291C240.862 49.8946 240.692 50.3444 240.385 50.6961L240.071 51.0558C239.709 51.4709 239.188 51.7135 238.639 51.7232L226.252 51.9417L226.247 51.9417L211.169 51.9077L196.086 51.8738L181.006 51.8399L181.003 51.8398L165.924 51.7041Z" stroke="#00142D" stroke-width="0.967307"/>
+                            </g>
+                            <defs>
+                                <filter id="filter0_d_2470_24979" x="0.0234375" y="0" width="243.523" height="54.3941" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                    <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                    <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                    <feOffset dx="1.93461" dy="1.93461"/>
+                                    <feComposite in2="hardAlpha" operator="out"/>
+                                    <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                    <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2470_24979"/>
+                                    <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2470_24979" result="shape"/>
+                                </filter>
+                                <linearGradient id="paint0_linear_2470_24979" x1="-0.391235" y1="-0.142229" x2="195.414" y2="124.111" gradientUnits="userSpaceOnUse">
+                                    <stop stop-color="#C1ECFF"/>
+                                    <stop offset="0.25" stop-color="#C1ECFF"/>
+                                    <stop offset="0.381662" stop-color="white"/>
+                                    <stop offset="0.608286" stop-color="#C2ECFF"/>
+                                    <stop offset="1" stop-color="#C1ECFF"/>
+                                </linearGradient>
+                            </defs>
+                        </svg>
+                        {% for attribute in product.metafields.accentuate.attribute[1] %}
+                            <p>{{ attribute }}</p>
+                        {% endfor %}
+                        {% for attribute_value in product.metafields.accentuate.attribute_value[1] %}
+                            <p>{{ attribute_value }}</p>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+        {% endif %}
+
+        <div class="atc-wrapper" id="atc-wrapper">
+            <div class="option-wrapper">
+                {% if product.has_only_default_variant == false  %}
+                    <div class="options bullet-variants">
+                        {% for variant in product.variants %}
+                            <button class="option bullet-variant{% if forloop.first %} active{% endif %}" data-value="{{ variant.title }}">
+                                <div class="variant-left">
+                                    <span class="circle"></span>
+                                    <p>{{ variant.title }}
+                                        {% if forloop.first %}
+                                            <strong>{{ product.metafields.accentuate.option_text_1 }}</strong>
+                                        {% endif %}
+                                        {% if forloop.index == 2 %}
+                                            {{ product.metafields.accentuate.option_text_2 }}
+                                        {% endif %}
+                                        {% if forloop.last %}
+                                            {{ product.metafields.accentuate.option_text_3 }}
+                                        {% endif %}
+                                    </p>
+                                </div>
+                                <div class="price-wrapper">
+                                    <div class="compare-at-price">{{ variant.compare_at_price | money }}</div>
+                                    <div class="real-price">{{ variant.price | money }}</div>
+                                </div>
+                            </button>
+                        {% endfor %}
+                    </div>
+                {% endif %}
+            </div>
+            <form class="atc-form">
+                <div class="quantity increment-wrapper">
+                    <button type="button" class="decrease">-</button>
+                    <span class="count">1</span>
+                    <button type="button" class="increase">+</button>
+                </div>
+                <button class="pink-btn add-to-cart{% unless product.available %} disabled{% endunless %}"
+                        data-id="{{ product.first_available_variant.id }}"
+                        data-variants="{% for variant in product.variants %}{% if forloop.last == true %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}{% else %}{{ variant.id }}||{{ variant.title }}||{{ variant.price }}||{% if variant.compare_at_price != blank %}{{ variant.compare_at_price }}{% else %}false{% endif %}||{% if variant.image != blank %}{{ variant.image |  image_url }}{% else %}false{% endif %}||{{ variant.available }}|||{% endif %}{% endfor %}"
+                        type="submit">
+                    <span class="in-stock">
+                        Add To Cart
+                        <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Vector.png?v=1691970255">
+                    </span>
+                    <span class="out-of-stock">Sold out</span>
+                </button>
+            </form>
+        </div>
+        <div class="drawers-wrapper">
+            {% for title in product.metafields.accentuate.drawer_title %}
+                <div class="col drawer detail-drawer">
+                    <div class="label">{{ title }}
+                        <span>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="28" height="29" viewBox="0 0 28 29" fill="none">
+                              <g filter="url(#filter0_d_1769_3223)">
+                                <path d="M11.6988 25.551V17.0862H3.55957V9.92374H11.6988V1.45898H18.8612V9.92374H27.0004V17.0862H18.8612V25.551H11.6988Z" fill="white"/>
+                                <path d="M11.2292 25.551V26.0205H11.6988H18.8612H19.3308V25.551V17.5558H27.0004H27.47V17.0862V9.92374V9.45417H27.0004H19.3308V1.45898V0.989416H18.8612H11.6988H11.2292V1.45898V9.45417H3.55957H3.09V9.92374V17.0862V17.5558H3.55957H11.2292V25.551Z" stroke="#00142D" stroke-width="0.939137"/>
+                              </g>
+                              <defs>
+                                <filter id="filter0_d_1769_3223" x="0.620117" y="0.52002" width="27.3193" height="27.9702" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                  <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                  <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                  <feOffset dx="-2" dy="2"/>
+                                  <feComposite in2="hardAlpha" operator="out"/>
+                                  <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0.0784314 0 0 0 0 0.176471 0 0 0 1 0"/>
+                                  <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1769_3223"/>
+                                  <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1769_3223" result="shape"/>
+                                </filter>
+                              </defs>
+                            </svg>
+                        </span>
+                    </div>
+                    <div class="drawer-items drawer-text">
+                        {{ product.metafields.accentuate.drawer_content[forloop.index0] }}
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+{% schema %}
+{
+"name": "PDP Hero Bundle",
+"tag": "section",
+"class": "pdp-hero bundle mw",
+"settings": [
+{
+"id": "variant_ice_block",
+"type": "image_picker",
+"label": "Variant Ice Block"
+}
+]
+}
+{% endschema %}

@@ -195,21 +195,19 @@
       @include get-vw(margin-bottom, 26px, 24px);
     }
     .variant-wrapper {
+      max-width: 482.074px;
       width: 100%;
       display: flex;
       align-items: center;
       position: relative;
       padding-bottom: 3px;
-      @include get-vw(height, 53px, 53px);
+      @include get-vw(height, 55px, 55px);
       @include get-vw(margin-bottom, 26px, 26px);
     }
-    .left-variant {
-      border-right: 1px solid #00142D;
-    }
     .variant {
-      height: calc(100% - 3px);
+      height: 100%;
       position: relative;
-      padding: 0 24px;
+      padding: 0 20px;
       z-index: 2;
       width: 50%;
       display: flex;
@@ -222,6 +220,13 @@
       font-size: 14px;
       line-height: 1.45;
       text-transform: uppercase;
+      p {
+        position: relative;
+        z-index: 2;
+      }
+      .bg {
+        height: 100%;
+      }
     }
     .atc-wrapper {
       width: 100%;
@@ -367,13 +372,13 @@
         }
       }
     }
-    .options {
+    .rainbow-options {
       display: flex;
       @include get-vw(gap, 10px, 4px);
       justify-content: flex-start;
       @include get-vw(padding-bottom, 15px, 15px);
     }
-    .option {
+    .rainbow-option {
       --color: #F5FDFF;
       --color-hover: #F5FDFF;
       --hover-back: #477DFD;
@@ -599,6 +604,116 @@
         text-shadow: -3px 3px #00142dbf;
 
 
+      }
+    }
+
+    &.bundle {
+      .option-wrapper {
+        width: 100%;
+      }
+      .bullet-variants {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        gap: 8px;
+      }
+      .bullet-variant {
+        border-radius: 100px;
+        border: 1px solid #000;
+        background: #FFF;
+        box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+        padding: 16px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        transition: all .2s $ease-out-sine;
+        html:not(.touch) & {
+          &:hover {
+            transform: translate3d(1px, 1px, 0px);
+            box-shadow: 0px 0px;
+          }
+        }
+        &.active {
+          .circle {
+            border-color: #000000;
+            &:after, &:before {
+              visibility: visible;
+              opacity: 1;
+            }
+          }
+        }
+      }
+      .variant-left {
+        display: flex;
+        align-items: center;
+        gap: 11px;
+        .circle {
+          width: 26px;
+          height: 26px;
+          border-radius: 50%;
+          border: 2px solid #00579E;
+          box-shadow: 2px 2px 1px 1px #00000025;
+          position: relative;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          transition: all .2s $ease-out-sine;
+          &:after {
+            content: '';
+            background: #FFA3FF;
+            border-radius: 50%;
+            border: 1px solid #000000;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            width: 10px;
+            height: 10px;
+            box-shadow: 2px 2px 1px 1px #00000025;
+            transition: all .2s $ease-out-sine;
+          }
+          &:before {
+            content: '';
+            background: #FFFFFF;
+            border-radius: 50%;
+            position: absolute;
+            opacity: 0;
+            visibility: hidden;
+            border: 2px solid #FFA3FF;
+            width: calc(100% - 4px);
+            height: calc(100% - 4px);
+            transition: all .2s $ease-out-sine;
+          }
+        }
+        p {
+          color: #00142D;
+          font-family: $mencoBlack;
+          font-size: 18px;
+          line-height: 1.45;
+          text-transform: uppercase;
+          strong {
+            color: #477DFD;
+          }
+        }
+      }
+      .price-wrapper {
+        display: flex;
+        gap: 4px;
+        margin-bottom: 0;
+        .real-price {
+          color: #00142D;
+          font-family: $mencoBlack;
+          font-size: 18px;
+          line-height: 1.45;
+          text-transform: uppercase;
+        }
+        .compare-at-price {
+          color: #00142D;
+          font-family: $mencoMedium;
+          font-size: 18px;
+          line-height: 1.45;
+          text-decoration: line-through;
+          text-transform: uppercase;
+        }
       }
     }
   }

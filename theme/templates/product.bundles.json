@@ -1,0 +1,103 @@
+{
+  "sections": {
+    "pdp-hero-bundle": {
+      "type": "pdp-hero-bundle",
+      "settings": {
+        "variant_ice_block": "shopify:\/\/shop_images\/pdp-ice-block-1.png"
+      }
+    },
+    "about-section": {
+      "type": "about-section",
+      "settings": {
+        "igloo_icon": "shopify:\/\/shop_images\/about-img.png"
+      }
+    },
+    "faq-section": {
+      "type": "faq-section",
+      "blocks": {
+        "6e34ebcf-921c-44ab-a430-d733f75c3213": {
+          "type": "faq-block",
+          "settings": {
+            "question": "How long is your shipping?",
+            "answer": "<p>Domestic delivery times typically take 5-10 business days or longer depending on location. If after 10 days your package still has yet to arrive, please email us at <strong>support@pudgypenguins.io<\/strong>.International delivery times typically take 7-21 business days or longer depending on location. If after 21 days your package still has yet to arrive, please email us at <strong>support@pudgypenguins.io<\/strong> with your order number and details.International orders may be subject to customs delays\/fees, which we have no control over.<\/p>"
+          }
+        },
+        "8f6c4641-607f-46a6-9ea4-5da24095eb0d": {
+          "type": "faq-block",
+          "settings": {
+            "question": "Can I exchange my order after purchase?",
+            "answer": "<p>You must return the original item in its original condition and original packaging within fourteen (14) days of the date of your exchange using the return label provided to you. You will receive any refund owed to you once we receive the returned original item. If the original item is not received within fourteen (14) days, we will charge your original payment method or default payment method (if original method is unavailable) for the cost of the original item (less any refund owed to you if the replacement item costs less).<\/p>"
+          }
+        },
+        "9b2100a5-3768-4d5d-b5ee-c0b10223d4ad": {
+          "type": "faq-block",
+          "settings": {
+            "question": "What is your return policy?",
+            "answer": "<p>If you are not 100% satisfied with your purchase from Pudgy Penguins, you can return your qualifying item(s) for a full refund within 30 days of purchase. Returns must be unworn with the original tags attached (including the security tag, if applicable) and with the original packaging; returned merchandise that does not satisfy these requirements may not qualify for a refund. You will also need to have proof of purchase. <\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "6e34ebcf-921c-44ab-a430-d733f75c3213",
+        "8f6c4641-607f-46a6-9ea4-5da24095eb0d",
+        "9b2100a5-3768-4d5d-b5ee-c0b10223d4ad"
+      ],
+      "settings": {
+        "header": "FAQ’S"
+      }
+    },
+    "pdp-recirc": {
+      "type": "pdp-recirc",
+      "settings": {
+        "heading": "You might also like"
+      }
+    },
+    "bottom-marquee": {
+      "type": "bottom-marquee",
+      "blocks": {
+        "4513afea-0e4b-48fc-90ef-b9b089937a66": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/ny-times.png"
+          }
+        },
+        "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/end.png"
+          }
+        },
+        "d7507adf-d969-4e27-873d-335e99f37fdf": {
+          "type": "marquee",
+          "settings": {
+            "image": "shopify:\/\/shop_images\/tech.png"
+          }
+        }
+      },
+      "block_order": [
+        "4513afea-0e4b-48fc-90ef-b9b089937a66",
+        "cfc43a11-8e9a-4e6a-ad14-c2a1f87bdff5",
+        "d7507adf-d969-4e27-873d-335e99f37fdf"
+      ],
+      "disabled": true,
+      "settings": {
+        "marquee_duration": "30",
+        "marquee_duration_mobile": "20",
+        "header": "As seen on"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "pdp-hero-bundle",
+    "about-section",
+    "faq-section",
+    "pdp-recirc",
+    "bottom-marquee",
+    "footer"
+  ]
+}
