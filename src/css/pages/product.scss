@@ -605,6 +605,23 @@
 
 
       }
+
+      &.bundle {
+        .option-wrapper {
+          aspect-ratio: unset;
+        }
+        .options {
+          overflow: hidden;
+        }
+        .bullet-variants {
+          padding-bottom: 8px;
+        }
+        .bullet-variant {
+          min-width: unset;
+          width: auto;
+          gap: 12px;
+        }
+      }
     }
 
     &.bundle {
@@ -622,7 +639,7 @@
         border: 1px solid #000;
         background: #FFF;
         box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
-        padding: 16px;
+        @include get-vw(padding, 16px, 11px);
         display: flex;
         justify-content: space-between;
         align-items: center;
@@ -687,9 +704,10 @@
         p {
           color: #00142D;
           font-family: $mencoBlack;
-          font-size: 18px;
+          @include get-vw(font-size, 18px, 16px);
           line-height: 1.45;
           text-transform: uppercase;
+          text-wrap: nowrap;
           strong {
             color: #477DFD;
           }
@@ -702,17 +720,19 @@
         .real-price {
           color: #00142D;
           font-family: $mencoBlack;
-          font-size: 18px;
+          @include get-vw(font-size, 18px, 16px);
           line-height: 1.45;
           text-transform: uppercase;
+          text-wrap: nowrap;
         }
         .compare-at-price {
           color: #00142D;
           font-family: $mencoMedium;
-          font-size: 18px;
+          @include get-vw(font-size, 18px, 16px);
           line-height: 1.45;
           text-decoration: line-through;
           text-transform: uppercase;
+          text-wrap: nowrap;
         }
       }
     }
