@@ -113,31 +113,35 @@
         {% endif %}
 
         <div class="atc-wrapper" id="atc-wrapper">
-            <div class="option-wrapper">
+            <div class="option-wrapper slider no-drag-free no-loop-mobile" data-at="767">
                 {% if product.has_only_default_variant == false  %}
-                    <div class="options bullet-variants">
-                        {% for variant in product.variants %}
-                            <button class="option bullet-variant{% if forloop.first %} active{% endif %}" data-value="{{ variant.title }}">
-                                <div class="variant-left">
-                                    <span class="circle"></span>
-                                    <p>{{ variant.title }}
-                                        {% if forloop.first %}
-                                            <strong>{{ product.metafields.accentuate.option_text_1 }}</strong>
-                                        {% endif %}
-                                        {% if forloop.index == 2 %}
-                                            {{ product.metafields.accentuate.option_text_2 }}
-                                        {% endif %}
-                                        {% if forloop.last %}
-                                            {{ product.metafields.accentuate.option_text_3 }}
-                                        {% endif %}
-                                    </p>
-                                </div>
-                                <div class="price-wrapper">
-                                    <div class="compare-at-price">{{ variant.compare_at_price | money }}</div>
-                                    <div class="real-price">{{ variant.price | money }}</div>
-                                </div>
-                            </button>
-                        {% endfor %}
+                    <div class="options slides bullet-variants">
+                        <div class="slides">
+                            <div class="inner">
+                                {% for variant in product.variants %}
+                                    <button class="slide option bullet-variant{% if forloop.first %} active{% endif %}" data-value="{{ variant.title }}">
+                                        <div class="variant-left">
+                                            <span class="circle"></span>
+                                            <p>{{ variant.title }}
+                                                {% if forloop.first %}
+                                                    <strong>{{ product.metafields.accentuate.option_text_1 }}</strong>
+                                                {% endif %}
+                                                {% if forloop.index == 2 %}
+                                                    {{ product.metafields.accentuate.option_text_2 }}
+                                                {% endif %}
+                                                {% if forloop.last %}
+                                                    {{ product.metafields.accentuate.option_text_3 }}
+                                                {% endif %}
+                                            </p>
+                                        </div>
+                                        <div class="price-wrapper">
+                                            <div class="compare-at-price">{{ variant.compare_at_price | money }}</div>
+                                            <div class="real-price">{{ variant.price | money }}</div>
+                                        </div>
+                                    </button>
+                                {% endfor %}
+                            </div>
+                        </div>
                     </div>
                 {% endif %}
             </div>
