@@ -607,11 +607,12 @@
       }
 
       &.bundle {
+        .atc-wrapper {
+          padding: 14px 10px 16px;
+        }
         .option-wrapper {
           aspect-ratio: unset;
-          .slides {
-            overflow: hidden;
-          }
+          overflow: hidden;
           .inner {
             flex-direction: row !important;
           }
