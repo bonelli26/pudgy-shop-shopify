@@ -590,7 +590,6 @@
       .atc-form, .atc-form-walmart {
         width: 100%;
       }
-
       .add-to-cart {
         width: 100%;
       }
@@ -599,7 +598,6 @@
         min-width: 90px;
         padding: 0 14px 2px;
       }
-
       h1 {
         text-shadow: -3px 3px #00142dbf;
 
@@ -607,9 +605,21 @@
       }
 
       &.bundle {
+        .options {
+          &.open {
+            .current-label {
+              span {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
         .label {
           display: flex !important;
-          pointer-events: all;
+          pointer-events: all !important;
+          .circle {
+            display: none !important;
+          }
         }
         .atc-wrapper {
           padding: 14px 10px 16px;
@@ -651,7 +661,18 @@
       .bullet-variant {
         display: flex;
       }
-      .bullet-variant, .current-label {
+      .current-label {
+        width: 100%;
+        @include get-vw(padding, 16px, 11px);
+        justify-content: space-between;
+        align-items: center;
+        transition: all .2s $ease-out-sine;
+        position: relative;
+        span {
+          transition: all .25s $ease-in;
+        }
+      }
+      .bullet-variant {
         width: 100%;
         border-radius: 100px;
         border: 1px solid #000;
