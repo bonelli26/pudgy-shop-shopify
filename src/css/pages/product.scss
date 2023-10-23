@@ -607,6 +607,10 @@
       }
 
       &.bundle {
+        .label {
+          display: flex !important;
+          pointer-events: all;
+        }
         .atc-wrapper {
           padding: 14px 10px 16px;
         }
@@ -620,28 +624,19 @@
         .options {
           overflow: hidden;
         }
-        .bullet-variants {
-          padding-bottom: 8px;
-        }
         .bullet-variant {
           min-width: unset;
-          width: auto;
+          width: 100%;
           gap: 12px;
+          opacity: 0;
         }
+
       }
     }
 
     &.bundle {
       .option-wrapper {
         width: 100%;
-        .slides {
-          overflow: visible;
-        }
-        .inner {
-          flex-direction: column;
-          gap: 8px;
-          padding-bottom: 8px;
-        }
       }
       .bullet-variants {
         display: flex;
@@ -649,16 +644,24 @@
         width: 100%;
         gap: 8px;
       }
+      .label {
+        display: none;
+        pointer-events: none;
+      }
       .bullet-variant {
+        display: flex;
+      }
+      .bullet-variant, .current-label {
+        width: 100%;
         border-radius: 100px;
         border: 1px solid #000;
         background: #FFF;
         box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
         @include get-vw(padding, 16px, 11px);
-        display: flex;
         justify-content: space-between;
         align-items: center;
         transition: all .2s $ease-out-sine;
+        position: relative;
         html:not(.touch) & {
           &:hover {
             transform: translate3d(1px, 1px, 0px);
@@ -672,6 +675,35 @@
               visibility: visible;
               opacity: 1;
             }
+          }
+        }
+      }
+      .drawer-items {
+        display: flex;
+        flex-direction: column;
+        gap: 8px;
+        padding-bottom: 8px;
+      }
+      .current-label {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        color: #00142D;
+        font-family: $mencoBlack;
+        font-size: 16px;
+        line-height: 1.45;
+        text-transform: uppercase;
+        span {
+          width: 24px;
+          height: 24px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          svg {
+            display: flex;
+            width: 100%;
+            height: auto;
           }
         }
       }
@@ -722,7 +754,7 @@
           @include get-vw(font-size, 18px, 16px);
           line-height: 1.45;
           text-transform: uppercase;
-          text-wrap: nowrap;
+          white-space: nowrap;
           strong {
             color: #477DFD;
           }
@@ -738,7 +770,7 @@
           @include get-vw(font-size, 18px, 16px);
           line-height: 1.45;
           text-transform: uppercase;
-          text-wrap: nowrap;
+          white-space: nowrap;
         }
         .compare-at-price {
           color: #00142D;
@@ -747,7 +779,7 @@
           line-height: 1.45;
           text-decoration: line-through;
           text-transform: uppercase;
-          text-wrap: nowrap;
+          white-space: nowrap;
           opacity: 0.6;
         }
       }

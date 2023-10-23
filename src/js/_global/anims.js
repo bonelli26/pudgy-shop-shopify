@@ -129,7 +129,7 @@ export const prepDrawers = () => {
 			let label = thisDrawer.querySelector(".current-label");
 			childrenItems.forEach((item) => {
 				item.addEventListener("click", () => {
-					label.textContent = item.textContent;
+					label.innerHTML = item.innerHTML;
 				});
 			});
 		}
