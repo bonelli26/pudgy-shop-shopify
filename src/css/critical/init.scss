@@ -3781,7 +3781,7 @@ footer {
 			font-size: 56px;
 		}
 	}
-	
+
 }
 
 .xmas-intro {
@@ -3914,7 +3914,7 @@ footer {
 }
 .xmas-video {
 	.max-width {
-		@include get-vw(padding-bottom, 140px, 70px);
+		@include get-vw(padding-bottom, 140px, 60px);
 	}
 	.body {
 		@include get-vw(max-width, 683px, 683px);
@@ -3951,9 +3951,9 @@ footer {
 		border-radius: 22px;
 		width: calc(50% - 16px);
 		transition: all .4s cubic-bezier(.47,1.64,.41,.8);
-		@include get-vw(height, 550px, 528px);
-		min-width: 309.187px;
-		max-width: 309.187px;
+		@include get-vw(height, 550px, 277.67px);
+		@include get-vw(min-width, 309.187px);
+		@include get-vw(max-width, 309.187px);
 		overflow: hidden;
 		position: relative;
 		&:after {
@@ -4009,7 +4009,7 @@ footer {
 		svg {
 			display: flex;
 			width: auto;
-			height: 98px;
+			@include get-vw(height, 98px, 51px);
 			transition: all .4s cubic-bezier(.47,1.64,.41,.8);
 		}
 	}
