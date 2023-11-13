@@ -3671,7 +3671,7 @@ footer {
 	.bg {
 		pointer-events: none;
 		&:last-child {
-			@include get-vw(width, 470.346px, 330.56px);
+			@include get-vw(width, 400px, 300px);
 			height: auto;
 			//@include get-vw(height, 394.681px, 277.382px);
 			transform: rotate(-7.69deg);
