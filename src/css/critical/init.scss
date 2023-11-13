@@ -3656,7 +3656,7 @@ footer {
 
 .view-xmas-lp {
 	background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
-	section:nth-last-child(2) {
+	section:nth-last-child(3) {
 		@include get-vw(padding-bottom, 180px, 150px);
 	}
 }
@@ -3667,12 +3667,17 @@ footer {
 	border-bottom: 3px solid #00142D;
 	max-height: 800px;
 	min-height: 800px;
+	overflow: hidden;
 	.bg {
 		pointer-events: none;
 		&:last-child {
+			@include get-vw(width, 470.346px, 330.56px);
 			height: auto;
-			bottom: 0;
+			//@include get-vw(height, 394.681px, 277.382px);
+			transform: rotate(-7.69deg);
+			@include get-vw(bottom, -60px, -30px);
 			top: unset;
+			@include get-vw(left, 110px, 55px);
 		}
 	}
 	.max-width {
