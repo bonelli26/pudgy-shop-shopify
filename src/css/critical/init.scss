@@ -4021,4 +4021,9 @@ footer {
 		transform: translateX(-50%);
 	}
 
+	@include bp-767 {
+		.video-wrapper {
+			min-width: 41vw;
+		}
+	}
 }
