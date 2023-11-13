@@ -3781,13 +3781,7 @@ footer {
 			font-size: 56px;
 		}
 	}
-
-	@include bp-767 {
-
-		.bg:last-child {
-			width: 100%;
-		}
-	}
+	
 }
 
 .xmas-intro {
