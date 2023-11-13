@@ -17,22 +17,39 @@ export const pageEntrance = (namespace = null)=> {
 
 	if(globalStorage.namespace === "get-notified") {
 		gsap.set(domStorage.header, { display: "none" });
-		globalStorage.pencilMarqueeDark.tween.pause()
-		globalStorage.pencilMarquee.tween.pause()
+		globalStorage.pencilMarqueeDark.tween.pause();
+		globalStorage.pencilMarquee.tween.pause();
+		globalStorage.pencilMarqueeRainbowText.tween.pause();
 	} else if (globalStorage.namespace === "giveaway") {
+		domStorage.nav.classList.remove("xmas");
 		domStorage.nav.classList.add("giveaway");
 		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
 		gsap.to(domStorage.header, { display: "block" });
 		gsap.set(domStorage.pencilMarqueeDark, { display: "flex" });
-		globalStorage.pencilMarqueeDark.tween.play()
-		globalStorage.pencilMarquee.tween.pause()
+		globalStorage.pencilMarqueeDark.tween.play();
+		globalStorage.pencilMarquee.tween.pause();
+		globalStorage.pencilMarqueeRainbowText.tween.pause();
+	} else if (globalStorage.namespace === "xmas-lp") {
+		domStorage.nav.classList.remove("giveaway");
+		domStorage.nav.classList.add("xmas");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "flex" });
+		globalStorage.pencilMarqueeRainbowText.tween.play();
+		globalStorage.pencilMarqueeDark.tween.pause();
+		globalStorage.pencilMarquee.tween.pause();
 	} else {
 		domStorage.nav.classList.remove("giveaway");
-		globalStorage.pencilMarqueeDark.tween.pause()
-		globalStorage.pencilMarquee.tween.play()
+		domStorage.nav.classList.remove("xmas-lp");
+		globalStorage.pencilMarqueeDark.tween.pause();
+		globalStorage.pencilMarqueeRainbowText.tween.pause();
+		globalStorage.pencilMarquee.tween.play();
 		gsap.to(domStorage.header, { display: "block" });
 		gsap.set(domStorage.pencilMarqueeRainbow, { display: "flex" });
 		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
 	}
 
 
@@ -74,36 +91,50 @@ export const globalEntrance = (namespace = null)=>{
 	if(globalStorage.namespace === "get-notified") {
 		gsap.set(domStorage.header, { display: "none" });
 	} else if (globalStorage.namespace === "giveaway") {
+		domStorage.nav.classList.remove("xmas");
 		domStorage.nav.classList.add("giveaway");
 		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
 		gsap.to(domStorage.header, { display: "block" });
 		gsap.set(domStorage.pencilMarqueeDark, { display: "flex" });
-	} else {
+	} else if (globalStorage.namespace === "xmas-lp") {
 		domStorage.nav.classList.remove("giveaway");
+		domStorage.nav.classList.add("xmas");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "flex" });
+	}
+	else {
+		domStorage.nav.classList.remove("giveaway");
+		domStorage.nav.classList.remove("xmas");
 		gsap.to(domStorage.header, { display: "block" });
 		gsap.set(domStorage.pencilMarqueeRainbow, { display: "flex" });
 		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
 	}
 
-	const img = domStorage.globalMask.querySelector("img")
-	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile
+	const img = domStorage.globalMask.querySelector("img");
+	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile;
 
 	img.addEventListener("load", () => {
 		if (namespace === "giveaway") {
-			globalStorage.pencilMarqueeDark.tween.play()
+			globalStorage.pencilMarqueeDark.tween.play();
+		} else if (namespace === "xmas-lp") {
+			globalStorage.pencilMarqueeRainbowText.tween.play();
 		} else {
-			globalStorage.pencilMarquee.tween.play()
+			globalStorage.pencilMarquee.tween.play();
 		}
-		gsap.set(img, { opacity: 1 })
+		gsap.set(img, { opacity: 1 });
 		timeline
 			.to(domStorage.header,  { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
 					gsap.delayedCall(.1, () => {
 						globalStorage.transitionFinished = true;
-					})
-				} }, 0.2)
-	})
+					});
+				} }, 0.2);
+	});
 
-	img.src = url
+	img.src = url;
 
 	timeline.play();
 
@@ -260,6 +291,12 @@ export class Marquees {
 						};
 					} else if (i === 1) {
 						globalStorage.pencilMarquee = {
+							el: this.marquees[i],
+							tween: tween,
+							playing: false
+						};
+					} else if (i === 2) {
+						globalStorage.pencilMarqueeRainbowText = {
 							el: this.marquees[i],
 							tween: tween,
 							playing: false

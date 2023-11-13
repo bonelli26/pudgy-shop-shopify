@@ -209,6 +209,21 @@
     ]
   },
   {
+    "name": "Pencil Bar XMAS LP",
+    "settings": [
+      {
+        "type": "text",
+        "id": "pencil_bar_link_xmas",
+        "label": "Pencil Bar Link"
+      },
+      {
+        "type": "text",
+        "id": "pencil_bar_message_xmas",
+        "label": "Pencil Bar Message"
+      }
+    ]
+  },
+  {
     "name": "Footer Content",
     "settings": [
       {

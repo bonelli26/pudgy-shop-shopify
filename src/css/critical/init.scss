@@ -264,6 +264,15 @@ body {
 			color: #FFE092;
 		}
 	}
+	&.rainbow-text {
+		background: #00142D;
+		p, a {
+			background: linear-gradient(90deg, #9F8FFF 0.37%, #FFA3FF 25.61%, #FF8B8B 50.52%, #FFE092 74.9%, #A9FF99 100%);
+			background-clip: text;
+			-webkit-background-clip: text;
+			-webkit-text-fill-color: transparent;
+		}
+	}
 }
 nav {
 	display: flex;
@@ -295,6 +304,18 @@ nav {
 				transform: none;
 				left: 24px;
 			}
+		}
+	}
+	&.xmas {
+		.nav-bar {
+			display: none;
+		}
+		.icon-link {
+			display: none !important;
+		}
+		.logo {
+			left: 50%;
+			transform: translateX(-50%);
 		}
 	}
 
@@ -497,7 +518,7 @@ nav {
 	}
 }
 
-.view-product, .view-home, .view-collection, .view-page, .view-rarity, .view-get-notified, .view-store-locator, .view-store-locator, .view-giveaway {
+.view-product, .view-home, .view-collection, .view-page, .view-rarity, .view-get-notified, .view-store-locator, .view-store-locator, .view-giveaway, .view-xmas-lp {
 	position: relative;
 	overflow: hidden;
 	section {
@@ -3630,5 +3651,166 @@ footer {
 			justify-content: center;
 			gap: 12px;
 		}
+	}
+}
+
+.view-xmas-lp {
+	background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
+}
+
+.xmas-hero {
+	position: relative;
+	height: calc((var(--vh, 1vh) * 100));
+	border-bottom: 3px solid #00142D;
+	max-height: 800px;
+	min-height: 800px;
+	.bg {
+		pointer-events: none;
+		&:last-child {
+			height: auto;
+			bottom: 0;
+			top: unset;
+		}
+	}
+	.center {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+		@include get-vw(padding-top, 208px, 154px);
+		text-align: center;
+	}
+	.tag {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		border-radius: 41px;
+		border: 2px solid #00142D;
+		background:  #FFC220;
+		color: #00142D;
+		font-family: $mencoBlack;
+		@include get-vw(font-size, 16px, 16px);
+		line-height: 1.45;
+		text-transform: uppercase;
+		padding: 0 22px;
+		width: auto;
+		@include get-vw(height, 35px, 35px);
+		@include get-vw(margin-bottom, 16px, 16px);
+	}
+	h1 {
+		color: #FFF;
+		text-shadow: -3px 3px #00142d;
+		-webkit-text-stroke: 1.5px #00142d;
+		text-stroke: 1.5px #00142d;
+		font-family: $ttBlack;
+		font-size: 104px;
+		line-height: .91;
+		letter-spacing: -2px;
+		text-transform: uppercase;
+		@include get-vw(margin-bottom, 16px, 16px);
+		strong {
+			color: #A9FF99;
+		}
+	}
+	.intro {
+		color: #00142D;
+		font-family: $mencoBlack;
+		font-size: 18px;
+		line-height: 1.45;
+		text-transform: uppercase;
+		@include get-vw(margin-bottom, 16px, 16px);
+	}
+	.pink-btn {
+		@include get-vw(margin-bottom, 16px, 16px);
+		width: 321px;
+		background: var(--RainbowHorizontal, linear-gradient(90deg, #9F8FFF 0.37%, #FFA3FF 25.61%, #FF8B8B 50.52%, #FFE092 74.9%, #A9FF99 100%));
+	}
+	.disclaimer {
+		color: #00142D;
+		text-align: center;
+		font-family: $mencoMedium;
+		font-size: 17px;
+		line-height: 145%;
+		strong {
+			font-weight: unset;
+			font-family: $mencoBlack;
+			color: #477DFD;
+		}
+	}
+
+	@include bp-767 {
+		.bg:last-child {
+			width: 100%;
+		}
+	}
+}
+
+.xmas-intro {
+	.max-width {
+		@include get-vw(padding-top, 86px, 44px);
+		@include get-vw(padding-bottom, 57px, 24px);
+	}
+	.body {
+		width: 683px;
+		margin: 0 auto;
+		text-align: center;
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
+	}
+	h2 {
+		color: #FFF;
+		text-shadow: -3px 3px #00142d;
+		-webkit-text-stroke: 1.5px #00142d;
+		text-stroke: 1.5px #00142d;
+		font-family: $ttBlack;
+		font-size: 72px;
+		line-height: .91;
+		letter-spacing: -2px;
+		text-transform: uppercase;
+		@include get-vw(margin-bottom, 24px, 16px);
+	}
+	p {
+		color: var(--Dark, #00142D);
+		font-family: $mencoBold;
+		@include get-vw(font-size, 18px, 16px);
+		line-height: 1.45;
+		text-transform: uppercase;
+		@include get-vw(margin-bottom, 24px, 16px);
+	}
+	.media-wrapper {
+		border-radius: 100%;
+		box-shadow: 0px 2.71942px 2.71942px 0px rgba(0, 0, 0, 0.10);
+		background: #E7F9FD;
+		@include get-vw(width, 189px, 189px);
+		@include get-vw(height, 189px, 189px);
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		overflow: hidden;
+		position: relative;
+		border: 4px transparent;
+		svg {
+			position: absolute;
+			z-index: 2;
+			display: flex;
+			height: 100%;
+		}
+		img {
+			display: flex;
+			height: 100%;
+			position: relative;
+			z-index: 1;
+		}
+	}
+}
+
+.xmas-richtext {
+	.body {
+		display: flex;
+		flex-direction: column;
+		text-align: left;
+		@include get-vw(padding-bottom, 48px, );
 	}
 }

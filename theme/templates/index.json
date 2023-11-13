@@ -14,12 +14,12 @@
     "block-trio": {
       "type": "block-trio",
       "settings": {
-        "eyebrow_1": "Members",
+        "eyebrow_1": "huddle Members",
         "copy_1": "10k+",
-        "eyebrow_2": "Toys Sold",
-        "copy_2": "100k+",
-        "eyebrow_3": "Giphy Views",
-        "copy_3": "5B+"
+        "eyebrow_2": "toys sold",
+        "copy_2": "1m+",
+        "eyebrow_3": "traits unlocked",
+        "copy_3": "400k"
       }
     },
     "best-sellers": {

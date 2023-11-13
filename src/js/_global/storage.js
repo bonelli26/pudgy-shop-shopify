@@ -21,6 +21,7 @@ export const globalStorage = {
 	"allReviewsOverview": "",
 	"pencilMarquee": "",
 	"pencilMarqueeDark": "",
+	"pencilMarqueeRainbowText": ""
 };
 
 export const domStorage = {
@@ -28,6 +29,7 @@ export const domStorage = {
 	"pencilMarquee": document.querySelectorAll(".pencil-bar"),
 	"pencilMarqueeDark": document.querySelector(".giveaway-marquee"),
 	"pencilMarqueeRainbow": document.querySelector(".gradiant-marquee"),
+	"pencilMarqueeRainbowText": document.querySelector(".rainbow-text"),
 	"nav": document.getElementById("nav"),
 	"navBar": document.getElementById("nav-bar"),
 	"mainEl": document.getElementById("main"),

@@ -200,6 +200,24 @@ height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
         </div>
       </div>
     </div>
+    <div class="pencil-bar rainbow-text">
+      <div class="inner" data-dur="25" data-mobile-dur="10">
+        <div class="group">
+          {% if settings.pencil_bar_link_g == blank and settings.pencil_bar_message_g != blank %}
+            <p>{{ settings.pencil_bar_message_g }}</p>
+          {% elsif settings.pencil_bar_link_g != blank %}
+            <a target="_blank" href="{{ settings.pencil_bar_link_g }}">{{ settings.pencil_bar_message_g }}</a>
+          {% endif %}
+        </div>
+        <div class="group" aria-hidden="true">
+          {% if settings.pencil_bar_link_xmas == blank and settings.pencil_bar_message_xmas != blank %}
+            <p>{{ settings.pencil_bar_message_xmas }}</p>
+          {% elsif settings.pencil_bar_link_xmas != blank %}
+            <a target="_blank" href="{{ settings.pencil_bar_link_xmas }}">{{ settings.pencil_bar_message_xmas }}</a>
+          {% endif %}
+        </div>
+      </div>
+    </div>
     <nav id="nav" class="max-width">
       <a class="logo mw prefetch-us" href="/">
         <svg xmlns="http://www.w3.org/2000/svg" width="149" height="83" viewBox="0 0 149 83" fill="none">
