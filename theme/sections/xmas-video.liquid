@@ -37,7 +37,7 @@
                             </defs>
                         </svg>
                     </button>
-                    <video preload muted loop playsinline class="preload auto" data-preload-desktop="{{ block.settings.video_url }}" data-preload-mobile="{{ block.settings.video_url }}"></video>
+                    <video muted preload autoplay loop playsinline webkit-playsinline class="preload auto" data-preload-desktop="{{ block.settings.video_url }}" data-preload-mobile="{{ block.settings.video_url }}"></video>
                 </div>
             {% endfor %}
             <div class="video-wrapper dummy"></div>
@@ -49,7 +49,7 @@
 {
   "name": "XMAS Video",
   "tag": "section",
-  "class": "xmas-video",
+  "class": "xmas-video mw",
   "settings": [
     {
       "id": "header",

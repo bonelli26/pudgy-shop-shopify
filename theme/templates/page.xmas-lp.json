@@ -8,11 +8,11 @@
         "hero_intro": "Our goal is to give away 35,000 toys this Christmas",
         "hero_button_copy": "Learn More",
         "hero_button_url": "\/",
-        "hero_disclaimer": "<p>Campaign Period: <strong>November 15th<\/strong> to <strong>December 1st<\/strong><\/p>",
+        "hero_disclaimer": "<p>Campaign Period: <strong>November 15th<\/strong> to <strong>December 9th<\/strong><\/p>",
         "hero_bg": "shopify:\/\/shop_images\/xmas-heroBG.jpg",
         "hero_bg_mobile": "shopify:\/\/shop_images\/xmas-hero-mb.jpg",
-        "hero_pengu": "shopify:\/\/shop_images\/xmas-pengu-1.png",
-        "hero_mobile_pengu": "shopify:\/\/shop_images\/xmas-pengu-mb_3be4d0e7-7517-4cad-ac38-0f37736f865f.png"
+        "hero_pengu": "shopify:\/\/shop_images\/hero-pengu_a3a1183f-0286-4bf8-8f4b-309e6d900481.gif",
+        "hero_mobile_pengu": "shopify:\/\/shop_images\/hero-pengu_a3a1183f-0286-4bf8-8f4b-309e6d900481.gif"
       }
     },
     "xmas-intro": {
@@ -30,14 +30,14 @@
           "type": "richtext",
           "settings": {
             "title": "The Campaign:",
-            "copy": "<p>We are excited to unveil the #PudgyChristmas Donation Challenge.<br\/>This year, we aim to donate 3<strong>5,000 Pudgy toys<\/strong> to charitable organizations, helping to ensure that thousands of children will get to experience the excitement of finding a gift just for them.<\/p>"
+            "copy": "<p>We are excited to unveil the <em>#PudgyChristmas<\/em> Donation Challenge.<br\/>This year, we aim to donate <strong>10,000 Pudgy toys<\/strong> to charitable organizations, helping to ensure that thousands of children will get to experience the excitement of finding a gift just for them.<\/p>"
           }
         },
         "2fb958db-b12b-4f88-b054-098afa25e7ce": {
           "type": "richtext",
           "settings": {
             "title": "Your Impact:",
-            "copy": "<p>Every view counts, and every share matters. For every 10,000 views on your #PudgyChristmas challenge video, we will send one of our cuddly Pudgy Penguin toys to a local charity, ready to be opened by a child on Christmas morning.<\/p>"
+            "copy": "<p>Every view counts, and every share matters. For every <strong>10,000 views<\/strong> on your <em>#PudgyChristmas<\/em> challenge video, we will send one of our cuddly Pudgy Penguin toys to a local charity, ready to be opened by a child on Christmas morning.<\/p>"
           }
         },
         "6301c5ed-1452-41c8-b0e8-eeed760df9a0": {
@@ -79,16 +79,10 @@
         "1cd517a5-4d29-49a6-a5dd-81ebcee06ca5": {
           "type": "video",
           "settings": {
-            "video_url": ""
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/d75a55725ed84c36975e23e41b05b270.mp4"
           }
         },
         "dde69023-9838-46ab-9b92-811772b61962": {
-          "type": "video",
-          "settings": {
-            "video_url": ""
-          }
-        },
-        "efda537d-c610-41eb-a1ac-7249622643d4": {
           "type": "video",
           "settings": {
             "video_url": ""
@@ -97,8 +91,7 @@
       },
       "block_order": [
         "1cd517a5-4d29-49a6-a5dd-81ebcee06ca5",
-        "dde69023-9838-46ab-9b92-811772b61962",
-        "efda537d-c610-41eb-a1ac-7249622643d4"
+        "dde69023-9838-46ab-9b92-811772b61962"
       ],
       "settings": {
         "header": "Examples:"
