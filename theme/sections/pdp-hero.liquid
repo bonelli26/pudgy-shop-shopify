@@ -131,6 +131,18 @@
                     </div>
                 {% endif %}
             </div>
+            <div class="textly-form">
+                {% for block in section.blocks %}
+                    {%- case block.type -%}
+                        {%- when '@app' -%}
+                            {% render block %}
+                    {%- endcase -%}
+                {% endfor %}
+                <form>
+                    <label>Write your note here</label>
+                    <input placeholder="Enter teXT">
+                </form>
+            </div>
             {% if product.metafields.accentuate.store_locator %}
                 <div class="atc-form-walmart">
                     <a href="/pages/store-locator" class="pink-btn add-to-cart" type="button" data-router-disabled>
@@ -206,6 +218,11 @@
 "type": "image_picker",
 "label": "Variant Ice Block"
 }
-]
+],
+  "blocks": [
+    {
+      "type": "@app"
+    }
+  ]
 }
 {% endschema %}

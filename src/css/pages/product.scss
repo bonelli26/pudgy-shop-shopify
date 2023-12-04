@@ -374,6 +374,7 @@
     }
     .rainbow-options {
       display: flex;
+      flex-wrap: wrap;
       @include get-vw(gap, 10px, 4px);
       justify-content: flex-start;
       @include get-vw(padding-bottom, 15px, 15px);
@@ -491,6 +492,45 @@
         }
       }
     }
+    .textly-form {
+      display: flex;
+      width: 100%;
+      @include get-vw(margin-bottom, 24px, 20px);
+      form {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+      label {
+        color: #00142D;
+        font-family: $mencoBlack;
+        @include get-vw(font-size, 16px, 16px);
+        line-height: 1.45;
+        text-transform: uppercase;
+        @include get-vw(padding-bottom, 10px, 10px);
+        display: flex;
+      }
+      input {
+        @include get-vw(border-radius, 29px, 29px);
+        border: 1px solid #00142D;
+        background: #FFF;
+        box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+        padding: 16px 24px;
+        color: #00142D;
+        font-family: $mencoBlack;
+        @include get-vw(font-size, 16px, 16px);
+        line-height: 1.45;
+        text-transform: uppercase;
+        &::placeholder {
+          color: #00142D;
+          font-family: $mencoMedium;
+          @include get-vw(font-size, 18px, 18px);
+          line-height: 1.45;
+          text-transform: uppercase;
+        }
+      }
+    }
+
     @include bp-767 {
       .pdp-hero-inner {
         flex-direction: column;
