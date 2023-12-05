@@ -527,157 +527,57 @@
       }
     }
 
-    @include bp-767 {
-      .pdp-hero-inner {
-        flex-direction: column;
-        padding: 135px 17px 42px;
-        gap: 16px;
-      }
-      .left {
-        width: 100%;
-        height: 339px;
-      }
-      .right {
-        width: 100%;
-      }
-      .slider {
-        display: flex;
-        gap: 12px;
-        height: 100%;
-        aspect-ratio: 0.75/1;
-        overflow: visible;
-      }
-      .slides {
-        padding-bottom: 2px;
-        overflow: visible;
-      }
-      .slide {
-        width: 68vw;
-        min-width: 68vw;
-        margin-right: 5px;
-        overflow: visible;
-        img {
-          border-radius: 22px;
-          height: 100%;
-        }
-      }
-      .frame-mobile {
-        position: absolute;
-        height: 100%;
-        margin-bottom: 0;
-        min-width: 68vw;
-        border-radius: 22px;
-        border: 4px solid #FFF;
-        overflow: hidden;
-        box-shadow: 0 1.1258188486099243px 1.6887284517288208px 0 rgba(0, 0, 0, 0.32);
-      }
-      .frame {
-        border-radius: 0;
-        box-shadow: none;
-        border: none;
-        overflow: visible;
-        height: 100%;
-      }
-      .thumbnails {
-        height: 100%;
-        flex: 1;
-        flex-direction: column;
-        justify-content: flex-start;
-        gap: 10px;
-        border: none;
-        display: none;
-      }
-      .thumbnail {
-        width: 70px;
-        height: 25%;
-        border: unset;
-        border-radius: 16.5px;
-        max-height: unset;
-        &.active {
-          border: 2.067px solid #00142D;
-          transform: rotate(-5deg);
-        }
-      }
-      .ribbon {
-        top: unset;
-        bottom: -65px;
-        right: -40px;
-        transform: rotate(-4deg);
-        width: 142px;
-        height: 142px;
-      }
-      .after-pay {
+    &.options {
+      .option-name {
+        color: #00142D;
         font-family: $mencoBlack;
+        @include get-vw-no-max(font-size, 16px, 16px);
+        line-height: 1.45;
+        text-transform: uppercase;
+        margin-bottom: 4px;
       }
-      .variant-wrapper {
-        margin-bottom: 0;
-      }
-      .atc-wrapper {
-        position: fixed;
-        left: 0;
-        bottom: 0;
-        width: 100%;
-        padding: 14px 14px 16px;
-        border-radius: 40px 40px 0 0;
-        background: #FFFFFF;
-        z-index: 100;
-        gap: 0;
-      }
-      .atc-form, .atc-form-walmart {
-        width: 100%;
-      }
-      .add-to-cart {
-        width: 100%;
-      }
-      .quantity {
-        max-width: 90px;
-        min-width: 90px;
-        padding: 0 14px 2px;
-      }
-      h1 {
-        text-shadow: -3px 3px #00142dbf;
-
-
-      }
-
-      &.bundle {
-        .options {
-          &.open {
-            .current-label {
-              span {
-                transform: rotate(180deg);
-              }
+      .drawer {
+        margin-bottom: 10px;
+        &.open {
+          .label {
+            border: none;
+            box-shadow: none;
+            opacity: 0.5;
+            span {
+              transform: rotate(180deg);
             }
           }
         }
-        .label {
-          display: flex !important;
-          pointer-events: all !important;
-          .circle {
-            display: none !important;
-          }
-        }
-        .atc-wrapper {
-          padding: 14px 10px 16px;
-        }
-        .option-wrapper {
-          aspect-ratio: unset;
-          overflow: hidden;
-          .inner {
-            flex-direction: row !important;
-          }
-        }
-        .options {
-          overflow: hidden;
-        }
-        .bullet-variant {
-          min-width: unset;
-          width: 100%;
-          gap: 12px;
-          opacity: 0;
-        }
-
       }
+      .label {
+        border-radius: 100px;
+        border: 1px solid #000;
+        box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+        display: none;
+        width: 99%;
+        @include get-vw(padding, 16px, 11px);
+        justify-content: space-between;
+        align-items: center;
+        transition: all .2s $ease-out-sine;
+        position: relative;
+        color: #00142D;
+        font-family: $mencoBlack;
+        @include get-vw(font-size, 16px, 16px);
+        line-height: 1.45;
+        text-transform: uppercase;
+        span {
+          transition: all .25s $ease-in;
+          width: 24px;
+          height: 24px;
+          display: flex;
+        }
+        svg {
+          display: flex;
+          height: 100%;
+          width: auto;
+        }
+      }
+
     }
 
     &.bundle {
@@ -841,6 +741,173 @@
         }
       }
     }
+
+    @include bp-767 {
+      .pdp-hero-inner {
+        flex-direction: column;
+        padding: 135px 17px 42px;
+        gap: 16px;
+      }
+      .left {
+        width: 100%;
+        height: 339px;
+      }
+      .right {
+        width: 100%;
+      }
+      .slider {
+        display: flex;
+        gap: 12px;
+        height: 100%;
+        aspect-ratio: 0.75/1;
+        overflow: visible;
+      }
+      .slides {
+        padding-bottom: 2px;
+        overflow: visible;
+      }
+      .slide {
+        width: 68vw;
+        min-width: 68vw;
+        margin-right: 5px;
+        overflow: visible;
+        img {
+          border-radius: 22px;
+          height: 100%;
+        }
+      }
+      .frame-mobile {
+        position: absolute;
+        height: 100%;
+        margin-bottom: 0;
+        min-width: 68vw;
+        border-radius: 22px;
+        border: 4px solid #FFF;
+        overflow: hidden;
+        box-shadow: 0 1.1258188486099243px 1.6887284517288208px 0 rgba(0, 0, 0, 0.32);
+      }
+      .frame {
+        border-radius: 0;
+        box-shadow: none;
+        border: none;
+        overflow: visible;
+        height: 100%;
+      }
+      .thumbnails {
+        height: 100%;
+        flex: 1;
+        flex-direction: column;
+        justify-content: flex-start;
+        gap: 10px;
+        border: none;
+        display: none;
+      }
+      .thumbnail {
+        width: 70px;
+        height: 25%;
+        border: unset;
+        border-radius: 16.5px;
+        max-height: unset;
+        &.active {
+          border: 2.067px solid #00142D;
+          transform: rotate(-5deg);
+        }
+      }
+      .ribbon {
+        top: unset;
+        bottom: -65px;
+        right: -40px;
+        transform: rotate(-4deg);
+        width: 142px;
+        height: 142px;
+      }
+      .after-pay {
+        font-family: $mencoBlack;
+      }
+      .variant-wrapper {
+        margin-bottom: 0;
+      }
+      .atc-wrapper {
+        position: fixed;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        padding: 14px 14px 16px;
+        border-radius: 40px 40px 0 0;
+        background: #FFFFFF;
+        z-index: 100;
+        gap: 0;
+      }
+      .atc-form, .atc-form-walmart {
+        width: 100%;
+      }
+      .add-to-cart {
+        width: 100%;
+      }
+      .quantity {
+        max-width: 90px;
+        min-width: 90px;
+        padding: 0 14px 2px;
+      }
+      h1 {
+        text-shadow: -3px 3px #00142dbf;
+
+
+      }
+
+      &.bundle {
+        .options {
+          &.open {
+            .current-label {
+              span {
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+        .label {
+          display: flex !important;
+          pointer-events: all !important;
+          .circle {
+            display: none !important;
+          }
+        }
+        .atc-wrapper {
+          padding: 14px 10px 16px;
+        }
+        .option-wrapper {
+          aspect-ratio: unset;
+          overflow: hidden;
+          .inner {
+            flex-direction: row !important;
+          }
+        }
+        .options {
+          overflow: hidden;
+        }
+        .bullet-variant {
+          min-width: unset;
+          width: 100%;
+          gap: 12px;
+          opacity: 0;
+        }
+
+      }
+
+      &.options {
+        .label {
+          display: flex;
+        }
+        .drawer {
+          overflow: hidden;
+        }
+        .option-wrapper, .textly-form {
+          @include get-vw(padding, 11px, 11px);
+        }
+      }
+    }
+
+
   }
   .about-section {
     position: relative;

@@ -82,8 +82,6 @@ export class AddToCart {
 		let options = pdpHero.querySelectorAll(".option");
 		const priceEls = pdpHero.querySelectorAll(".price");
 		const comparePriceEl = pdpHero.querySelector(".compare-at-price");
-		const imgEls = pdpHero.querySelectorAll(".primary-image, .primary-thumbnail");
-		const imgTab = pdpHero.querySelectorAll(".img-tab img");
 		const allOptionsArr = [];
 
 		for (let i = 0; i < options.length; i++) {
@@ -93,14 +91,6 @@ export class AddToCart {
 				if (option.classList.contains("active")) { return; }
 
 				const optionArr = [];
-
-				// let img = imgTab[i];
-				// if (img) {
-				// 	if (img.classList.contains("active")) { return; }
-				//
-				// 	img.parentElement.querySelector(".active").classList.remove("active");
-				// 	img.classList.add("active");
-				// }
 
 				option.parentElement.querySelector(".active").classList.remove("active");
 				option.classList.add("active");
@@ -151,6 +141,8 @@ export class AddToCart {
 
 			allOptionsArr.push(options[i].dataset.value);
 		}
+
+
 
 		if (varData[0].available === "false") {
 			for (let j = 1; j < varData.length; j++) {

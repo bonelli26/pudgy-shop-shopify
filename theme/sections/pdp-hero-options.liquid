@@ -120,22 +120,30 @@
         {% endif %}
 
         <div class="atc-wrapper" id="atc-wrapper">
-            {% if template.suffix == "collectibles" %}
-                <div class="textly-form">
-                    <label for="penguin#">STATE LIL PUDGY BEFORE #, IF ITS A LIL PUDGY.</label>
-                    <input id="penguin#" name="properties[penguin#]" placeholder="Pudgy Penguin/ Lil Pudgy #">
-                </div>
-            {% endif %}
-            <div class="option-wrapper">
-                {% if product.has_only_default_variant == false  %}
-                    {% for option in product.options_with_values %}
-                        <div class="options rainbow-options">
-                            {% for value in option.values %}
-                                <button class="rainbow-option option{% if forloop.first %} active{% endif %}" data-value="{{ value }}"><span>{{ value }}</span></button>
+            <div class="drawer" data-at="767">
+                <button class="label">Customise this product
+                    <span>
+                        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 14"><path fill="#F5FDFF" fill-rule="evenodd" d="M3.263 1.4a1.75 1.75 0 0 1 2.474 0L10.5 6.163 15.263 1.4a1.75 1.75 0 1 1 2.474 2.475L10.5 11.113 3.263 3.875a1.75 1.75 0 0 1 0-2.475Z" clip-rule="evenodd"/><path stroke="#00142D" stroke-width=".8" d="m10.5 5.597-4.48-4.48a2.15 2.15 0 1 0-3.04 3.041l7.237 7.237.283.283.283-.283 7.237-7.237a2.15 2.15 0 0 0-3.04-3.04l-4.48 4.48Z"/></svg>
+                    </span>
+                </button>
+                <div class="drawer-items">
+                    <div class="option-wrapper">
+                        {% if product.has_only_default_variant == false  %}
+                            {% for option in product.options_with_values %}
+                                <p class="option-name">{{ option.name }}</p>
+                                <div class="options rainbow-options">
+                                    {% for value in option.values %}
+                                        <button class="rainbow-option option{% if forloop.first %} active{% endif %}" data-value="{{ value }}"><span>{{ value }}</span></button>
+                                    {% endfor %}
+                                </div>
                             {% endfor %}
-                        </div>
-                    {% endfor %}
-                {% endif %}
+                        {% endif %}
+                    </div>
+                    <div class="textly-form">
+                        <label for="penguin#">STATE LIL PUDGY BEFORE #, IF ITS A LIL PUDGY.</label>
+                        <input id="penguin#" name="properties[penguin#]" placeholder="Pudgy Penguin/ Lil Pudgy #">
+                    </div>
+                </div>
             </div>
             {% if product.metafields.accentuate.store_locator %}
                 <div class="atc-form-walmart">
@@ -211,11 +219,6 @@
       "id": "variant_ice_block",
       "type": "image_picker",
       "label": "Variant Ice Block"
-    }
-  ],
-  "blocks": [
-    {
-      "type": "@app"
     }
   ]
 }
