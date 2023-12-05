@@ -120,12 +120,6 @@
         {% endif %}
 
         <div class="atc-wrapper" id="atc-wrapper">
-            {% if template.suffix == "collectibles" %}
-                <div class="textly-form">
-                    <label for="penguin#">STATE LIL PUDGY BEFORE #, IF ITS A LIL PUDGY.</label>
-                    <input id="penguin#" name="properties[penguin#]" placeholder="Pudgy Penguin/ Lil Pudgy #">
-                </div>
-            {% endif %}
             <div class="option-wrapper">
                 {% if product.has_only_default_variant == false  %}
                     <div class="options rainbow-options">
@@ -212,11 +206,6 @@
 "type": "image_picker",
 "label": "Variant Ice Block"
 }
-],
-  "blocks": [
-    {
-      "type": "@app"
-    }
-  ]
+]
 }
 {% endschema %}

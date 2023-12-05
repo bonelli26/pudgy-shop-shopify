@@ -1,7 +1,7 @@
 {
   "sections": {
-    "pdp-hero": {
-      "type": "pdp-hero",
+    "pdp-hero-options": {
+      "type": "pdp-hero-options",
       "settings": {
         "variant_ice_block": "shopify:\/\/shop_images\/pdp-ice-block-1.png"
       }
@@ -93,7 +93,7 @@
     }
   },
   "order": [
-    "pdp-hero",
+    "pdp-hero-options",
     "about-section",
     "faq-section",
     "pdp-recirc",
