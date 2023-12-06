@@ -84,64 +84,101 @@ export class AddToCart {
 		const comparePriceEl = pdpHero.querySelector(".compare-at-price");
 		const allOptionsArr = [];
 
-		for (let i = 0; i < options.length; i++) {
-			let option = options[i];
+		if(pdpHero.classList.contains('options')) {
+			for (let i = 0; i < options.length; i++) {
+				let option = options[i];
+				option.addEventListener("click", () => {
+					if (option.classList.contains("active")) { return; }
+					const optionArr = [];
 
-			option.addEventListener("click", () => {
-				if (option.classList.contains("active")) { return; }
+					option.parentElement.querySelector(".active").classList.remove("active");
+					option.classList.add("active");
 
-				const optionArr = [];
+					const activeOptions = document.querySelectorAll(".pdp-hero.options .option.active");
 
-				option.parentElement.querySelector(".active").classList.remove("active");
-				option.classList.add("active");
+					for (let j = 0; j < activeOptions.length; j++) {
+						optionArr.push(activeOptions[j].dataset.value);
+					}
+					let currentVariant = false;
 
-				const activeOptions = pdpHero.querySelectorAll(".option.active");
-
-				for (let j = 0; j < activeOptions.length; j++) {
-					optionArr.push(activeOptions[j].dataset.value);
-				}
-
-
-				let currentVariant = false;
-
-				for (let j = 0; j < varData.length; j++) {
-					let matches = 0;
-					for (let z = 0; z < optionArr.length; z++) {
-						if (varData[j].title === optionArr[z]) {
-							matches++;
-						} else {
+					for (let j = 0; j < varData.length; j++) {
+						let matches = 0;
+						for (let z = 0; z < optionArr.length; z++) {
+							if (varData[j].title.includes(optionArr[z])) {
+								matches++;
+							} else {
+								break;
+							}
+						}
+						if (matches === optionArr.length) {
+							currentVariant = varData[j];
 							break;
 						}
 					}
-					if (matches === optionArr.length) {
-						currentVariant = varData[j];
-						break;
+
+				});
+				allOptionsArr.push(options[i].dataset.value);
+			}
+		} else {
+			console.log(pdpHero);
+			for (let i = 0; i < options.length; i++) {
+				let option = options[i];
+
+				option.addEventListener("click", () => {
+					if (option.classList.contains("active")) { return; }
+
+					const optionArr = [];
+
+					option.parentElement.querySelector(".active").classList.remove("active");
+					option.classList.add("active");
+
+					const activeOptions = pdpHero.querySelectorAll(".option.active");
+
+					for (let j = 0; j < activeOptions.length; j++) {
+						optionArr.push(activeOptions[j].dataset.value);
 					}
-				}
 
-				if (currentVariant) {
-					priceEls.forEach((priceEl, i) => {
-						priceEl.textContent = parseFloat(currentVariant.price.toString().slice(0, -2)).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-					});
 
-					if (currentVariant.comparePrice !== "false") {
-						comparePriceEl.textContent = parseFloat(currentVariant.comparePrice.toString().slice(0, -2)).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
-					} else {
-						comparePriceEl.textContent = "";
+					let currentVariant = false;
+
+					for (let j = 0; j < varData.length; j++) {
+						let matches = 0;
+						for (let z = 0; z < optionArr.length; z++) {
+							if (varData[j].title === optionArr[z]) {
+								matches++;
+							} else {
+								break;
+							}
+						}
+						if (matches === optionArr.length) {
+							currentVariant = varData[j];
+							break;
+						}
 					}
 
-					if (currentVariant.available !== "false") {
-						addToCartBtn.dataset.id = currentVariant.id;
-						addToCartBtn.classList.remove("disabled");
-					} else {
-						addToCartBtn.classList.add("disabled");
-					}
-				}
-			});
+					if (currentVariant) {
+						priceEls.forEach((priceEl, i) => {
+							priceEl.textContent = parseFloat(currentVariant.price.toString().slice(0, -2)).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+						});
 
-			allOptionsArr.push(options[i].dataset.value);
+						if (currentVariant.comparePrice !== "false") {
+							comparePriceEl.textContent = parseFloat(currentVariant.comparePrice.toString().slice(0, -2)).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
+						} else {
+							comparePriceEl.textContent = "";
+						}
+
+						if (currentVariant.available !== "false") {
+							addToCartBtn.dataset.id = currentVariant.id;
+							addToCartBtn.classList.remove("disabled");
+						} else {
+							addToCartBtn.classList.add("disabled");
+						}
+					}
+				});
+
+				allOptionsArr.push(options[i].dataset.value);
+			}
 		}
-
 
 
 		if (varData[0].available === "false") {
