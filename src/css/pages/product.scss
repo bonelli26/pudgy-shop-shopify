@@ -245,6 +245,9 @@
         box-shadow: 2px 2px 0 0 rgba(0, 0, 0, 0.25);
         @include get-vw(height, 58px, 58px);
       }
+      .drawer {
+        width: 100%;
+      }
     }
     .quantity {
       display: flex;
@@ -374,7 +377,6 @@
     }
     .rainbow-options {
       display: flex;
-      flex-wrap: wrap;
       @include get-vw(gap, 10px, 4px);
       justify-content: flex-start;
       @include get-vw(padding-bottom, 15px, 15px);
@@ -402,6 +404,10 @@
       line-height: .8;
       letter-spacing: -0.26px;
       text-transform: uppercase;
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       span:not(.tag) {
         z-index: 3;
         position: relative;
@@ -495,7 +501,7 @@
     .textly-form {
       display: flex;
       width: 100%;
-      @include get-vw(margin-bottom, 24px, 20px);
+      //@include get-vw(margin-bottom, 24px, 20px);
       flex-direction: column;
       label {
         color: #00142D;
@@ -742,6 +748,12 @@
       }
     }
 
+    @include bp-1200 {
+      .rainbow-options {
+        flex-wrap: wrap;
+      }
+    }
+
     @include bp-767 {
       .pdp-hero-inner {
         flex-direction: column;
@@ -851,8 +863,11 @@
       }
       h1 {
         text-shadow: -3px 3px #00142dbf;
-
-
+      }
+      .rainbow-option {
+        width: auto;
+        min-width: unset;
+        padding: 0 16px;
       }
 
       &.bundle {
