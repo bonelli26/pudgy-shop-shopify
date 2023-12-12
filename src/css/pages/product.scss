@@ -404,7 +404,7 @@
       line-height: .8;
       letter-spacing: -0.26px;
       text-transform: uppercase;
-      width: 100%;
+      width: auto;
       display: flex;
       align-items: center;
       justify-content: center;
@@ -498,10 +498,15 @@
         }
       }
     }
+    .pudgy-number-wrapper {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      @include get-vw(padding-bottom, 10px, 10px);
+    }
     .textly-form {
       display: flex;
-      width: 100%;
-      //@include get-vw(margin-bottom, 24px, 20px);
+      width: calc(80% - 5px);
       flex-direction: column;
       label {
         color: #00142D;
@@ -532,8 +537,57 @@
         }
       }
     }
+    .lil-pudgy-check {
+      display: flex;
+      flex-direction: column;
+      width: calc(20% - 5px);
+      label {
+        color: #00142D;
+        font-family: $mencoBlack;
+        @include get-vw(font-size, 16px, 16px);
+        line-height: 1.45;
+        text-transform: uppercase;
+        @include get-vw(padding-bottom, 10px, 10px);
+        display: flex;
+      }
+      .check {
+        @include get-vw(width, 50px, 25px);
+        @include get-vw(height, 50px, 25px);
+        margin: 0;
+        border-radius: 50%;
+        border: 1px solid #000;
+        background: #FFF;
+        box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+        @include get-vw(padding, 16px, 11px);
+        transition: all .2s $ease-out-sine;
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        &:after {
+          content: '';
+          background: #FFA3FF;
+          border-radius: 50%;
+          border: 1px solid #000000;
+          position: absolute;
+          opacity: 0;
+          visibility: hidden;
+          width: calc(100% - 15px);
+          height: calc(100% - 15px);
+          box-shadow: 2px 2px 0px 0px rgba(0, 0, 0, 0.25);
+          transition: all .2s $ease-out-sine;
+        }
+        &.active {
+          &:after {
+            opacity: 1;
+            visibility: visible;
+          }
+        }
+      }
+    }
 
     &.options {
+
       .option-name {
         color: #00142D;
         font-family: $mencoBlack;
@@ -748,7 +802,7 @@
       }
     }
 
-    @include bp-1200 {
+    @include bp-959 {
       .rainbow-options {
         flex-wrap: wrap;
       }
