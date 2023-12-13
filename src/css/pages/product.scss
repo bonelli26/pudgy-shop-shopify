@@ -540,6 +540,7 @@
     .lil-pudgy-check {
       display: flex;
       flex-direction: column;
+      align-items: center;
       width: calc(20% - 5px);
       label {
         color: #00142D;
@@ -587,7 +588,6 @@
     }
 
     &.options {
-
       .option-name {
         color: #00142D;
         font-family: $mencoBlack;
@@ -970,9 +970,13 @@
         .drawer {
           overflow: hidden;
         }
-        .option-wrapper, .textly-form {
-          @include get-vw(padding, 11px, 11px);
-        }
+      }
+      .textly-form {
+        width: calc(70% - 5px);
+      }
+      .lil-pudgy-check {
+        width: calc(30% - 5px);
+
       }
     }
 

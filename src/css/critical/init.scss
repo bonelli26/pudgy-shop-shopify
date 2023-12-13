@@ -2818,9 +2818,6 @@ footer {
 		align-items: center;
 		max-width: 640px;
 		width: 100%;
-		h1 {
-			display: none !important;
-		}
 	}
 	form {
 		width: 100%;
@@ -2988,7 +2985,23 @@ footer {
 			width: 100%;
 		}
 	}
+
+	iframe {
+		h1 {
+			display: none !important;
+		}
+		:is(.dark .bg-gray-50) {
+			background-color: transparent !important;
+		}
+		:is(.dark h1) {
+			color: #00142D !important;
+		}
+		body {
+			background-color: transparent !important;
+		}
+	}
 }
+
 
 .view-rarity {
 	background: linear-gradient(180deg, #C2ECFF 4.69%, #699FFF 25%, #F1A7FA 66.64%, #074FCF 100%), #F5FDFF;

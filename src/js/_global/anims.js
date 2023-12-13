@@ -138,7 +138,7 @@ export const globalEntrance = (namespace = null)=>{
 
 	timeline.play();
 
-}
+};
 
 export const prepDrawers = () => {
 	const drawers = document.querySelectorAll(".drawer:not(.bound)")
@@ -162,6 +162,12 @@ export const prepDrawers = () => {
 				item.addEventListener("click", () => {
 					label.innerHTML = item.innerHTML;
 				});
+			});
+		}
+
+		if (thisDrawer.classList.contains("allow-click")) {
+			childrenWrapper.addEventListener("click", (event) => {
+				event.stopPropagation();
 			});
 		}
 
@@ -569,7 +575,6 @@ export const prepModals = (modalTrigger) => {
 
 };
 
-
 export const prepTabs = () => {
 	let tabWrappers = globalStorage.isGreaterThan767 ? document.querySelectorAll(".tab-set") : document.querySelectorAll(".tab-set:not(.formula-tab)");
 	for (let i = 0; i < tabWrappers.length; i++) {
@@ -603,8 +608,6 @@ export const prepTabs = () => {
 		}
 	}
 };
-
-
 
 export const newTabs = () => {
 	let tabWrappers = document.querySelectorAll(".new-tabs");
