@@ -3,29 +3,20 @@
     <p class="form-fade-el">{{ section.settings.copy }}</p>
 </div>
 <div class="bottom">
-    <iframe style="
-            width:100%;
-            height:1200px;
-            border-radius: 13px;
-            border: 2px solid #00142D;
-            background: linear-gradient(98deg, #C1ECFF -0.29%, #C1ECFF 24.74%, #FFF 37.93%, #C2ECFF 60.62%, #C1ECFF 99.84%);
-            box-shadow: 4px 4px 0px 0px rgba(0, 0, 0, 0.25);"
-            src="https://noteforms.com/forms/orders-requests-contact-form-kew4bu">
-    </iframe>
-    {% comment %}<form class="bind-gorgias">{% endcomment %}
-        {% comment %}<div class="success-content">{% endcomment %}
-            {% comment %}<p>{{ section.settings.success_copy }}</p>{% endcomment %}
-        {% comment %}</div>{% endcomment %}
-        {% comment %}<div class="form-content form-fade-el">{% endcomment %}
-            {% comment %}<label for="name">Name</label>{% endcomment %}
-            {% comment %}<input required type="text" id="name" name="name" placeholder="Enter your name">{% endcomment %}
-            {% comment %}<label for="email">Email</label>{% endcomment %}
-            {% comment %}<input required type="email" name="email" placeholder="Enter your Email" id="email">{% endcomment %}
-            {% comment %}<label for="message">Message</label>{% endcomment %}
-            {% comment %}<textarea required name="message" id="message" placeholder="Enter your Message  "></textarea>{% endcomment %}
-            {% comment %}<button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>{% endcomment %}
-        {% comment %}</div>{% endcomment %}
-    {% comment %}</form>{% endcomment %}
+    <form class="bind-gorgias">
+        <div class="success-content">
+            <p>{{ section.settings.success_copy }}</p>
+        </div>
+        <div class="form-content form-fade-el">
+            <label for="name">Name</label>
+            <input required type="text" id="name" name="name" placeholder="Enter your name">
+            <label for="email">Email</label>
+            <input required type="email" name="email" placeholder="Enter your Email" id="email">
+            <label for="message">Message</label>
+            <textarea required name="message" id="message" placeholder="Enter your Message  "></textarea>
+            <button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>
+        </div>
+    </form>
 </div>
 
 

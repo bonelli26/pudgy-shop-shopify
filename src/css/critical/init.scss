@@ -829,7 +829,7 @@ nav {
 	}
 }
 
-.view-page, .view-faqs, .view-contact {
+.view-page, .view-faqs, .view-contact, .view-wholesale-contact {
 	background: linear-gradient(180deg, #C3EDFF 0%, #F5FDFF 100%);
 	footer {
 		.footer-marquee, .top {
@@ -2986,20 +2986,6 @@ footer {
 		}
 	}
 
-	iframe {
-		h1 {
-			display: none !important;
-		}
-		:is(.dark .bg-gray-50) {
-			background-color: transparent !important;
-		}
-		:is(.dark h1) {
-			color: #00142D !important;
-		}
-		body {
-			background-color: transparent !important;
-		}
-	}
 }
 
 
