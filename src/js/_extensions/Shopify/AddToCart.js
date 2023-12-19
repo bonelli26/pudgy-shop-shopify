@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 export class AddToCart {
 
 	constructor(){
+		this.pdp = document.querySelectorAll(".pdp-hero");
 		this.forms = document.querySelectorAll(".atc-form:not(.bound)");
 		this.shippingMeterBar = document.getElementById("shipping-meter-bar")
 		this.shippingNoteOne = document.getElementById("shipping-note-one")
@@ -166,10 +167,8 @@ export class AddToCart {
 	 */
 	addToCart(form){
 		let varID = form.querySelector(".add-to-cart").dataset.id;
-
+		const pdpHero = document.querySelector(".pdp-hero");
 		const count = form.querySelector(".count");
-		const pudgyNumberText = document.querySelector(".textly-form input").value;
-		const isLilPudgy = document.querySelector(".lil-pudgy-check .check");
 
 		let quantity;
 		if (count) {
@@ -185,19 +184,24 @@ export class AddToCart {
 			}]
 		};
 
-		if (pudgyNumberText !== '') {
-			formData.items[0].properties = {
-				['Pudgy Number']: pudgyNumberText
-			};
-		}
 
-		if (isLilPudgy.classList.contains('active')) {
-			formData.items[0].properties = {
-				['Lil Pudgy']: true,
-				['Pudgy Number']: pudgyNumberText
-			};
-		}
+		if(pdpHero.classList.contains('options')) {
+			const pudgyNumberText = document.querySelector(".textly-form input").value;
+			const isLilPudgy = document.querySelector(".lil-pudgy-check .check");
 
+			if (pudgyNumberText !== '') {
+				formData.items[0].properties = {
+					['Pudgy Number']: pudgyNumberText
+				};
+			}
+
+			if (isLilPudgy.classList.contains('active')) {
+				formData.items[0].properties = {
+					['Lil Pudgy']: true,
+					['Pudgy Number']: pudgyNumberText
+				};
+			}
+		}
 
 		console.log(formData);
 
