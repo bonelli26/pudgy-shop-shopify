@@ -47,67 +47,95 @@
         {% comment %}</div>{% endcomment %}
         <div class="copy">{{ product.description }}</div>
         {% if product.metafields.accentuate.attribute %}
-        <div class="variant-wrapper mw">
-            <svg class="bg" width="485" height="55" preserveAspectRatio="none" viewBox="0 0 485 55" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <g filter="url(#filter0_d_1130_7248)">
-                    <path d="M4.27328 0.582371C4.60688 0.411765 4.97503 0.320584 5.34884 0.315989L31.0554 2.92739e-10H61.1851H91.3147L106.376 0.538293L121.444 2.92739e-10H241.963H362.482H392.611L407.673 0.538293L422.741 2.92739e-10H452.871H465.637L480.638 0.466168C481.934 0.50646 482.962 1.5629 482.967 2.86024L482.973 4.6024L482.947 9.20481L482.893 18.4096L482.793 35.4344L482.744 43.9468L482.719 48.203L482.715 48.9354C482.71 49.7991 482.244 50.5973 481.494 51.0293L480.035 51.8691C479.672 52.078 479.262 52.1897 478.845 52.1933L452.565 52.4253L422.435 52.3914L392.306 52.3574L362.176 52.3235L332.047 52.1877L301.917 52.2556L241.658 52.1877L121.138 52.4593H91.0086L60.8806 52.1877L30.7493 52.4593L8.33667 51.8076L3.26003 52.2386C1.8575 52.3577 0.656726 51.2596 0.651106 49.8528L0.644515 48.203L0.66935 43.9468L0.71902 35.4344L0.81836 18.4096L0.872071 9.20481L0.898926 4.6024L0.903733 3.77858C0.909025 2.87159 1.4214 2.04087 2.23083 1.62691L4.27328 0.582371Z" fill="url(#paint0_linear_1130_7248)"/>
-                    <path d="M106.356 1.02163L106.374 1.02225L106.391 1.02163L121.45 0.483645H241.96H362.479H392.6H392.608L407.653 1.02163L407.67 1.02225L407.687 1.02163L422.738 0.483645H422.747H452.868H465.627H465.634L480.62 0.94958C481.657 0.981813 482.479 1.82697 482.483 2.86484L482.49 4.6024L482.49 4.607L482.463 9.20481L482.409 18.4096L482.31 35.4344L482.26 43.9468L482.235 48.203L482.231 48.9354C482.227 49.6264 481.855 50.2649 481.254 50.6106L479.796 51.4504C479.506 51.6174 479.178 51.7068 478.844 51.7097L452.568 51.9417L452.566 51.9417L422.439 51.9077L392.309 51.8738L362.181 51.8398L362.18 51.8398L332.052 51.7041L332.049 51.7041L301.921 51.772L301.919 51.772L241.662 51.7041L241.66 51.7041L121.141 51.9756L121.14 51.9756L91.0137 51.9756H91.0115L60.8878 51.7041L60.8878 51.704L60.879 51.7041L30.7569 51.9755L8.35355 51.3241L8.32601 51.3233L8.29855 51.3257L3.2219 51.7567C2.09988 51.852 1.13926 50.9735 1.13476 49.8481L1.12817 48.203L1.12818 48.2007L1.153 43.9468L1.20267 35.4344L1.30201 18.4096L1.35572 9.20481L1.38258 4.6024L1.38739 3.77858C1.39162 3.05299 1.80152 2.38841 2.44906 2.05724L4.49152 1.0127C4.75839 0.876218 5.05292 0.803274 5.35196 0.799598L31.0556 0.483645H61.1823H91.3033L106.356 1.02163Z" stroke="#00142D" stroke-width="0.967307" vector-effect="non-scaling-stroke"/>
-                </g>
-                <defs>
-                    <filter id="filter0_d_1130_7248" x="0.644531" y="0" width="484.264" height="54.3941" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
-                        <feFlood flood-opacity="0" result="BackgroundImageFix"/>
-                        <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
-                        <feOffset dx="1.93461" dy="1.93461"/>
-                        <feComposite in2="hardAlpha" operator="out"/>
-                        <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
-                        <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_1130_7248"/>
-                        <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_1130_7248" result="shape"/>
-                    </filter>
-                    <linearGradient id="paint0_linear_1130_7248" x1="-0.467146" y1="-0.142229" x2="211.19" y2="266.924" gradientUnits="userSpaceOnUse">
-                        <stop stop-color="#C1ECFF"/>
-                        <stop offset="0.25" stop-color="#C1ECFF"/>
-                        <stop offset="0.381662" stop-color="white"/>
-                        <stop offset="0.608286" stop-color="#C2ECFF"/>
-                        <stop offset="1" stop-color="#C1ECFF"/>
-                    </linearGradient>
-                </defs>
-            </svg>
-            <div class="left-variant variant">
-                {% for attribute in product.metafields.accentuate.attribute[0] %}
-                    <p>{{ attribute }}</p>
-                {% endfor %}
-                {% for attribute_value in product.metafields.accentuate.attribute_value[0] %}
-                    <p>{{ attribute_value }}</p>
-                {% endfor %}
-            </div>
-            <div class="right-variant variant">
-                {% for attribute in product.metafields.accentuate.attribute[1] %}
-                    <p>{{ attribute }}</p>
-                {% endfor %}
-                {% for attribute_value in product.metafields.accentuate.attribute_value[1] %}
-                    <p>{{ attribute_value }}</p>
-                {% endfor %}
-            </div>
+        <div class="variant-wrapper mw" {% if product.metafields.accentuate.attribute[1] %}style="width: 50%"{% endif %}>
+            {% if product.metafields.accentuate.attribute[0] %}
+                <div class="left-variant variant">
+                    <svg class="bg" xmlns="http://www.w3.org/2000/svg" width="244" height="55" viewBox="0 0 244 55" fill="none">
+                        <g filter="url(#filter0_d_2470_24979)">
+                            <path d="M1.54292 1.02732C1.98627 0.575741 2.58757 0.314305 3.21847 0.298815L15.3889 2.92739e-10H30.4721H45.5553L52.9217 0.526004C53.0362 0.534186 53.1513 0.534186 53.266 0.526004L60.6385 2.92739e-10H120.971H181.304H196.387L203.754 0.526004C203.868 0.534186 203.983 0.534186 204.098 0.526004L211.471 2.92739e-10H226.554H232.945L239.358 0.398159C240.628 0.477014 241.613 1.5273 241.612 2.80023L241.61 4.6024L241.583 9.20481L241.53 18.4096L241.43 35.4344L241.381 43.9468L241.356 48.203L241.349 49.4291C241.345 50.0109 241.132 50.5732 240.749 51.0128L240.435 51.3726C239.982 51.8914 239.331 52.1946 238.645 52.2067L226.248 52.4253L211.165 52.3914L196.082 52.3574L180.999 52.3235L165.916 52.1877L150.833 52.2556L120.667 52.1877L60.3324 52.4593H45.2492L30.1676 52.1877L15.0828 52.4593L4.13866 51.8235C3.95658 51.8129 3.77377 51.823 3.59372 51.8535L2.83208 51.9826C1.35925 52.2323 0.0217473 51.1027 0.0231112 49.6104L0.0243974 48.203L0.0492326 43.9468L0.0989028 35.4344L0.198243 18.4096L0.251954 9.20481L0.278809 4.6024L0.286492 3.28566C0.290175 2.6545 0.540475 2.04836 0.983943 1.59666L1.54292 1.02732Z" fill="url(#paint0_linear_2470_24979)"/>
+                            <path d="M165.924 51.7041L165.917 51.7041L150.837 51.772H150.833L120.671 51.7041L120.667 51.7041L60.3352 51.9756L60.333 51.9756L45.2563 51.9756L30.1791 51.7042L30.1704 51.704L30.1617 51.7042L15.0953 51.9754L4.16952 51.3407C3.95103 51.328 3.73165 51.3401 3.51558 51.3767L2.75395 51.5058C1.57569 51.7055 0.505681 50.8019 0.506773 49.608L0.508051 48.203L0.508058 48.2019L0.532886 43.9468L0.582556 35.4344L0.681897 18.4096L0.735607 9.20481L0.762462 4.6024L0.770145 3.28566C0.773092 2.78073 0.973332 2.29582 1.32811 1.93446L1.88708 1.36512C2.24176 1.00385 2.7228 0.794706 3.22752 0.782314L15.392 0.483645H30.4693H45.5352L52.8844 1.00842C53.0219 1.01824 53.16 1.01824 53.2976 1.00842L60.6529 0.483645H120.969H181.301H196.367L203.717 1.00842C203.854 1.01824 203.992 1.01824 204.13 1.00842L211.485 0.483645H226.551H232.927L239.325 0.880875C240.341 0.943959 241.13 1.78419 241.128 2.80253L241.127 4.6024L241.127 4.6047L241.1 9.20481L241.046 18.4096L240.947 35.4344L240.897 43.9468L240.872 48.203L240.865 49.4291C240.862 49.8946 240.692 50.3444 240.385 50.6961L240.071 51.0558C239.709 51.4709 239.188 51.7135 238.639 51.7232L226.252 51.9417L226.247 51.9417L211.169 51.9077L196.086 51.8738L181.006 51.8399L181.003 51.8398L165.924 51.7041Z" stroke="#00142D" stroke-width="0.967307"/>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2470_24979" x="0.0234375" y="0" width="243.523" height="54.3941" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="1.93461" dy="1.93461"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2470_24979"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2470_24979" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_2470_24979" x1="-0.391235" y1="-0.142229" x2="195.414" y2="124.111" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C1ECFF"/>
+                                <stop offset="0.25" stop-color="#C1ECFF"/>
+                                <stop offset="0.381662" stop-color="white"/>
+                                <stop offset="0.608286" stop-color="#C2ECFF"/>
+                                <stop offset="1" stop-color="#C1ECFF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    {% for attribute in product.metafields.accentuate.attribute[0] %}
+                        <p>{{ attribute }}</p>
+                    {% endfor %}
+                    {% for attribute_value in product.metafields.accentuate.attribute_value[0] %}
+                        <p>{{ attribute_value }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {% if product.metafields.accentuate.attribute[1] %}
+                <div class="right-variant variant">
+                    <svg class="bg" xmlns="http://www.w3.org/2000/svg" width="244" height="55" viewBox="0 0 244 55" fill="none">
+                        <g filter="url(#filter0_d_2470_24979)">
+                            <path d="M1.54292 1.02732C1.98627 0.575741 2.58757 0.314305 3.21847 0.298815L15.3889 2.92739e-10H30.4721H45.5553L52.9217 0.526004C53.0362 0.534186 53.1513 0.534186 53.266 0.526004L60.6385 2.92739e-10H120.971H181.304H196.387L203.754 0.526004C203.868 0.534186 203.983 0.534186 204.098 0.526004L211.471 2.92739e-10H226.554H232.945L239.358 0.398159C240.628 0.477014 241.613 1.5273 241.612 2.80023L241.61 4.6024L241.583 9.20481L241.53 18.4096L241.43 35.4344L241.381 43.9468L241.356 48.203L241.349 49.4291C241.345 50.0109 241.132 50.5732 240.749 51.0128L240.435 51.3726C239.982 51.8914 239.331 52.1946 238.645 52.2067L226.248 52.4253L211.165 52.3914L196.082 52.3574L180.999 52.3235L165.916 52.1877L150.833 52.2556L120.667 52.1877L60.3324 52.4593H45.2492L30.1676 52.1877L15.0828 52.4593L4.13866 51.8235C3.95658 51.8129 3.77377 51.823 3.59372 51.8535L2.83208 51.9826C1.35925 52.2323 0.0217473 51.1027 0.0231112 49.6104L0.0243974 48.203L0.0492326 43.9468L0.0989028 35.4344L0.198243 18.4096L0.251954 9.20481L0.278809 4.6024L0.286492 3.28566C0.290175 2.6545 0.540475 2.04836 0.983943 1.59666L1.54292 1.02732Z" fill="url(#paint0_linear_2470_24979)"/>
+                            <path d="M165.924 51.7041L165.917 51.7041L150.837 51.772H150.833L120.671 51.7041L120.667 51.7041L60.3352 51.9756L60.333 51.9756L45.2563 51.9756L30.1791 51.7042L30.1704 51.704L30.1617 51.7042L15.0953 51.9754L4.16952 51.3407C3.95103 51.328 3.73165 51.3401 3.51558 51.3767L2.75395 51.5058C1.57569 51.7055 0.505681 50.8019 0.506773 49.608L0.508051 48.203L0.508058 48.2019L0.532886 43.9468L0.582556 35.4344L0.681897 18.4096L0.735607 9.20481L0.762462 4.6024L0.770145 3.28566C0.773092 2.78073 0.973332 2.29582 1.32811 1.93446L1.88708 1.36512C2.24176 1.00385 2.7228 0.794706 3.22752 0.782314L15.392 0.483645H30.4693H45.5352L52.8844 1.00842C53.0219 1.01824 53.16 1.01824 53.2976 1.00842L60.6529 0.483645H120.969H181.301H196.367L203.717 1.00842C203.854 1.01824 203.992 1.01824 204.13 1.00842L211.485 0.483645H226.551H232.927L239.325 0.880875C240.341 0.943959 241.13 1.78419 241.128 2.80253L241.127 4.6024L241.127 4.6047L241.1 9.20481L241.046 18.4096L240.947 35.4344L240.897 43.9468L240.872 48.203L240.865 49.4291C240.862 49.8946 240.692 50.3444 240.385 50.6961L240.071 51.0558C239.709 51.4709 239.188 51.7135 238.639 51.7232L226.252 51.9417L226.247 51.9417L211.169 51.9077L196.086 51.8738L181.006 51.8399L181.003 51.8398L165.924 51.7041Z" stroke="#00142D" stroke-width="0.967307"/>
+                        </g>
+                        <defs>
+                            <filter id="filter0_d_2470_24979" x="0.0234375" y="0" width="243.523" height="54.3941" filterUnits="userSpaceOnUse" color-interpolation-filters="sRGB">
+                                <feFlood flood-opacity="0" result="BackgroundImageFix"/>
+                                <feColorMatrix in="SourceAlpha" type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 127 0" result="hardAlpha"/>
+                                <feOffset dx="1.93461" dy="1.93461"/>
+                                <feComposite in2="hardAlpha" operator="out"/>
+                                <feColorMatrix type="matrix" values="0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0 0.25 0"/>
+                                <feBlend mode="normal" in2="BackgroundImageFix" result="effect1_dropShadow_2470_24979"/>
+                                <feBlend mode="normal" in="SourceGraphic" in2="effect1_dropShadow_2470_24979" result="shape"/>
+                            </filter>
+                            <linearGradient id="paint0_linear_2470_24979" x1="-0.391235" y1="-0.142229" x2="195.414" y2="124.111" gradientUnits="userSpaceOnUse">
+                                <stop stop-color="#C1ECFF"/>
+                                <stop offset="0.25" stop-color="#C1ECFF"/>
+                                <stop offset="0.381662" stop-color="white"/>
+                                <stop offset="0.608286" stop-color="#C2ECFF"/>
+                                <stop offset="1" stop-color="#C1ECFF"/>
+                            </linearGradient>
+                        </defs>
+                    </svg>
+                    {% for attribute in product.metafields.accentuate.attribute[1] %}
+                        <p>{{ attribute }}</p>
+                    {% endfor %}
+                    {% for attribute_value in product.metafields.accentuate.attribute_value[1] %}
+                        <p>{{ attribute_value }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
         </div>
         {% endif %}
 
         <div class="atc-wrapper" id="atc-wrapper">
             <div class="option-wrapper">
                 {% if product.has_only_default_variant == false  %}
-                    <div class="options">
+                    <div class="options rainbow-options">
                         {% for option in product.options_with_values %}
                             {% for value in option.values %}
-                                <button class="option{% if forloop.first %} active{% endif %}" data-value="{{ value }}"><span>{{ value }}</span></button>
+                                <button class="rainbow-option option{% if forloop.first %} active{% endif %}" data-value="{{ value }}"><span>{{ value }}</span></button>
                             {% endfor %}
                         {% endfor %}
                     </div>
                 {% endif %}
             </div>
-            {% if product.metafields.accentuate.walmart_link %}
+            {% if product.metafields.accentuate.store_locator %}
                 <div class="atc-form-walmart">
-                    <a href="{{ product.metafields.accentuate.walmart_link }}" target="_blank" class="pink-btn add-to-cart" type="button">
+                    <a href="/pages/store-locator" class="pink-btn add-to-cart" type="button" data-router-disabled>
                         <span class="in-stock">
-                            Buy Now
+                            Find Store
                             <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Vector.png?v=1691970255">
                         </span>
                     </a>

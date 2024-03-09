@@ -2,6 +2,7 @@ import { gsap } from "gsap";
 import {globalStorage} from "../_global/storage";
 
 export class MiniCart {
+
     constructor() {
         this.backdrop = document.getElementById("mini-cart-backdrop");
         this.trigger = globalStorage.isGreaterThan767 ? document.getElementById("mini-cart-trigger") : document.getElementById("mini-cart-trigger-mobile") ;

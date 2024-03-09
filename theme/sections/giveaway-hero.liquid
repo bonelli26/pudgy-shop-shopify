@@ -1,0 +1,69 @@
+<img class="preload-critical bg"{% if section.settings.hero_bg.alt %} alt="{{ section.settings.hero_bg.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_bg | image_url }}" data-preload-mobile="https:{{ section.settings.hero_bg_mobile | image_url }}">
+<div class="max-width hero-wrapper">
+    <div class="left">
+        <div class="tag">{{ section.settings.hero_tag }}</div>
+        <h1>{{ section.settings.header }}</h1>
+        <p>{{ section.settings.copy }}</p>
+        <div id="initial-state">
+            <form class="bind-form" data-id="RDD6jv">
+                <div class="form-content">
+                    <input class="password" type="text">
+                    <input required type="email" name="email" placeholder="Enter your Email" id="email">
+                    <button class="pink-btn" type="submit" value="Submit"><span>Submit</span></button>
+                </div>
+            </form>
+            <div class="available">{{ section.settings.available }}</div>
+        </div>
+        <div class="completed" id="completed-state">
+            <div>{{ section.settings.success_copy }}</div>
+        </div>
+    </div>
+</div>
+
+
+
+
+{% schema %}
+{
+  "name": "Giveaway Hero",
+  "tag": "section",
+  "class": "giveaway-hero mw",
+  "settings": [
+    {
+      "id": "hero_tag",
+      "type": "text",
+      "label": "Hero Tag"
+    },
+    {
+      "type": "text",
+      "id": "header",
+      "label": "Header"
+    },
+    {
+      "type": "text",
+      "id": "copy",
+      "label": "Copy"
+    },
+    {
+      "type": "richtext",
+      "id": "available",
+      "label": "Available"
+    },
+    {
+      "type": "text",
+      "id": "success_copy",
+      "label": "Success copy"
+    },
+    {
+      "id": "hero_bg",
+      "type": "image_picker",
+      "label": "Hero BG"
+    },
+    {
+      "id": "hero_bg_mobile",
+      "type": "image_picker",
+      "label": "Hero BG mobile"
+    }
+  ]
+}
+{% endschema %}

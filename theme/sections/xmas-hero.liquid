@@ -1,0 +1,72 @@
+<div class="max-width hero-wrapper">
+    <div class="center">
+        <div class="tag">{{ section.settings.hero_tag }}</div>
+        <h1>{{ section.settings.hero_header }}</h1>
+        <p class="intro">{{ section.settings.hero_intro }}</p>
+        <a class="pink-btn prefetch-us" href="{{ section.settings.hero_button_url }}"><span>{{ section.settings.hero_button_copy }}</span></a>
+        <div class="disclaimer">{{ section.settings.hero_disclaimer }}</div>
+    </div>
+</div>
+<img class="preload-critical bg"{% if section.settings.hero_bg.alt %} alt="{{ section.settings.hero_bg.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_bg | image_url }}" data-preload-mobile="https:{{ section.settings.hero_bg_mobile | image_url }}">
+<img class="preload-critical bg"{% if section.settings.hero_pengu.alt %} alt="{{ section.settings.hero_pengu.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_pengu | image_url }}" data-preload-mobile="https:{{ section.settings.hero_mobile_pengu | image_url }}">
+
+
+{% schema %}
+{
+  "name": "XMAS Hero",
+  "tag": "section",
+  "class": "xmas-hero mw",
+  "settings": [
+    {
+      "id": "hero_tag",
+      "type": "text",
+      "label": "Hero Tag"
+    },
+    {
+      "id": "hero_header",
+      "type": "richtext",
+      "label": "Hero Header"
+    },
+    {
+      "id": "hero_intro",
+      "type": "text",
+      "label": "Hero Intro"
+    },
+    {
+      "id": "hero_button_copy",
+      "type": "text",
+      "label": "Hero Button Copy"
+    },
+    {
+      "id": "hero_button_url",
+      "type": "text",
+      "label": "Hero Button URL"
+    },
+    {
+      "id": "hero_disclaimer",
+      "type": "richtext",
+      "label": "Hero Disclaimer"
+    },
+    {
+      "id": "hero_bg",
+      "type": "image_picker",
+      "label": "Hero BG"
+    },
+    {
+      "id": "hero_bg_mobile",
+      "type": "image_picker",
+      "label": "Hero BG mobile"
+    },
+    {
+      "id": "hero_pengu",
+      "type": "image_picker",
+      "label": "Hero Pengu"
+    },
+    {
+      "id": "hero_mobile_pengu",
+      "type": "image_picker",
+      "label": "Hero Mobile Pengu"
+    }
+  ]
+}
+{% endschema %}

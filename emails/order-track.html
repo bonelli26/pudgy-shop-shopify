@@ -1,0 +1,107 @@
+<div  style="font-size:0;padding-bottom:20px;padding-top:10px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%">
+        <tbody>
+        <tr>
+            <td>
+                <div style="margin:0px auto;max-width:600px">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                <span>
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-deliver-1.png?v=1696874253" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                {% if fulfillment.tracking_numbers.size == 1 %}
+                                    <a href="{{ fulfillment.tracking_url }}">
+                                        <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-deliver-2.png?v=1696874253" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                    </a>
+                                {% else %}
+                                    {% for tracking_number in fulfillment.tracking_numbers %}
+                                        <a href="{{ fulfillment.tracking_urls[forloop.index0] }}">
+                                            <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-deliver-2.png?v=1696874253" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                        </a>
+                                    {% endfor %}
+                                {% endif %}
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="mailto:{{ shop.email }}" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-deliver-3.png?v=1696874253" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <span>
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/footer-1.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody style="display: flex; padding: 0 130px; justify-content: center">
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.youtube.com/@pudgypenguinsofficial" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/youtube_11e08b34-fc0f-478f-ba75-b934d1fd17f7.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.tiktok.com/@pudgypenguins?lang=en" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/tiktok_2a5adcda-dbf7-4e1d-bd43-6f2dbbbe587d.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.instagram.com/pudgypenguins/" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/instagram_5399825e-f8c3-42fc-b40a-9f636688abc4.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://twitter.com/pudgypenguins" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/x.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 32px 0px 32px" valign="top">
+                                <span>
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/footer-2.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>

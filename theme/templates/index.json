@@ -14,12 +14,12 @@
     "block-trio": {
       "type": "block-trio",
       "settings": {
-        "eyebrow_1": "Members",
+        "eyebrow_1": "huddle Members",
         "copy_1": "10k+",
-        "eyebrow_2": "Toys Sold",
-        "copy_2": "100k+",
-        "eyebrow_3": "Giphy Views",
-        "copy_3": "5B+"
+        "eyebrow_2": "toys sold",
+        "copy_2": "1m+",
+        "eyebrow_3": "traits unlocked",
+        "copy_3": "400k"
       }
     },
     "best-sellers": {
@@ -60,7 +60,7 @@
         "9110167c-e0ed-4035-88e1-a08bafa83ca2": {
           "type": "product-card",
           "settings": {
-            "product": "pudgy-penguins™-positive-penguin-grey-purple"
+            "product": "pins-pack-of-6"
           }
         },
         "aa2c735d-077c-42fe-847d-e9d88e12084f": {

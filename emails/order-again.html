@@ -1,0 +1,129 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            background: #eee;
+            font-family: 'Helvetica Neue', Helvetica, Arial, san-serif;
+        }
+        #outer {
+            width: 95%;
+            min-width: 320px;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #f9f9f9;
+            position: relative;
+        }
+        #inner {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        p {
+            margin: 0 0 9px;
+        }
+        img + div {
+            display: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div  style="font-size:0;padding-bottom:20px;padding-top:10px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%">
+        <tbody>
+        <tr>
+            <td>
+                <div style="margin:0px auto;max-width:600px">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                <span>
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-again-1.png?v=1696462655" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 15px 0px 15px" valign="top">
+                                <h3 style="padding-bottom: 20px; text-align:left; line-height: 1.10;font-size: 24px;color: #000;font-family:sans-serif;font-weight:600;margin: 0; max-width: 100% !important; width: 100% !important;">Order Summary</h3>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 15px 0px 15px" valign="top">
+                                <table class="row" style="width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                    {% for line in event.extra.line_items %}
+                                    <tr class="order-list__item" style="border-top: none;width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                        <td class="order-list__item__cell" style="position: relative; padding: 24px 0;width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                            <table style="border-spacing: 0;border-collapse: collapse; width: 100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td height="60" width="60">
+                                                        <img align="left" class="order-list__product-image" height="150" src="{{ line.product.images.0.src }}" style="border-radius: 5px; border: 1px solid #000" width="150"/>
+                                                    </td>
+                                                    <td class="order-list__product-description-cell" style="color: #000; vertical-align: baseline; padding-left: 5px">
+                                                        {% if line.product.title != 'Default Title' %}
+                                                        <span class="order-list__item-variant" style=" color: #000;line-height: 150%;font-size: 20px;font-weight: 600; font-family:sans-serif">{{ line.product.title }}</span>
+                                                        {% endif %}
+                                                    </td>
+                                                    <td class="order-list__price-cell" style="text-align: right; vertical-align: baseline; width: 70px">
+                                                        <p class="order-list__item-price" style="color: #000;line-height: 150%;font-size: 22px;font-weight: 600;margin: 0 0 0 15px; font-family:sans-serif">
+                                                            {% if line.line_price &gt; 0 %}
+                                                            ${{ line.line_price }}
+                                                            {% else %}
+                                                            Free
+                                                            {% endif %}
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:48px 0px 0px 0px" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="https://shop.pudgypenguins.com/collections/penguins-toys" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-again-2.png?v=1696462655" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+        <tbody>
+        <tr>
+            <td style="border:0;padding:0px 32px 0px 32px" valign="top">
+                <a href="{% unsubscribe_link %}">
+                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Property_1_Alt_Solid_BG.png?v=1697131826" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px;" width="600"/>
+                </a>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+
+

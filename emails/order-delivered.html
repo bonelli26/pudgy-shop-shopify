@@ -1,0 +1,80 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            background: #eee;
+            font-family: 'Helvetica Neue', Helvetica, Arial, san-serif;
+        }
+        #outer {
+            width: 95%;
+            min-width: 320px;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #f9f9f9;
+            position: relative;
+        }
+        #inner {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        p {
+            margin: 0 0 9px;
+        }
+        img + div {
+            display: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div style="font-size:0;padding-bottom:20px;padding-top:10px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%">
+        <tbody>
+        <tr>
+            <td>
+                <div style="margin:0px auto;max-width:600px">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                <span>
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-delivered-1.png?v=1696875144" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </span>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="mailto:{{ shop.email }}" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/order-delivered-2.png?v=1696875143" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 32px 0px 32px" valign="top">
+                                <a href="{% unsubscribe_link %}">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Property_1_Alt_Solid_BG.png?v=1697131826" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px;" width="600"/>
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>
+

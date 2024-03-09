@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html>
+<head>
+    <title></title>
+    <style type="text/css">
+        body {
+            background: #eee;
+            font-family: 'Helvetica Neue', Helvetica, Arial, san-serif;
+        }
+        #outer {
+            width: 95%;
+            min-width: 320px;
+            max-width: 600px;
+            margin: 20px auto;
+            background: #f9f9f9;
+            position: relative;
+        }
+        #inner {
+            padding: 20px;
+            font-size: 14px;
+            line-height: 19px;
+        }
+        p {
+            margin: 0 0 9px;
+        }
+        img + div {
+            display: none;
+            pointer-events: none;
+        }
+    </style>
+</head>
+<body>
+<div  style="font-size:0;padding-bottom:20px;padding-top:10px">
+    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%">
+        <tbody>
+        <tr>
+            <td>
+                <div style="margin:0px auto;max-width:600px">
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-1.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px;pointer-events: none;" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="{{ event.extra.responsive_checkout_url }}&discount=CODEPENGU1" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-2.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 0px 0px 0px" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-3.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 15px 0px 15px" valign="top">
+                                <table class="row" style="width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                    {% for line in event.extra.line_items %}
+                                    <tr class="order-list__item" style="border-top: none;width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                        <td class="order-list__item__cell" style="position: relative; padding: 24px 0;width: 100% !important; max-width: 100% !important; margin: 0 !important;">
+                                            <table style="border-spacing: 0;border-collapse: collapse; width: 100%">
+                                                <tbody>
+                                                <tr>
+                                                    <td width="60" height="60">
+                                                        <a href="#">
+                                                            <img src="{{ line.product.images.0.src }}" align="left" width="150" height="150" class="order-list__product-image" style="border-radius: 5px; border: 1px solid #000"/>
+                                                        </a>
+                                                    </td>
+                                                    <td class="order-list__product-description-cell" style="color: #000; vertical-align: baseline; padding-left: 5px">
+                                                        {% if line.product.title != 'Default Title' %}
+                                                        <span class="order-list__item-variant" style=" color: #000;line-height: 150%;font-size: 20px;font-weight: 600; font-family:sans-serif">{{ line.product.title }}</span>
+                                                        {% endif %}
+                                                    </td>
+                                                    <td class="order-list__price-cell" style="text-align: right; vertical-align: baseline; width: 70px">
+                                                        <p class="order-list__item-price" style="color: #000;line-height: 150%;font-size: 22px;font-weight: 600;margin: 0 0 0 15px; font-family:sans-serif">
+                                                            {% if line.line_price > 0 %}
+                                                            ${{ line.line_price }}
+                                                            {% else %}
+                                                            Free
+                                                            {% endif %}
+                                                        </p>
+                                                    </td>
+                                                </tr>
+                                                </tbody>
+                                            </table>
+                                        </td>
+                                    </tr>
+                                    {% endfor %}
+                                </table>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:48px 0px 0px 0px" valign="top">
+                                <a style="color:#15c;font-style:normal;font-weight:normal;text-decoration:underline" href="{{ event.extra.responsive_checkout_url }}&discount=CODEPENGU1" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/review-abandonment-4.png?v=1696877265" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/footer-1.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody style="display: flex; padding: 0 130px; justify-content: center">
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.youtube.com/@pudgypenguinsofficial" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/youtube_11e08b34-fc0f-478f-ba75-b934d1fd17f7.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.tiktok.com/@pudgypenguins?lang=en" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/tiktok_2a5adcda-dbf7-4e1d-bd43-6f2dbbbe587d.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://www.instagram.com/pudgypenguins/" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/instagram_5399825e-f8c3-42fc-b40a-9f636688abc4.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td style="border:0" valign="top">
+                                <a style="width: 100%;height: 100%; display: flex;" href="https://twitter.com/pudgypenguins" target="_blank">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/x.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 32px 0px 32px" valign="top">
+                                <a href="#">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/footer-2.png?v=1696874307" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px" width="600">
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                    <table align="center" border="0" cellpadding="0" cellspacing="0" role="presentation" style="width:100%; background: #BDE5FF">
+                        <tbody>
+                        <tr>
+                            <td style="border:0;padding:0px 32px 0px 32px" valign="top">
+                                <a href="{% unsubscribe_link %}">
+                                    <img src="https://cdn.shopify.com/s/files/1/0649/5646/5395/files/Property_1_Alt_Solid_BG.png?v=1697131826" style="border:0;height:auto;line-height:100%;max-width:100%;outline:none;text-decoration:none;display:block;width:100%;font-size:13px;" width="600"/>
+                                </a>
+                            </td>
+                        </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </td>
+        </tr>
+        </tbody>
+    </table>
+</div>
+</body>
+</html>

@@ -13,39 +13,71 @@ export const pageEntrance = (namespace = null)=> {
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
 
+
 	if(globalStorage.namespace === "get-notified") {
 		gsap.set(domStorage.header, { display: "none" });
+		globalStorage.pencilMarqueeDark.tween.pause();
+		globalStorage.pencilMarquee.tween.pause();
+		globalStorage.pencilMarqueeRainbowText.tween.pause();
+	} else if (globalStorage.namespace === "giveaway") {
+		domStorage.nav.classList.remove("xmas");
+		domStorage.nav.classList.add("giveaway");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "flex" });
+		globalStorage.pencilMarqueeDark.tween.play();
+		globalStorage.pencilMarquee.tween.pause();
+		globalStorage.pencilMarqueeRainbowText.tween.pause();
+	} else if (globalStorage.namespace === "xmas-lp") {
+		domStorage.nav.classList.remove("giveaway");
+		domStorage.nav.classList.add("xmas");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "flex" });
+		globalStorage.pencilMarqueeRainbowText.tween.play();
+		globalStorage.pencilMarqueeDark.tween.pause();
+		globalStorage.pencilMarquee.tween.pause();
 	} else {
-		gsap.set(domStorage.header, { display: "block" });
+		domStorage.nav.classList.remove("giveaway");
+		domStorage.nav.classList.remove("xmas-lp");
+		globalStorage.pencilMarqueeDark.tween.pause();
+		globalStorage.pencilMarqueeRainbowText.tween.pause();
+		globalStorage.pencilMarquee.tween.play();
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "flex" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
 	}
 
 
 	/* ----- Setup cases for specific load-ins ----- */
 	switch(namespace){
 		/* ----- Our default page entrance ----- */
-
 		default:
 			break;
 
 	}
+
 	timeline.to(domStorage.globalMask, { duration: 0.3, autoAlpha: 0, force3D: true, ease: "sine.inOut", onComplete: () => {
-			if(globalStorage.firstLoad){
-				globalStorage.firstLoad = false
-				gsap.set(domStorage.header, { zIndex: 98 })
-			}
-		} })
+			gsap.set(domStorage.header, { zIndex: 90 });
+		} });
 
 	gsap.set(domStorage.clickMask, { pointerEvents: "none" });
 
 	timeline.play();
 
+	if (globalStorage.firstLoad) {
+		globalStorage.firstLoad = false
+	}
 };
 
 /*
 	Global element animations
 -------------------------------------------------- */
 export let $slideShow;
-export const globalEntrance = (namespace)=>{
+export const globalEntrance = (namespace = null)=>{
 
 	if(globalStorage.firstLoad !== true){
 		return;
@@ -55,24 +87,57 @@ export const globalEntrance = (namespace)=>{
 	/* ----- Establish our timeline ----- */
 	let timeline = new gsap.timeline({ paused: true });
 
-	const img = domStorage.globalMask.querySelector("img")
-	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile
+	if(globalStorage.namespace === "get-notified") {
+		gsap.set(domStorage.header, { display: "none" });
+	} else if (globalStorage.namespace === "giveaway") {
+		domStorage.nav.classList.remove("xmas");
+		domStorage.nav.classList.add("giveaway");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "flex" });
+	} else if (globalStorage.namespace === "xmas-lp") {
+		domStorage.nav.classList.remove("giveaway");
+		domStorage.nav.classList.add("xmas");
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "flex" });
+	}
+	else {
+		domStorage.nav.classList.remove("giveaway");
+		domStorage.nav.classList.remove("xmas");
+		gsap.to(domStorage.header, { display: "block" });
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "flex" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
+	}
+
+	const img = domStorage.globalMask.querySelector("img");
+	const url = globalStorage.isGreaterThan767 ? domStorage.globalMask.dataset.url : domStorage.globalMask.dataset.urlMobile;
 
 	img.addEventListener("load", () => {
-		globalStorage.pencilMarquee.tween.play()
-		gsap.set(img, { opacity: 1 })
+		if (namespace === "giveaway") {
+			globalStorage.pencilMarqueeDark.tween.play();
+		} else if (namespace === "xmas-lp") {
+			globalStorage.pencilMarqueeRainbowText.tween.play();
+		} else {
+			globalStorage.pencilMarquee.tween.play();
+		}
+		gsap.set(img, { opacity: 1 });
 		timeline
 			.to(domStorage.header,  { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
 					gsap.delayedCall(.1, () => {
 						globalStorage.transitionFinished = true;
-					})
-				} }, 0.2)
-	})
+					});
+				} }, 0.2);
+	});
 
-	img.src = url
+	img.src = url;
 
 	timeline.play();
-}
+
+};
 
 export const prepDrawers = () => {
 	const drawers = document.querySelectorAll(".drawer:not(.bound)")
@@ -94,8 +159,14 @@ export const prepDrawers = () => {
 			let label = thisDrawer.querySelector(".current-label");
 			childrenItems.forEach((item) => {
 				item.addEventListener("click", () => {
-					label.textContent = item.textContent;
+					label.innerHTML = item.innerHTML;
 				});
+			});
+		}
+
+		if (thisDrawer.classList.contains("allow-click")) {
+			childrenWrapper.addEventListener("click", (event) => {
+				event.stopPropagation();
 			});
 		}
 
@@ -167,7 +238,7 @@ export const prepDrawers = () => {
 export class Marquees {
 
 	constructor(pencilMarquee = false) {
-		this.pencilMarquee = pencilMarquee
+		this.pencilMarquee = pencilMarquee;
 		if (pencilMarquee) {
 			this.marquees = document.querySelectorAll('.pencil-bar');
 		} else {
@@ -217,11 +288,25 @@ export class Marquees {
 
 			} else {
 				if (this.pencilMarquee) {
-					globalStorage.pencilMarquee = {
-						el: this.marquees[i],
-						tween: tween,
-						playing: false
-					};
+					if (i === 0) {
+						globalStorage.pencilMarqueeDark = {
+							el: this.marquees[i],
+							tween: tween,
+							playing: false
+						};
+					} else if (i === 1) {
+						globalStorage.pencilMarquee = {
+							el: this.marquees[i],
+							tween: tween,
+							playing: false
+						};
+					} else if (i === 2) {
+						globalStorage.pencilMarqueeRainbowText = {
+							el: this.marquees[i],
+							tween: tween,
+							playing: false
+						};
+					}
 				} else {
 					globalStorage.marqueeData.push({
 						el: this.marquees[i],
@@ -489,7 +574,6 @@ export const prepModals = (modalTrigger) => {
 
 };
 
-
 export const prepTabs = () => {
 	let tabWrappers = globalStorage.isGreaterThan767 ? document.querySelectorAll(".tab-set") : document.querySelectorAll(".tab-set:not(.formula-tab)");
 	for (let i = 0; i < tabWrappers.length; i++) {
@@ -523,8 +607,6 @@ export const prepTabs = () => {
 		}
 	}
 };
-
-
 
 export const newTabs = () => {
 	let tabWrappers = document.querySelectorAll(".new-tabs");

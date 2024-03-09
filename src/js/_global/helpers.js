@@ -349,7 +349,6 @@ export const bindGorgiasForms = () => {
 
 export const bindKlaviyoForms = () => {
 	const forms = document.querySelectorAll(".bind-form:not(.bound)");
-	console.log('hello');
 	for (let i = 0; i < forms.length; i++) {
 		let form = forms[i];
 		let showingError = false
@@ -365,7 +364,7 @@ export const bindKlaviyoForms = () => {
 			const email = emailField.value;
 
 			submittedOnce = true;
-			gsap.to(initialState, { autoAlpha: 0, duration: 0.3, ease: "sine.inOut", pointerEvents: "none", onComplete: () => {
+			gsap.to(initialState, { autoAlpha: 0, height: 0, duration: 0.3, ease: "sine.inOut", pointerEvents: "none", onComplete: () => {
 					gsap.delayedCall(0.3, () => {
 						gsap.to(completedState, { autoAlpha: 1, duration: 0.3, ease: "sine.inOut", pointerEvents: "all" });
 					})

@@ -1,0 +1,52 @@
+<div class="max-width">
+    <div class="body">
+        <h2>{{ section.settings.header }}</h2>
+        <p class="copy">{{ section.settings.copy }}</p>
+        <div class="richtext">
+            {% for block in section.blocks %}
+                <div class="text-block">
+                    <div class="header">{{ block.settings.title }}</div>
+                    <div class="text">{{ block.settings.copy }}</div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+{% schema %}
+{
+  "name": "Giveaway Richtext",
+  "tag": "section",
+  "class": "giveaway-richtext",
+  "settings": [
+    {
+      "id": "header",
+      "type": "text",
+      "label": "Header"
+    },
+    {
+      "id": "copy",
+      "type": "text",
+      "label": "Copy"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Rich Text",
+      "type": "richtext",
+      "settings": [
+        {
+          "id": "title",
+          "type": "text",
+          "label": "Title"
+        },
+        {
+          "id": "copy",
+          "type": "richtext",
+          "label": "Copy"
+        }
+      ]
+    }
+  ]
+}
+{% endschema %}

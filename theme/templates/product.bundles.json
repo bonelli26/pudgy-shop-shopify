@@ -1,7 +1,7 @@
 {
   "sections": {
-    "pdp-hero-options": {
-      "type": "pdp-hero-options",
+    "pdp-hero-bundle": {
+      "type": "pdp-hero-bundle",
       "settings": {
         "variant_ice_block": "shopify:\/\/shop_images\/pdp-ice-block-1.png"
       }
@@ -18,22 +18,22 @@
         "6e34ebcf-921c-44ab-a430-d733f75c3213": {
           "type": "faq-block",
           "settings": {
-            "question": "SHIPPING POLICY",
-            "answer": "<p>Domestic delivery times for collectibles typically take 5-10 business days or longer after processing. International delivery times can take up to 21 business days or longer depending on location. International orders may be subject to customs delays and duty fees, which we have no control over.<\/p><p>For more information about shipping, <a href=\"https:\/\/shop.pudgypenguins.com\/policies\/shipping-policy\" title=\"Shipping Policy\">please visit here<\/a>. Please allow additional time for custom items and collectibles.<\/p>"
+            "question": "How long is your shipping?",
+            "answer": "<p>Domestic delivery times typically take 5-10 business days or longer depending on location. If after 10 days your package still has yet to arrive, please email us at <strong>support@pudgypenguins.io<\/strong>.International delivery times typically take 7-21 business days or longer depending on location. If after 21 days your package still has yet to arrive, please email us at <strong>support@pudgypenguins.io<\/strong> with your order number and details.International orders may be subject to customs delays\/fees, which we have no control over.<\/p>"
           }
         },
         "8f6c4641-607f-46a6-9ea4-5da24095eb0d": {
           "type": "faq-block",
           "settings": {
-            "question": "RETURNS & EXCHANGES",
-            "answer": "<p>If you are not 100% satisfied with your purchase from Pudgy Penguins, you can return your qualifying item(s) for a full refund within 30 days of delivery. Returns must be unopened with the original tags attached (including the security tag, if applicable) and with the original packaging; returned merchandise that does not satisfy these requirements may not qualify for a refund. <\/p><p>With limited collection drops, all sales are final. We have no control over items and packaging that are damaged in transit. Please file a claim with the courier associated with the tracking. To initiate a return, please contact us at <strong>support@pudgypenguins.io. <\/strong>For our returns and exchanges policy, you can find it <a href=\"\/policies\/refund-policy\" title=\"Refund Policy\">here<\/a>. <\/p>"
+            "question": "Can I exchange my order after purchase?",
+            "answer": "<p>You must return the original item in its original condition and original packaging within fourteen (14) days of the date of your exchange using the return label provided to you. You will receive any refund owed to you once we receive the returned original item. If the original item is not received within fourteen (14) days, we will charge your original payment method or default payment method (if original method is unavailable) for the cost of the original item (less any refund owed to you if the replacement item costs less).<\/p>"
           }
         },
         "9b2100a5-3768-4d5d-b5ee-c0b10223d4ad": {
           "type": "faq-block",
           "settings": {
-            "question": "What happens when a collectible is sold out?",
-            "answer": "<p>If an item is listed as sold out, it is unavailable for purchase. Please email us at support@pudgypenguins.io for more information.<\/p>"
+            "question": "What is your return policy?",
+            "answer": "<p>If you are not 100% satisfied with your purchase from Pudgy Penguins, you can return your qualifying item(s) for a full refund within 30 days of purchase. Returns must be unworn with the original tags attached (including the security tag, if applicable) and with the original packaging; returned merchandise that does not satisfy these requirements may not qualify for a refund. You will also need to have proof of purchase. <\/p>"
           }
         }
       },
@@ -93,7 +93,7 @@
     }
   },
   "order": [
-    "pdp-hero-options",
+    "pdp-hero-bundle",
     "about-section",
     "faq-section",
     "pdp-recirc",

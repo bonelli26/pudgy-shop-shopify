@@ -177,7 +177,7 @@
   .type {
     color: #00142D;
     font-family: $mencoBold;
-font-weight: 700;
+    font-weight: 700;
     font-size: 16px;
     line-height: 1;
     text-transform: uppercase;
@@ -191,6 +191,13 @@ font-weight: 700;
     letter-spacing: -0.64px;
     text-transform: uppercase;
     margin-bottom: 5px;
+  }
+  .variant {
+    padding-bottom: 8px;
+    padding-left: 4px;
+    color: #000;
+    font-family: $mencoMedium;
+    font-size: 17px;
   }
   .price-wrapper {
     display: flex;
@@ -235,6 +242,24 @@ font-weight: 700;
     font-size: 18px;
     line-height: 1.45;
     text-transform: uppercase;
+  }
+  .pudgy-number {
+    display: flex;
+    align-items: center;
+    @include get-vw(padding-bottom, 10px, 10px);
+    @include get-vw(padding-left, 4px, 4px);
+    p:first-of-type {
+      color: #00142D;
+      font-family: $mencoBold;
+      @include get-vw(font-size, 16px, 16px);
+      line-height: 1.45;
+      text-transform: uppercase;
+    }
+    p:last-of-type {
+      color: #000;
+      font-family: $mencoMedium;
+      @include get-vw(font-size, 17px, 17px);
+    }
   }
   .increment {
     color: #00142D;

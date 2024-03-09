@@ -5,6 +5,7 @@ import { gsap } from "gsap";
 export class AddToCart {
 
 	constructor(){
+		this.pdp = document.querySelectorAll(".pdp-hero");
 		this.forms = document.querySelectorAll(".atc-form:not(.bound)");
 		this.shippingMeterBar = document.getElementById("shipping-meter-bar")
 		this.shippingNoteOne = document.getElementById("shipping-note-one")
@@ -82,42 +83,28 @@ export class AddToCart {
 		let options = pdpHero.querySelectorAll(".option");
 		const priceEls = pdpHero.querySelectorAll(".price");
 		const comparePriceEl = pdpHero.querySelector(".compare-at-price");
-		const imgEls = pdpHero.querySelectorAll(".primary-image, .primary-thumbnail");
-		const imgTab = pdpHero.querySelectorAll(".img-tab img");
 		const allOptionsArr = [];
 
 		for (let i = 0; i < options.length; i++) {
 			let option = options[i];
-
 			option.addEventListener("click", () => {
 				if (option.classList.contains("active")) { return; }
-
 				const optionArr = [];
-
-				// let img = imgTab[i];
-				// if (img) {
-				// 	if (img.classList.contains("active")) { return; }
-				//
-				// 	img.parentElement.querySelector(".active").classList.remove("active");
-				// 	img.classList.add("active");
-				// }
 
 				option.parentElement.querySelector(".active").classList.remove("active");
 				option.classList.add("active");
 
-				const activeOptions = pdpHero.querySelectorAll(".option.active");
+				const activeOptions = document.querySelectorAll(".pdp-hero.options .option.active");
 
 				for (let j = 0; j < activeOptions.length; j++) {
 					optionArr.push(activeOptions[j].dataset.value);
 				}
-
-
 				let currentVariant = false;
 
 				for (let j = 0; j < varData.length; j++) {
 					let matches = 0;
 					for (let z = 0; z < optionArr.length; z++) {
-						if (varData[j].title === optionArr[z]) {
+						if (varData[j].title.includes(optionArr[z])) {
 							matches++;
 						} else {
 							break;
@@ -128,7 +115,6 @@ export class AddToCart {
 						break;
 					}
 				}
-
 				if (currentVariant) {
 					priceEls.forEach((priceEl, i) => {
 						priceEl.textContent = parseFloat(currentVariant.price.toString().slice(0, -2)).toLocaleString('en-US', { style: 'currency', currency: 'USD' });
@@ -147,23 +133,32 @@ export class AddToCart {
 						addToCartBtn.classList.add("disabled");
 					}
 				}
-			});
 
+			});
 			allOptionsArr.push(options[i].dataset.value);
 		}
-
 		if (varData[0].available === "false") {
 			for (let j = 1; j < varData.length; j++) {
 				if (varData[j].available === "true") {
 					const winningOptions = varData[j].title.split(" / ");
 					for (let z = 0; z < winningOptions.length; z++) {
 						const thisOption = document.querySelector('.option[data-value="'+winningOptions[z]+'"]');
-						thisOption.click()
+						thisOption.click();
 					}
 					break;
 				}
 			}
 		}
+
+		const isLilPudgy = document.querySelector(".lil-pudgy-check .check");
+
+		isLilPudgy.addEventListener("click" , () => {
+			if (isLilPudgy.classList.contains("active")) {
+				isLilPudgy.classList.remove("active");
+			} else {
+				isLilPudgy.classList.add("active");
+			}
+		});
 	}
 
 	/*
@@ -172,20 +167,45 @@ export class AddToCart {
 	 */
 	addToCart(form){
 		let varID = form.querySelector(".add-to-cart").dataset.id;
+		const pdpHero = document.querySelector(".pdp-hero");
+		const count = form.querySelector(".count");
 
-		const count = form.querySelector(".count")
-		let quantity
+		let quantity;
 		if (count) {
-			quantity = Number(count.textContent)
+			quantity = Number(count.textContent);
 		} else {
-			quantity = 1
+			quantity = 1;
 		}
+
 		let formData = {
 			'items': [{
 				'id': varID,
 				'quantity': quantity
 			}]
 		};
+
+
+		if(pdpHero.classList.contains('options')) {
+			const pudgyNumberText = document.querySelector(".textly-form input").value;
+			const isLilPudgy = document.querySelector(".lil-pudgy-check .check");
+
+			if (pudgyNumberText !== '') {
+				formData.items[0].properties = {
+					['Pudgy Number']: pudgyNumberText
+				};
+			}
+
+			if (isLilPudgy.classList.contains('active')) {
+				formData.items[0].properties = {
+					['Lil Pudgy']: true,
+					['Pudgy Number']: pudgyNumberText
+				};
+			}
+		}
+
+		console.log(formData);
+
+
 
 		fetch(window.Shopify.routes.root + 'cart/add.js', {
 			method: 'POST',
@@ -308,6 +328,7 @@ export class AddToCart {
 		let html = ``;
 		for (let i = 0; i < items.length; i++) {
 			let item = items[i];
+			console.log(item.properties);
 			/* --- Product --- */
 			html += `
 				<article class="line-item product-tile" data-id="${item.variant_id}" data-key="${item.key}" data-quantity="${item.quantity}">
@@ -317,8 +338,24 @@ export class AddToCart {
 					<div class="product-info">
 						<div class="left">
 							<div class="line-item-subtitle type">${item.product_type}</div>
-							<h1 class="name">${item.product_title}</h1>
-							<div class="increment-wrapper quantity">
+							<h1 class="name">${item.product_title}</h1>`;
+							if (item.variant_title) {
+								html += `<p class="variant">${item.variant_title}</p>`;
+							}
+							if (item.properties['Lil Pudgy'] && item.properties['Pudgy Number']) {
+								html += `
+								<div class="pudgy-number">
+									<p>Lil Pudgy #</p>
+									<p>${item.properties['Pudgy Number']}</p>
+								</div>`;
+							} else if (item.properties['Pudgy Number']) {
+								html += `
+								<div class="pudgy-number">
+									<p>Pudgy #</p> 
+									<p>${item.properties['Pudgy Number']}</p>
+								</div>`;
+							}
+						html += `<div class="increment-wrapper quantity">
 									<button name="decrease item quantity" aria-label="decrease item quantity" type="button" class="increment decrease" data-type="minus">-</button>
 										<span class="count">${item.quantity}</span>
 									<button name="increase item quantity" aria-label="increase item quantity" type="button" class="increment increase" data-type="plus">+</button>

@@ -17,6 +17,10 @@ class ProductsRenderer extends Highway.Renderer{
 
 	onEnterCompleted(){
 
+		window.gtag('event', 'conversion', {
+			'send_to': 'AW-10947310670/HOZjCMCvx-cYEM7oiuQo'
+		});
+
 		// let reviewsSection = document.querySelector(".junip-product-review");
 		// let reviewsScrollTrigger = document.querySelector(".review-overview");
 		// reviewsScrollTrigger.addEventListener("click", () => {
@@ -73,6 +77,7 @@ class ProductsRenderer extends Highway.Renderer{
 		// 		el.addEventListener('focus', window.SkioLoadJS, { capture: true });
 		// 	});
 		// }
+
 	}
 
 	onLeave(){

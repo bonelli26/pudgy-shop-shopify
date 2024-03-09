@@ -1,0 +1,144 @@
+{
+  "sections": {
+    "xmas-hero": {
+      "type": "xmas-hero",
+      "settings": {
+        "hero_tag": "A VERY PUDGY XMAS",
+        "hero_header": "<p><strong>#PudgyChristmas <\/strong><\/p><p>Donation Challenge<\/p>",
+        "hero_intro": "Our goal is to give away 35,000 toys this Christmas",
+        "hero_button_copy": "Learn More",
+        "hero_button_url": "\/",
+        "hero_disclaimer": "<p>Campaign Period: <strong>November 15th<\/strong> to <strong>December 9th<\/strong><\/p>",
+        "hero_bg": "shopify:\/\/shop_images\/xmas-heroBG.jpg",
+        "hero_bg_mobile": "shopify:\/\/shop_images\/xmas-hero-mb.jpg",
+        "hero_pengu": "shopify:\/\/shop_images\/hero-pengu_a3a1183f-0286-4bf8-8f4b-309e6d900481.gif",
+        "hero_mobile_pengu": "shopify:\/\/shop_images\/hero-pengu_a3a1183f-0286-4bf8-8f4b-309e6d900481.gif"
+      }
+    },
+    "xmas-intro": {
+      "type": "xmas-intro",
+      "settings": {
+        "header": "Our Commitment: A Toy Under Every Tree 🎄",
+        "copy": "Because every child deserves a smile and a toy underneath their tree.",
+        "pengu": "shopify:\/\/shop_images\/pengu-gif.gif"
+      }
+    },
+    "xmas-richtext": {
+      "type": "xmas-richtext",
+      "blocks": {
+        "de1dcf5b-c48e-456d-b833-1faa6239d400": {
+          "type": "richtext",
+          "settings": {
+            "title": "The Campaign:",
+            "copy": "<p>We are excited to unveil the <em>#PudgyChristmas<\/em> Donation Challenge.<br\/>This year, we aim to donate <strong>10,000 Pudgy toys<\/strong> to charitable organizations, helping to ensure that thousands of children will get to experience the excitement of finding a gift just for them.<\/p>"
+          }
+        },
+        "2fb958db-b12b-4f88-b054-098afa25e7ce": {
+          "type": "richtext",
+          "settings": {
+            "title": "Your Impact:",
+            "copy": "<p>Every view counts, and every share matters. For every <strong>10,000 views<\/strong> on your <em>#PudgyChristmas<\/em> challenge video, we will send one of our cuddly Pudgy Penguin toys to a local charity, ready to be opened by a child on Christmas morning.<\/p>"
+          }
+        },
+        "6301c5ed-1452-41c8-b0e8-eeed760df9a0": {
+          "type": "richtext",
+          "settings": {
+            "title": "The Why:",
+            "copy": "<p>Pudgy Penguins recognizes the challenges this year has brought to many families. With the holiday season upon us, our hearts are set on ensuring the joy of Christmas reaches as many children as possible.<br\/>While we may not reach every home, we believe our collective efforts can make the holiday season brighter for thousands of families this winter season.<\/p>"
+          }
+        },
+        "b6fbaf46-6d30-4062-b0e1-8bc677a18b5f": {
+          "type": "richtext",
+          "settings": {
+            "title": "Join the Challenge: Share Joy with Every View",
+            "copy": "<p>You create the ripple – together, we make the wave!<\/p>"
+          }
+        },
+        "97a887ce-5f41-4853-9e50-9c0494388f78": {
+          "type": "richtext",
+          "settings": {
+            "title": "How to Participate:",
+            "copy": "<ol><li><strong>Spread the Word<\/strong>: Simply include <em>#PudgyChristmas<\/em> in your video.<\/li><li><strong>Feature Our Penguins<\/strong>: Feature our delightful Pudgy Penguins filter, or showcase an actual Pudgy toy in your content.<\/li><li><strong>Message Matters<\/strong>: We recommend adding a call-to-action in your video, such as “<strong>10K views = 1 toy for kids”<\/strong>, to encourage viewership and participation. This not only spreads the word, but amplifies the impact.<\/li><li><strong>Connect with Us<\/strong>: Keep up with the movement at <strong>@pudgypenguins <\/strong>and encourage others to partake in this act of kindness. <\/li><\/ol><p>Together, let’s make this Christmas one to remember for children everywhere. Your participation means more than just views – it’s about giving, sharing, and celebrating the season of giving. Join us in the #PudgyChristmas Donation Challenge now!<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "de1dcf5b-c48e-456d-b833-1faa6239d400",
+        "2fb958db-b12b-4f88-b054-098afa25e7ce",
+        "6301c5ed-1452-41c8-b0e8-eeed760df9a0",
+        "b6fbaf46-6d30-4062-b0e1-8bc677a18b5f",
+        "97a887ce-5f41-4853-9e50-9c0494388f78"
+      ],
+      "settings": {
+        "header": ""
+      }
+    },
+    "xmas-video": {
+      "type": "xmas-video",
+      "blocks": {
+        "1cd517a5-4d29-49a6-a5dd-81ebcee06ca5": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/59ce2aad0c7d40fabaf05a6e69e30bd4.mp4"
+          }
+        },
+        "dde69023-9838-46ab-9b92-811772b61962": {
+          "type": "video",
+          "settings": {
+            "video_url": "https:\/\/cdn.shopify.com\/videos\/c\/o\/v\/dee09e73069e4acba04271b6c1de13a5.mp4"
+          }
+        }
+      },
+      "block_order": [
+        "1cd517a5-4d29-49a6-a5dd-81ebcee06ca5",
+        "dde69023-9838-46ab-9b92-811772b61962"
+      ],
+      "settings": {
+        "header": "Examples:"
+      }
+    },
+    "xmas-richtext-2": {
+      "type": "xmas-richtext",
+      "blocks": {
+        "d2ef4c24-02df-49e8-aee0-18224a30f679": {
+          "type": "richtext",
+          "settings": {
+            "title": "Sponsor Contact Information:",
+            "copy": "<p>For inquiries, further information, or any questions regarding the #PudgyChristmas Donation Challenge, participants and interested parties can reach out to the campaign's official sponsor via email at <a href=\"\/pages\/contact\" title=\"Get In Touch\">spreadingjoy@pudgypenguins.io<\/a><\/p>"
+          }
+        },
+        "c56b0272-0104-42ce-b974-a7603ced041b": {
+          "type": "richtext",
+          "settings": {
+            "title": "Use of Entries:",
+            "copy": "<p>By participating in the #PudgyChristmas Donation Challenge, entrants agree to grant Pudgy Penguins the unrestricted right to use, publish, display, modify, distribute, and syndicate their submitted videos, photos, and posts across our marketing channels, including but not limited to social media platforms, websites, and promotional materials. Participation in the challenge constitutes the entrant's consent for Pudgy Penguins to use their entries for any purpose without further compensation, notification, or permission, unless prohibited by law. Entrants acknowledge that Pudgy Penguins may tag, post, repost, share, or employ the content at their discretion, ensuring participants' creativity in support of a great cause is celebrated and shared far and wide.<\/p>"
+          }
+        }
+      },
+      "block_order": [
+        "d2ef4c24-02df-49e8-aee0-18224a30f679",
+        "c56b0272-0104-42ce-b974-a7603ced041b"
+      ],
+      "settings": {
+        "header": "Disclaimers:"
+      }
+    },
+    "dark-footer": {
+      "type": "dark-footer",
+      "settings": {
+        "social_image_1": "shopify:\/\/shop_images\/image_6.png",
+        "social_image_2": "shopify:\/\/shop_images\/image_8.png",
+        "social_image_3": "shopify:\/\/shop_images\/image_9.png",
+        "social_image_4": "shopify:\/\/shop_images\/image_10.png"
+      }
+    }
+  },
+  "order": [
+    "xmas-hero",
+    "xmas-intro",
+    "xmas-richtext",
+    "xmas-video",
+    "xmas-richtext-2",
+    "dark-footer"
+  ]
+}
