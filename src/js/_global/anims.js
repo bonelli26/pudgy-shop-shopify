@@ -45,7 +45,7 @@ export const pageEntrance = (namespace = null)=> {
 	Global element animations
 -------------------------------------------------- */
 export let $slideShow;
-export const globalEntrance = ()=>{
+export const globalEntrance = (namespace)=>{
 
 	if(globalStorage.firstLoad !== true){
 		return;
