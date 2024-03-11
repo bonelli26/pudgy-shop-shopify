@@ -1,4 +1,5 @@
 import Highway from "@dogstudio/highway";
+import { H } from "../routing";
 import { AddToCart } from "../_extensions/Shopify/AddToCart";
 import {$scroll} from "../_global/_renderer";
 import {globalStorage} from "../_global/storage";
@@ -16,6 +17,15 @@ class ProductsRenderer extends Highway.Renderer{
 	}
 
 	onEnterCompleted(){
+		const loginWrapper = document.getElementById("login-wrapper");
+		if (loginWrapper) {
+			const loginLink = loginWrapper.querySelector(".form-wrapper a")
+			loginLink.addEventListener(("click"), (e) => {
+				e.preventDefault()
+				console.log(loginLink.href)
+				window.location.href = loginLink.href
+			})
+		}
 
 		window.gtag('event', 'conversion', {
 			'send_to': 'AW-10947310670/HOZjCMCvx-cYEM7oiuQo'

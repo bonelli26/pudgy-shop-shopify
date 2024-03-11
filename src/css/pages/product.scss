@@ -1,4 +1,20 @@
 .view-product {
+  .logged-out {
+    background: linear-gradient(180deg,#c3edff,#f5fdff);
+    .form-wrapper {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      margin-top: 40px;
+      a {
+        border: 2px solid;
+        padding: 12px 20px 13px;
+        border-radius: 24px;
+        font-size: 16px;
+        font-family: $mencoBlack;
+      }
+    }
+  }
   .pdp-hero {
     z-index: 4;
     position: relative;
