@@ -8,6 +8,7 @@
     },
     "about-section": {
       "type": "about-section",
+      "disabled": true,
       "settings": {
         "igloo_icon": "shopify:\/\/shop_images\/about-img.png"
       }

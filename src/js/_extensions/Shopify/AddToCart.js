@@ -152,13 +152,15 @@ export class AddToCart {
 
 		const isLilPudgy = document.querySelector(".lil-pudgy-check .check");
 
-		isLilPudgy.addEventListener("click" , () => {
-			if (isLilPudgy.classList.contains("active")) {
-				isLilPudgy.classList.remove("active");
-			} else {
-				isLilPudgy.classList.add("active");
-			}
-		});
+		if (isLilPudgy) {
+			isLilPudgy.addEventListener("click" , () => {
+				if (isLilPudgy.classList.contains("active")) {
+					isLilPudgy.classList.remove("active");
+				} else {
+					isLilPudgy.classList.add("active");
+				}
+			});
+		}
 	}
 
 	/*
@@ -194,13 +196,13 @@ export class AddToCart {
 					['Pudgy Number']: pudgyNumberText
 				};
 			}
-
-			if (isLilPudgy.classList.contains('active')) {
+			if (isLilPudgy && isLilPudgy.classList.contains('active')) {
 				formData.items[0].properties = {
 					['Lil Pudgy']: true,
 					['Pudgy Number']: pudgyNumberText
 				};
 			}
+
 		}
 
 		console.log(formData);

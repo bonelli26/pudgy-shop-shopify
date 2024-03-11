@@ -45,7 +45,7 @@
     "privacy": "Privacy",
     "privacy_url": "\/",
     "site_credits": "Site Credits",
-    "site_credits_url": "https:\/\/bureaux.inc",
+    "site_credits_url": "https:\/\/bureaux.us",
     "image_1": "shopify:\/\/shop_images\/Rectangle_161.png",
     "profile_image_1": "shopify:\/\/shop_images\/Ellipse_2_c6c6849e-dbb8-467a-bcfc-61f7fb9408b2.png",
     "profile_name_1": "<p>Kuromi<\/p><p>@chrn69<\/p>",
@@ -139,6 +139,13 @@
         "type": "shopify:\/\/apps\/s-store-locator\/blocks\/embed-app\/e7003487-cc51-4321-9488-2c47c07a5b17",
         "disabled": false,
         "settings": {
+        }
+      },
+      "5149645339031002760": {
+        "type": "shopify:\/\/apps\/order-limits-minmaxify\/blocks\/app-embed-block\/3acfba32-89f3-4377-ae20-cbb9abc48475",
+        "disabled": false,
+        "settings": {
+          "async": false
         }
       }
     }

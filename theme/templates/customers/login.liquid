@@ -77,9 +77,6 @@
             <a class="create" href="{{ routes.account_register_url }}">
               {{ 'customer.login_page.create_account' | t }}
             </a>
-            <button class="recover" id="show-forgot-password" type="button">
-              {{ 'customer.login_page.forgot_password' | t }}
-            </button>
           </div>
         </div>
       </div>
@@ -144,11 +141,6 @@
               {{ 'customer.login_page.submit' | t }}
             </button>
           {%- endform -%}
-          <div class="bottom-links">
-            <button id="hide-forgot-password" type="button">
-              {{ 'customer.login_page.cancel' | t }}
-            </button>
-          </div>
         </div>
       </div>
     </div>
