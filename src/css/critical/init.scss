@@ -3854,7 +3854,7 @@ footer {
 		display: flex;
 		flex-direction: column;
 		text-align: left;
-		@include get-vw(padding-bottom, 48px, 24px);
+		padding-bottom: 130px;
 		width: 100%;
 		margin: 0 auto;
 	}
