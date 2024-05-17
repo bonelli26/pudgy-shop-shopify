@@ -5,7 +5,7 @@
         <h1>{{ section.settings.header }}</h1>
         <p>{{ section.settings.copy }}</p>
         <div id="initial-state">
-            <form class="bind-form" data-id="RDD6jv">
+            <form class="bind-form" data-id="{{ section.settings.listID }}">
                 <div class="form-content">
                     <input class="password" type="text">
                     <input required type="email" name="email" placeholder="Enter your Email" id="email">
@@ -33,6 +33,11 @@
       "id": "hero_tag",
       "type": "text",
       "label": "Hero Tag"
+    },
+    {
+      "id": "listID",
+      "type": "text",
+      "label": "List ID"
     },
     {
       "type": "text",
