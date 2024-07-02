@@ -393,10 +393,11 @@
             </svg>
         </div>
         <div class="links">
+            <a class="link" href="/pages/store-locator" data-router-disabled>Walmart</a>
+            <a class="link" href="/pages/target-store-locator" data-router-disabled>Target</a>
             {% for link in linklists.pudgy_shop_footer.links %}
                 <a class="link prefetch-us" href="{{ link.url }}"  class="blue-hover">{{ link.title }}</a>
             {% endfor %}
-            <a class="link prefetch-us checked" href="/pages/store-locator" data-router-disabled="">Store <span>Locator</span></a>
         </div>
         <div class="socials">
             <a href="{{ settings.url_1 }}" target="_blank">

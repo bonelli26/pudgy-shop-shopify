@@ -6,18 +6,18 @@
     <h1>
         {{ collection.title }}
     </h1>
-    <p>{{ section.settings.collections_copy }}</p>
+    <div>{{ collection.description }}</div>
 </div>
 <div class="collection-grid mw">
 
-    <div class="filters">
+    {% comment %}<div class="filters">
         {% for block in section.blocks %}
             {% assign thisCollection = block.settings.collection %}
             <a class="prefetch-us pink-btn filter blue{% if collection.handle == thisCollection.handle %} active{% endif %}" href="{{ thisCollection.handle }}">
                 <span>{{ block.settings.collection }}</span>
             </a>
         {% endfor %}
-    </div>
+    </div>{% endcomment %}
 
     <div class="filters-wrapper">
         <div class="filters-mobile drawer replace-label" data-at="767">

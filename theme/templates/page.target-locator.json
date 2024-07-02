@@ -1,0 +1,30 @@
+{
+  "sections": {
+    "store-locator": {
+      "type": "store-locator",
+      "blocks": {
+        "ca4a80fe-6f0d-493c-b262-cd62bfb55b03": {
+          "type": "shopify:\/\/apps\/s-store-locator\/blocks\/storeify-storelocator\/e7003487-cc51-4321-9488-2c47c07a5b17",
+          "settings": {
+          }
+        }
+      },
+      "block_order": [
+        "ca4a80fe-6f0d-493c-b262-cd62bfb55b03"
+      ],
+      "settings": {
+        "header": "Store locator",
+        "copy": "Find Pudgy Penguins at a retail store near you!"
+      }
+    },
+    "footer": {
+      "type": "footer",
+      "settings": {
+      }
+    }
+  },
+  "order": [
+    "store-locator",
+    "footer"
+  ]
+}
