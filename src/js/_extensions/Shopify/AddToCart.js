@@ -61,7 +61,7 @@ export class AddToCart {
 		let variants = addToCartBtn.dataset.variants;
 		if (variants) { variants = variants.split("|||"); } else { return; }
 		if (variants[0].length < 2) { return; }
-
+		console.log(variants)
 		const varData = [];
 		for (let i = 0; i < variants.length; i++) {
 			let data = variants[i].split("||"),
@@ -94,7 +94,7 @@ export class AddToCart {
 				option.parentElement.querySelector(".active").classList.remove("active");
 				option.classList.add("active");
 
-				const activeOptions = document.querySelectorAll(".pdp-hero.options .option.active");
+				const activeOptions = document.querySelectorAll(".pdp-hero .options .option.active");
 
 				for (let j = 0; j < activeOptions.length; j++) {
 					optionArr.push(activeOptions[j].dataset.value);
@@ -103,7 +103,9 @@ export class AddToCart {
 
 				for (let j = 0; j < varData.length; j++) {
 					let matches = 0;
+					console.log(optionArr)
 					for (let z = 0; z < optionArr.length; z++) {
+						console.log(varData[j].title, optionArr[z])
 						if (varData[j].title.includes(optionArr[z])) {
 							matches++;
 						} else {
