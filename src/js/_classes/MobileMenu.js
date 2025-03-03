@@ -1,10 +1,14 @@
 import { gsap } from "gsap";
 import {globalStorage} from "../_global/storage";
 
-export class MobileMenu {
+
+
+
+export class MobileMenu {	
 
 	constructor() {
-		this.nav = document.querySelector("nav");
+		this.nav = document.querySelector("nav");		
+		if(globalStorage.namespace === "bellyland") {return;}	
 		if(!this.nav) { return; }
 		if(!globalStorage.isGreaterThan767) {
 			this.navDrawer = document.getElementById("nav-bar");
@@ -21,7 +25,7 @@ export class MobileMenu {
 		this.bindListeners();
 	}
 
-	bindListeners() {
+	bindListeners() {		
 		this.trigger.addEventListener("click", () => {
 			if (this.isOpen) {
 				this.close();

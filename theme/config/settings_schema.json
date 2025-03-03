@@ -224,6 +224,21 @@
     ]
   },
   {
+    "name": "Pencil Bar Bellyland",
+    "settings": [
+      {
+        "type": "url",
+        "id": "pencil_bar_link_belly",
+        "label": "Pencil Bar Link"
+      },
+      {
+        "type": "text",
+        "id": "pencil_bar_message_belly",
+        "label": "Pencil Bar Message"
+      }
+    ]
+  },
+  {
     "name": "Footer Content",
     "settings": [
       {

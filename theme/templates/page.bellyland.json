@@ -1,0 +1,29 @@
+/*
+ * ------------------------------------------------------------
+ * IMPORTANT: The contents of this file are auto-generated.
+ *
+ * This file may be updated by the Shopify admin theme editor
+ * or related systems. Please exercise caution as any changes
+ * made to this file may be overwritten.
+ * ------------------------------------------------------------
+ */
+{
+  "sections": {
+    "bellyland-hero": {
+      "type": "bellyland-hero",
+      "settings": {
+        "hero_tag": "LIMITED EDITION",
+        "hero_header": "Pudgy in bellyland",
+        "hero_intro": "Introducing “Pudgy in Bellyland”, the exceptional collaboration between Pudgy Penguins and Bellyland (Lotte).",
+        "button_url_1": "",
+        "button_url_2": "",
+        "hero_bg": "shopify://shop_images/Belly_Hero_BG.jpg",
+        "hero_bg_mobile": "shopify://shop_images/Belly_Hero_BG_Mobile.jpg",
+        "hero_image": "shopify://shop_images/PP_Lotte_Toys_FRONT_V1-1_1.png"
+      }
+    }
+  },
+  "order": [
+    "bellyland-hero"
+  ]
+}

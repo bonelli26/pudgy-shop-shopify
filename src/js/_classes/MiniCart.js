@@ -5,7 +5,11 @@ export class MiniCart {
 
     constructor() {
         this.backdrop = document.getElementById("mini-cart-backdrop");
-        this.trigger = globalStorage.isGreaterThan767 ? document.getElementById("mini-cart-trigger") : document.getElementById("mini-cart-trigger-mobile") ;
+        if(globalStorage.namespace === "bellyland") {
+            this.trigger = document.getElementById("mini-cart-trigger");
+        } else {
+            this.trigger = globalStorage.isGreaterThan767 ? document.getElementById("mini-cart-trigger") : document.getElementById("mini-cart-trigger-mobile");
+        }        
         // this.homeTrigger = document.getElementById("mini-cart-trigger-home");
         this.miniCart = document.getElementById("mini-cart");
         this.fadeEls = document.querySelector(".mini-cart .inner");

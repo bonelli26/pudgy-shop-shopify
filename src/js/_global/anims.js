@@ -39,6 +39,12 @@ export const pageEntrance = (namespace = null)=> {
 		globalStorage.pencilMarqueeRainbowText.tween.play();
 		globalStorage.pencilMarqueeDark.tween.pause();
 		globalStorage.pencilMarquee.tween.pause();
+	} else if (globalStorage.namespace === "bellyland") {	
+		domStorage.nav.classList.remove("xmas");		
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });				
 	} else {
 		domStorage.nav.classList.remove("giveaway");
 		domStorage.nav.classList.remove("xmas-lp");
@@ -102,9 +108,14 @@ export const globalEntrance = (namespace = null)=>{
 		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
 		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
 		gsap.to(domStorage.header, { display: "block" });
-		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "flex" });
-	}
-	else {
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "flex" });	
+	} else if (globalStorage.namespace === "bellyland") {	
+		domStorage.nav.classList.remove("xmas");		
+		gsap.set(domStorage.pencilMarqueeRainbow, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeDark, { display: "none" });
+		gsap.set(domStorage.pencilMarqueeRainbowText, { display: "none" });
+		gsap.to(domStorage.header, { display: "block" });				
+	} else {
 		domStorage.nav.classList.remove("giveaway");
 		domStorage.nav.classList.remove("xmas");
 		gsap.to(domStorage.header, { display: "block" });
@@ -121,6 +132,14 @@ export const globalEntrance = (namespace = null)=>{
 			globalStorage.pencilMarqueeDark.tween.play();
 		} else if (namespace === "xmas-lp") {
 			globalStorage.pencilMarqueeRainbowText.tween.play();
+		} else if (namespace === "bellyland") {
+			gsap.set(img, { opacity: 1 });
+			timeline
+				.to(domStorage.header,  { autoAlpha: 1, y: 0, duration: 0.3, ease: "sine.inOut", force3D: true, onComplete: ()=>{
+						gsap.delayedCall(.1, () => {
+							globalStorage.transitionFinished = true;
+						});
+					} }, 0.2);
 		} else {
 			globalStorage.pencilMarquee.tween.play();
 		}

@@ -1,0 +1,64 @@
+<div class="max-width hero-wrapper">
+    <div class="inner">
+        <div class="tag">{{ section.settings.hero_tag }}</div>
+        <h1>{{ section.settings.hero_header }}</h1>
+        <p>{{ section.settings.hero_intro }}</p>
+        <div class="cta-wrapper">
+            <a class="belly-btn white prefetch-us" href="{{ section.settings.button_url_1 }}"><span>Learn more</span></a>
+            <a class="belly-btn prefetch-us" href="{{ section.settings.button_url_2 }}"><span>Shop Now</span></a>    
+        </div>        
+    </div>
+    <img class="preload-critical"{% if section.settings.hero_image.alt %} alt="{{ section.settings.hero_image.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_image | image_url }}" data-preload-mobile="https:{{ section.settings.hero_image | image_url }}">
+</div>
+<img class="preload-critical bg"{% if section.settings.hero_bg.alt %} alt="{{ section.settings.hero_bg.alt }}"{% endif %} data-preload-desktop="https:{{ section.settings.hero_bg | image_url }}" data-preload-mobile="https:{{ section.settings.hero_bg_mobile | image_url }}">
+
+
+{% schema %}
+    {
+        "name": "Bellyland Hero",
+        "tag": "section",
+        "class": "bellyland-hero mw",
+        "settings": [
+            {
+              "id": "hero_tag",
+              "type": "text",
+              "label": "Hero Tag"
+            },
+            {
+              "id": "hero_header",
+              "type": "text",
+              "label": "Hero Header"
+            },
+            {
+              "id": "hero_intro",
+              "type": "text",
+              "label": "Hero Intro"
+            },
+            {
+              "id": "button_url_1",
+              "type": "url",
+              "label": "Hero Button URL"
+            },
+            {
+                "id": "button_url_2",
+                "type": "url",
+                "label": "Hero Button URL"
+              },
+            {
+              "id": "hero_bg",
+              "type": "image_picker",
+              "label": "Hero BG"
+            },
+            {
+              "id": "hero_bg_mobile",
+              "type": "image_picker",
+              "label": "Hero BG mobile"
+            },
+            {
+              "id": "hero_image",
+              "type": "image_picker",
+              "label": "Hero image"
+            }
+        ]
+    }
+{% endschema %}
