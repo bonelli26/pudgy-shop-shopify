@@ -21,9 +21,42 @@
         "hero_bg_mobile": "shopify://shop_images/Belly_Hero_BG_Mobile.jpg",
         "hero_image": "shopify://shop_images/PP_Lotte_Toys_FRONT_V1-1_1.png"
       }
+    },
+    "fifty_fifty_belly_LQHrbB": {
+      "type": "fifty-fifty-belly",
+      "blocks": {
+        "content_Nw7jQr": {
+          "type": "content",
+          "settings": {
+            "img_rigth": true,
+            "header": "physical Collectibles",
+            "copy": "You’ll get 2x Collectible figurines, 24x Bellyland Ice cream Figures, 1x Photo card, 1x Ice cream Menu guide and 1x Package box.",
+            "button_url": "",
+            "image": "shopify://shop_images/Frame_1000009616_9eee1303-82f1-48f4-b42d-872b3b40c471.png"
+          }
+        },
+        "content_NaJ39D": {
+          "type": "content",
+          "settings": {
+            "img_rigth": false,
+            "header": "Digital collectibles",
+            "copy": "You’ll be able to claim a Digital Collectible, Merge Pax and Polly with Bellyland NFT and to Claim special Pudgyworld traits.",
+            "button_url": "",
+            "image": "shopify://shop_images/Frame_1000009616.png"
+          }
+        }
+      },
+      "block_order": [
+        "content_Nw7jQr",
+        "content_NaJ39D"
+      ],
+      "settings": {
+        "header": "What you’ll get"
+      }
     }
   },
   "order": [
-    "bellyland-hero"
+    "bellyland-hero",
+    "fifty_fifty_belly_LQHrbB"
   ]
 }

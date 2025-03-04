@@ -1,0 +1,72 @@
+<div class="max-width{% if section.settings.header %} w-header{% endif %}">
+  {% if section.settings.header %}
+    <h2>{{ section.settings.header }}</h2>
+  {% endif %}
+  <div class="section-wrapper">
+      {% for block in section.blocks %}    
+        <div class="content-wrapper{% if block.settings.img_rigth %} img-right{% endif %}">
+          <div class="img-wrapper">
+            <img class="preload" {% if block.settings.image.alt %} alt="{{ block.settings.image.alt }}"{% endif %} data-preload-desktop="https:{{ block.settings.image | image_url }}" data-preload-mobile="https:{{ block.settings.image | image_url }}">
+          </div>
+          <div class="text-wrapper">
+            <p class="title">{{ block.settings.header }}</p>
+            <p class="copy">{{ block.settings.copy }}</p>
+            <a class="belly-btn prefetch-us" href="{{ block.settings.button_url }}"><span>Shop Now</span></a>    
+          </div>  
+        </div>                    
+      {% endfor %}
+  </div>
+</div>
+
+{% schema %}
+{
+  "name": "Fifty Fifty Bellyland",
+  "tag": "section",
+  "class": "fifty-fifty-belly mw",
+  "settings": [
+    {
+      "id": "header",
+      "type": "text",
+      "label": "Header"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Content",
+      "type": "content",
+      "settings": [
+        {
+          "id": "img_rigth",
+          "type": "checkbox",
+          "label": "Image Right"
+        },
+        {
+          "id": "header",
+          "type": "text",
+          "label": "Header"
+        },
+        {
+          "id": "copy",
+          "type": "text",
+          "label": "Copy"
+        },
+        {
+          "type": "url",
+          "id": "button_url",
+          "label": "Button URL"
+        },
+        {
+          "id": "image",
+          "type": "image_picker",
+          "label": "Image"
+        }        
+      ]
+    }
+  ],
+  "presets": [
+      {
+        "name": "Fifty Fifty Bellyland"
+      }
+    ]
+}
+{% endschema %}
