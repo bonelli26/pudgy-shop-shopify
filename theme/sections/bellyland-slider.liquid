@@ -1,0 +1,59 @@
+<div class="top">
+    <h2>{{ section.settings.heading }}</h2>
+    <p>{{ section.settings.copy }}</p>
+</div>
+<div class="best-sellers-wrapper slider no-drag-free" data-at="767" data-align="center">
+    <div class="slides">
+        <div class="inner">
+            {% for block in section.blocks %}
+                {% assign thisProduct = block.settings.product %}
+                <a href="/products/{{ thisProduct.handle }}" class="slide card-wrapper prefetch-us">
+                    
+                </a>
+            {% endfor %}
+        </div>
+    </div>
+</div>
+
+
+
+
+
+
+{% schema %}
+{
+  "name": "Bellyland Slider",
+  "tag": "section",
+  "class": "bellyland-slider mw max-width",
+  "settings": [
+    {
+      "id": "heading",
+      "type": "text",
+      "label": "Heading"
+    },
+    {
+      "id": "copy",
+      "type": "text",
+      "label": "Copy"
+    }
+  ],
+  "blocks": [
+    {
+      "name": "Slide",
+      "type": "slide",      
+      "settings": [
+        {
+            "id": "heading",
+            "type": "text",
+            "label": "Heading"
+        }
+      ]
+    }
+  ],
+  "presets": [
+    {
+      "name": "Bellyland Slider"
+    }
+  ]
+}
+{% endschema %}

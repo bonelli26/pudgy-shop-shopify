@@ -1,0 +1,90 @@
+{% if section.settings.header != blank %}
+    <div class="header">{{ section.settings.header }}</div>
+{% endif %}
+<div class="socials">
+    {% for block in section.blocks %}
+        {% case block.type %}
+        {% when 'socials' %}
+            <a href="{{ block.settings.url }}" target="_blank">
+                <img class="preload" data-preload-desktop="https:{{ block.settings.icon | image_url }}" data-preload-mobile="https:{{ block.settings.icon | image_url }}">    
+            </a>
+        {%  endcase %}
+    {% endfor %}
+</div>
+<div class="utilities">
+    {% for block in section.blocks %}
+        {% case block.type %}
+        {% when 'utility' %}
+            <a href="{{ block.settings.url }}" target="_blank">{{ block.settings.copy }}</a>
+        {%  endcase %}
+    {% endfor %}
+</div>
+<div class="copyright">{{ section.settings.copyright }}</div>
+<a class="belly-btn white top" href="#">
+    <span>
+        <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 15 12"><path d="M5.826 1.56a2 2 0 0 1 3.348 0l4.803 7.345c.87 1.33-.085 3.095-1.674 3.095H2.697c-1.589 0-2.543-1.764-1.674-3.095L5.826 1.56Z" fill="#0C3EB3"/></svg>
+        top        
+    </span>
+</a>
+
+
+{% schema %}
+    {
+        "name": "Small Footer",
+        "tag": "section",
+        "class": "small-footer mw max-width",
+        "settings": [  
+            {
+                "id": "header",
+                "type": "text",
+                "label": "Header"
+            },          
+            {
+                "id": "copyright",
+                "type": "text",
+                "label": "Copyright"
+            }
+        ],
+        "blocks": [
+            {
+                "name": "Socials",
+                "type": "socials",  
+                "limit": 5,    
+                "settings": [
+                    {
+                        "type": "image_picker",
+                        "id": "icon",
+                        "label": "Icon"
+                    },
+                    {
+                        "type": "url",
+                        "id": "url",
+                        "label": "URL"
+                    }
+                ]
+            },
+            {
+                "name": "Utility Links",
+                "type": "utility",  
+                "limit": 3,    
+                "settings": [
+                    {
+                        "type": "text",
+                        "id": "copy",
+                        "label": "Copy"
+                    },
+                    {
+                        "type": "url",
+                        "id": "url",
+                        "label": "URL"
+                    }
+                ]
+            }
+        ],
+        "presets": [
+            {
+                "name": "Small Footer"
+            }
+        ]
+    }
+{% endschema %}

@@ -1,5 +1,5 @@
 <div class="max-width{% if section.settings.header %} w-header{% endif %}">
-  {% if section.settings.header %}
+  {% if section.settings.header != blank %}
     <h2>{{ section.settings.header }}</h2>
   {% endif %}
   <div class="section-wrapper">
@@ -64,9 +64,9 @@
     }
   ],
   "presets": [
-      {
-        "name": "Fifty Fifty Bellyland"
-      }
-    ]
+    {
+      "name": "Fifty Fifty Bellyland"
+    }
+  ]
 }
 {% endschema %}
